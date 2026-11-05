@@ -1,0 +1,131 @@
+{
+  "upstream_commit": "77e7c747d653b34e79e43df7d88bad87de5c27d8",
+  "checkpoint_sha256": "7db6b073a829529b7404fdf7ac9c7209c728af32f0e4d88be54e12a16bae282a",
+  "checkpoint_step": 70000,
+  "optimizer_steps_performed": 0,
+  "cfd_solves_performed": 0,
+  "source_sha256": {
+    "channel_operator/model.py": "58ebca8cd20ed0eac10254054c40d2cab467ed3f35eeee51c407534cfb628967",
+    "channel_operator/profiles.py": "32f4f99beff1dbe498a76734e05972f823ad12072962275b791b3b0fbefcfefd",
+    "channel_operator/train.py": "e3841b0bd974ffa784e755e8c9a8ebc0ce9f240e6a325922020e300f113eb85d",
+    "channel_operator/v2_model.py": "89a4c3623ebc1de00631db36d0cd45d1f42c9202f514baee6efb2ad530edfd76",
+    "channel_operator/v2_jax.py": "a3c9d4e03388f410082ee72897243fd9fbb20cb209b266a8cad9b1c25fcce8de",
+    "channel_operator/v2_profiles.py": "ea52bc26de7c3c396c9988a36a7952f4eba7a390e59726c315b18f6078c391a5",
+    "channel_operator/v2_predict.py": "916014f3fdd53b4e62f0722add25fc901bc4671831a0905c0924d4a3be5802a8",
+    "channel_operator/v2_train.py": "a927b226bc92dbeabe217602506d0965973cb1bd9d53c0a3af2976248e6e2a38",
+    "channel_operator/v2_evaluate.py": "a94a9e1746f95d207ef56b0984ce112b0e204535292f792d446badb853207993",
+    "channel_operator/v2_data.py": "844f1a61293b31781cef055bc10a2aae0e900a1a95e34fc167941dd101bc95d6",
+    "channel_operator/broad_profiles.py": "6efffaf6ef204b449d1a97a5df6131a8492b4f3075f86fb105c8f5707fb669ab",
+    "run_v2_jax.py": "4fbad17fc3c762255c88e9b631784dd1d9af327810a1499a2e2c064eaea16d63",
+    "run_experiment.py": "15442ee6ed5d6ef605b9f27a3e9032b2eab913e77485b4fbfbfd0a1a66cea64b"
+  },
+  "current_v2_sources_match_published_metadata": {
+    "channel_operator/v2_train.py": true,
+    "channel_operator/v2_data.py": true,
+    "channel_operator/v2_profiles.py": true,
+    "channel_operator/v2_jax.py": true,
+    "channel_operator/v2_model.py": true,
+    "channel_operator/v2_evaluate.py": true,
+    "channel_operator/v2_predict.py": true
+  },
+  "nine_cycle_boundary": {
+    "relative_l2_error": 0.39055682364008026,
+    "boundary_loss": 0.21482514263973665,
+    "gradient_l2_wrt_all_trainable_parameters": 0.0,
+    "conclusion": "The current inlet error cannot be changed by optimizing network weights.",
+    "cubic_spline_min_from_33_samples": -0.021424427465344793,
+    "cubic_spline_min_from_257_samples": 0.0
+  },
+  "four_mode_boundary_controls": [
+    {
+      "coefficients": [
+        0.25,
+        -0.1,
+        0.05,
+        0.0
+      ],
+      "inlet_max_error": 3.827914274445732e-08
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.6
+      ],
+      "inlet_max_error": 2.765541751159617e-08
+    }
+  ],
+  "finite_sensor_counterexamples": [
+    {
+      "sensors": 33,
+      "formula": "f0=6*y*(1-y); f1=f0*(1+0.4*sin(pi*(m-1)*y))",
+      "sensor_max_difference": 5.10702591327572e-15,
+      "full_profile_relative_l2_difference": 0.2828427747803592,
+      "mean_f0": 0.9999999990686774,
+      "mean_f1": 0.9999999990686774,
+      "min_f1": 0.0,
+      "max_f1": 2.0979544008236664
+    },
+    {
+      "sensors": 257,
+      "formula": "f0=6*y*(1-y); f1=f0*(1+0.4*sin(pi*(m-1)*y))",
+      "sensor_max_difference": 4.04121180963557e-14,
+      "full_profile_relative_l2_difference": 0.28284271248983045,
+      "mean_f0": 0.9999999990686774,
+      "mean_f1": 0.9999999990686774,
+      "min_f1": 0.0,
+      "max_f1": 2.0999679565429688
+    }
+  ],
+  "actual_v2_splits": {
+    "train": {
+      "conditions": 288,
+      "unique_profiles": 192
+    },
+    "monitor": {
+      "conditions": 16,
+      "unique_profiles": 8
+    },
+    "blind": {
+      "conditions": 8,
+      "unique_profiles": 8
+    }
+  },
+  "compiled_trainer_imports": [
+    "pathlib",
+    "channel_operator.v2_jax",
+    "channel_operator.v2_profiles",
+    "channel_operator.v2_model"
+  ],
+  "broad_bank_shape": [
+    10000,
+    257
+  ],
+  "current_branch_input_features": 34,
+  "broad_generator_envelope_counterexample": {
+    "formula": "630*y^4*(1-y)^4",
+    "mean": 1.0,
+    "max_speed": 2.4609375,
+    "coordinate_samples": [
+      0.01,
+      0.05,
+      0.1,
+      0.5
+    ],
+    "ratio_to_parabolic_base": [
+      0.000101881395,
+      0.011253046875,
+      0.076545,
+      1.640625
+    ],
+    "generator_global_lower_ratio_bound": 0.14285714285714285,
+    "conclusion": "Even the broad bank has a restricted envelope; it is not all admissible profiles."
+  },
+  "upstream_notebook_caveat": {
+    "basic_default": "One interior response label per input; boundary-only override is commented out.",
+    "fourier_default": "Interior labels are computed by the shared generator but overwritten by s(0)=0 before training.",
+    "burgers": "Training loss uses initial data, periodic boundary constraints and PDE residual; the provided train call is commented out.",
+    "source": "Pinned notebook source, not inference from the filename."
+  }
+}
