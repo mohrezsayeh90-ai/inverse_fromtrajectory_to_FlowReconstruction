@@ -1,0 +1,64 @@
+{
+  "kaggle_run": "mohrezsayeh/channel-general-physics-v3-pressure-long",
+  "version": 1,
+  "observed_utc": "2026-11-05T19:30:57.377677+00:00",
+  "jax_version": "0.11.1",
+  "GPU_devices": [
+    "CudaDevice(id=0)",
+    "CudaDevice(id=1)"
+  ],
+  "GPU_structural_tests_passed": 59,
+  "GPU_test_seconds": 152.53,
+  "two_device_single_device_update_parity": "passed",
+  "input_pool_resume_hash_check": "passed",
+  "model_configuration_resume_check": "passed",
+  "parent_validation_reference_hashes": "all four passed; original precision retained",
+  "parent_weight_sha256": "3e6d907c05c9203bcbc301111b7dfc25a939a22ce701b6f6066ddcf032060ce3",
+  "target_total_steps": 100000,
+  "first_resumed_optimizer_update": {
+    "step": 5001,
+    "seconds": 85.48305445199998,
+    "role": "repeated_physics_validation_no_CFD_labels",
+    "physics_monitor_points": 1024,
+    "cases": [
+      {
+        "name": "poiseuille",
+        "reynolds": 40.0,
+        "momentum_rms": 0.16022013127803802,
+        "divergence_rms": 2.0128879896219587e-08,
+        "outlet_traction_rms": 0.0009336416842415929
+      },
+      {
+        "name": "nine_oscillations",
+        "reynolds": 55.0,
+        "momentum_rms": 2.6863527297973633,
+        "divergence_rms": 6.352638024509361e-07,
+        "outlet_traction_rms": 0.014072994701564312
+      },
+      {
+        "name": "beta_5_5",
+        "reynolds": 30.0,
+        "momentum_rms": 0.8049935102462769,
+        "divergence_rms": 1.1561884605271189e-07,
+        "outlet_traction_rms": 0.002723218407481909
+      },
+      {
+        "name": "flat",
+        "reynolds": 70.0,
+        "momentum_rms": 1.0881747007369995,
+        "divergence_rms": 1.0299144292957862e-07,
+        "outlet_traction_rms": 0.0024585742503404617
+      }
+    ],
+    "loss": 2.330260992050171,
+    "momentum_mse": 2.3284239768981934,
+    "outlet_mse": 0.0001837038726080209,
+    "divergence_mse": 2.7872658608235623e-13,
+    "gradient_l2": 98.7029037475586,
+    "physics_normalization": "input_curvature_sqrt",
+    "momentum_mse_is_normalized": true
+  },
+  "training_completed": false,
+  "final_heldout_test_evaluated": false,
+  "trained_model_ready": false
+}

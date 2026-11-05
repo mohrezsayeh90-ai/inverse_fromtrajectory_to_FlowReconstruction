@@ -18,5 +18,9 @@
   "current_training_resume_step": 5000,
   "last_completed_kaggle_run": "mohrezsayeh/channel-general-physics-v3-pressure",
   "largest_completed_experiment_steps": 100000,
-  "updated_utc": "2026-11-05T19:26:55.661899+00:00"
+  "updated_utc": "2026-11-05T19:26:55.661899+00:00",
+  "last_observed_current_run_step": 5001,
+  "last_observed_current_run_utc": "2026-11-05T19:30:57.377677+00:00",
+  "GPU_structural_tests_passed": 59,
+  "continuation_optimizer_update_verified": true
 }
