@@ -1,0 +1,361 @@
+{
+  "step": 70000,
+  "role": "repeated_monitor_validation",
+  "profile_disjoint_from_supervised_training": true,
+  "dtype": "float64 inference/diagnostics from trained float32 weights",
+  "config": {
+    "width": 64,
+    "latent": 32,
+    "depth": 3,
+    "pressure_mode": "convective"
+  },
+  "cases": [
+    {
+      "case": 0,
+      "coefficients": [
+        -0.6000000238418579,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.002946359878540577,
+      "u_relative_l2": 0.002485988882810231,
+      "v_relative_l2": 0.04071180926731243,
+      "v_rmse": 0.0017171015376075678,
+      "pressure_relative_l2": 0.002734037837950293,
+      "divergence_rms": 9.845434094489768e-17,
+      "momentum_rms": 0.05312752653851026,
+      "outlet_rms": 0.005163733529840038,
+      "flux_max_error": 1.533045151003165e-05,
+      "wall_max_velocity": 6.156330172081409e-16,
+      "inlet_max_velocity_error": 5.1586007687731694e-08
+    },
+    {
+      "case": 1,
+      "coefficients": [
+        -0.6000000238418579,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.003671088216284831,
+      "u_relative_l2": 0.0036206711037278143,
+      "v_relative_l2": 0.02954063025779316,
+      "v_rmse": 0.0006688968134765243,
+      "pressure_relative_l2": 0.0076699215668940245,
+      "divergence_rms": 5.108340309919619e-17,
+      "momentum_rms": 0.02269630169705541,
+      "outlet_rms": 0.004213181611250618,
+      "flux_max_error": 1.5399902187684944e-05,
+      "wall_max_velocity": 3.885780586188048e-16,
+      "inlet_max_velocity_error": 5.1586007687731694e-08
+    },
+    {
+      "case": 2,
+      "coefficients": [
+        0.6000000238418579,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.0027207325421216323,
+      "u_relative_l2": 0.0023166326097636657,
+      "v_relative_l2": 0.03673433457824064,
+      "v_rmse": 0.0015493453824451178,
+      "pressure_relative_l2": 0.0031403365720983996,
+      "divergence_rms": 7.064275004253064e-17,
+      "momentum_rms": 0.05386761943930751,
+      "outlet_rms": 0.006269825741712253,
+      "flux_max_error": 1.52722928529192e-05,
+      "wall_max_velocity": 7.322929965889822e-16,
+      "inlet_max_velocity_error": 5.1586007687731694e-08
+    },
+    {
+      "case": 3,
+      "coefficients": [
+        0.6000000238418579,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.0032548584872231228,
+      "u_relative_l2": 0.003156548173527139,
+      "v_relative_l2": 0.03851818012995639,
+      "v_rmse": 0.0008721785292661297,
+      "pressure_relative_l2": 0.00844443183300898,
+      "divergence_rms": 5.2911291167711806e-17,
+      "momentum_rms": 0.02370743480228305,
+      "outlet_rms": 0.005217385563791438,
+      "flux_max_error": 1.5258788633731868e-05,
+      "wall_max_velocity": 4.440892098500626e-16,
+      "inlet_max_velocity_error": 5.1586007687731694e-08
+    },
+    {
+      "case": 4,
+      "coefficients": [
+        0.0,
+        -0.6000000238418579,
+        0.0,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.0015456070834194305,
+      "u_relative_l2": 0.0013942843815429435,
+      "v_relative_l2": 0.031204940638857107,
+      "v_rmse": 0.0007259946586037681,
+      "pressure_relative_l2": 0.0036927833718097326,
+      "divergence_rms": 1.4884344783357123e-16,
+      "momentum_rms": 0.05222134547998843,
+      "outlet_rms": 0.005897265588877559,
+      "flux_max_error": 1.5289740225243875e-05,
+      "wall_max_velocity": 1.3040390696968603e-08,
+      "inlet_max_velocity_error": 3.179271734765621e-08
+    },
+    {
+      "case": 5,
+      "coefficients": [
+        0.0,
+        -0.6000000238418579,
+        0.0,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.0026319907940998964,
+      "u_relative_l2": 0.0025786113490197486,
+      "v_relative_l2": 0.05538354018763843,
+      "v_rmse": 0.0005875976059407426,
+      "pressure_relative_l2": 0.01013962188545117,
+      "divergence_rms": 4.759534710699633e-17,
+      "momentum_rms": 0.024963154998189765,
+      "outlet_rms": 0.006074163266698943,
+      "flux_max_error": 1.4721383796101328e-05,
+      "wall_max_velocity": 2.8768559018846544e-09,
+      "inlet_max_velocity_error": 3.179271734765621e-08
+    },
+    {
+      "case": 6,
+      "coefficients": [
+        0.0,
+        0.6000000238418579,
+        0.0,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.0021681700126117225,
+      "u_relative_l2": 0.0019368538414921322,
+      "v_relative_l2": 0.030271543721674038,
+      "v_rmse": 0.0010492914704806951,
+      "pressure_relative_l2": 0.002471183198355272,
+      "divergence_rms": 1.9677869799079245e-16,
+      "momentum_rms": 0.0585330276326698,
+      "outlet_rms": 0.006003925669765394,
+      "flux_max_error": 2.9866744809314838e-05,
+      "wall_max_velocity": 1.885794893816766e-08,
+      "inlet_max_velocity_error": 9.70877300776607e-08
+    },
+    {
+      "case": 7,
+      "coefficients": [
+        0.0,
+        0.6000000238418579,
+        0.0,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.00452346984670719,
+      "u_relative_l2": 0.004411112077303111,
+      "v_relative_l2": 0.05925464979730877,
+      "v_rmse": 0.0010652078804223688,
+      "pressure_relative_l2": 0.00682803479419444,
+      "divergence_rms": 7.620688512715702e-17,
+      "momentum_rms": 0.028600667831989682,
+      "outlet_rms": 0.006440956411760308,
+      "flux_max_error": 2.9866744809314838e-05,
+      "wall_max_velocity": 4.1602742435376484e-09,
+      "inlet_max_velocity_error": 9.70877300776607e-08
+    },
+    {
+      "case": 8,
+      "coefficients": [
+        0.0,
+        0.0,
+        -0.6000000238418579,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.0016682858380763588,
+      "u_relative_l2": 0.0014489775036372137,
+      "v_relative_l2": 0.02702145025927057,
+      "v_rmse": 0.0008981204330621329,
+      "pressure_relative_l2": 0.00638472184779843,
+      "divergence_rms": 2.1295245271665586e-16,
+      "momentum_rms": 0.07498199563152036,
+      "outlet_rms": 0.006141722292196198,
+      "flux_max_error": 1.534181923035227e-05,
+      "wall_max_velocity": 7.801458650439131e-16,
+      "inlet_max_velocity_error": 4.32158903107549e-08
+    },
+    {
+      "case": 9,
+      "coefficients": [
+        0.0,
+        0.0,
+        -0.6000000238418579,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.004998882913490215,
+      "u_relative_l2": 0.004858164544535205,
+      "v_relative_l2": 0.055509900944517014,
+      "v_rmse": 0.0013116697966314142,
+      "pressure_relative_l2": 0.020648899942878423,
+      "divergence_rms": 1.0982250433316807e-16,
+      "momentum_rms": 0.03547401740486168,
+      "outlet_rms": 0.010807199615507473,
+      "flux_max_error": 1.5258788350958064e-05,
+      "wall_max_velocity": 4.163336342344337e-16,
+      "inlet_max_velocity_error": 4.32158903107549e-08
+    },
+    {
+      "case": 10,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.6000000238418579,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.002301247909886661,
+      "u_relative_l2": 0.002157042704768406,
+      "v_relative_l2": 0.026254598757448244,
+      "v_rmse": 0.0008726506803719712,
+      "pressure_relative_l2": 0.004780328654580831,
+      "divergence_rms": 1.744009251227618e-16,
+      "momentum_rms": 0.0698381834364756,
+      "outlet_rms": 0.005476766190545671,
+      "flux_max_error": 1.533239493334282e-05,
+      "wall_max_velocity": 7.996451626640779e-16,
+      "inlet_max_velocity_error": 4.321589086586641e-08
+    },
+    {
+      "case": 11,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.6000000238418579,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.0042030465654535115,
+      "u_relative_l2": 0.004105791683556781,
+      "v_relative_l2": 0.042398262709276234,
+      "v_rmse": 0.0010020234788909762,
+      "pressure_relative_l2": 0.015006873905777637,
+      "divergence_rms": 1.086346589978958e-16,
+      "momentum_rms": 0.032292430183216404,
+      "outlet_rms": 0.009308239686363058,
+      "flux_max_error": 1.5258788350958064e-05,
+      "wall_max_velocity": 4.3210030551462525e-16,
+      "inlet_max_velocity_error": 4.321589086586641e-08
+    },
+    {
+      "case": 12,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        -0.6000000238418579
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.0016393442822518335,
+      "u_relative_l2": 0.0014923418575304734,
+      "v_relative_l2": 0.029918845668489055,
+      "v_rmse": 0.0007327041899476273,
+      "pressure_relative_l2": 0.002913118361443123,
+      "divergence_rms": 2.911006905080165e-16,
+      "momentum_rms": 0.07519326823178893,
+      "outlet_rms": 0.008075493522461648,
+      "flux_max_error": 1.7297007839922607e-05,
+      "wall_max_velocity": 9.892017183957627e-10,
+      "inlet_max_velocity_error": 6.622857218196998e-08
+    },
+    {
+      "case": 13,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        -0.6000000238418579
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.004414264403077289,
+      "u_relative_l2": 0.004323042425377437,
+      "v_relative_l2": 0.07489119069223148,
+      "v_rmse": 0.0009572954687063189,
+      "pressure_relative_l2": 0.010370416879754919,
+      "divergence_rms": 1.3270027329443501e-16,
+      "momentum_rms": 0.038031250587531144,
+      "outlet_rms": 0.008808875680934171,
+      "flux_max_error": 1.8321888677341747e-05,
+      "wall_max_velocity": 2.6108767464831583e-09,
+      "inlet_max_velocity_error": 6.622857218196998e-08
+    },
+    {
+      "case": 14,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.6000000238418579
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.0029054358528462377,
+      "u_relative_l2": 0.0026904911562815933,
+      "v_relative_l2": 0.044882214033018786,
+      "v_rmse": 0.0011951956902479036,
+      "pressure_relative_l2": 0.005248502454330384,
+      "divergence_rms": 2.9953384654437593e-16,
+      "momentum_rms": 0.07783323824135935,
+      "outlet_rms": 0.008257777622626328,
+      "flux_max_error": 2.5582949010449774e-05,
+      "wall_max_velocity": 1.0837138748325666e-09,
+      "inlet_max_velocity_error": 2.652231201327737e-08
+    },
+    {
+      "case": 15,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.6000000238418579
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.004270294884949201,
+      "u_relative_l2": 0.004176176072616944,
+      "v_relative_l2": 0.06080879838479889,
+      "v_rmse": 0.0010122291799354642,
+      "pressure_relative_l2": 0.013613480994491032,
+      "divergence_rms": 1.466810006071374e-16,
+      "momentum_rms": 0.04388370272251356,
+      "outlet_rms": 0.010048277613436943,
+      "flux_max_error": 2.5582949010449774e-05,
+      "wall_max_velocity": 2.860333878690803e-09,
+      "inlet_max_velocity_error": 2.652231201327737e-08
+    }
+  ],
+  "gates": {
+    "velocity": true,
+    "pressure": true,
+    "momentum": false,
+    "outlet": true,
+    "divergence": true,
+    "flux": true,
+    "hard_boundaries": true
+  },
+  "passed": false,
+  "field_accuracy_passed": true
+}

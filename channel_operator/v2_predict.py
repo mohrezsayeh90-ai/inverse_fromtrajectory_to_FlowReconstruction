@@ -35,6 +35,12 @@ def main():
     report={'step':state['step'],'retraining':False,'reynolds':a.re,'output':str(output),
         'divergence_rms':float(mass.square().mean().sqrt().detach()),'momentum_rms':float((mx.square().mean()+my.square().mean()).sqrt().detach()),
         'flux_max_error':float(np.abs(flux-1).max()),'scope':'four smooth cosine modes, L1<=0.8, Re in [10,100]; fixed trained operator'}
+    validation=Path(a.checkpoint).parent/'validation_summary.json'
+    if validation.exists():
+        checks=json.loads(validation.read_text())
+        report['published_validation']=checks
+        if not checks.get('all_gates_passed'):
+            print('WARNING: field tests passed but the strict momentum-residual target remains unmet; see the model report')
     output.with_suffix('.json').write_text(json.dumps(report,indent=2));print(json.dumps(report))
 
 

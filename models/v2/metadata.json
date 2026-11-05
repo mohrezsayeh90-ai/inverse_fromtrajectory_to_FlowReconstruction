@@ -1,0 +1,33 @@
+{
+  "step": 70000,
+  "backend": "JAX 0.11.1 GPU; parity-tested portable PyTorch inference export",
+  "pressure_mode": "convective",
+  "training_cases": 288,
+  "training_anchor_points_per_case": 256,
+  "physics_points_sampled_online": true,
+  "mode": "hybrid FEM + physics-informed DeepONet",
+  "primary_updates": 50000,
+  "adaptive_continuation_updates": 20000,
+  "optimizer_heldout_profiles_audited": 24,
+  "checkpoint_sha256": "7db6b073a829529b7404fdf7ac9c7209c728af32f0e4d88be54e12a16bae282a",
+  "sources": {
+    "channel_operator/v2_train.py": "a927b226bc92dbeabe217602506d0965973cb1bd9d53c0a3af2976248e6e2a38",
+    "channel_operator/v2_data.py": "844f1a61293b31781cef055bc10a2aae0e900a1a95e34fc167941dd101bc95d6",
+    "channel_operator/v2_profiles.py": "ea52bc26de7c3c396c9988a36a7952f4eba7a390e59726c315b18f6078c391a5",
+    "channel_operator/v2_jax.py": "a3c9d4e03388f410082ee72897243fd9fbb20cb209b266a8cad9b1c25fcce8de",
+    "channel_operator/v2_model.py": "89a4c3623ebc1de00631db36d0cd45d1f42c9202f514baee6efb2ad530edfd76",
+    "channel_operator/v2_evaluate.py": "a94a9e1746f95d207ef56b0984ce112b0e204535292f792d446badb853207993",
+    "channel_operator/v2_predict.py": "916014f3fdd53b4e62f0722add25fc901bc4671831a0905c0924d4a3be5802a8"
+  },
+  "validation": {
+    "step": 70000,
+    "field_accuracy_passed": true,
+    "all_gates_passed": false,
+    "monitor_cases": 16,
+    "blind_cases": 8,
+    "failed_gates": [
+      "momentum"
+    ],
+    "scope": "four cosine inlet modes, positive no-slip inlets, L1<=0.8, Re=[10,100], channel 5x1"
+  }
+}

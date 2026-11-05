@@ -1,0 +1,193 @@
+{
+  "step": 70000,
+  "role": "untouched_final_blind_test",
+  "profile_disjoint_from_supervised_training": true,
+  "dtype": "float64 inference/diagnostics from trained float32 weights",
+  "config": {
+    "width": 64,
+    "latent": 32,
+    "depth": 3,
+    "pressure_mode": "convective"
+  },
+  "cases": [
+    {
+      "case": 0,
+      "coefficients": [
+        0.73,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.004834263645415052,
+      "u_relative_l2": 0.004753188951561303,
+      "v_relative_l2": 0.03517869980608912,
+      "v_rmse": 0.000981012535363821,
+      "pressure_relative_l2": 0.00669793937871965,
+      "divergence_rms": 6.768545897785498e-17,
+      "momentum_rms": 0.030169878917778222,
+      "outlet_rms": 0.007035145734402438,
+      "flux_max_error": 1.525878887009835e-05,
+      "wall_max_velocity": 4.440892098500626e-16,
+      "inlet_max_velocity_error": 3.981224905302838e-08
+    },
+    {
+      "case": 1,
+      "coefficients": [
+        0.0,
+        -0.76,
+        0.0,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.0031573936239796146,
+      "u_relative_l2": 0.003092604026228811,
+      "v_relative_l2": 0.05604679392174783,
+      "v_rmse": 0.0007156824917968853,
+      "pressure_relative_l2": 0.014120951221447946,
+      "divergence_rms": 6.156005186445073e-17,
+      "momentum_rms": 0.03222355775079281,
+      "outlet_rms": 0.007915655545331775,
+      "flux_max_error": 1.4597145878036955e-05,
+      "wall_max_velocity": 3.5000514952429573e-09,
+      "inlet_max_velocity_error": 3.673408510707077e-08
+    },
+    {
+      "case": 2,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.74,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.002557369729003288,
+      "u_relative_l2": 0.0023565529448028185,
+      "v_relative_l2": 0.02644434631347,
+      "v_rmse": 0.0010848875523370176,
+      "pressure_relative_l2": 0.005622408011980437,
+      "divergence_rms": 1.9647902794389515e-16,
+      "momentum_rms": 0.08530376145537784,
+      "outlet_rms": 0.006807552905211208,
+      "flux_max_error": 1.5371918409168295e-05,
+      "wall_max_velocity": 4.887818749599594e-16,
+      "inlet_max_velocity_error": 3.9255711126173765e-08
+    },
+    {
+      "case": 3,
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.78
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.00567384725956716,
+      "u_relative_l2": 0.005506685775652625,
+      "v_relative_l2": 0.07041970092297482,
+      "v_rmse": 0.001593452400644826,
+      "pressure_relative_l2": 0.042241211637397934,
+      "divergence_rms": 1.5530000472305547e-16,
+      "momentum_rms": 0.05895718381366202,
+      "outlet_rms": 0.01627969350694115,
+      "flux_max_error": 2.8875347482637537e-05,
+      "wall_max_velocity": 3.7725009080017985e-09,
+      "inlet_max_velocity_error": 2.3446429686657666e-08
+    },
+    {
+      "case": 4,
+      "coefficients": [
+        -0.008250202425492707,
+        0.5280804617211684,
+        -0.15774404359063857,
+        0.03764723091046272
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.003815303463909229,
+      "u_relative_l2": 0.0035694324779836175,
+      "v_relative_l2": 0.04800484979942724,
+      "v_rmse": 0.001452553229063374,
+      "pressure_relative_l2": 0.0018462133966478077,
+      "divergence_rms": 1.5132880281810957e-16,
+      "momentum_rms": 0.06947259414539256,
+      "outlet_rms": 0.006136077378629833,
+      "flux_max_error": 2.8562754012195768e-05,
+      "wall_max_velocity": 1.629815739924307e-08,
+      "inlet_max_velocity_error": 4.887535931530351e-08
+    },
+    {
+      "case": 5,
+      "coefficients": [
+        0.1965592478033594,
+        0.11417735700961804,
+        -0.24338437421957237,
+        0.23433749032633513
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.003898098673584361,
+      "u_relative_l2": 0.0037954273571093795,
+      "v_relative_l2": 0.06301770912336407,
+      "v_rmse": 0.0009771061766055563,
+      "pressure_relative_l2": 0.029293670297624853,
+      "divergence_rms": 6.049064869886462e-17,
+      "momentum_rms": 0.02614402586143357,
+      "outlet_rms": 0.007743677224606761,
+      "flux_max_error": 2.1719282107701687e-05,
+      "wall_max_velocity": 1.4109719463550213e-09,
+      "inlet_max_velocity_error": 3.611690368998666e-08
+    },
+    {
+      "case": 6,
+      "coefficients": [
+        -0.000886952349417213,
+        -0.2900422963641694,
+        0.2617364458308822,
+        0.18631994648992112
+      ],
+      "reynolds": 30.0,
+      "velocity_relative_l2": 0.004147143991798097,
+      "u_relative_l2": 0.003966109911852937,
+      "v_relative_l2": 0.0757341441932143,
+      "v_rmse": 0.0013251299261518039,
+      "pressure_relative_l2": 0.009681322300213062,
+      "divergence_rms": 1.071374136524538e-16,
+      "momentum_rms": 0.04456031148316024,
+      "outlet_rms": 0.006141191228189579,
+      "flux_max_error": 1.553567542111889e-05,
+      "wall_max_velocity": 3.521133550783513e-09,
+      "inlet_max_velocity_error": 3.4848357977068645e-08
+    },
+    {
+      "case": 7,
+      "coefficients": [
+        0.10878544124367684,
+        0.25619722976852966,
+        -0.1102729546649605,
+        -0.24854692029006972
+      ],
+      "reynolds": 90.0,
+      "velocity_relative_l2": 0.005438312776289977,
+      "u_relative_l2": 0.005375168384928441,
+      "v_relative_l2": 0.06680004062511856,
+      "v_rmse": 0.0008870686390663665,
+      "pressure_relative_l2": 0.008971944046184116,
+      "divergence_rms": 5.552468375586266e-17,
+      "momentum_rms": 0.021464389023106503,
+      "outlet_rms": 0.006020095009534054,
+      "flux_max_error": 1.9133923707115308e-05,
+      "wall_max_velocity": 1.6580652104552174e-09,
+      "inlet_max_velocity_error": 4.787518004256697e-08
+    }
+  ],
+  "gates": {
+    "velocity": true,
+    "pressure": true,
+    "momentum": false,
+    "outlet": true,
+    "divergence": true,
+    "flux": true,
+    "hard_boundaries": true
+  },
+  "passed": false,
+  "field_accuracy_passed": true
+}

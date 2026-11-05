@@ -1,0 +1,18 @@
+{
+  "channel_operator/__init__.py": "5cfb4a13a4efafdf4006275f14b963c2b6dcb76395c472b584cc9b1f26191308",
+  "channel_operator/data.py": "25ccb17fcb8373ac126e9ab67324ef547a853931edb4bcd23706c45cde87ad02",
+  "channel_operator/evaluate.py": "ddbc800a1db0eeb507c7e21ea5969940fc8b3684dee0a6da9d6465957c1b8bb6",
+  "channel_operator/model.py": "58ebca8cd20ed0eac10254054c40d2cab467ed3f35eeee51c407534cfb628967",
+  "channel_operator/predict.py": "449adf45e6f1958362f736d524cb81b29c0a5ce515485d20f148bbda8e494857",
+  "channel_operator/profiles.py": "32f4f99beff1dbe498a76734e05972f823ad12072962275b791b3b0fbefcfefd",
+  "channel_operator/reference.py": "a7a2a9893ffe74820cf1e74bc792c83bbb7296165b36d356b92f9a67ff8b248f",
+  "channel_operator/train.py": "e3841b0bd974ffa784e755e8c9a8ebc0ce9f240e6a325922020e300f113eb85d",
+  "channel_operator/v2_data.py": "844f1a61293b31781cef055bc10a2aae0e900a1a95e34fc167941dd101bc95d6",
+  "channel_operator/v2_jax.py": "e6e7df3c5ed3850460e2274d65a2f6df1b26bbde3851c6a781e7488642cc8f52",
+  "channel_operator/v2_model.py": "c1b4296fab57d0581261368ec196eed2ab4c4d676fc0879ec793ae323fee5996",
+  "channel_operator/v2_profiles.py": "ea52bc26de7c3c396c9988a36a7952f4eba7a390e59726c315b18f6078c391a5",
+  "channel_operator/v2_train.py": "a927b226bc92dbeabe217602506d0965973cb1bd9d53c0a3af2976248e6e2a38",
+  "run_v2_jax.py": "614893ff1ddd0c445da8d4d9749bd25fba0c91c03237fcf05306e1a8b9442a41",
+  "tests/test_v2_jax_parity.py": "a38556e4027284357316534bf09f1f38e44a0dbe0632daf8456e4e668f2cb195",
+  "tests/test_v2_physics.py": "6c87789a7f1f2fc700662fc44ec256e10326fa0c114c4f797e22293566efb125"
+}

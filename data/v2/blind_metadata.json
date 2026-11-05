@@ -1,0 +1,79 @@
+{
+  "seed": 7115903,
+  "cases": [
+    {
+      "iterations": 22,
+      "increment": 8.11818976151562e-08,
+      "nonlinear_residual": 4.7435543755374134e-09,
+      "nx": 96,
+      "ny": 36,
+      "mesh_velocity_relative_l2": 1.5052397178494806e-05,
+      "mesh_pressure_relative_l2": 0.00014986780363941191
+    },
+    {
+      "iterations": 17,
+      "increment": 6.146023396704815e-08,
+      "nonlinear_residual": 8.511552652620158e-09,
+      "nx": 96,
+      "ny": 36,
+      "mesh_velocity_relative_l2": 4.571291774955527e-05,
+      "mesh_pressure_relative_l2": 0.00042672156755238353
+    },
+    {
+      "iterations": 14,
+      "increment": 6.285825090146805e-08,
+      "nonlinear_residual": 2.261949198628225e-08,
+      "nx": 96,
+      "ny": 36,
+      "mesh_velocity_relative_l2": 0.00026578190193358824,
+      "mesh_pressure_relative_l2": 0.0009733829660698736
+    },
+    {
+      "iterations": 18,
+      "increment": 4.4456126130771774e-08,
+      "nonlinear_residual": 5.579144543759028e-09,
+      "nx": 96,
+      "ny": 36,
+      "mesh_velocity_relative_l2": 0.0002962812487403853,
+      "mesh_pressure_relative_l2": 0.006357628395302573
+    },
+    {
+      "iterations": 12,
+      "increment": 9.101588381374143e-08,
+      "nonlinear_residual": 2.5913288839568017e-08,
+      "nx": 96,
+      "ny": 36,
+      "mesh_velocity_relative_l2": 0.00011722683950365544,
+      "mesh_pressure_relative_l2": 0.0003959771872920723
+    },
+    {
+      "iterations": 21,
+      "increment": 9.220698767039213e-08,
+      "nonlinear_residual": 6.582773570291283e-09,
+      "nx": 96,
+      "ny": 36,
+      "mesh_velocity_relative_l2": 9.102915658881399e-05,
+      "mesh_pressure_relative_l2": 0.0005604971978449622
+    },
+    {
+      "iterations": 17,
+      "increment": 7.304376384507302e-08,
+      "nonlinear_residual": 8.744510511309542e-09,
+      "nx": 96,
+      "ny": 36,
+      "mesh_velocity_relative_l2": 0.00010288079179577042,
+      "mesh_pressure_relative_l2": 0.00038805155856323444
+    },
+    {
+      "iterations": 20,
+      "increment": 5.6411259141271736e-08,
+      "nonlinear_residual": 2.436021375319228e-09,
+      "nx": 96,
+      "ny": 36,
+      "mesh_velocity_relative_l2": 0.00010084513348784582,
+      "mesh_pressure_relative_l2": 0.0002876059129734588
+    }
+  ],
+  "role": "final blind evaluation after checkpoint selection",
+  "uploaded_to_training_notebooks": false
+}

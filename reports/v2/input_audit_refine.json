@@ -1,0 +1,40 @@
+{
+  "first_step": 50000,
+  "last_step": 70000,
+  "fresh_physics_inlets_replayed": 160000,
+  "training_profiles_checked": 288,
+  "monitor_profile_collisions": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "blind_profile_collisions": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "all_heldout_profiles_unseen_by_optimizer": true,
+  "response_fields_loaded": false,
+  "adaptive_physics": true,
+  "rng_replay_matches_saved_checkpoint": true,
+  "training_file_sha256": "bd032780ae94734833659f5c02a51f89ed1dd21c74d4186beb4a03c9982ea694",
+  "blind_file_sha256": "e357410a93df785278fafc15b313ca4f4243de1e7cfb66d715773450542f768f"
+}

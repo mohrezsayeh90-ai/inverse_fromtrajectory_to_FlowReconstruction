@@ -10,11 +10,17 @@ from .v2_model import load,physics,outlet
 from .v2_profiles import inlet_values
 
 
-def evaluate(checkpoint,data_path,output,role):
+def evaluate(checkpoint,data_path,output,role,training_data=None):
     output=Path(output);output.mkdir(parents=True,exist_ok=True);torch.set_num_threads(4)
     model,state=load(checkpoint);model.double()
     t=lambda x:torch.tensor(x,dtype=torch.float64)
     with np.load(data_path) as d:data={k:d[k].copy() for k in d.files}
+    profile_disjoint=None
+    if training_data:
+        with np.load(training_data) as d:train_profiles=d['profiles'].astype(np.float32)
+        held=data['profiles'].astype(np.float32)
+        profile_disjoint=not np.any(np.all(train_profiles[:,None,:]==held[None,:,:],axis=-1))
+        if not profile_disjoint:raise ValueError('Held-out profile overlaps supervised training inputs')
     prediction=[];records=[];rng=np.random.default_rng(730531)
     for i in range(len(data['profiles'])):
         p,r=t(data['profiles'][i:i+1]),t(data['reynolds'][i:i+1])
@@ -45,7 +51,7 @@ def evaluate(checkpoint,data_path,output,role):
     gates={'velocity':maximum('velocity_relative_l2')<.05,'pressure':maximum('pressure_relative_l2')<.1,
         'momentum':maximum('momentum_rms')<.05,'outlet':maximum('outlet_rms')<.1,'divergence':maximum('divergence_rms')<1e-4,
         'flux':maximum('flux_max_error')<.02,'hard_boundaries':max(maximum('wall_max_velocity'),maximum('inlet_max_velocity_error'))<1e-5}
-    report={'step':state['step'],'role':role,'data_was_used_by_optimizer':False,'dtype':'float64 inference/diagnostics from trained float32 weights',
+    report={'step':state['step'],'role':role,'profile_disjoint_from_supervised_training':profile_disjoint,'dtype':'float64 inference/diagnostics from trained float32 weights',
             'config':state['config'],'cases':records,'gates':gates,'passed':all(gates.values()),
             'field_accuracy_passed':gates['velocity'] and gates['pressure']}
     (output/'metrics.json').write_text(json.dumps(report,indent=2))

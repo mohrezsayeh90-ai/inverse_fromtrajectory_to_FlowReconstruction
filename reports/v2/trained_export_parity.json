@@ -1,0 +1,5 @@
+{
+  "trained_checkpoint_jax_vs_export_torch_max_absolute_difference": 5.364418029785156e-07,
+  "tested_points": 128,
+  "model_unchanged": true
+}

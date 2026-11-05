@@ -4,6 +4,11 @@ __pycache__/
 artifacts/
 *.pt
 !models/channel_operator_candidate.pt
+!models/v2/stream_operator.pt
 *.npz
+!models/v2/jax_checkpoint.npz
+!data/v2/train.npz
+!data/v2/monitor.npz
+!data/v2/blind.npz
 .venv/
 kaggle-run/

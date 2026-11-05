@@ -1,0 +1,32 @@
+{
+  "final_model": {
+    "ref": "mohrezsayeh/channel-stream-jax-refine-v2",
+    "status": "COMPLETE",
+    "failureMessage": null
+  },
+  "corrected_main": {
+    "ref": "mohrezsayeh/channel-stream-jax-doe-v2",
+    "status": "COMPLETE",
+    "failureMessage": null
+  },
+  "pressure_control": {
+    "ref": "mohrezsayeh/channel-stream-jax-convective-v2",
+    "status": "COMPLETE",
+    "failureMessage": null
+  },
+  "compiled_control": {
+    "ref": "mohrezsayeh/channel-stream-jax-v2",
+    "status": "COMPLETE",
+    "failureMessage": null
+  },
+  "slow_control_version1": {
+    "ref": "mohrezsayeh/channel-stream-deeponet-v2/1",
+    "status": "COMPLETE",
+    "failureMessage": null
+  },
+  "training_reference": {
+    "ref": "mohrezsayeh/channel-v2-doe-reference",
+    "status": "COMPLETE",
+    "failureMessage": null
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "selected_checkpoint": "/workspace/operator-v2-refined-result/artifacts/v2_model.pt",
+  "sha256": "7db6b073a829529b7404fdf7ac9c7209c728af32f0e4d88be54e12a16bae282a",
+  "step": 70000,
+  "selection_used": "16 monitored validation cases only",
+  "final_blind_predictions_inspected": false,
+  "selection_reason": "Field error targets satisfied; smaller monitored momentum residual than the 50k checkpoint. Strict momentum target still not passed."
+}

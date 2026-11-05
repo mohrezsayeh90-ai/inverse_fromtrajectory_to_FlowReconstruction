@@ -1,0 +1,23 @@
+{
+  "network_correction_not_zeroed": true,
+  "cases": [
+    {
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.0003185629341841809,
+      "v_absolute_rmse": 6.832961302092131e-05,
+      "pressure_relative_l2": 0.001688655907921421
+    },
+    {
+      "reynolds": 55.0,
+      "velocity_relative_l2": 0.000553919294448619,
+      "v_absolute_rmse": 8.926032999464208e-05,
+      "pressure_relative_l2": 0.004068544156574785
+    },
+    {
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.000491816557793462,
+      "v_absolute_rmse": 0.00011571198410727682,
+      "pressure_relative_l2": 0.004017210324943173
+    }
+  ]
+}

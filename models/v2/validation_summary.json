@@ -1,0 +1,11 @@
+{
+  "step": 70000,
+  "field_accuracy_passed": true,
+  "all_gates_passed": false,
+  "monitor_cases": 16,
+  "blind_cases": 8,
+  "failed_gates": [
+    "momentum"
+  ],
+  "scope": "four cosine inlet modes, positive no-slip inlets, L1<=0.8, Re=[10,100], channel 5x1"
+}

@@ -1,0 +1,33 @@
+{
+  "data": {
+    "weighted_loss": 0.07667151093482971,
+    "parameter_gradient_l2": 3.2793474197387695
+  },
+  "mass": {
+    "weighted_loss": 0.0016813707770779729,
+    "parameter_gradient_l2": 0.07007244229316711
+  },
+  "momentum": {
+    "weighted_loss": 0.013499907217919827,
+    "parameter_gradient_l2": 0.20171846449375153
+  },
+  "outlet": {
+    "weighted_loss": 0.00013960187789052725,
+    "parameter_gradient_l2": 0.049869880080223083
+  },
+  "scaled_per_component_data_mse": {
+    "u": 3.839907731162384e-05,
+    "v": 3.046862957489793e-06,
+    "p": 1.6057692846516147e-05
+  },
+  "coverage": {
+    "train_cases": 192,
+    "max_abs_mode": [
+      0.2822541811718707,
+      0.406782040094139,
+      0.34535922391544427,
+      0.4160497295739602
+    ],
+    "strong_low_Re_cases": 8
+  }
+}
