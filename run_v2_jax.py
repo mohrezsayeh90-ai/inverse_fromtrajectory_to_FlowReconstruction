@@ -16,6 +16,11 @@ def train(args):
     if args.require_gpu and not any(d.platform=='gpu' for d in devices):raise RuntimeError('GPU required')
     with np.load(Path(args.data)/'train.npz') as d:train={k:d[k].astype(np.float32) for k in d.files}
     with np.load(Path(args.data)/'monitor.npz') as d:monitor={k:d[k].astype(np.float32) for k in d.files}
+    if args.relative_data:
+        rms=np.sqrt(np.mean(train['fields']**2,axis=1))
+        train['data_scale']=1/np.maximum(rms,np.array([.25,.01,.05],dtype=np.float32))
+    else:
+        train['data_scale']=np.column_stack([np.ones(len(train['profiles'])),np.full(len(train['profiles']),10.),train['reynolds']/60]).astype(np.float32)
     if np.min(np.abs(train['coefficients'][:,None]-monitor['coefficients'][None]).max(-1))<1e-8:raise ValueError('Monitor leakage')
     config=dict(width=args.width,latent=args.latent,depth=args.depth)
     if args.pressure_mode!='viscous':config['pressure_mode']=args.pressure_mode
@@ -23,6 +28,7 @@ def train(args):
     rng=np.random.default_rng(5197);weight=1.;first=0
     if args.resume:
         with np.load(args.resume,allow_pickle=False) as s:
+            if json.loads(str(s['config_json']))!=config:raise ValueError('Resume model configuration mismatch')
             params={k:jnp.asarray(s['param::'+k]) for k in params};m={k:jnp.asarray(s['m::'+k]) for k in params};v={k:jnp.asarray(s['v::'+k]) for k in params}
             first=int(s['step']);weight=float(s['data_weight']);rng.bit_generator.state=json.loads(str(s['rng_json']))
     fns=make_functions(args.latent,args.depth,args.pressure_mode)
@@ -56,20 +62,43 @@ def train(args):
         for prefix,tree in [('param',params),('m',m),('v',v)]:
             arrays.update({prefix+'::'+k:np.asarray(value) for k,value in tree.items()})
         arrays.update(step=np.array(step),data_weight=np.array(weight),rng_json=np.array(json.dumps(rng.bit_generator.state)),config_json=np.array(json.dumps(config)))
-        np.savez_compressed(output/'jax_checkpoint.npz',**arrays)
+        np.savez_compressed(output/'jax_checkpoint.tmp.npz',**arrays)
+        (output/'jax_checkpoint.tmp.npz').replace(output/'jax_checkpoint.npz')
         (output/'latest_validation.json').write_text(json.dumps(record,indent=2))
-    gradient_balance={};last=None
+    gradient_balance={};last=None;condition_probability=np.full(len(train['profiles']),1/len(train['profiles']))
+    probe_rng=np.random.default_rng(441193)
+    condition_probe=probe_rng.uniform(size=(len(train['profiles']),256,2)).astype(np.float32)
+    condition_probe[...,0]=5*condition_probe[...,0]**2
     for step in range(first+1,args.steps+1):
+        if args.adaptive_physics and (step==first+1 or step%500==0):
+            scores=[]
+            for left in range(0,len(train['profiles']),16):
+                right=min(left+16,len(train['profiles']))
+                rr=np.asarray(fns['physics'](params,train['profiles'][left:right],train['reynolds'][left:right],condition_probe[left:right]))
+                scores.extend(np.sqrt(np.mean(np.sum(rr[...,:2]**2,-1),-1)+1e-12))
+            scores=np.array(scores,dtype=np.float64)
+            condition_probability=.3/len(scores)+.7*scores/scores.sum()
         ci=rng.integers(len(train['profiles']),size=args.batch);pi=rng.integers(len(train['xy']),size=192)
         fresh,re,_=sample(rng,args.batch//2)
         n=args.batch-args.batch//2
-        pp=np.concatenate([train['profiles'][ci[:n]],fresh]).astype(np.float32)
-        rr=np.concatenate([train['reynolds'][ci[:n]],re]).astype(np.float32)
-        xy=rng.uniform(size=(args.batch,args.points,2)).astype(np.float32);choose=rng.uniform(size=xy.shape[:-1])<.5
+        physics_ci=rng.choice(len(train['profiles']),size=n,p=condition_probability) if args.adaptive_physics else ci[:n]
+        pp=np.concatenate([train['profiles'][physics_ci],fresh]).astype(np.float32)
+        rr=np.concatenate([train['reynolds'][physics_ci],re]).astype(np.float32)
+        count=256 if args.adaptive_physics else args.points
+        xy=rng.uniform(size=(args.batch,count,2)).astype(np.float32);choose=rng.uniform(size=xy.shape[:-1])<.5
         xy[...,0]=5*np.where(choose,xy[...,0]**2,xy[...,0])
+        if args.adaptive_physics:
+            candidate_residual=np.asarray(fns['physics'](params,pp,rr,xy))
+            risk=np.sqrt(np.sum(candidate_residual[...,:2]**2,-1)+1e-12)
+            probabilities=.5/count+.5*risk/risk.sum(-1,keepdims=True)
+            probabilities=probabilities.astype(np.float64);probabilities/=probabilities.sum(-1,keepdims=True)
+            select=np.stack([rng.choice(count,size=args.points,p=prob) for prob in probabilities])
+            xy=xy[np.arange(args.batch)[:,None],select]
         batch={'profiles':pp,'reynolds':rr,'xy':xy,'out_y':rng.uniform(size=(args.batch,32)).astype(np.float32),
             'data_profiles':train['profiles'][ci],'data_reynolds':train['reynolds'][ci],
-            'data_xy':np.broadcast_to(train['xy'][pi],(args.batch,len(pi),2)).copy(),'target':train['fields'][ci[:,None],pi[None,:]]}
+            'data_xy':np.broadcast_to(train['xy'][pi],(args.batch,len(pi),2)).copy(),'target':train['fields'][ci[:,None],pi[None,:]],'data_scale':train['data_scale'][ci]}
+        if args.restart_lr is not None:
+            batch['learning_rate']=np.array(max(1e-5,args.restart_lr*.9**((step-first)/1000)),dtype=np.float32)
         if step==first+1 or step%250==0:
             gp,gd=fns['balance'](params,batch);gp,gd=float(gp),float(gd)
             weight=.8*weight+.2*np.clip(gp/(gd+1e-12),1e-3,10)
@@ -80,7 +109,7 @@ def train(args):
             if not np.isfinite(value):raise RuntimeError('Nonfinite loss')
             record={'step':step,'seconds':time.time()-start,'loss':value,'momentum_mse':float(aux[0]),'outlet_mse':float(aux[1]),
                 'data_mse':float(aux[2]),'divergence_rms':float(aux[3]),'data_weight':float(weight),'gradient_norm_before_clip':float(gn),
-                'gradient_balance':gradient_balance,'validation':validation()}
+                'gradient_balance':gradient_balance,'adaptive_physics':args.adaptive_physics,'validation':validation()}
             stop=False
             if step%1000==0 or step==args.steps:
                 phy=physical_validation();record['validation_physics']=phy
@@ -97,8 +126,9 @@ def train(args):
     model=StreamDeepONet(**config);state=model.state_dict()
     state.update({k:torch.from_numpy(np.array(value)) for k,value in params.items()})
     model.load_state_dict(state)
-    torch.save({'state_dict':model.state_dict(),'config':config,'step':step,'model_type':'stream_deeponet_v2_jax','data_weight':float(weight)},output/'v2_model.pt')
-    summary={'backend':'jax','jax_version':jax.__version__,'devices':[str(x) for x in devices],'steps':step,'planned_steps':args.steps,'seconds':time.time()-start,'config':config,'final':last}
+    mode='relative_rms' if args.relative_data else 'scaled_mse'
+    torch.save({'state_dict':model.state_dict(),'config':config,'step':step,'model_type':'stream_deeponet_v2_jax','data_weight':float(weight),'training_cases':len(train['profiles']),'data_loss_mode':mode},output/'v2_model.pt')
+    summary={'backend':'jax','jax_version':jax.__version__,'devices':[str(x) for x in devices],'steps':step,'planned_steps':args.steps,'seconds':time.time()-start,'config':config,'training_cases':len(train['profiles']),'data_loss_mode':mode,'adaptive_physics':args.adaptive_physics,'restart_lr':args.restart_lr,'final':last}
     (output/'v2_training_summary.json').write_text(json.dumps(summary,indent=2))
 
 
@@ -109,6 +139,8 @@ if __name__=='__main__':
     p.add_argument('--width',type=int,default=64);p.add_argument('--latent',type=int,default=32);p.add_argument('--depth',type=int,default=3)
     p.add_argument('--require-gpu',action='store_true');p.add_argument('--resume')
     p.add_argument('--pressure-mode',choices=['viscous','convective'],default='viscous')
+    p.add_argument('--relative-data',action='store_true')
+    p.add_argument('--adaptive-physics',action='store_true');p.add_argument('--restart-lr',type=float)
     args=p.parse_args()
     if args.batch<2 or min(args.steps,args.log_every,args.points)<1:p.error('Invalid counts')
     train(args)

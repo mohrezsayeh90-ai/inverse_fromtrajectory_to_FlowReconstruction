@@ -80,7 +80,10 @@ def make_functions(latent=32,depth=3,pressure_mode='viscous'):
         momentum=jnp.mean(jnp.sum(residual[...,:2]**2,-1))
         boundary=jnp.mean(jnp.sum(outlet_map(params,ctx,batch['out_y'])**2,-1))
         pred=fields(params,batch['data_profiles'],batch['data_reynolds'],batch['data_xy'])
-        scale=jnp.stack([jnp.ones_like(batch['data_reynolds']),jnp.full_like(batch['data_reynolds'],10.),batch['data_reynolds']/60],-1)[:,None,:]
+        if 'data_scale' in batch:
+            scale=batch['data_scale'][:,None,:]
+        else:
+            scale=jnp.stack([jnp.ones_like(batch['data_reynolds']),jnp.full_like(batch['data_reynolds'],10.),batch['data_reynolds']/60],-1)[:,None,:]
         data=jnp.mean(((pred-batch['target'])*scale)**2)
         return momentum,boundary,data,jnp.sqrt(jnp.mean(residual[...,2]**2))
     def loss(params,batch,weight):
@@ -93,7 +96,7 @@ def make_functions(latent=32,depth=3,pressure_mode='viscous'):
         grad=jax.tree_util.tree_map(lambda g:g*factor,grad)
         m=jax.tree_util.tree_map(lambda old,g:.9*old+.1*g,m,grad)
         v=jax.tree_util.tree_map(lambda old,g:.999*old+.001*g*g,v,grad)
-        lr=jnp.maximum(1e-5,1e-3*.9**(count/1000))
+        lr=batch.get('learning_rate',jnp.maximum(1e-5,1e-3*.9**(count/1000)))
         params=jax.tree_util.tree_map(lambda w,a,b:w-lr*(a/(1-.9**count))/(jnp.sqrt(b/(1-.999**count))+1e-8),params,m,v)
         return params,m,v,value,aux,gn
     def balance(params,batch):
