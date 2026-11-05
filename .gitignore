@@ -10,6 +10,8 @@ artifacts/
 !data/v2/train.npz
 !data/v2/monitor.npz
 !data/v2/blind.npz
+!data/broad_inlets/train.npz
+!data/broad_inlets/heldout.npz
 !reports/v2/comparisons/all_fields.npz
 !reports/v2/nine_oscillations/comparison_fields.npz
 !reports/v2/nine_oscillations/reference_*.npz
