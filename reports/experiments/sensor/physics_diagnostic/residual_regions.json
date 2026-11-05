@@ -1,0 +1,373 @@
+{
+  "checkpoint_sha256": "2351b8b07a74ea690262f8fec375c2c1d79c5d5fa71ae795dde24f47e187c2d2",
+  "runtime_signature": "daac185b26ba7837f8568a683412dbaf42b8456010c24ea89e1db8fdc81f7ea5",
+  "step": 5000,
+  "role": "repeated_validation_diagnostic_no_parameter_updates",
+  "sampling": "96 cubically graded x midpoints by 128 uniform y midpoints; sampling RMS, not area integral",
+  "cases": [
+    {
+      "name": "asymmetric",
+      "reynolds": 100.0,
+      "regions": [
+        {
+          "x_from": 0.0,
+          "x_to": 0.02,
+          "points": 1920,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 0.2825218202973952,
+            "momentum_p99": 0.46184702127407856,
+            "momentum_max": 0.46399239262295566,
+            "divergence_rms": 2.373251663826803e-17
+          },
+          "trained_candidate": {
+            "momentum_rms": 1.184080070439933,
+            "momentum_p99": 3.539693133475308,
+            "momentum_max": 3.7790235030115014,
+            "divergence_rms": 2.8529390928418045e-17
+          }
+        },
+        {
+          "x_from": 0.02,
+          "x_to": 0.1,
+          "points": 1408,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 0.21393407406252776,
+            "momentum_p99": 0.3914356786342291,
+            "momentum_max": 0.4039129944693675,
+            "divergence_rms": 2.5786597328254542e-17
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.6080156732212557,
+            "momentum_p99": 1.6322730531172227,
+            "momentum_max": 1.9084102062895973,
+            "divergence_rms": 4.992812120999361e-17
+          }
+        },
+        {
+          "x_from": 0.1,
+          "x_to": 0.5,
+          "points": 2432,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 0.1175129306713525,
+            "momentum_p99": 0.22259387542903486,
+            "momentum_max": 0.24035436044209096,
+            "divergence_rms": 5.413116402120882e-17
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.25175135670693627,
+            "momentum_p99": 0.5862407814163088,
+            "momentum_max": 0.9444843711073838,
+            "divergence_rms": 6.891724951647613e-17
+          }
+        },
+        {
+          "x_from": 0.5,
+          "x_to": 1.0,
+          "points": 1408,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 0.09088015991135798,
+            "momentum_p99": 0.12221564359204976,
+            "momentum_max": 0.12305067539737499,
+            "divergence_rms": 5.763846650116768e-17
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.09020640763476176,
+            "momentum_p99": 0.16646032786186105,
+            "momentum_max": 0.19263601841356168,
+            "divergence_rms": 6.816143749270789e-17
+          }
+        },
+        {
+          "x_from": 1.0,
+          "x_to": 5.0,
+          "points": 5120,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 0.04325362897972602,
+            "momentum_p99": 0.09262510512069728,
+            "momentum_max": 0.10048007467529688,
+            "divergence_rms": 3.342496636759904e-17
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.06866099930755147,
+            "momentum_p99": 0.1307404802636399,
+            "momentum_max": 0.16390913310891145,
+            "divergence_rms": 4.180472754821405e-17
+          }
+        }
+      ]
+    },
+    {
+      "name": "beta",
+      "reynolds": 30.0,
+      "regions": [
+        {
+          "x_from": 0.0,
+          "x_to": 0.02,
+          "points": 1920,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 1.6798048586816292,
+            "momentum_p99": 2.6147529163598624,
+            "momentum_max": 2.6303065070809994,
+            "divergence_rms": 2.249148773143929e-16
+          },
+          "trained_candidate": {
+            "momentum_rms": 3.5370758340515622,
+            "momentum_p99": 11.221187373740468,
+            "momentum_max": 11.73046908657142,
+            "divergence_rms": 2.266984535739758e-16
+          }
+        },
+        {
+          "x_from": 0.02,
+          "x_to": 0.1,
+          "points": 1408,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 1.5628118909917321,
+            "momentum_p99": 2.194441525676892,
+            "momentum_max": 2.251137790125915,
+            "divergence_rms": 2.326804139648162e-16
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.9260603697867125,
+            "momentum_p99": 1.5101193728024453,
+            "momentum_max": 1.654441324501856,
+            "divergence_rms": 2.6962103610905224e-16
+          }
+        },
+        {
+          "x_from": 0.1,
+          "x_to": 0.5,
+          "points": 2432,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 1.386289378174886,
+            "momentum_p99": 2.1725072170929267,
+            "momentum_max": 2.189117565882434,
+            "divergence_rms": 2.796042930997551e-16
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.7970688050892437,
+            "momentum_p99": 1.4603593800310817,
+            "momentum_max": 1.6060912012776,
+            "divergence_rms": 3.396824202872322e-16
+          }
+        },
+        {
+          "x_from": 0.5,
+          "x_to": 1.0,
+          "points": 1408,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 0.41794773621288267,
+            "momentum_p99": 0.8343164140436476,
+            "momentum_max": 0.8576542830507962,
+            "divergence_rms": 1.1725323071270407e-16
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.2862564183521592,
+            "momentum_p99": 0.6411287285375862,
+            "momentum_max": 0.7790157718807386,
+            "divergence_rms": 1.4545901666264267e-16
+          }
+        },
+        {
+          "x_from": 1.0,
+          "x_to": 5.0,
+          "points": 5120,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 0.047964253735106634,
+            "momentum_p99": 0.16801048054469683,
+            "momentum_max": 0.19779876132636326,
+            "divergence_rms": 1.6586015852563252e-17
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.09371856506538977,
+            "momentum_p99": 0.2409015078449832,
+            "momentum_max": 0.309142811112552,
+            "divergence_rms": 2.195807748656104e-17
+          }
+        }
+      ]
+    },
+    {
+      "name": "flat",
+      "reynolds": 70.0,
+      "regions": [
+        {
+          "x_from": 0.0,
+          "x_to": 0.02,
+          "points": 1920,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 3.0660653026930333,
+            "momentum_p99": 12.412364255341236,
+            "momentum_max": 12.416936474059417,
+            "divergence_rms": 1.3774723249445976e-16
+          },
+          "trained_candidate": {
+            "momentum_rms": 2.631639859557529,
+            "momentum_p99": 8.3853598191542,
+            "momentum_max": 9.666948273582829,
+            "divergence_rms": 1.4070019965079424e-16
+          }
+        },
+        {
+          "x_from": 0.02,
+          "x_to": 0.1,
+          "points": 1408,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 2.6685690635621113,
+            "momentum_p99": 11.82280991186953,
+            "momentum_max": 12.340463171029876,
+            "divergence_rms": 2.307365702890635e-16
+          },
+          "trained_candidate": {
+            "momentum_rms": 2.4888938964053056,
+            "momentum_p99": 10.667948100627907,
+            "momentum_max": 11.36213875548695,
+            "divergence_rms": 2.698943831619679e-16
+          }
+        },
+        {
+          "x_from": 0.1,
+          "x_to": 0.5,
+          "points": 2432,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 1.7825826573060795,
+            "momentum_p99": 8.625026168954783,
+            "momentum_max": 11.092980067424966,
+            "divergence_rms": 2.688819466479803e-16
+          },
+          "trained_candidate": {
+            "momentum_rms": 1.8115092463137368,
+            "momentum_p99": 8.730895771159023,
+            "momentum_max": 11.142923753264744,
+            "divergence_rms": 3.3512434062810335e-16
+          }
+        },
+        {
+          "x_from": 0.5,
+          "x_to": 1.0,
+          "points": 1408,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 0.6202603481026441,
+            "momentum_p99": 2.8665169523467613,
+            "momentum_max": 4.161216369348859,
+            "divergence_rms": 1.0284386417405128e-16
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.649062971274038,
+            "momentum_p99": 2.85846314195726,
+            "momentum_max": 4.165603159132468,
+            "divergence_rms": 1.2825166488081878e-16
+          }
+        },
+        {
+          "x_from": 1.0,
+          "x_to": 5.0,
+          "points": 5120,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 0.08864722296003101,
+            "momentum_p99": 0.41669827229060985,
+            "momentum_max": 1.2705555538736397,
+            "divergence_rms": 1.4030672912224544e-17
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.1243973290857037,
+            "momentum_p99": 0.44390760389647765,
+            "momentum_max": 1.261134635441113,
+            "divergence_rms": 1.8144711245439823e-17
+          }
+        }
+      ]
+    },
+    {
+      "name": "nine",
+      "reynolds": 55.0,
+      "regions": [
+        {
+          "x_from": 0.0,
+          "x_to": 0.02,
+          "points": 1920,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 9.86181983068407,
+            "momentum_p99": 25.18770088929364,
+            "momentum_max": 27.41951099018354,
+            "divergence_rms": 3.2006078244940926e-15
+          },
+          "trained_candidate": {
+            "momentum_rms": 19.49786214420295,
+            "momentum_p99": 59.33057588867447,
+            "momentum_max": 72.51111244606417,
+            "divergence_rms": 3.412317554407437e-15
+          }
+        },
+        {
+          "x_from": 0.02,
+          "x_to": 0.1,
+          "points": 1408,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 4.186501238725923,
+            "momentum_p99": 13.991683974142878,
+            "momentum_max": 16.637937831608255,
+            "divergence_rms": 2.3530460678874015e-15
+          },
+          "trained_candidate": {
+            "momentum_rms": 3.796378387920757,
+            "momentum_p99": 11.578627968651315,
+            "momentum_max": 14.994167587319895,
+            "divergence_rms": 2.9349081100395753e-15
+          }
+        },
+        {
+          "x_from": 0.1,
+          "x_to": 0.5,
+          "points": 2432,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 0.14405819325717806,
+            "momentum_p99": 0.6165982157521179,
+            "momentum_max": 0.9689771097350282,
+            "divergence_rms": 1.1874548561550483e-16
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.7383562592917482,
+            "momentum_p99": 1.9554820321837394,
+            "momentum_max": 2.4326789366403667,
+            "divergence_rms": 1.6305007047368067e-16
+          }
+        },
+        {
+          "x_from": 0.5,
+          "x_to": 1.0,
+          "points": 1408,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 4.503088708423583e-08,
+            "momentum_p99": 2.0810127263505895e-07,
+            "momentum_max": 2.587716227595826e-07,
+            "divergence_rms": 3.193739075912479e-23
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.397388965972784,
+            "momentum_p99": 1.0247056216552377,
+            "momentum_max": 1.2218783861205544,
+            "divergence_rms": 8.074254226592702e-18
+          }
+        },
+        {
+          "x_from": 1.0,
+          "x_to": 5.0,
+          "points": 5120,
+          "analytic_lift_without_neural_correction": {
+            "momentum_rms": 7.258782542775552e-16,
+            "momentum_p99": 4.260245174244229e-15,
+            "momentum_max": 8.211953288244791e-15,
+            "divergence_rms": 5.7701620668609975e-31
+          },
+          "trained_candidate": {
+            "momentum_rms": 0.3544901310685436,
+            "momentum_p99": 0.9814723824588727,
+            "momentum_max": 1.1864491593591011,
+            "divergence_rms": 2.9894134723794853e-18
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,17 @@
 {
-  "phase": "new_operator_GPU_training_running",
+  "phase": "completed_sensor_run_rejected_and_testing_independent_pressure_operator",
   "trained_model_ready": false,
   "archive_source_commit": "eb10c32487c79390597458189385e98d12962038",
   "archive_integrity_verified": true,
   "training_labels": "none",
   "universal_accuracy_claim": false,
-  "structural_tests_passed": 10,
+  "structural_tests_passed": 59,
   "training_labels_used": 0,
-  "kaggle_run": "mohrezsayeh/channel-general-physics-v3",
-  "last_completed_probe_step": 1000
+  "kaggle_run": "mohrezsayeh/channel-general-physics-v3-pressure",
+  "last_completed_probe_step": 1000,
+  "last_completed_training_step": 100000,
+  "last_completed_sensor_step": 5000,
+  "final_heldout_test_evaluated": false,
+  "last_evaluated_candidate": "sensor",
+  "last_evaluated_candidate_accepted": false
 }

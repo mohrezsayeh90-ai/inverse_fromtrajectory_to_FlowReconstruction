@@ -27,7 +27,12 @@ def load(path,optimizer=False):
     with np.load(path,allow_pickle=False) as d:
         metadata=json.loads(str(d['metadata']))
         if metadata['format']!=FORMAT:raise ValueError('Not a full-profile checkpoint; old V2 weights are incompatible')
-        config=Config(**metadata['config']);template=initialize(config)
+        # The initial Gaussian experiment predates the explicit lift field.
+        configuration=dict(metadata['config']);configuration.setdefault('lift','gaussian')
+        configuration.setdefault('encoder_kind','pooled')
+        configuration.setdefault('functional_moments',False)
+        configuration.setdefault('separate_pressure_trunk',False)
+        config=Config(**configuration);template=initialize(config)
         flat,structure=jax.tree_util.tree_flatten(template)
         def tree(prefix):
             values=[jnp.asarray(d[f'{prefix}_{i}']) for i in range(len(flat))]

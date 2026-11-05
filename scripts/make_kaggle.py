@@ -15,13 +15,31 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--output',default='kaggle_run');p.add_argument('--id',default='mohrezsayeh/channel-general-physics-v3-probe')
     p.add_argument('--steps',type=int,default=1000);p.add_argument('--resume-source');p.add_argument('--include-references',action='store_true')
+    p.add_argument('--lift',choices=['gaussian','oseen'],default='oseen')
+    p.add_argument('--physics-normalization',choices=['none','input_curvature','input_curvature_sqrt'],default='input_curvature_sqrt')
+    p.add_argument('--functional-moments',action='store_true')
+    p.add_argument('--encoder-kind',choices=['pooled','sensor'],default='sensor')
+    p.add_argument('--batch',type=int,default=64);p.add_argument('--points',type=int,default=48)
+    p.add_argument('--width',type=int,default=128);p.add_argument('--latent',type=int,default=64)
+    p.add_argument('--depth',type=int,default=4)
+    p.add_argument('--separate-pressure-trunk',action='store_true')
+    p.add_argument('--devices',type=int,default=1)
+    p.add_argument('--final-evaluation',action='store_true')
+    p.add_argument('--include-heldout',action='store_true')
     a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
-    files=sorted((ROOT/'flow_operator').glob('*.py'))+sorted((ROOT/'tests').glob('*.py'))+[ROOT/'pyproject.toml']
+    if a.final_evaluation and not a.include_references:p.error('final-evaluation requires include-references')
+    if a.functional_moments and a.encoder_kind!='pooled':p.error('functional-moments requires --encoder-kind pooled')
+    files=sorted((ROOT/'flow_operator').glob('*.py'))+sorted((ROOT/'tests').glob('*.py'))+[ROOT/'pyproject.toml',ROOT/'configs/acceptance.json']
+    if a.devices>1:files+=[ROOT/'scripts/verify_parallel.py']
+    if a.final_evaluation:files+=[ROOT/'scripts/finalize_run.py']
     sources={str(path.relative_to(ROOT)):path.read_text() for path in files}
     refs={}
     if a.include_references:
         refs={str(path.relative_to(ROOT)):base64.b64encode(path.read_bytes()).decode() for path in (ROOT/'validation/references').glob('*.npz')}
         if len(refs)<4:raise ValueError('Expected the four independent validation references')
+    if a.include_heldout:
+        if not a.final_evaluation or not a.include_references:p.error('Heldout requires final-evaluation and validation references')
+        refs.update({str(path.relative_to(ROOT)):base64.b64encode(path.read_bytes()).decode() for path in (ROOT/'validation/heldout_references').glob('*.npz')})
     manifest={k:hashlib.sha256(v.encode()).hexdigest() for k,v in sources.items()}
     setup='''import os,sys,json,base64,subprocess
 from pathlib import Path
@@ -39,13 +57,21 @@ assert any(d.platform=='gpu' for d in jax.devices()), 'GPU required'
     setup+='for name,text in reference_files.items():\n    path=Path(name)\n    path.parent.mkdir(parents=True,exist_ok=True)\n    path.write_bytes(base64.b64decode(text))\n'
     setup+='Path("output").mkdir(exist_ok=True)\nPath("output/source_manifest.json").write_text('+repr(json.dumps(manifest,indent=2))+')\n'
     setup+='subprocess.run([sys.executable,"-m","pytest","-q"],check=True)\n'
-    command=['-m','flow_operator.train','--output','output','--steps',str(a.steps),'--batch','8','--points','64',
+    if a.devices>1:setup+='subprocess.run([sys.executable,"-m","scripts.verify_parallel"],check=True)\n'
+    command=['-m','flow_operator.train','--output','output','--steps',str(a.steps),'--batch',str(a.batch),'--points',str(a.points),
              '--pool-count','10000','--log-every','250','--require-gpu']
+    command+=['--width',str(a.width),'--latent',str(a.latent),'--depth',str(a.depth)]
+    command+=['--lift',a.lift,'--physics-normalization',a.physics_normalization]
+    if a.functional_moments:command+=['--functional-moments']
+    command+=['--encoder-kind',a.encoder_kind]
+    if a.separate_pressure_trunk:command+=['--separate-pressure-trunk']
+    command+=['--devices',str(a.devices)]
     if refs:command+=['--reference-monitor','validation/references','--reference-every','1000']
     run='command='+repr(command)+'\n'
     if a.resume_source:
         run+='matches=[p for p in Path("/kaggle/input").rglob("checkpoint.npz") if '+repr(a.resume_source.split('/')[-1])+' in p.parts]\nassert len(matches)==1,matches\ncommand += ["--resume",str(matches[0])]\n'
     run+='subprocess.run([sys.executable,*command],check=True)\n'
+    if a.final_evaluation:run+='subprocess.run([sys.executable,"-m","scripts.finalize_run"],check=True)\n'
     notebook=dict(cells=[dict(cell_type='markdown',metadata={},source=[
         '# Full-profile physics-only channel operator\n',
         'Complete supplied spline in hard inlet boundary; variable-quadrature function encoder.\n',

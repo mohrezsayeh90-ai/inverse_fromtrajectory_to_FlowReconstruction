@@ -1,0 +1,116 @@
+{
+  "gaussian": {
+    "momentum_rms": {
+      "poiseuille": 2.76875418914433e-15,
+      "nine_oscillations": 7.262804344823995,
+      "beta_5_5": 2.164523445739139,
+      "flat": 1.4079011856484562
+    },
+    "reference": {
+      "role": "read_only_validation_not_backpropagated",
+      "cases": [
+        {
+          "name": "asymmetric",
+          "reynolds": 100.0,
+          "velocity_relative_l2": 0.03963509115650638,
+          "u_relative_l2": 0.03895843169008468,
+          "v_relative_l2": 0.3740788708486842,
+          "v_rmse": 0.008199528745154653,
+          "pressure_relative_l2": 0.28215771654479893,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        },
+        {
+          "name": "beta",
+          "reynolds": 30.0,
+          "velocity_relative_l2": 0.1251469386948773,
+          "u_relative_l2": 0.10022623848499496,
+          "v_relative_l2": 1.972687855202275,
+          "v_rmse": 0.08859032691534614,
+          "pressure_relative_l2": 0.45005551757392653,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        },
+        {
+          "name": "flat",
+          "reynolds": 70.0,
+          "velocity_relative_l2": 0.08840606470900124,
+          "u_relative_l2": 0.07279896085672408,
+          "v_relative_l2": 1.967819041620252,
+          "v_rmse": 0.05348391224330713,
+          "pressure_relative_l2": 0.19801831581209367,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        },
+        {
+          "name": "nine",
+          "reynolds": 55.0,
+          "velocity_relative_l2": 0.01504189857276008,
+          "u_relative_l2": 0.01241536579139331,
+          "v_relative_l2": 0.33969173285247023,
+          "v_rmse": 0.009317339409984877,
+          "pressure_relative_l2": 0.12762641285350435,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        }
+      ],
+      "max_velocity_relative_l2": 0.1251469386948773,
+      "max_pressure_relative_l2": 0.45005551757392653
+    },
+    "neural_correction": "identically zero",
+    "training_steps": 0
+  },
+  "oseen": {
+    "momentum_rms": {
+      "poiseuille": 3.14001017927244e-15,
+      "nine_oscillations": 2.393612695394371,
+      "beta_5_5": 0.8692812865038831,
+      "flat": 1.4340367310968622
+    },
+    "reference": {
+      "role": "read_only_validation_not_backpropagated",
+      "cases": [
+        {
+          "name": "asymmetric",
+          "reynolds": 100.0,
+          "velocity_relative_l2": 0.035924362683539414,
+          "u_relative_l2": 0.035475234308444084,
+          "v_relative_l2": 0.2910713941724784,
+          "v_rmse": 0.006380067010988392,
+          "pressure_relative_l2": 0.27794495194169816,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        },
+        {
+          "name": "beta",
+          "reynolds": 30.0,
+          "velocity_relative_l2": 0.028280962290038326,
+          "u_relative_l2": 0.023411581078305464,
+          "v_relative_l2": 0.41773401641446284,
+          "v_rmse": 0.018759781472889536,
+          "pressure_relative_l2": 0.44694047864556413,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        },
+        {
+          "name": "flat",
+          "reynolds": 70.0,
+          "velocity_relative_l2": 0.04510339813723804,
+          "u_relative_l2": 0.04137826518584332,
+          "v_relative_l2": 0.704887462578108,
+          "v_rmse": 0.019158336408257152,
+          "pressure_relative_l2": 0.19574600047749122,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        },
+        {
+          "name": "nine",
+          "reynolds": 55.0,
+          "velocity_relative_l2": 0.008814787316424804,
+          "u_relative_l2": 0.007951911552783065,
+          "v_relative_l2": 0.15225295408461464,
+          "v_rmse": 0.004176117085532074,
+          "pressure_relative_l2": 0.053431356566945525,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        }
+      ],
+      "max_velocity_relative_l2": 0.04510339813723804,
+      "max_pressure_relative_l2": 0.44694047864556413
+    },
+    "neural_correction": "identically zero",
+    "training_steps": 0
+  }
+}

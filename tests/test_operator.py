@@ -10,11 +10,14 @@ from scipy.signal import find_peaks
 from flow_operator.profiles import Inlet,stack
 from flow_operator.model import Config,initialize,make_functions,spline,context,point_fields
 from flow_operator.checkpoint import save,load
+from flow_operator.api import FlowOperator
 
 
-@pytest.fixture(scope='module')
-def setup_model():
-    c=Config(width=12,latent=6,depth=2,encoder_width=12)
+@pytest.fixture(scope='module',params=['gaussian','oseen','oseen_moments','oseen_sensor','oseen_sensor_separate'])
+def setup_model(request):
+    c=Config(width=12,latent=6,depth=2,encoder_width=12,lift='oseen' if request.param.startswith('oseen') else 'gaussian',
+             functional_moments=request.param=='oseen_moments',encoder_kind='sensor' if 'sensor' in request.param else 'pooled',
+             separate_pressure_trunk=request.param.endswith('separate'))
     p=jax.tree_util.tree_map(lambda z:z.astype(jnp.float64),initialize(c))
     return c,p,make_functions(c)
 
@@ -101,3 +104,61 @@ def test_checkpoint_roundtrip_and_resume_state(tmp_path,setup_model):
     for a,b in zip(jax.tree_util.tree_leaves(p),jax.tree_util.tree_leaves(got)):np.testing.assert_array_equal(a,b)
     other=np.random.default_rng();other.bit_generator.state=meta['rng_state']
     np.testing.assert_array_equal(other.uniform(size=10),rng.uniform(size=10))
+
+
+def test_reusable_inference_requires_explicit_provisional_status(tmp_path,setup_model):
+    c,p,f=setup_model;path=tmp_path/'candidate.npz'
+    save(path,p,c,7,np.random.default_rng(3).bit_generator.state)
+    with pytest.raises(ValueError,match='passing benchmark'):FlowOperator(path)
+    op=FlowOperator(path,allow_unvalidated=True,chunk_size=32)
+    y=np.linspace(0,1,257);profile=Inlet.from_samples(y,6*y*(1-y)*(1-.6*np.cos(18*np.pi*y)),33)
+    coords=np.column_stack([np.zeros(33),np.linspace(0,1,33)])
+    first=op.evaluate(profile,55.,coords);second=op.evaluate(profile,55.,coords)
+    np.testing.assert_array_equal(first,second)
+    np.testing.assert_allclose(first[:,0],profile.spline(coords[:,1]),atol=2e-6)
+
+
+def test_legacy_prototype_config_does_not_inherit_new_physics_defaults(tmp_path):
+    config=Config(width=8,latent=4,depth=1,encoder_width=8,lift='gaussian',encoder_kind='pooled')
+    params=initialize(config);path=tmp_path/'legacy_candidate.npz'
+    save(path,params,config,5,np.random.default_rng(1).bit_generator.state)
+    with np.load(path,allow_pickle=False) as d:arrays={k:d[k].copy() for k in d.files}
+    metadata=json.loads(str(arrays['metadata']))
+    for k in ['lift','encoder_kind','functional_moments','sensor_count','separate_pressure_trunk']:metadata['config'].pop(k)
+    arrays['metadata']=np.array(json.dumps(metadata));np.savez_compressed(path,**arrays)
+    loaded,cfg,_,_=load(path)
+    assert cfg.lift=='gaussian' and cfg.encoder_kind=='pooled' and not cfg.functional_moments
+    for a,b in zip(jax.tree_util.tree_leaves(params),jax.tree_util.tree_leaves(loaded)):np.testing.assert_array_equal(a,b)
+
+
+def test_knots_are_not_silently_merged_at_lower_precision():
+    y=np.array([0.,.4,.400000001,1.])
+    inlet=Inlet.from_samples(y,6*y*(1-y),33)
+    with pytest.raises(ValueError,match='collapse'):inlet.arrays(np.float32)
+    assert np.all(np.diff(inlet.arrays(np.float64)['knots'])>0)
+
+
+def test_independent_pressure_operator_has_no_stream_parameter_dependency():
+    cfg=Config(width=8,latent=4,depth=1,separate_pressure_trunk=True)
+    params=jax.tree_util.tree_map(lambda z:z.astype(jnp.float64),initialize(cfg))
+    y=np.linspace(0,1,257);inlet=Inlet.from_samples(y,6*y*(1-y)*(1-.6*np.cos(18*np.pi*y)),33)
+    a={k:jnp.asarray(v) for k,v in inlet.arrays(np.float64).items()}
+    def fields(p):return point_fields(p,context(p,a,55.,cfg),a,55.,jnp.array([.031,.3213]),cfg)
+    grad_pressure=jax.grad(lambda p:fields(p)[2]**2)(params)
+    grad_velocity=jax.grad(lambda p:jnp.sum(fields(p)[:2]**2))(params)
+    norm=lambda d:float(sum(jnp.sum(g*g) for g in jax.tree_util.tree_leaves(d)))
+    assert norm(grad_pressure['branch'])==0 and norm(grad_pressure['trunk'])==0
+    assert norm(grad_velocity['pressure_branch'])==0 and norm(grad_velocity['pressure_trunk'])==0
+    assert norm(grad_pressure['pressure_trunk'])>0 and norm(grad_velocity['trunk'])>0
+
+
+def test_acceptance_requires_matching_implementation_and_weight_hash(tmp_path):
+    import hashlib
+    from flow_operator.provenance import runtime_signature
+    cfg=Config(width=8,latent=4,depth=1);path=tmp_path/'candidate.npz'
+    save(path,initialize(cfg),cfg,1,np.random.default_rng(1).bit_generator.state)
+    report=dict(checkpoint_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),all_gates_passed=True,runtime_signature='another_implementation')
+    path.with_suffix('.validation.json').write_text(json.dumps(report))
+    with pytest.raises(ValueError,match='passing benchmark'):FlowOperator(path)
+    report['runtime_signature']=runtime_signature();path.with_suffix('.validation.json').write_text(json.dumps(report))
+    assert FlowOperator(path).benchmark_accepted

@@ -13,6 +13,7 @@ from .checkpoint import load
 from .model import make_functions
 from .profiles import stack
 from .validation import read_cases,compare
+from .provenance import runtime_signature
 
 
 def main():
@@ -22,6 +23,7 @@ def main():
     p.add_argument('--role',choices=['repeated_validation','final_heldout_test'],default='repeated_validation')
     a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
     checkpoint=Path(a.checkpoint);sha=hashlib.sha256(checkpoint.read_bytes()).hexdigest()
+    signature=runtime_signature()
     params,cfg,metadata,_=load(checkpoint)
     # Diagnostics in double precision from the actual trained float32 parameters.
     jax.config.update('jax_enable_x64',True)
@@ -67,10 +69,11 @@ def main():
         fig.savefig(out/(case['name']+'.png'),dpi=140);plt.close(fig)
     thresholds={k:v for k,v in limits.items() if isinstance(v,(int,float))}
     gates={k:all(r[k]<v for r in field_report['cases']) for k,v in thresholds.items()}
-    report=dict(checkpoint_sha256=sha,step=metadata['step'],role=a.role,cases=field_report['cases'],
+    report=dict(checkpoint_sha256=sha,runtime_signature=signature,step=metadata['step'],role=a.role,cases=field_report['cases'],
         thresholds=thresholds,gates=gates,all_gates_passed=all(gates.values()),
         universal_accuracy_guaranteed=False,training_labels_used=metadata['CFD_response_labels_used'],
         note='Accuracy measured on the listed benchmark only; no pressure alignment or per-input training.')
+    if runtime_signature()!=signature:raise RuntimeError('Model implementation changed during evaluation; acceptance was not saved')
     (out/'metrics.json').write_text(json.dumps(report,indent=2))
     # The predictor accepts only a matching, passing report next to the checkpoint.
     checkpoint.with_suffix('.validation.json').write_text(json.dumps(report,indent=2))

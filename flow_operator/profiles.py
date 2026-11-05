@@ -36,7 +36,7 @@ class Inlet:
             raise ValueError('Use at least 16 encoder quadrature points')
         spline = CubicSpline(y, values)
         mean = float(spline.integrate(0,1))
-        if not mean > 1e-12:
+        if not np.isfinite(mean) or not mean > 1e-12:
             raise ValueError('A positive mean is required by the chosen inlet-flow scaling')
         values = values/mean
         return cls(y.copy(), values, mean, CubicSpline(y,values), encoder_points)
@@ -49,6 +49,8 @@ class Inlet:
         return cls.from_samples(data[:,0],data[:,1],encoder_points)
 
     def arrays(self, dtype=np.float32):
+        if np.any(np.diff(self.y.astype(dtype))<=0):
+            raise ValueError('Input knots collapse at the requested numeric precision; use higher precision or resolve the input grid. No knots were discarded.')
         # Use a local t in [0,1] to avoid large inverse-mesh-power coefficients.
         h = np.diff(self.y)
         coeff = self.spline.c*np.stack([h**3,h**2,h,np.ones_like(h)])

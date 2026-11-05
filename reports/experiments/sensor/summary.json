@@ -1,0 +1,112 @@
+{
+  "step": 5000,
+  "seconds": 447.39025816799995,
+  "devices": [
+    "cuda:0",
+    "cuda:1"
+  ],
+  "config": {
+    "width": 128,
+    "latent": 64,
+    "depth": 4,
+    "encoder_width": 48,
+    "length": 5.0,
+    "seed": 91837,
+    "lift": "oseen",
+    "functional_moments": false,
+    "encoder_kind": "sensor",
+    "sensor_count": 257
+  },
+  "last": {
+    "step": 5000,
+    "seconds": 447.12076830699993,
+    "role": "repeated_physics_validation_no_CFD_labels",
+    "cases": [
+      {
+        "name": "poiseuille",
+        "reynolds": 40.0,
+        "momentum_rms": 0.2549569010734558,
+        "divergence_rms": 2.0201357031623957e-08,
+        "outlet_traction_rms": 0.0003702430403791368
+      },
+      {
+        "name": "nine_oscillations",
+        "reynolds": 55.0,
+        "momentum_rms": 3.3333661556243896,
+        "divergence_rms": 7.569384479211294e-07,
+        "outlet_traction_rms": 0.008471393957734108
+      },
+      {
+        "name": "beta_5_5",
+        "reynolds": 30.0,
+        "momentum_rms": 1.147894263267517,
+        "divergence_rms": 1.2875734967110475e-07,
+        "outlet_traction_rms": 0.007158460095524788
+      },
+      {
+        "name": "flat",
+        "reynolds": 70.0,
+        "momentum_rms": 1.1740643978118896,
+        "divergence_rms": 1.2890160405731876e-07,
+        "outlet_traction_rms": 0.003934412728995085
+      }
+    ],
+    "loss": 2.8196895122528076,
+    "momentum_mse": 2.817882537841797,
+    "outlet_mse": 0.00018068947247229517,
+    "divergence_mse": 1.824259059785005e-13,
+    "gradient_l2": 32.46119689941406,
+    "physics_normalization": "input_curvature_sqrt",
+    "momentum_mse_is_normalized": true,
+    "reference_validation": {
+      "role": "read_only_validation_not_backpropagated",
+      "cases": [
+        {
+          "name": "asymmetric",
+          "reynolds": 100.0,
+          "velocity_relative_l2": 0.04699609019694969,
+          "u_relative_l2": 0.046332728238886955,
+          "v_relative_l2": 0.4040857934646081,
+          "v_rmse": 0.00885725802022623,
+          "pressure_relative_l2": 0.13837609314473434,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        },
+        {
+          "name": "beta",
+          "reynolds": 30.0,
+          "velocity_relative_l2": 0.02517366276829618,
+          "u_relative_l2": 0.020770117053174473,
+          "v_relative_l2": 0.3744979621203594,
+          "v_rmse": 0.016818117882097295,
+          "pressure_relative_l2": 0.25235881093660834,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        },
+        {
+          "name": "flat",
+          "reynolds": 70.0,
+          "velocity_relative_l2": 0.03929167289632713,
+          "u_relative_l2": 0.036249811341075085,
+          "v_relative_l2": 0.5953964105715754,
+          "v_rmse": 0.016182448029759156,
+          "pressure_relative_l2": 0.21302396854241712,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        },
+        {
+          "name": "nine",
+          "reynolds": 55.0,
+          "velocity_relative_l2": 0.02559843441626473,
+          "u_relative_l2": 0.020834525628222727,
+          "v_relative_l2": 0.5948891982284664,
+          "v_rmse": 0.016317101757774167,
+          "pressure_relative_l2": 0.13211973933893773,
+          "role": "repeated_reference_validation_excluded_from_objective"
+        }
+      ],
+      "max_velocity_relative_l2": 0.04699609019694969,
+      "max_pressure_relative_l2": 0.25235881093660834
+    }
+  },
+  "training_mode": "physics_only",
+  "CFD_response_labels_used": 0,
+  "validated_for_deployment": false
+}

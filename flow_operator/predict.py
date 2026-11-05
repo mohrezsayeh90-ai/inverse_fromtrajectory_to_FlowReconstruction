@@ -10,6 +10,7 @@ import numpy as np
 from .profiles import Inlet,stack
 from .checkpoint import load
 from .model import make_functions,context
+from .provenance import runtime_signature
 
 
 def main():
@@ -25,7 +26,8 @@ def main():
     accepted=False
     if report_path.exists():
         validation=json.loads(report_path.read_text())
-        accepted=validation.get('checkpoint_sha256')==sha and validation.get('all_gates_passed') is True
+        accepted=(validation.get('checkpoint_sha256')==sha and validation.get('all_gates_passed') is True
+                  and validation.get('runtime_signature')==runtime_signature())
     if not accepted and not a.allow_unvalidated:
         p.error('No matching accepted validation report. Use --allow-unvalidated only for an explicitly provisional diagnostic.')
     if not accepted:

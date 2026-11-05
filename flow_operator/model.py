@@ -12,12 +12,25 @@ import numpy as np
 
 @dataclass(frozen=True)
 class Config:
-    width: int = 96
-    latent: int = 48
-    depth: int = 3
+    width: int = 128
+    latent: int = 64
+    depth: int = 4
     encoder_width: int = 48
     length: float = 5.
     seed: int = 91837
+    lift: str = 'oseen'
+    functional_moments: bool = False
+    encoder_kind: str = 'sensor'
+    sensor_count: int = 257
+    separate_pressure_trunk: bool = False
+
+    def __post_init__(self):
+        if min(self.width,self.latent,self.depth,self.encoder_width)<1 or self.sensor_count<16:
+            raise ValueError('Network dimensions must be positive and sensor_count >=16')
+        if self.lift not in ['gaussian','oseen'] or self.encoder_kind not in ['pooled','sensor']:
+            raise ValueError('Unknown model configuration')
+        if self.encoder_kind=='sensor' and self.functional_moments:
+            raise ValueError('The direct sensor branch already receives the full sensor vector; disable functional_moments')
 
     def json(self): return asdict(self)
 
@@ -34,9 +47,16 @@ def initialize(config=Config()):
         return dict(u=layer(n,width),v=layer(n,width),
                     gates=[layer(n if i==0 else width,width) for i in range(depth)], out=layer(width,m,1e-3))
     # Pointwise encoder weights do not depend on the number/locations of samples.
-    return dict(encoder=[layer(2+2*len(FREQUENCIES),config.encoder_width),layer(config.encoder_width,config.encoder_width)],
-                branch=mlp(2*config.encoder_width+2,2*config.latent,config.width,config.depth),
-                trunk=mlp(10+2*len(FREQUENCIES),2*config.latent,config.width,config.depth))
+    branch_inputs=config.sensor_count+2 if config.encoder_kind=='sensor' else 2*config.encoder_width+2+(2*len(FREQUENCIES)+1 if config.functional_moments else 0)
+    outputs=config.latent if config.separate_pressure_trunk else 2*config.latent
+    params=dict(branch=mlp(branch_inputs,outputs,config.width,config.depth),
+                trunk=mlp(10+2*len(FREQUENCIES),outputs,config.width,config.depth))
+    if config.separate_pressure_trunk:
+        params['pressure_branch']=mlp(branch_inputs,config.latent,config.width,config.depth)
+        params['pressure_trunk']=mlp(10+2*len(FREQUENCIES),config.latent,config.width,config.depth)
+    if config.encoder_kind=='pooled':
+        params['encoder']=[layer(2+2*len(FREQUENCIES),config.encoder_width),layer(config.encoder_width,config.encoder_width)]
+    return params
 
 
 def dense(p,x): return x@p['w']+p['b']
@@ -60,7 +80,22 @@ def spline(profile,y):
     return f,integral
 
 
+def branch_outputs(params,inputs,config):
+    if config.separate_pressure_trunk:
+        return jnp.stack([mlp(params['branch'],inputs),mlp(params['pressure_branch'],inputs)])
+    return mlp(params['branch'],inputs).reshape(2,config.latent)
+
+
 def context(params,profile,re,config):
+    if config.encoder_kind=='sensor':
+        # The paper's direct-sensor branch: ALL samples, not pooled moments.
+        # The supplied spline itself (possibly with a different knot grid) still
+        # enters the hard boundary unchanged. This grid is only the branch input.
+        sensors=jnp.linspace(0.,1.,config.sensor_count)
+        sampled=jax.vmap(lambda y:spline(profile,y)[0])(sensors)
+        inputs=jnp.concatenate([sampled-6*sensors*(1-sensors),
+            jnp.array([jnp.log(re/10)/jnp.log(10.),jnp.log1p(profile['effective_mode'])/5])])
+        return branch_outputs(params,inputs,config)
     y,f,w=profile['encoder_y'],profile['encoder_f'],profile['encoder_w']
     phase=jnp.pi*y[:,None]*jnp.array(FREQUENCIES)
     encoded=jnp.concatenate([y[:,None],(f-6*y*(1-y))[:,None],jnp.sin(phase),jnp.cos(phase)],axis=1)
@@ -68,7 +103,15 @@ def context(params,profile,re,config):
     mean=jnp.sum(w[:,None]*encoded,axis=0)
     second=jnp.sum(w[:,None]*encoded**2,axis=0)
     inputs=jnp.concatenate([mean,second,jnp.array([jnp.log(re/10)/jnp.log(10.),jnp.log1p(profile['effective_mode'])/5])])
-    return mlp(params['branch'],inputs).reshape(2,config.latent)
+    if config.functional_moments:
+        # Strong condition features, alongside the learned pointwise encoder.
+        # They do NOT reconstruct or replace the inlet spline in the boundary.
+        delta=f-6*y*(1-y)
+        moments=jnp.concatenate([jnp.sum((w*delta)[:,None]*jnp.sin(phase),axis=0),
+                                 jnp.sum((w*delta)[:,None]*jnp.cos(phase),axis=0),
+                                 jnp.array([jnp.sum(w*delta*delta)])])
+        inputs=jnp.concatenate([inputs,moments])
+    return branch_outputs(params,inputs,config)
 
 
 def potentials(params,branch,profile,re,xy,config):
@@ -81,16 +124,35 @@ def potentials(params,branch,profile,re,xy,config):
         jnp.sin(phase)/modes,jnp.cos(phase)/modes,
         jnp.array([jnp.exp(-x/s) for s in [.02,.05,.1,.3,1.,3.]]),
         jnp.array([jnp.log1p(20*x)/jnp.log1p(20*config.length),x/config.length])])
-    raw=jnp.sum(branch*mlp(params['trunk'],features).reshape(2,config.latent),axis=1)/jnp.sqrt(float(config.latent))
-    _,integral=spline(profile,y)
+    if config.separate_pressure_trunk:
+        # psi enters NS through third derivatives, p through first derivatives.
+        # Separate scalar DeepONets prevent their spatial bases from competing.
+        pressure_features=jnp.concatenate([features[:2],jnp.sin(phase),jnp.cos(phase),features[2+2*len(FREQUENCIES):]])
+        raw=jnp.array([jnp.sum(branch[0]*mlp(params['trunk'],features)),
+                       jnp.sum(branch[1]*mlp(params['pressure_trunk'],pressure_features))])/jnp.sqrt(float(config.latent))
+    else:
+        raw=jnp.sum(branch*mlp(params['trunk'],features).reshape(2,config.latent),axis=1)/jnp.sqrt(float(config.latent))
+    inlet,integral=spline(profile,y)
     base=3*y*y-2*y**3
-    ell=.05+.05*re/profile['effective_mode']**2
-    decay=jnp.exp(-(x/ell)**2)
+    pressure_lift=0.
+    if config.lift=='oseen':
+        # Linearized half-plane NS lift. This is an analytic prior, not a CFD
+        # label or a replacement for the full nonlinear NS objective.
+        k=jnp.pi*profile['effective_mode']
+        alpha=2*k*k/(jnp.sqrt(re*re+4*k*k)+re)
+        delta=re*alpha/(k+alpha)
+        decay=jnp.exp(-alpha*x)*(1-alpha*jnp.expm1(-delta*x)/delta)
+        pressure_lift=(k+alpha)/re*(inlet-6*y*(1-y))*jnp.exp(-k*x)
+    elif config.lift=='gaussian':
+        ell=.05+.05*re/profile['effective_mode']**2
+        decay=jnp.exp(-(x/ell)**2)
+    else:
+        raise ValueError('Unknown lift configuration')
     # Entire spline antiderivative, including ALL supplied oscillations.
     lift=base+(integral-base)*decay
     mask=16*y*y*(1-y)**2*(1-jnp.exp(-x/.1))**2
     psi=lift+mask*raw[0]
-    pressure=12/re*(config.length-x)+raw[1]
+    pressure=12/re*(config.length-x)+pressure_lift+raw[1]
     return psi,pressure
 
 

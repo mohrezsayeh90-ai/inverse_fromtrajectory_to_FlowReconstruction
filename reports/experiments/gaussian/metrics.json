@@ -1,0 +1,89 @@
+{
+  "checkpoint_sha256": "8779ae401ebdd0a538c2d287fd31f92b3dec6a0447c6e62a2163b457874b4562",
+  "step": 50000,
+  "role": "repeated_validation",
+  "cases": [
+    {
+      "name": "asymmetric",
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.08206950034166031,
+      "u_relative_l2": 0.07765513524391966,
+      "v_relative_l2": 1.3569038974541492,
+      "v_rmse": 0.02974231740580761,
+      "pressure_relative_l2": 0.11377876103512768,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.3917450843043349,
+      "divergence_rms": 1.1199241817241834e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 0.0014700155552087497,
+      "flux_max_error": 3.832333004716304e-06
+    },
+    {
+      "name": "beta",
+      "reynolds": 30.0,
+      "velocity_relative_l2": 0.0461598889030826,
+      "u_relative_l2": 0.034904101945729474,
+      "v_relative_l2": 0.7948532169438226,
+      "v_rmse": 0.03569561507314468,
+      "pressure_relative_l2": 0.060837198775666304,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.6685975780852635,
+      "divergence_rms": 3.9816172550630964e-16,
+      "boundary_max_error": 8.881784197001252e-16,
+      "outlet_traction_rms": 0.0045592625845176345,
+      "flux_max_error": 3.7088855178168956e-06
+    },
+    {
+      "name": "flat",
+      "reynolds": 70.0,
+      "velocity_relative_l2": 0.04247236917584045,
+      "u_relative_l2": 0.03283641317722338,
+      "v_relative_l2": 1.0566164080827438,
+      "v_rmse": 0.028718077246678814,
+      "pressure_relative_l2": 0.09013804689102788,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 1.2860913696878573,
+      "divergence_rms": 3.2676739472708697e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 0.0015303639283816034,
+      "flux_max_error": 4.460259577121484e-06
+    },
+    {
+      "name": "nine",
+      "reynolds": 55.0,
+      "velocity_relative_l2": 0.03677422007444892,
+      "u_relative_l2": 0.030547644667111375,
+      "v_relative_l2": 0.8189920242804616,
+      "v_rmse": 0.02246397520544234,
+      "pressure_relative_l2": 0.1282402851642669,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 9.969643568608078,
+      "divergence_rms": 9.698456751249504e-16,
+      "boundary_max_error": 8.881784197001252e-16,
+      "outlet_traction_rms": 0.015676505760813343,
+      "flux_max_error": 3.825770206078438e-06
+    }
+  ],
+  "thresholds": {
+    "velocity_relative_l2": 0.05,
+    "pressure_relative_l2": 0.1,
+    "momentum_rms": 0.05,
+    "divergence_rms": 0.0001,
+    "outlet_traction_rms": 0.01,
+    "flux_max_error": 0.002,
+    "boundary_max_error": 0.0001
+  },
+  "gates": {
+    "velocity_relative_l2": false,
+    "pressure_relative_l2": false,
+    "momentum_rms": false,
+    "divergence_rms": true,
+    "outlet_traction_rms": false,
+    "flux_max_error": true,
+    "boundary_max_error": true
+  },
+  "all_gates_passed": false,
+  "universal_accuracy_guaranteed": false,
+  "training_labels_used": 0,
+  "note": "Accuracy measured on the listed benchmark only; no pressure alignment or per-input training."
+}

@@ -1,14 +1,42 @@
 {
-  "probe": {
-    "id": "mohrezsayeh/channel-general-physics-v3-probe",
-    "status": "COMPLETE",
-    "steps": 1000
-  },
-  "main": {
-    "id": "mohrezsayeh/channel-general-physics-v3",
-    "status": "RUNNING",
-    "target_steps": 50000
-  },
-  "training_mode": "physics_only",
-  "training_CFD_labels": 0
+  "training_CFD_labels": 0,
+  "runs": [
+    {
+      "id": "mohrezsayeh/channel-general-physics-v3-probe",
+      "steps": 1000,
+      "status": "COMPLETE"
+    },
+    {
+      "id": "mohrezsayeh/channel-general-physics-v3",
+      "steps": 50000,
+      "status": "COMPLETE",
+      "accepted": false
+    },
+    {
+      "id": "mohrezsayeh/channel-general-physics-v3-oseen",
+      "steps": 100000,
+      "status": "COMPLETE",
+      "accepted": false
+    },
+    {
+      "id": "mohrezsayeh/channel-general-physics-v3-moments",
+      "steps": 30000,
+      "status": "COMPLETE",
+      "accepted": false
+    },
+    {
+      "id": "mohrezsayeh/channel-general-physics-v3-sensor",
+      "target_steps": 5000,
+      "status": "COMPLETE",
+      "steps": 5000,
+      "accepted": false
+    },
+    {
+      "id": "mohrezsayeh/channel-general-physics-v3-pressure",
+      "target_steps": 5000,
+      "status": "RUNNING",
+      "devices": 2,
+      "accepted": null
+    }
+  ]
 }
