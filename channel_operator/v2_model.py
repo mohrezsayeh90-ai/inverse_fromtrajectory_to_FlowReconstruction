@@ -25,9 +25,12 @@ class ModifiedMLP(nn.Module):
 
 
 class StreamDeepONet(nn.Module):
-    def __init__(self,width=64,latent=32,depth=3):
+    def __init__(self,width=64,latent=32,depth=3,pressure_mode='viscous'):
         super().__init__()
         self.config=dict(width=width,latent=latent,depth=depth)
+        self.pressure_mode=pressure_mode
+        if pressure_mode not in ['viscous','convective']:raise ValueError('Unknown pressure mode')
+        if pressure_mode!='viscous':self.config['pressure_mode']=pressure_mode
         self.latent=latent
         self.branch=ModifiedMLP(34,width,2*latent,depth)
         self.trunk=ModifiedMLP(14,width,2*latent,depth)
@@ -64,7 +67,8 @@ class StreamDeepONet(nn.Module):
         psi=base+(b[:,None,1:]*deviation*decay).sum(-1)
         mask=16*y*y*(1-y)**2*(1-torch.exp(-x/.2))**2
         psi=psi+mask*raw[...,0]
-        p=12/re[:,None]*(5-x+raw[...,1])
+        pressure_scale=12/re[:,None] if self.pressure_mode=='viscous' else 1.
+        p=12/re[:,None]*(5-x)+pressure_scale*raw[...,1]
         return psi,p
 
     def forward(self,profiles,re,xy):
