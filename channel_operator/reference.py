@@ -25,7 +25,7 @@ def convection(u, v, w):
     return dot(np.einsum("j...,ij...->i...", w.wind, u.grad), v)
 
 
-def solve_channel(profile, reynolds, length=5., nx=40, ny=16, tolerance=1e-7, max_iterations=150):
+def solve_channel(profile, reynolds, length=5., nx=40, ny=16, tolerance=1e-7, max_iterations=150, inlet_function=None):
     mesh = MeshTri.init_tensor(np.linspace(0, length, nx+1), np.linspace(0, 1, ny+1))
     ub = Basis(mesh, ElementVector(ElementTriP2()), intorder=5)
     pb = Basis(mesh, ElementTriP1(), intorder=5)
@@ -35,7 +35,8 @@ def solve_channel(profile, reynolds, length=5., nx=40, ny=16, tolerance=1e-7, ma
     fixed = np.union1d(walls.all(), inlet.all())
     bc = np.zeros(ub.N+pb.N)
     inlet_u = inlet.all(["u^1"])
-    bc[inlet_u] = CubicSpline(Y, profile)(ub.doflocs[1, inlet_u])
+    inlet_function = CubicSpline(Y, profile) if inlet_function is None else inlet_function
+    bc[inlet_u] = inlet_function(ub.doflocs[1, inlet_u])
     zero = csr_matrix((pb.N, pb.N))
     stokes = bmat([[a, b.T], [b, zero]], format="csr")
     solution = solve(*condense(stokes, np.zeros(len(bc)), x=bc, D=fixed))
