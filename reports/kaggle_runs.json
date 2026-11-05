@@ -1,0 +1,14 @@
+{
+  "probe": {
+    "id": "mohrezsayeh/channel-general-physics-v3-probe",
+    "status": "COMPLETE",
+    "steps": 1000
+  },
+  "main": {
+    "id": "mohrezsayeh/channel-general-physics-v3",
+    "status": "RUNNING",
+    "target_steps": 50000
+  },
+  "training_mode": "physics_only",
+  "training_CFD_labels": 0
+}

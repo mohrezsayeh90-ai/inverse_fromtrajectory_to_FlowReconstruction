@@ -1,0 +1,12 @@
+{
+  "phase": "new_operator_GPU_training_running",
+  "trained_model_ready": false,
+  "archive_source_commit": "eb10c32487c79390597458189385e98d12962038",
+  "archive_integrity_verified": true,
+  "training_labels": "none",
+  "universal_accuracy_claim": false,
+  "structural_tests_passed": 10,
+  "training_labels_used": 0,
+  "kaggle_run": "mohrezsayeh/channel-general-physics-v3",
+  "last_completed_probe_step": 1000
+}

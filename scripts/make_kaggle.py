@@ -1,46 +1,64 @@
-"""Build a self-contained, private Kaggle notebook; contains source, never credentials."""
+"""Package only NEW operator sources, no old weights and no training responses."""
 import argparse
+import base64
 import hashlib
 import json
-import uuid
 from pathlib import Path
 
+ROOT=Path(__file__).resolve().parents[1]
 
-def cell(source):
-    return {"cell_type": "code", "id": uuid.uuid4().hex[:8], "metadata": {}, "execution_count": None, "outputs": [], "source": source.splitlines(keepends=True)}
+
+def code_cell(text):return dict(cell_type='code',metadata={},execution_count=None,outputs=[],source=text.splitlines(keepends=True))
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--destination", default="kaggle-run")
-    parser.add_argument("--id", default="mohrezsayeh/channel-pi-deeponet-re10-100")
-    parser.add_argument("--steps", type=int, default=12000)
-    parser.add_argument("--train-cases", type=int, default=48)
-    parser.add_argument("--entrance-features", action="store_true")
-    args = parser.parse_args()
-    root = Path(__file__).resolve().parents[1]
-    target = Path(args.destination)
-    target.mkdir(parents=True, exist_ok=True)
-    files = sorted(root.glob("channel_operator/*.py"))+sorted(root.glob("tests/*.py"))+[root/"run_experiment.py"]
-    source = {str(p.relative_to(root)): p.read_text() for p in files}
-    manifest = {name: hashlib.sha256(text.encode()).hexdigest() for name, text in source.items()}
-    setup = 'import os, json, subprocess, sys\nfrom pathlib import Path\nos.environ["MPLCONFIGDIR"]="/kaggle/working/.mpl"\n'
-    setup += 'subprocess.run([sys.executable,"-m","pip","install","scikit-fem==12.0.2","pytest>=8,<10"],check=True)\n'
-    setup += 'import torch\nprint("PyTorch:",torch.__version__,"CUDA:",torch.cuda.is_available())\nassert torch.cuda.is_available(), "GPU is required for this experiment"\nprint("GPU:",torch.cuda.get_device_name(0))\n'
-    setup += 'sources = '+repr(source)+'\n'
-    setup += 'for name, content in sources.items():\n    path=Path(name)\n    path.parent.mkdir(parents=True,exist_ok=True)\n    path.write_text(content)\n'
-    setup += 'Path("artifacts").mkdir(exist_ok=True)\nPath("artifacts/source_manifest.json").write_text('+repr(json.dumps(manifest, indent=2))+')\n'
-    setup += 'subprocess.run([sys.executable,"-m","pytest","-q"],check=True)\n'
-    run = 'subprocess.run([sys.executable,"run_experiment.py","--output","artifacts","--steps",'+repr(str(args.steps))+',"--train-cases",'+repr(str(args.train_cases))+'],check=True)\n'
-    if args.entrance_features:
-        run = run.replace('],check=True)', ',"--entrance-features"],check=True)')
-    report = 'from IPython.display import display, Image\nprint(Path("artifacts/metrics.json").read_text())\ndisplay(Image(filename="artifacts/heldout_fields.png"))\n'
-    notebook = {"cells": [{"cell_type": "markdown", "id": uuid.uuid4().hex[:8], "metadata": {}, "source": ["# Conditional Navier–Stokes channel operator\n", "Private GPU experiment. Hybrid FEM + physics-informed DeepONet; held-out FEM validation. No account credentials are embedded.\n"]}, cell(setup), cell(run), cell(report)],
-                "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}, "language_info": {"name": "python", "version": "3.11"}}, "nbformat": 4, "nbformat_minor": 5}
-    (target/"channel.ipynb").write_text(json.dumps(notebook))
-    (target/"kernel-metadata.json").write_text(json.dumps({"id": args.id, "title": args.id.split("/")[-1].replace("-", " ").title(), "code_file": "channel.ipynb", "language": "python", "kernel_type": "notebook", "is_private": True, "enable_gpu": True, "enable_internet": True, "dataset_sources": [], "competition_sources": [], "kernel_sources": []}, indent=2))
-    print(target)
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--output',default='kaggle_run');p.add_argument('--id',default='mohrezsayeh/channel-general-physics-v3-probe')
+    p.add_argument('--steps',type=int,default=1000);p.add_argument('--resume-source');p.add_argument('--include-references',action='store_true')
+    a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
+    files=sorted((ROOT/'flow_operator').glob('*.py'))+sorted((ROOT/'tests').glob('*.py'))+[ROOT/'pyproject.toml']
+    sources={str(path.relative_to(ROOT)):path.read_text() for path in files}
+    refs={}
+    if a.include_references:
+        refs={str(path.relative_to(ROOT)):base64.b64encode(path.read_bytes()).decode() for path in (ROOT/'validation/references').glob('*.npz')}
+        if len(refs)<4:raise ValueError('Expected the four independent validation references')
+    manifest={k:hashlib.sha256(v.encode()).hexdigest() for k,v in sources.items()}
+    setup='''import os,sys,json,base64,subprocess
+from pathlib import Path
+os.environ['XLA_PYTHON_CLIENT_PREALLOCATE']='false'
+os.environ['MPLCONFIGDIR']='/kaggle/working/.mpl'
+os.environ['OPENBLAS_NUM_THREADS']='1'
+os.environ['OMP_NUM_THREADS']='1'
+import jax
+print('JAX',jax.__version__,'DEVICES',jax.devices())
+assert any(d.platform=='gpu' for d in jax.devices()), 'GPU required'
+'''
+    setup+='sources='+repr(sources)+'\n'
+    setup+='for name,text in sources.items():\n    path=Path(name)\n    path.parent.mkdir(parents=True,exist_ok=True)\n    path.write_text(text)\n'
+    setup+='reference_files='+repr(refs)+'\n'
+    setup+='for name,text in reference_files.items():\n    path=Path(name)\n    path.parent.mkdir(parents=True,exist_ok=True)\n    path.write_bytes(base64.b64decode(text))\n'
+    setup+='Path("output").mkdir(exist_ok=True)\nPath("output/source_manifest.json").write_text('+repr(json.dumps(manifest,indent=2))+')\n'
+    setup+='subprocess.run([sys.executable,"-m","pytest","-q"],check=True)\n'
+    command=['-m','flow_operator.train','--output','output','--steps',str(a.steps),'--batch','8','--points','64',
+             '--pool-count','10000','--log-every','250','--require-gpu']
+    if refs:command+=['--reference-monitor','validation/references','--reference-every','1000']
+    run='command='+repr(command)+'\n'
+    if a.resume_source:
+        run+='matches=[p for p in Path("/kaggle/input").rglob("checkpoint.npz") if '+repr(a.resume_source.split('/')[-1])+' in p.parts]\nassert len(matches)==1,matches\ncommand += ["--resume",str(matches[0])]\n'
+    run+='subprocess.run([sys.executable,*command],check=True)\n'
+    notebook=dict(cells=[dict(cell_type='markdown',metadata={},source=[
+        '# Full-profile physics-only channel operator\n',
+        'Complete supplied spline in hard inlet boundary; variable-quadrature function encoder.\n',
+        'No CFD response labels in the objective. Benchmark references, if present, are read-only monitors.\n',
+        'Candidate run: successful execution alone does not certify prediction accuracy.\n']),code_cell(setup),code_cell(run),
+        code_cell('print(Path("output/summary.json").read_text())\n')],
+        metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python'}},nbformat=4,nbformat_minor=5)
+    (out/'operator.ipynb').write_text(json.dumps(notebook))
+    (out/'kernel-metadata.json').write_text(json.dumps(dict(id=a.id,title=a.id.split('/')[-1].replace('-',' ').title(),
+        code_file='operator.ipynb',language='python',kernel_type='notebook',is_private=True,enable_gpu=True,enable_internet=False,
+        dataset_sources=[],competition_sources=[],kernel_sources=[a.resume_source] if a.resume_source else []),indent=2))
+    (out/'source_manifest.json').write_text(json.dumps(manifest,indent=2))
+    print('Packaged',len(sources),'new source files and',len(refs),'validation-only reference files')
 
 
-if __name__ == "__main__":
-    main()
+if __name__=='__main__':main()

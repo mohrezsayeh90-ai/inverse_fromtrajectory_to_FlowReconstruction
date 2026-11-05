@@ -1,0 +1,15 @@
+{
+  "id": "mohrezsayeh/channel-general-physics-v3",
+  "title": "Channel General Physics V3",
+  "code_file": "operator.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [
+    "mohrezsayeh/channel-general-physics-v3-probe"
+  ]
+}
