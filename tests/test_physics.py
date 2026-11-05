@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 import torch
 from channel_operator.model import ChannelDeepONet, residuals, outlet_residuals, gradient
-from channel_operator.profiles import from_coefficients, sample_profiles, Y, normalize
+from channel_operator.profiles import from_coefficients, sample_profiles, Y, normalize, load_csv, INTEGRAL_WEIGHTS
 from channel_operator.reference import solve_channel
 
 
@@ -58,6 +58,15 @@ def test_profile_constraints():
         normalize(np.zeros(33))
     with pytest.raises(ValueError):
         from_coefficients([5., 0., 0., 0.])
+
+
+def test_custom_csv_preserves_shape_and_normalizes_mean(tmp_path):
+    expected = from_coefficients([.25, -.1, .05, 0.])
+    path = tmp_path/"inlet.csv"
+    np.savetxt(path, np.column_stack([Y, 2.7*expected]), delimiter=",", header="y,u", comments="")
+    profile = load_csv(path)
+    assert np.max(np.abs(profile-expected)) < 1e-12
+    assert abs(profile@INTEGRAL_WEIGHTS-1) < 1e-12
 
 
 def test_independent_fem_poiseuille():

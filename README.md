@@ -36,6 +36,31 @@ python run_experiment.py --output artifacts --steps 12000
 
 آموزش از GPU موجود استفاده می‌کند و در غیر این صورت روی CPU اجرا می‌شود. تولید حل‌های اجزای محدود روی CPU است. خروجی‌ها: `model.pt`, `training.jsonl`, `training_summary.json`, `metrics.json`, `reference_metadata.json`, `heldout_fields.png` و فایل‌های NPZ. برای اجرای مرحله‌ای از `--stage data|train|evaluate` استفاده کنید؛ ازسرگیری وزن‌ها و optimizer با `--resume artifacts/model.pt` ممکن است، اما دنبالهٔ تصادفی دقیق اجرای قبلی بازسازی نمی‌شود.
 
+صفر بودن کد خروج فرمان یا وضعیت Complete در Kaggle فقط پایان موفق اجرای برنامه را نشان می‌دهد؛ پذیرش علمی با `passed` و تک‌تک `gates` در `metrics.json` مشخص می‌شود.
+
+### نسخهٔ دارای ویژگی‌های ناحیهٔ ورودی
+
+گزینهٔ `--entrance-features` چهار ویژگی برای طول‌های کوتاه نزدیک ورودی به trunk اضافه می‌کند و وزن پیش‌فرض جملهٔ داده را از ۲۰ به ۲۰۰ افزایش می‌دهد. وزن داده با `--data-weight` قابل تعیین است؛ وزن‌های بقای جرم، مومنتوم، خروجی و دبی به‌ترتیب ۱۰، ۱، ۰٫۱ و ۱۰ باقی می‌مانند. تنظیم ضرایب loss، جایگزین آزمون مستقل نیست.
+
+اجرای توسعهٔ محلی شامل آموزش ۴۰۰۰ گامی روی ۲۴ شرط، سپس ادامهٔ همان آموزش عمومی تا گام ۱۰۰۰۰ روی ۱۲۸ شرط با وزن دادهٔ ۱۰۰۰ است. این ادامهٔ آموزش برای کل خانواده انجام می‌شود؛ در زمان پیش‌بینی برای هیچ ورودی مجدداً آموزش انجام نمی‌شود.
+
+```bash
+python run_experiment.py --output artifacts/entrance --steps 4000 \
+  --train-cases 24 --test-cases 4 --entrance-features
+python run_experiment.py --output artifacts/refined --stage data \
+  --train-cases 128 --test-cases 4
+python run_experiment.py --output artifacts/refined --stage train --steps 10000 \
+  --resume artifacts/entrance/model.pt --entrance-features --data-weight 1000
+python run_experiment.py --output artifacts/refined --stage evaluate
+```
+
+چهار حالت این اجرای محلی برای بررسی توسعه استفاده شده‌اند؛ نباید به‌عنوان آزمون نهایی دست‌نخورده معرفی شوند. برای آزمون مستقلِ سخت‌تر، ۱۶ ترکیب ثابت از ضریب‌های مرزی `+/-0.6` در چهار مود و رینولدزهای ۱۰ و ۱۰۰ در دسترس است:
+
+```bash
+python scripts/stress_test.py --checkpoint artifacts/refined/model.pt \
+  --output artifacts/refined/stress_test.json
+```
+
 ## پیش‌بینی بدون آموزش مجدد
 
 ```bash
@@ -44,6 +69,8 @@ python -m channel_operator.predict --checkpoint artifacts/model.pt --re 55 \
 ```
 
 برای ورودی نمونه‌برداری‌شده، به‌جای ضرایب از `--inlet-csv inlet.csv` استفاده کنید. فایل CSV سربرگ `y,u`، حداقل چهار سطر، مختصات صعودی از صفر تا یک و سرعت صفر در دو انتها داشته باشد. سرعت میانگین به یک نرمال می‌شود؛ `Re` باید بر پایهٔ میانگین فیزیکی همان پروفایل وارد شود. ورودی منفی یا اسپلاین دارای سرعت منفی رد می‌شود. پروفایل‌های دارای بازگشت جریان و جریان آشفته در این مدل پشتیبانی نشده‌اند.
+
+کنار فایل پیش‌بینی، فایل JSON تشخیصی شامل خطای دبی و باقی‌ماندهٔ معادلات نوشته می‌شود. اگر checkpoint همهٔ معیارها را پاس نکرده باشد یا گزارش اعتبارسنجی هم‌گام موجود نباشد، برنامه هشدار می‌دهد. این تشخیص‌ها جانشین خطای اندازه‌گیری‌شده در برابر CFD نیستند.
 
 ## Kaggle و ذخیره‌سازی
 
