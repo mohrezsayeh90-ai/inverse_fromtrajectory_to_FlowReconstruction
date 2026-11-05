@@ -10,5 +10,6 @@ Each directory in `candidates/` contains an actual trained checkpoint and its ma
 | oseen | 100,000 | pooled | false |
 | moments | 30,000 | pooled plus moments | false |
 | sensor | 5,000 | direct sensors | false |
+| pressure | 5,000 | separate scalar pressure/stream operators, direct sensors | false |
 
 See [measured comparisons](../reports/experiments/README.md) and [the completed-run review](../reports/COMPLETED_RUN_REVIEW.md). A passing report is bound to both the checkpoint hash and the implementation signature; none of these weights has a universal accuracy guarantee.

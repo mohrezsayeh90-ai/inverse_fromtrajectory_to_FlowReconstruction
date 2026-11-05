@@ -13,7 +13,7 @@ COLORS={'gaussian':'#9b778c','oseen':'#527ca8','moments':'#e39432','sensor':'#00
 
 def main():
     out=ROOT/'reports/experiments';out.mkdir(parents=True,exist_ok=True)
-    summaries=[];histories={}
+    summaries=[];histories={};case_metrics={}
     for name in LABELS:
         p=out/name
         if (p/'training.jsonl').exists():
@@ -25,6 +25,7 @@ def main():
             histories[name]=records
         if (p/'metrics.json').exists():
             m=json.loads((p/'metrics.json').read_text())
+            case_metrics[name]=m['cases']
             summaries.append(dict(name=name,step=m['step'],max_velocity_pct=100*max(r['velocity_relative_l2'] for r in m['cases']),
                 max_pressure_pct=100*max(r['pressure_relative_l2'] for r in m['cases']),
                 max_momentum_rms=max(r['momentum_rms'] for r in m['cases']),
@@ -61,12 +62,21 @@ def main():
         columns=['name','step','max_velocity_pct','max_pressure_pct','max_momentum_rms','accepted','checkpoint_sha256']
         writer=csv.DictWriter(f,fieldnames=columns,lineterminator='\n');writer.writeheader()
         for s in summaries:writer.writerow({k:s[k] for k in columns})
+    with (out/'case_errors.csv').open('w',newline='') as f:
+        columns=['experiment','case','reynolds','velocity_relative_l2','u_relative_l2','v_relative_l2','v_rmse','pressure_relative_l2','momentum_rms']
+        writer=csv.DictWriter(f,fieldnames=columns,lineterminator='\n');writer.writeheader()
+        for name,cases in case_metrics.items():
+            for case in cases:writer.writerow(dict(experiment=name,case=case['name'],**{k:case[k] for k in columns[2:]}))
     text=['# نتایج واقعی آزمایش‌های اپراتور جدید','','تمام اعداد این صفحه از checkpoint واقعی و مرجع مستقل آمده‌اند. این‌ها validation تکرارشونده‌اند؛ آزمون کور نهایی نیستند. پاسخ CFD وارد objective آموزش نشده است.','',
           '| آزمایش | گام | بیشینهٔ خطای سرعت ٪ | بیشینهٔ خطای فشار ٪ | بیشینهٔ RMS مومنتوم | تمام معیارها پاس؟ |','|---|---:|---:|---:|---:|---|']
     for s in summaries:text.append(f"| [{LABELS[s['name']]}]({s['name']}/metrics.json) | {s['step']} | {s['max_velocity_pct']:.3f} | {s['max_pressure_pct']:.3f} | {s['max_momentum_rms']:.4f} | {s['accepted']} |")
     text+=['','![خطای مرجع در آموزش](reference_learning_curves.png)','','![باقی‌ماندهٔ معادلات](momentum_learning_curves.png)','',
            'آزمایش‌ها فقط در یک عامل تغییر نکرده‌اند؛ از این جدول نمی‌توان سهم مستقل هر تغییر معماری، batch یا مقیاس‌بندی را استنتاج کرد. قیود ورودی و جرم در همهٔ نسخه‌های جدید برقرارند، اما این به‌تنهایی دقت میدان را تضمین نمی‌کند.',
-           '', 'برای هر آزمایش، `training.jsonl`، متادیتای ورودی‌ها، SHA256 سورس و معیارهای رد/قبول نگه داشته شده‌اند. وزن‌های آزمایشی در `models/candidates/` قرار دارند؛ نامزدِ ردشده، مدل آمادهٔ استفاده نیست.']
+           '', 'برای هر آزمایش، `training.jsonl`، متادیتای ورودی‌ها، SHA256 سورس و معیارهای رد/قبول نگه داشته شده‌اند. وزن‌های آزمایشی در `models/candidates/` قرار دارند؛ نامزدِ ردشده، مدل آمادهٔ استفاده نیست.',
+           '', 'خطای بردار سرعت ممکن است ضعف مؤلفهٔ عرضیِ کوچک‌تر را پنهان کند. [CSV تمام حالت‌ها](case_errors.csv) خطای جداگانهٔ u و v و RMSE عرضی را هم دارد.']
+    for name,cases in case_metrics.items():
+        text+=['',f'## {LABELS[name]}','', 'نقشه‌های مرجع، مدل و اختلاف برای هر سه میدان:', '',
+               ' | '.join(f"[{c['name']}]({name}/{c['name']}.png)" for c in cases)]
     (out/'README.md').write_text('\n'.join(text)+'\n')
     print(json.dumps(summaries,indent=2))
 

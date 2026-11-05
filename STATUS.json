@@ -1,5 +1,5 @@
 {
-  "phase": "completed_sensor_run_rejected_and_testing_independent_pressure_operator",
+  "phase": "continuing_independent_pressure_operator_after_rejected_pilot",
   "trained_model_ready": false,
   "archive_source_commit": "eb10c32487c79390597458189385e98d12962038",
   "archive_integrity_verified": true,
@@ -7,11 +7,16 @@
   "universal_accuracy_claim": false,
   "structural_tests_passed": 59,
   "training_labels_used": 0,
-  "kaggle_run": "mohrezsayeh/channel-general-physics-v3-pressure",
+  "kaggle_run": "mohrezsayeh/channel-general-physics-v3-pressure-long",
   "last_completed_probe_step": 1000,
-  "last_completed_training_step": 100000,
+  "last_completed_training_step": 5000,
   "last_completed_sensor_step": 5000,
   "final_heldout_test_evaluated": false,
-  "last_evaluated_candidate": "sensor",
-  "last_evaluated_candidate_accepted": false
+  "last_evaluated_candidate": "pressure",
+  "last_evaluated_candidate_accepted": false,
+  "current_training_target_steps": 100000,
+  "current_training_resume_step": 5000,
+  "last_completed_kaggle_run": "mohrezsayeh/channel-general-physics-v3-pressure",
+  "largest_completed_experiment_steps": 100000,
+  "updated_utc": "2026-11-05T19:26:55.661899+00:00"
 }

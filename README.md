@@ -11,6 +11,7 @@
 - [اجرای بررسیِ GPU](https://www.kaggle.com/code/mohrezsayeh/channel-general-physics-v3-probe)
 - [آزمایش فعلیِ شاخهٔ مستقیم](https://www.kaggle.com/code/mohrezsayeh/channel-general-physics-v3-sensor)
 - [آزمایش اپراتورهای مستقل فشار و تابع جریان](https://www.kaggle.com/code/mohrezsayeh/channel-general-physics-v3-pressure)
+- [ادامهٔ همان اپراتور تا ۱۰۰هزار گام](https://www.kaggle.com/code/mohrezsayeh/channel-general-physics-v3-pressure-long)؛ [روش بازتولید و ارزیابی خودکار](docs/TRAINING_REPRODUCIBILITY.md)
 - [گزارش تطبیق مبنای بازسازی](docs/operator_design_audit/README.md)
 - [نگاشت ایرادهای قبلی به تغییرهای کد جدید](docs/IMPLEMENTATION.md)
 

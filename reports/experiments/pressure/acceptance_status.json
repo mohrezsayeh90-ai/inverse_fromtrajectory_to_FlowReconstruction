@@ -1,0 +1,10 @@
+{
+  "training_completed": true,
+  "benchmark_accepted": false,
+  "final_test_evaluated": false,
+  "ready_after_both_suites": false,
+  "checkpoint": "selected_checkpoint.npz",
+  "checkpoint_sha256": "3e6d907c05c9203bcbc301111b7dfc25a939a22ce701b6f6066ddcf032060ce3",
+  "universal_accuracy_guaranteed": false,
+  "CFD_training_labels": 0
+}
