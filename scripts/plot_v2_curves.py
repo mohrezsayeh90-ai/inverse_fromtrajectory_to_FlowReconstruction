@@ -34,6 +34,8 @@ def main():
     for ax,title,threshold in zip(axes.ravel(),['Unseen severe velocity error, max (%)','Unseen severe pressure error, max (%)','Unseen NS momentum RMS, max','Unseen outlet RMS, max'],[5,10,.05,.1]):
         ax.axhline(threshold,color='black',linestyle='--',alpha=.6);ax.set_title(title);ax.set_xlabel('optimizer step');ax.grid(alpha=.2);ax.legend(fontsize=8)
     fig.savefig(out/'learning_curves.png',dpi=160);fig.savefig(out/'learning_curves.svg');plt.close(fig)
+    svg=out/'learning_curves.svg'
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
     for filename,items in [('iteration_errors.csv',rows),('per_case_errors.csv',case_rows)]:
         keys=list(items[0]);
         with open(out/filename,'w',newline='') as f:
