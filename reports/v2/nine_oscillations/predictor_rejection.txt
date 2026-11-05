@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/inverse_fromtrajectory_to_FlowReconstruction/channel_operator/v2_predict.py", line 47, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/inverse_fromtrajectory_to_FlowReconstruction/channel_operator/v2_predict.py", line 21, in main
+    supplied=load_csv(a.inlet_csv);b=PROJECT@supplied;b/=b[0]+b[1:]@INTEGRALS
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/inverse_fromtrajectory_to_FlowReconstruction/channel_operator/profiles.py", line 50, in load_csv
+    return normalize(CubicSpline(data[:, 0], data[:, 1])(Y))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/inverse_fromtrajectory_to_FlowReconstruction/channel_operator/profiles.py", line 21, in normalize
+    raise ValueError("Supported inlets must be nonnegative, including spline interpolation")
+ValueError: Supported inlets must be nonnegative, including spline interpolation

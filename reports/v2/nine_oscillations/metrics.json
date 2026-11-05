@@ -1,0 +1,109 @@
+{
+  "case": "Nine full oscillations / nine interior velocity peaks",
+  "reynolds": 55.0,
+  "amplitude": 0.6,
+  "inlet_formula": "6*y*(1-y)*(1-0.6*cos(18*pi*y))/(1+7.2/(18*pi)^2)",
+  "inlet_peak_count": 9,
+  "input_sensor_count": 33,
+  "inlet_mean": 0.9999999840360976,
+  "inlet_min": 0.0,
+  "inlet_max": 2.3946083432955003,
+  "training_sample_max": 2.8747646808624268,
+  "scalar_ranges_respected": true,
+  "within_trained_function_family": false,
+  "standard_predictor_rejects": true,
+  "evaluation": "forced_raw_network_OOD_diagnostic",
+  "sensor_spline_min": -0.021523265614220348,
+  "four_mode_sensor_fit_relative_l2": 0.39054952978375845,
+  "same_boundary_value_problem": false,
+  "checkpoint_sha256": "7db6b073a829529b7404fdf7ac9c7209c728af32f0e4d88be54e12a16bae282a",
+  "step": 70000,
+  "training_performed": false,
+  "inlet_velocity_relative_l2": 0.3905568236404157,
+  "fem_inlet_interpolation_relative_l2": 0.00013659762110677847,
+  "model_inlet_peak_count": 1,
+  "reference_mesh_converged": true,
+  "reference_mesh_criteria": {
+    "velocity": 0.01,
+    "pressure": 0.02,
+    "entrance_velocity": 0.02,
+    "entrance_pressure": 0.03,
+    "minimum_meshes": 3
+  },
+  "mesh_refinement": [
+    {
+      "iterations": 13,
+      "increment": 4.4342382517940885e-08,
+      "nonlinear_residual": 1.1810938441135139e-08,
+      "nx": 64,
+      "ny": 72,
+      "seconds": 22.870437402998505
+    },
+    {
+      "iterations": 13,
+      "increment": 4.4466497081595596e-08,
+      "nonlinear_residual": 8.840720315462138e-09,
+      "nx": 80,
+      "ny": 108,
+      "seconds": 67.27968014700127,
+      "change_from_previous_mesh": {
+        "velocity_relative_l2": 0.0001414099508239221,
+        "u_relative_l2": 0.00012752781987512005,
+        "v_relative_l2": 0.0056845499654931035,
+        "pressure_relative_l2": 0.0015349838891904224,
+        "v_rmse": 6.701195828984107e-05
+      },
+      "entrance_change": {
+        "velocity_relative_l2": 0.0005707318994668063,
+        "u_relative_l2": 0.0005150013960529178,
+        "v_relative_l2": 0.005683370589363675,
+        "pressure_relative_l2": 0.0037718135392576244,
+        "v_rmse": 0.00027342030956823093
+      }
+    },
+    {
+      "iterations": 13,
+      "increment": 4.451937835471052e-08,
+      "nonlinear_residual": 6.7852338831701396e-09,
+      "nx": 104,
+      "ny": 144,
+      "seconds": 157.00306018899937,
+      "change_from_previous_mesh": {
+        "velocity_relative_l2": 3.886177729999633e-05,
+        "u_relative_l2": 3.483592251303818e-05,
+        "v_relative_l2": 0.0016018322440933647,
+        "pressure_relative_l2": 0.0008333869823522925,
+        "v_rmse": 1.8890722577328748e-05
+      },
+      "entrance_change": {
+        "velocity_relative_l2": 0.0001569533955976742,
+        "u_relative_l2": 0.0001407892751315874,
+        "v_relative_l2": 0.0016018351145042876,
+        "pressure_relative_l2": 0.002047918777521956,
+        "v_rmse": 7.70934537368607e-05
+      }
+    }
+  ],
+  "metrics": {
+    "velocity_relative_l2": 0.0828707713446811,
+    "u_relative_l2": 0.07906467092221775,
+    "v_relative_l2": 2.309109799496883,
+    "pressure_relative_l2": 0.11843554433295984,
+    "v_rmse": 0.02723678093463514,
+    "entrance_x_le_0.3": {
+      "velocity_relative_l2": 0.155263674463129,
+      "u_relative_l2": 0.14157738669366096,
+      "v_relative_l2": 1.4725832558026435,
+      "pressure_relative_l2": 0.17167298307544782,
+      "v_rmse": 0.07088578932787377
+    },
+    "downstream_x_ge_1": {
+      "velocity_relative_l2": 0.07434100164032495,
+      "u_relative_l2": 0.07241508044009369,
+      "v_relative_l2": 105.75893964982112,
+      "pressure_relative_l2": 0.11400127342490256,
+      "v_rmse": 0.01841898788662985
+    }
+  },
+  "norm": "Trapezoid quadrature over actual nonuniform x and uniform y; no pressure alignment"
+}

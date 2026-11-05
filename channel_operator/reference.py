@@ -25,8 +25,19 @@ def convection(u, v, w):
     return dot(np.einsum("j...,ij...->i...", w.wind, u.grad), v)
 
 
-def solve_channel(profile, reynolds, length=5., nx=40, ny=16, tolerance=1e-7, max_iterations=150, inlet_function=None):
-    mesh = MeshTri.init_tensor(np.linspace(0, length, nx+1), np.linspace(0, 1, ny+1))
+def solve_channel(profile, reynolds, length=5., nx=40, ny=16, tolerance=1e-7, max_iterations=150, inlet_function=None,
+                  x_nodes=None, y_nodes=None):
+    def nodes(supplied, end, count):
+        values = np.linspace(0, end, count+1) if supplied is None else np.asarray(supplied, dtype=float)
+        if (values.ndim != 1 or len(values) < 2 or not np.isfinite(values).all()
+                or not np.all(np.diff(values) > 0)
+                or not np.isclose(values[0], 0) or not np.isclose(values[-1], end)):
+            raise ValueError('Mesh nodes must increase strictly from zero to the domain endpoint')
+        return values
+
+    x_nodes, y_nodes = nodes(x_nodes, length, nx), nodes(y_nodes, 1., ny)
+    nx, ny = len(x_nodes)-1, len(y_nodes)-1
+    mesh = MeshTri.init_tensor(x_nodes, y_nodes)
     ub = Basis(mesh, ElementVector(ElementTriP2()), intorder=5)
     pb = Basis(mesh, ElementTriP1(), intorder=5)
     a, b = asm(diffusion, ub)/reynolds, asm(divergence, ub, pb)

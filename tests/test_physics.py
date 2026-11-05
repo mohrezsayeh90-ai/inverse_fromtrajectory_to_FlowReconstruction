@@ -69,9 +69,11 @@ def test_custom_csv_preserves_shape_and_normalizes_mean(tmp_path):
     assert abs(profile@INTEGRAL_WEIGHTS-1) < 1e-12
 
 
-def test_independent_fem_poiseuille():
+@pytest.mark.parametrize('graded', [False, True])
+def test_independent_fem_poiseuille(graded):
     xy = np.array([[.1, .1], [1.5, .3], [4.9, .7]])
-    evaluate, info = solve_channel(from_coefficients(np.zeros(4)), 40., nx=16, ny=6)
+    mesh = dict(x_nodes=5*np.linspace(0, 1, 17)**2) if graded else {}
+    evaluate, info = solve_channel(from_coefficients(np.zeros(4)), 40., nx=16, ny=6, **mesh)
     truth = np.column_stack([6*xy[:, 1]*(1-xy[:, 1]), np.zeros(3), 12/40*(5-xy[:, 0])])
     assert np.max(np.abs(evaluate(xy)-truth)) < 1e-9
     assert info["nonlinear_residual"] < 1e-9
