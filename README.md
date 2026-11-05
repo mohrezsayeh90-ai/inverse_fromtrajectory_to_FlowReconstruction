@@ -2,6 +2,17 @@
 
 یک مدل شرطی برای پیش‌بینی سرعت و فشار جریان آرام در کانال دوبعدی؛ ورودی مدل، **پروفایل سرعت ورودی و عدد رینولدز** است. پس از آموزش، برای شرایط جدید به آموزش مجدد نیاز نیست. این پروژه از ایدهٔ Physics-informed DeepONet استفاده می‌کند و پیاده‌سازی مستقل PyTorch است.
 
+**وضعیت فعلی: نسخهٔ پژوهشی، نه حل عمومی تأییدشده.** مدل آموزش‌دیده و نتایج کامل در [گزارش آزمایش](reports/RESULTS.md) قرار دارند. روی هشت ورودی تازه، بیشینهٔ خطای سرعت حدود ۱٫۹٪ و فشار ۱٫۷٪ بود؛ اما برخی معیارهای فیزیکی پاس نشدند و خطای فشار در آزمون پروفایل‌های مرزیِ شدیدتر تا حدود ۵۸٪ رسید. این محدودیت را در استفاده از مدل لحاظ کنید.
+
+برای اجرای وزن منتخبِ ذخیره‌شده در همین مخزن، بدون آموزش مجدد:
+
+```bash
+python -m channel_operator.predict --checkpoint models/channel_operator_candidate.pt \
+  --re 55 --coefficients 0.25 -0.1 0.05 0 --output prediction.npz
+```
+
+این checkpoint برای inference است و optimizer ندارد؛ checkpointهای کاملِ آموزش در خروجی اجراهای محلی و خصوصی Kaggle نگه داشته می‌شوند. برنامه دربارهٔ معیارهای اعتبارسنجیِ پاس‌نشده هشدار می‌دهد.
+
 ## تعریف مسئله
 
 کانال بی‌بعد `0 <= x <= 5`, `0 <= y <= 1` و سیال تراکم‌ناپذیر نیوتنی:
@@ -61,6 +72,19 @@ python scripts/stress_test.py --checkpoint artifacts/refined/model.pt \
   --output artifacts/refined/stress_test.json
 ```
 
+در مرحلهٔ بعد، ۶۴ شرط آموزشی با دامنهٔ بیشتر و رینولدزهای ۵۰، ۷۵ و ۱۰۰ به همان مجموعهٔ آموزش افزوده و آموزش عمومی تا گام ۱۶۰۰۰ ادامه داده می‌شود. این فرمان داده‌های آزمون را تغییر نمی‌دهد و از افزودن تکراری جلوگیری می‌کند:
+
+```bash
+python scripts/augment_training.py --output artifacts/refined --count 64
+python run_experiment.py --output artifacts/refined --stage train --steps 16000 \
+  --resume artifacts/refined/model.pt --entrance-features --data-weight 4000
+python run_experiment.py --output artifacts/refined --stage evaluate
+python scripts/final_benchmark.py --checkpoint artifacts/refined/model.pt \
+  --output artifacts/final-benchmark
+```
+
+`final_benchmark.py` یک مجموعهٔ هشت‌حالته با seed تازهٔ ۶۴۰۵۲۹ تولید می‌کند که در بررسی توسعه استفاده نشده است. گزارش چهارحالتهٔ توسعه، آزمون هشت‌حالتهٔ تازه و آزمون ۱۶حالتهٔ مرزی باید جداگانه تفسیر شوند.
+
 ## پیش‌بینی بدون آموزش مجدد
 
 ```bash
@@ -81,7 +105,9 @@ kaggle kernels status mohrezsayeh/channel-pi-deeponet-re10-100
 kaggle kernels output mohrezsayeh/channel-pi-deeponet-re10-100 -p artifacts/kaggle
 ```
 
-نوت‌بوک خصوصی است و خودِ کد را بسته‌بندی می‌کند؛ کلید حساب در آن قرار نمی‌گیرد. مدل و دادهٔ تولیدشده از Git مستثنی هستند و در خروجی خصوصی Kaggle ذخیره می‌شوند. دسترسی نوشتن GitHub مستقل از خواندن است و باید عملاً بررسی شود.
+نوت‌بوک خصوصی است و خودِ کد را بسته‌بندی می‌کند؛ کلید حساب در آن قرار نمی‌گیرد. داده‌های تولیدشده و checkpointهای کامل از Git مستثنی هستند؛ فقط checkpoint کوچکِ inference منتخب در `models/channel_operator_candidate.pt` ثبت شده است. نتایج GPU در خروجی خصوصی Kaggle نگه داشته می‌شوند.
+
+در محیط‌های دارای شبکهٔ محدود، API به `api.kaggle.com` و `www.kaggle.com` نیاز دارد و دریافت فایل‌های خروجی به `www.kaggleusercontent.com` نیز نیاز دارد. موفقیت آموزش مستقل از مجازبودن دانلود فایل‌هاست؛ گزارش عددی را می‌توان از لاگ API نیز دریافت کرد.
 
 ## مرجع علمی
 

@@ -1,0 +1,11 @@
+{
+  "output": "/workspace/channel-final-benchmark/example_prediction.npz",
+  "reynolds": 55.0,
+  "trained_step": 16000,
+  "retraining": false,
+  "checkpoint_passed_validation": false,
+  "max_flux_error": 0.0012582614785059398,
+  "divergence_rms": 0.009662407450377941,
+  "momentum_rms": 0.025374867022037506,
+  "note": "Residuals are diagnostics, not a substitute for independent CFD error estimates."
+}

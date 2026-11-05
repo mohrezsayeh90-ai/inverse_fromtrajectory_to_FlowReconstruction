@@ -1,0 +1,57 @@
+{
+  "status": "research_candidate_not_all_validation_gates_passed",
+  "step": 16000,
+  "model_config": {
+    "length": 5.0,
+    "width": 64,
+    "latent": 32,
+    "entrance_features": true
+  },
+  "training_mode": "hybrid_physics_informed",
+  "selected_model_training_device": "CPU",
+  "training_phases": [
+    {
+      "steps": [
+        1,
+        4000
+      ],
+      "fem_conditions": 24,
+      "data_weight": 200
+    },
+    {
+      "steps": [
+        4001,
+        10000
+      ],
+      "fem_conditions": 128,
+      "data_weight": 1000
+    },
+    {
+      "steps": [
+        10001,
+        16000
+      ],
+      "fem_conditions": 192,
+      "data_weight": 4000
+    }
+  ],
+  "final_test_seed": 640529,
+  "final_test_cases": 8,
+  "stress_test_cases": 16,
+  "checkpoint_sha256": "aad850a12a9ccfd0f523b864bc99c983337cf4b0955e5a77250a1aa0ede12131",
+  "export_prediction_max_difference": 0.0,
+  "source_hashes": {
+    "channel_operator/__init__.py": "5cfb4a13a4efafdf4006275f14b963c2b6dcb76395c472b584cc9b1f26191308",
+    "channel_operator/data.py": "25ccb17fcb8373ac126e9ab67324ef547a853931edb4bcd23706c45cde87ad02",
+    "channel_operator/evaluate.py": "ddbc800a1db0eeb507c7e21ea5969940fc8b3684dee0a6da9d6465957c1b8bb6",
+    "channel_operator/model.py": "58ebca8cd20ed0eac10254054c40d2cab467ed3f35eeee51c407534cfb628967",
+    "channel_operator/predict.py": "449adf45e6f1958362f736d524cb81b29c0a5ce515485d20f148bbda8e494857",
+    "channel_operator/profiles.py": "32f4f99beff1dbe498a76734e05972f823ad12072962275b791b3b0fbefcfefd",
+    "channel_operator/reference.py": "b585f6972822982635919b1c631b54625757dee3ab7911a033369f2a2641dc09",
+    "channel_operator/train.py": "e3841b0bd974ffa784e755e8c9a8ebc0ce9f240e6a325922020e300f113eb85d"
+  },
+  "gpu_experiments": [
+    "https://www.kaggle.com/code/mohrezsayeh/channel-pi-deeponet-re10-100",
+    "https://www.kaggle.com/code/mohrezsayeh/channel-pi-deeponet-entrance"
+  ]
+}

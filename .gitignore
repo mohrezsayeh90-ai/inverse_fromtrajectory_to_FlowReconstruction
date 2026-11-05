@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 artifacts/
 *.pt
+!models/channel_operator_candidate.pt
 *.npz
 .venv/
 kaggle-run/

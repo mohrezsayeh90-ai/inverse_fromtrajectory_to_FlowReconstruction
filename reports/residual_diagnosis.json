@@ -1,0 +1,10 @@
+{
+  "case": 0,
+  "reynolds": 12.0,
+  "momentum_rms_float32": 0.5664824843406677,
+  "momentum_rms_float64": 0.5664841040697209,
+  "momentum_rms_x_ge_0.05": 0.5422984750106185,
+  "momentum_rms_x_ge_0.1": 0.5017402486370427,
+  "momentum_rms_x_ge_0.25": 0.3688881081387451,
+  "momentum_rms_x_ge_0.5": 0.3235704467285116
+}

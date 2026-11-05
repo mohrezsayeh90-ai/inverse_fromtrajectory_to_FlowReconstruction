@@ -1,0 +1,329 @@
+{
+  "checkpoint_step": 16000,
+  "note": "Fixed boundary-of-training-domain cases, evaluated without refitting. Reference is 64x24 P2/P1; see main report for mesh convergence checks.",
+  "cases": [
+    {
+      "coefficients": [
+        -0.6,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.014924753433911602,
+      "pressure_relative_l2": 0.00917388576854715,
+      "divergence_rms": 0.0179086085408926,
+      "momentum_rms": 0.24206224083900452,
+      "reference": {
+        "iterations": 14,
+        "increment": 4.029785864273383e-08,
+        "nonlinear_residual": 1.2382642791961634e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        -0.6,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.01736145521543213,
+      "pressure_relative_l2": 0.05755580720310743,
+      "divergence_rms": 0.015119635500013828,
+      "momentum_rms": 0.05340475216507912,
+      "reference": {
+        "iterations": 22,
+        "increment": 5.736340461364603e-08,
+        "nonlinear_residual": 4.372465273998221e-09,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.6,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.010652456424534544,
+      "pressure_relative_l2": 0.014545651929824243,
+      "divergence_rms": 0.015654154121875763,
+      "momentum_rms": 0.2582763433456421,
+      "reference": {
+        "iterations": 14,
+        "increment": 4.0295997658847056e-08,
+        "nonlinear_residual": 1.239595788965454e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.6,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.011652595471870668,
+      "pressure_relative_l2": 0.07242781766369358,
+      "divergence_rms": 0.014841548167169094,
+      "momentum_rms": 0.04193633049726486,
+      "reference": {
+        "iterations": 22,
+        "increment": 5.7347357355712295e-08,
+        "nonlinear_residual": 4.3699096288449515e-09,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        -0.6,
+        0.0,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.019586794580649818,
+      "pressure_relative_l2": 0.009547099626875557,
+      "divergence_rms": 0.023229973390698433,
+      "momentum_rms": 0.4058252274990082,
+      "reference": {
+        "iterations": 12,
+        "increment": 6.545378603674497e-08,
+        "nonlinear_residual": 5.779616526090923e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        -0.6,
+        0.0,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.015758773300656427,
+      "pressure_relative_l2": 0.09769410610602437,
+      "divergence_rms": 0.013407052494585514,
+      "momentum_rms": 0.04924070090055466,
+      "reference": {
+        "iterations": 16,
+        "increment": 8.731786871050763e-08,
+        "nonlinear_residual": 1.6692152182823823e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.6,
+        0.0,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.037888567457921386,
+      "pressure_relative_l2": 0.020059702364123095,
+      "divergence_rms": 0.0330548994243145,
+      "momentum_rms": 0.6616460680961609,
+      "reference": {
+        "iterations": 12,
+        "increment": 3.650427241968482e-08,
+        "nonlinear_residual": 3.669988246734352e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.6,
+        0.0,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.04281940536647049,
+      "pressure_relative_l2": 0.01655034362008602,
+      "divergence_rms": 0.020135514438152313,
+      "momentum_rms": 0.08090049028396606,
+      "reference": {
+        "iterations": 17,
+        "increment": 4.6169376779003604e-08,
+        "nonlinear_residual": 8.45129631963655e-09,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.0,
+        -0.6,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.03868112332243745,
+      "pressure_relative_l2": 0.02598178604080351,
+      "divergence_rms": 0.030716003850102425,
+      "momentum_rms": 0.7743585705757141,
+      "reference": {
+        "iterations": 14,
+        "increment": 4.744577231822615e-08,
+        "nonlinear_residual": 2.184877043598149e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.0,
+        -0.6,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.03429980217056231,
+      "pressure_relative_l2": 0.1659415442659373,
+      "divergence_rms": 0.025122415274381638,
+      "momentum_rms": 0.08778926730155945,
+      "reference": {
+        "iterations": 23,
+        "increment": 9.616889042301751e-08,
+        "nonlinear_residual": 1.0113268458873447e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.0,
+        0.6,
+        0.0
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.03636067068388598,
+      "pressure_relative_l2": 0.027137766127500244,
+      "divergence_rms": 0.028862975537776947,
+      "momentum_rms": 0.8277766704559326,
+      "reference": {
+        "iterations": 14,
+        "increment": 4.7485320788097296e-08,
+        "nonlinear_residual": 2.1868418670315668e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.0,
+        0.6,
+        0.0
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.027603629056106232,
+      "pressure_relative_l2": 0.20621564822163987,
+      "divergence_rms": 0.026506714522838593,
+      "momentum_rms": 0.0840596929192543,
+      "reference": {
+        "iterations": 23,
+        "increment": 9.609052192803519e-08,
+        "nonlinear_residual": 1.0105076474828048e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        -0.6
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.02630922802350618,
+      "pressure_relative_l2": 0.013059477758326108,
+      "divergence_rms": 0.03195544704794884,
+      "momentum_rms": 0.8181158900260925,
+      "reference": {
+        "iterations": 12,
+        "increment": 3.707783744370519e-08,
+        "nonlinear_residual": 5.2763404851223944e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        -0.6
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.024774533510248293,
+      "pressure_relative_l2": 0.04153653781249115,
+      "divergence_rms": 0.026684928685426712,
+      "momentum_rms": 0.0833733081817627,
+      "reference": {
+        "iterations": 18,
+        "increment": 5.284230224370536e-08,
+        "nonlinear_residual": 7.81669597523585e-09,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.6
+      ],
+      "reynolds": 10.0,
+      "velocity_relative_l2": 0.02561916397112531,
+      "pressure_relative_l2": 0.016938955551479763,
+      "divergence_rms": 0.0294325053691864,
+      "momentum_rms": 0.8738493323326111,
+      "reference": {
+        "iterations": 13,
+        "increment": 4.935299270868102e-08,
+        "nonlinear_residual": 5.095888260819285e-08,
+        "nx": 64,
+        "ny": 24
+      }
+    },
+    {
+      "coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.6
+      ],
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.05784019174446038,
+      "pressure_relative_l2": 0.5767364769278361,
+      "divergence_rms": 0.02995862066745758,
+      "momentum_rms": 0.17511269450187683,
+      "reference": {
+        "iterations": 17,
+        "increment": 4.894993015954409e-08,
+        "nonlinear_residual": 8.116996615776796e-09,
+        "nx": 64,
+        "ny": 24
+      }
+    }
+  ],
+  "max_velocity_relative_l2": 0.05784019174446038,
+  "max_pressure_relative_l2": 0.5767364769278361,
+  "passed_velocity_pressure": false
+}

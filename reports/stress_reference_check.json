@@ -1,0 +1,11 @@
+{
+  "worst_coefficients": [
+    0.0,
+    0.0,
+    0.0,
+    0.6
+  ],
+  "reynolds": 100.0,
+  "mesh_64x24_vs_96x36_velocity_relative_l2": 0.00026730911311968373,
+  "mesh_64x24_vs_96x36_pressure_relative_l2": 0.0028795869053027195
+}

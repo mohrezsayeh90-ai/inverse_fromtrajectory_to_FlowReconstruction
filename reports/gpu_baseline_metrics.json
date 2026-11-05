@@ -1,0 +1,150 @@
+{
+  "checkpoint_step": 12000,
+  "training_mode": "hybrid_physics_informed",
+  "test_cases": [
+    {
+      "case": 0,
+      "reynolds": 12.0,
+      "velocity_relative_l2": 0.0007772870723703122,
+      "pressure_relative_l2": 0.0009214567842697597,
+      "v_absolute_rmse": 0.00020941866861178744,
+      "divergence_rms": 0.0008840286172926426,
+      "momentum_rms": 0.015040349215269089,
+      "max_flux_error": 0.00021327507784008048,
+      "scaled_outlet_rms": 0.0017654369585216045
+    },
+    {
+      "case": 1,
+      "reynolds": 24.285714285714285,
+      "velocity_relative_l2": 0.014833676627186725,
+      "pressure_relative_l2": 0.008039185526316772,
+      "v_absolute_rmse": 0.0055539403793828145,
+      "divergence_rms": 0.011970517225563526,
+      "momentum_rms": 0.06580474227666855,
+      "max_flux_error": 0.0026095440989593044,
+      "scaled_outlet_rms": 0.019740937277674675
+    },
+    {
+      "case": 2,
+      "reynolds": 36.57142857142857,
+      "velocity_relative_l2": 0.002261670430094511,
+      "pressure_relative_l2": 0.00942088404091343,
+      "v_absolute_rmse": 0.0004327614826994798,
+      "divergence_rms": 0.0012829125626012683,
+      "momentum_rms": 0.013802828267216682,
+      "max_flux_error": 0.0006121294900367502,
+      "scaled_outlet_rms": 0.0024941584561020136
+    },
+    {
+      "case": 3,
+      "reynolds": 48.85714285714286,
+      "velocity_relative_l2": 0.027339694653872534,
+      "pressure_relative_l2": 0.06021449765408595,
+      "v_absolute_rmse": 0.0069405619924003655,
+      "divergence_rms": 0.01949063129723072,
+      "momentum_rms": 0.126700296998024,
+      "max_flux_error": 0.0035593043830886018,
+      "scaled_outlet_rms": 0.04624918848276138
+    },
+    {
+      "case": 4,
+      "reynolds": 61.142857142857146,
+      "velocity_relative_l2": 0.01589485115598242,
+      "pressure_relative_l2": 0.011015037388729526,
+      "v_absolute_rmse": 0.004697613851857454,
+      "divergence_rms": 0.009599028155207634,
+      "momentum_rms": 0.04987749457359314,
+      "max_flux_error": 0.002963988241390325,
+      "scaled_outlet_rms": 0.007928600534796715
+    },
+    {
+      "case": 5,
+      "reynolds": 73.42857142857143,
+      "velocity_relative_l2": 0.006651119442772895,
+      "pressure_relative_l2": 0.008460374456345976,
+      "v_absolute_rmse": 0.0014486875034526452,
+      "divergence_rms": 0.004919031169265509,
+      "momentum_rms": 0.01888628862798214,
+      "max_flux_error": 0.0007668959842703771,
+      "scaled_outlet_rms": 0.007921889424324036
+    },
+    {
+      "case": 6,
+      "reynolds": 85.71428571428572,
+      "velocity_relative_l2": 0.004816304030952863,
+      "pressure_relative_l2": 0.008071937307010068,
+      "v_absolute_rmse": 0.0005905509568527872,
+      "divergence_rms": 0.0014442643150687218,
+      "momentum_rms": 0.009578412398695946,
+      "max_flux_error": 0.0008886404284567107,
+      "scaled_outlet_rms": 0.004515401553362608
+    },
+    {
+      "case": 7,
+      "reynolds": 98.0,
+      "velocity_relative_l2": 0.0032936698680998684,
+      "pressure_relative_l2": 0.0064257157916311775,
+      "v_absolute_rmse": 0.0006098518795197594,
+      "divergence_rms": 0.0020759333856403828,
+      "momentum_rms": 0.009698470123112202,
+      "max_flux_error": 0.0003313114430056885,
+      "scaled_outlet_rms": 0.0031193862669169903
+    }
+  ],
+  "acceptance_criteria": {
+    "velocity_relative_l2_max": 0.05,
+    "pressure_relative_l2_max": 0.1,
+    "max_flux_error": 0.02,
+    "divergence_rms_max": 0.03,
+    "momentum_rms_max": 0.05,
+    "scaled_outlet_rms_max": 0.1,
+    "reference_mesh_velocity_max": 0.01,
+    "reference_mesh_pressure_max": 0.02
+  },
+  "gates": {
+    "velocity": true,
+    "pressure": true,
+    "flux": true,
+    "divergence": true,
+    "momentum": false,
+    "outlet": true,
+    "reference_mesh": true,
+    "reference_poiseuille": true
+  },
+  "passed": false,
+  "reference_mesh_comparison": [
+    {
+      "velocity_relative_l2": 1.682234411585202e-05,
+      "pressure_relative_l2": 2.8518828853369193e-05
+    },
+    {
+      "velocity_relative_l2": 0.0004202425324022219,
+      "pressure_relative_l2": 0.0007158764854899817
+    },
+    {
+      "velocity_relative_l2": 3.005639624191839e-05,
+      "pressure_relative_l2": 6.89063322727334e-05
+    },
+    {
+      "velocity_relative_l2": 0.0007940454217078231,
+      "pressure_relative_l2": 0.002005561524454738
+    },
+    {
+      "velocity_relative_l2": 0.0002231698148588053,
+      "pressure_relative_l2": 0.0006514331687049067
+    },
+    {
+      "velocity_relative_l2": 0.00012458625588606677,
+      "pressure_relative_l2": 0.00028918628182013914
+    },
+    {
+      "velocity_relative_l2": 4.295396411124719e-05,
+      "pressure_relative_l2": 0.00012714430913604352
+    },
+    {
+      "velocity_relative_l2": 3.3938777339701755e-05,
+      "pressure_relative_l2": 0.00010793167548761129
+    }
+  ],
+  "scope": "Held-out smooth positive no-slip inlets within the four-mode L1<=0.6 family, Re in [10,100]; no extrapolation guarantee."
+}

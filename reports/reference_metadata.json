@@ -1,0 +1,97 @@
+{
+  "seed": 640529,
+  "test_used_for_training": false,
+  "test_mesh_comparison": [
+    {
+      "velocity_relative_l2": 0.002151280046492469,
+      "pressure_relative_l2": 0.0031775907230774956
+    },
+    {
+      "velocity_relative_l2": 0.00016001171139507577,
+      "pressure_relative_l2": 0.0003109906347354637
+    },
+    {
+      "velocity_relative_l2": 0.00017086842064268357,
+      "pressure_relative_l2": 0.000398364738414471
+    },
+    {
+      "velocity_relative_l2": 0.0002805152216056318,
+      "pressure_relative_l2": 0.0006384649449646412
+    },
+    {
+      "velocity_relative_l2": 0.0004372704371713545,
+      "pressure_relative_l2": 0.0012028352195111078
+    },
+    {
+      "velocity_relative_l2": 0.0001601793168851968,
+      "pressure_relative_l2": 0.00039968255390503013
+    },
+    {
+      "velocity_relative_l2": 0.0002669248761855784,
+      "pressure_relative_l2": 0.0008521559257723643
+    },
+    {
+      "velocity_relative_l2": 0.00042831632083449144,
+      "pressure_relative_l2": 0.0019372388013435625
+    }
+  ],
+  "reference_cases": [
+    {
+      "iterations": 13,
+      "increment": 6.185170549242148e-08,
+      "nonlinear_residual": 5.165205313405172e-08,
+      "nx": 64,
+      "ny": 24
+    },
+    {
+      "iterations": 14,
+      "increment": 8.782454758544181e-08,
+      "nonlinear_residual": 1.2784564702847699e-08,
+      "nx": 64,
+      "ny": 24
+    },
+    {
+      "iterations": 16,
+      "increment": 5.0673220389043626e-08,
+      "nonlinear_residual": 5.878968566083722e-09,
+      "nx": 64,
+      "ny": 24
+    },
+    {
+      "iterations": 18,
+      "increment": 5.173611561007051e-08,
+      "nonlinear_residual": 5.667451864913655e-09,
+      "nx": 64,
+      "ny": 24
+    },
+    {
+      "iterations": 19,
+      "increment": 9.74340544546144e-08,
+      "nonlinear_residual": 7.642259665185722e-09,
+      "nx": 64,
+      "ny": 24
+    },
+    {
+      "iterations": 17,
+      "increment": 5.730944482013616e-08,
+      "nonlinear_residual": 3.842385320200291e-09,
+      "nx": 64,
+      "ny": 24
+    },
+    {
+      "iterations": 19,
+      "increment": 7.285709954033542e-08,
+      "nonlinear_residual": 4.826978139131546e-09,
+      "nx": 64,
+      "ny": 24
+    },
+    {
+      "iterations": 22,
+      "increment": 7.59985801374957e-08,
+      "nonlinear_residual": 7.483531667342313e-09,
+      "nx": 64,
+      "ny": 24
+    }
+  ],
+  "poiseuille_max_abs_error": 1.2212453270876722e-14
+}
