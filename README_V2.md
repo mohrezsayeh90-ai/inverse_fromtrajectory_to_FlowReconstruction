@@ -2,6 +2,22 @@
 
 مدل ثابتِ ۷۰هزارگامی، پروفایل ورودی و Re را به u,v,p بی‌بعد نگاشت می‌کند. روش هیبریدی است: ۲۸۸ حل CFD برای آموزش، همراه با معادلات NS؛ ۱۶ حالت مستقل فقط برای پایش و ۸ حالت دیگر فقط برای آزمون نهایی. [گزارش کامل](reports/v2/REPORT.md) و [منحنی خطا](reports/v2/learning_curves.png) را ببینید.
 
+## مقایسهٔ تصویری تمام حالت‌ها
+
+[اطلس نتایج](reports/v2/comparisons/README.md) شامل مقایسهٔ مدل و مرجع برای تمام ۲۴ حالت است: میدان‌های u، v، فشار و اندازهٔ سرعت، نقشهٔ اختلاف، مقاطع کانال و جدول خطاهای هر حالت.
+
+- [PDF شامل ۴۹ صفحه](reports/v2/comparisons/comparison_atlas.pdf)
+- [داشبورد تعاملی آفلاین؛ دانلود و در مرورگر باز کنید](reports/v2/comparisons/dashboard.html)
+- [جدول خلاصهٔ خطاها](reports/v2/comparisons/summary.csv)
+- [مقادیر نقطه‌ای مدل، مرجع و اختلاف به CSV](reports/v2/comparisons/pointwise_fields.csv)
+- [تمام میدان‌ها برای پردازش با Python](reports/v2/comparisons/all_fields.npz)
+
+این خروجی‌ها بدون آموزش مجدد و روی همان نقاط مرجع ایجاد می‌شوند:
+
+```bash
+python scripts/render_v2_comparisons.py
+```
+
 ## پیش‌بینی بدون آموزش مجدد
 
 ```bash

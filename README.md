@@ -7,6 +7,7 @@
 - [راهنمای اجرای مدل جدید](README_V2.md)
 - [تشخیص علت‌ها و نتایج کنترل‌شده](reports/v2/REPORT.md)
 - [منحنی خطای حالات خارج از آموزش](reports/v2/learning_curves.png)
+- [اطلس مقایسهٔ هر ۲۴ حالت: مدل، مرجع FEM و نقشهٔ اختلاف](reports/v2/comparisons/README.md)
 - [تمام چاپ‌های آموزش به CSV](reports/v2/iteration_errors.csv)
 - وزن جدید: `models/v2/stream_operator.pt`؛ checkpoint کامل: `models/v2/jax_checkpoint.npz`.
 
