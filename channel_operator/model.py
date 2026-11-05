@@ -17,12 +17,15 @@ class ChannelDeepONet(nn.Module):
     Hard inlet/no-slip constraints; Poiseuille is a baseline, not training data.
     Input shapes: profiles [B,33], Re [B], coordinates [B,N,2].
     """
-    def __init__(self, length=5., width=64, latent=32):
+    def __init__(self, length=5., width=64, latent=32, entrance_features=False):
         super().__init__()
         self.config = dict(length=length, width=width, latent=latent)
+        self.entrance_features = entrance_features
+        if entrance_features:
+            self.config["entrance_features"] = True
         self.length, self.latent = length, latent
         self.branch = mlp(SENSORS+1, width, 3*latent)
-        self.trunk = mlp(10, width, 3*latent)
+        self.trunk = mlp(14 if entrance_features else 10, width, 3*latent)
         nn.init.normal_(self.trunk[-1].weight, std=1e-3)
         nn.init.zeros_(self.trunk[-1].bias)
         self.register_buffer("spline_map", torch.tensor(SPLINE_MAP.copy(), dtype=torch.float32))
@@ -54,9 +57,15 @@ class ChannelDeepONet(nn.Module):
         modes = torch.arange(1, 5, device=xy.device, dtype=xy.dtype)
         phase = torch.pi*y[..., None]*modes
         features = torch.cat([coords, torch.sin(phase), torch.cos(phase)], -1)
+        if self.entrance_features:
+            # Resolve short entrance scales without asking tanh(x/L) to invent them.
+            local = torch.stack([torch.log1p(20*x)/torch.log(x.new_tensor(101.)),
+                                 torch.exp(-x), torch.exp(-4*x), torch.exp(-16*x)], -1)
+            features = torch.cat([features, local], -1)
         t = self.trunk(features).reshape(*x.shape, 3, self.latent)
         raw = torch.einsum("bol,bnol->bno", b, t) / self.latent**.5
-        mask = (x/self.length)*4*y*(1-y)
+        axial_mask = 1-torch.exp(-x) if self.entrance_features else x/self.length
+        mask = axial_mask*4*y*(1-y)
         # Divergence-free entrance-decay baseline; the network learns corrections.
         ell = .05*reynolds[:, None]+.1
         decay = torch.exp(-(x/ell)**2)

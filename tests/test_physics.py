@@ -6,8 +6,9 @@ from channel_operator.profiles import from_coefficients, sample_profiles, Y, nor
 from channel_operator.reference import solve_channel
 
 
-def test_hard_boundary_conditions_and_integral():
-    model = ChannelDeepONet(width=16, latent=8).double()
+@pytest.mark.parametrize("entrance_features", [False, True])
+def test_hard_boundary_conditions_and_integral(entrance_features):
+    model = ChannelDeepONet(width=16, latent=8, entrance_features=entrance_features).double()
     profiles, _ = sample_profiles(np.random.default_rng(1), 3)
     p = torch.tensor(profiles)
     r = torch.tensor([10., 50., 100.], dtype=torch.float64)

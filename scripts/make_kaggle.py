@@ -2,11 +2,12 @@
 import argparse
 import hashlib
 import json
+import uuid
 from pathlib import Path
 
 
 def cell(source):
-    return {"cell_type": "code", "metadata": {}, "execution_count": None, "outputs": [], "source": source.splitlines(keepends=True)}
+    return {"cell_type": "code", "id": uuid.uuid4().hex[:8], "metadata": {}, "execution_count": None, "outputs": [], "source": source.splitlines(keepends=True)}
 
 
 def main():
@@ -15,6 +16,7 @@ def main():
     parser.add_argument("--id", default="mohrezsayeh/channel-pi-deeponet-re10-100")
     parser.add_argument("--steps", type=int, default=12000)
     parser.add_argument("--train-cases", type=int, default=48)
+    parser.add_argument("--entrance-features", action="store_true")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     target = Path(args.destination)
@@ -30,11 +32,13 @@ def main():
     setup += 'Path("artifacts").mkdir(exist_ok=True)\nPath("artifacts/source_manifest.json").write_text('+repr(json.dumps(manifest, indent=2))+')\n'
     setup += 'subprocess.run([sys.executable,"-m","pytest","-q"],check=True)\n'
     run = 'subprocess.run([sys.executable,"run_experiment.py","--output","artifacts","--steps",'+repr(str(args.steps))+',"--train-cases",'+repr(str(args.train_cases))+'],check=True)\n'
+    if args.entrance_features:
+        run = run.replace('],check=True)', ',"--entrance-features"],check=True)')
     report = 'from IPython.display import display, Image\nprint(Path("artifacts/metrics.json").read_text())\ndisplay(Image(filename="artifacts/heldout_fields.png"))\n'
-    notebook = {"cells": [{"cell_type": "markdown", "metadata": {}, "source": ["# Conditional Navier–Stokes channel operator\n", "Private GPU experiment. Hybrid FEM + physics-informed DeepONet; held-out FEM validation. No account credentials are embedded.\n"]}, cell(setup), cell(run), cell(report)],
+    notebook = {"cells": [{"cell_type": "markdown", "id": uuid.uuid4().hex[:8], "metadata": {}, "source": ["# Conditional Navier–Stokes channel operator\n", "Private GPU experiment. Hybrid FEM + physics-informed DeepONet; held-out FEM validation. No account credentials are embedded.\n"]}, cell(setup), cell(run), cell(report)],
                 "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}, "language_info": {"name": "python", "version": "3.11"}}, "nbformat": 4, "nbformat_minor": 5}
     (target/"channel.ipynb").write_text(json.dumps(notebook))
-    (target/"kernel-metadata.json").write_text(json.dumps({"id": args.id, "title": "Channel PI DeepONet Re10-100", "code_file": "channel.ipynb", "language": "python", "kernel_type": "notebook", "is_private": True, "enable_gpu": True, "enable_internet": True, "dataset_sources": [], "competition_sources": [], "kernel_sources": []}, indent=2))
+    (target/"kernel-metadata.json").write_text(json.dumps({"id": args.id, "title": args.id.split("/")[-1].replace("-", " ").title(), "code_file": "channel.ipynb", "language": "python", "kernel_type": "notebook", "is_private": True, "enable_gpu": True, "enable_internet": True, "dataset_sources": [], "competition_sources": [], "kernel_sources": []}, indent=2))
     print(target)
 
 

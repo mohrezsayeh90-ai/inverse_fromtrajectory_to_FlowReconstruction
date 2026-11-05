@@ -9,7 +9,7 @@ from .model import ChannelDeepONet, residuals, outlet_residuals
 from .profiles import sample_profiles
 
 
-def train(output, steps=12000, seed=42, batch=8, points=96, width=64, latent=32, physics_only=False, resume=None):
+def train(output, steps=12000, seed=42, batch=8, points=96, width=64, latent=32, physics_only=False, resume=None, entrance_features=False, data_weight=None):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     torch.manual_seed(seed)
@@ -17,7 +17,8 @@ def train(output, steps=12000, seed=42, batch=8, points=96, width=64, latent=32,
     rng = np.random.default_rng(seed)
     torch.set_num_threads(4)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = ChannelDeepONet(width=width, latent=latent).to(device)
+    model = ChannelDeepONet(width=width, latent=latent, entrance_features=entrance_features).to(device)
+    data_weight = (200 if entrance_features else 20) if data_weight is None else data_weight
     optimizer = torch.optim.Adam(model.parameters(), lr=2e-3)
     history, first_step = [], 0
     if resume:
@@ -27,6 +28,8 @@ def train(output, steps=12000, seed=42, batch=8, points=96, width=64, latent=32,
         model.load_state_dict(checkpoint["state_dict"])
         optimizer.load_state_dict(checkpoint["optimizer"])
         first_step = checkpoint["step"]
+        if steps <= first_step:
+            raise ValueError(f"Target steps must exceed resumed checkpoint step {first_step}")
     tensor = lambda a: torch.as_tensor(a, dtype=torch.float32, device=device)
     data = None
     if not physics_only:
@@ -40,6 +43,7 @@ def train(output, steps=12000, seed=42, batch=8, points=96, width=64, latent=32,
                  "step": step, "seed": seed, "mode": "physics_only" if physics_only else "hybrid_physics_informed",
                  "training_domain": {"length": 5, "height": 1, "reynolds": [10, 100], "cosine_modes": 4, "coefficient_l1_radius": .6},
                  "torch_version": torch.__version__}
+        state["loss_config"] = dict(mass=10, momentum=1, outlet=.1, flux=10, data=data_weight)
         temporary = output/"checkpoint.tmp"
         torch.save(state, temporary)
         temporary.replace(output/"model.pt")
@@ -81,7 +85,7 @@ def train(output, steps=12000, seed=42, batch=8, points=96, width=64, latent=32,
             scale[..., 2] = data["reynolds"][ci, None]/60
             supervised = ((prediction-target)*scale).square().mean()
         # FEM warm-start remains part of the loss, physics is active from step 1.
-        loss = 10*mass_loss + momentum + .1*bc_loss + 10*flux_loss + 20*supervised
+        loss = 10*mass_loss + momentum + .1*bc_loss + 10*flux_loss + data_weight*supervised
         if not torch.isfinite(loss):
             raise RuntimeError(f"Nonfinite loss at step {step}")
         loss.backward()

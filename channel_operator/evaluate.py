@@ -6,7 +6,7 @@ import torch
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from .model import load_model, residuals, outlet_residuals
+from .model import load_model, residuals, outlet_residuals, ChannelDeepONet
 from .profiles import from_coefficients, Y
 
 
@@ -20,6 +20,10 @@ def evaluate(output):
     p, r = tensor(profiles), tensor(res)
     with torch.no_grad():
         prediction = model(p, r, tensor(xy)[None].expand(len(p), -1, -1)).cpu().numpy()
+        baseline = ChannelDeepONet(**ckpt["model_config"]).to(device)
+        baseline.trunk[-1].weight.zero_()
+        baseline.trunk[-1].bias.zero_()
+        initial = baseline(p, r, tensor(xy)[None].expand(len(p), -1, -1)).cpu().numpy()
     cases = []
     rng = np.random.default_rng(84853)
     for i in range(len(p)):
@@ -37,6 +41,8 @@ def evaluate(output):
         record = {"case": i, "reynolds": float(res[i]),
                   "velocity_relative_l2": float(np.linalg.norm(error[:, :2])/np.linalg.norm(truth[i, :, :2])),
                   "pressure_relative_l2": float(np.linalg.norm(error[:, 2])/np.linalg.norm(truth[i, :, 2])),
+                  "untrained_baseline_velocity_relative_l2": float(np.linalg.norm(initial[i, :, :2]-truth[i, :, :2])/np.linalg.norm(truth[i, :, :2])),
+                  "untrained_baseline_pressure_relative_l2": float(np.linalg.norm(initial[i, :, 2]-truth[i, :, 2])/np.linalg.norm(truth[i, :, 2])),
                   "v_absolute_rmse": float(np.sqrt(np.mean(error[:, 1]**2))),
                   "divergence_rms": float(m.square().mean().sqrt().detach()),
                   "momentum_rms": float((mx.square().mean()+my.square().mean()).sqrt().detach()),
@@ -69,7 +75,11 @@ def evaluate(output):
         for k, (title, field) in enumerate([("FEM", truth), ("operator", prediction), ("error", prediction-truth)]):
             ax = axes[j, k]
             z = field[i, :, j].reshape(49, 21).T
-            im = ax.imshow(z, origin="lower", extent=[.015, 4.985, .01, .99], aspect="auto", cmap="coolwarm")
+            limits = {}
+            if k < 2:
+                limits = dict(vmin=min(truth[i, :, j].min(), prediction[i, :, j].min()),
+                              vmax=max(truth[i, :, j].max(), prediction[i, :, j].max()))
+            im = ax.imshow(z, origin="lower", extent=[.015, 4.985, .01, .99], aspect="auto", cmap="coolwarm", **limits)
             ax.set_title(f"{name}: {title}")
             fig.colorbar(im, ax=ax)
     fig.suptitle(f"Worst held-out velocity case: Re={res[i]:.1f}")
