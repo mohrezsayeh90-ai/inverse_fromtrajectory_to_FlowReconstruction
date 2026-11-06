@@ -1,0 +1,8 @@
+# Tested CPU environment, Python 3.12.14. GPU training uses Kaggle CUDA JAX.
+# Do not replace a working CUDA JAX installation with these CPU wheels.
+numpy==2.3.5
+scipy==1.17.0
+jax==0.11.1
+jaxlib==0.11.1
+matplotlib==3.10.8
+pytest==9.2.0

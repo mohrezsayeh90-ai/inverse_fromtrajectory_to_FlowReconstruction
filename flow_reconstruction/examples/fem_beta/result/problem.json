@@ -1,0 +1,53 @@
+{
+  "units": "nondimensional",
+  "tracks": [
+    {
+      "name": "upper_left",
+      "csv": "observed_track_1.csv",
+      "initial_position": [
+        0.03,
+        0.97
+      ],
+      "initial_velocity": [
+        6.0,
+        -4.0
+      ],
+      "stokes_time": 0.12
+    },
+    {
+      "name": "lower_right",
+      "csv": "observed_track_2.csv",
+      "initial_position": [
+        4.97,
+        0.03
+      ],
+      "initial_velocity": [
+        -6.0,
+        4.0
+      ],
+      "stokes_time": 0.12
+    }
+  ],
+  "inverse": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "starts": 3,
+    "max_iterations": 400,
+    "quadrature_order": 3,
+    "seed": 71103,
+    "precondition_shape": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "experimental_inverse_engine_implemented",
+  "forward_checkpoint": "models/candidates/pressure_long/checkpoint.npz",
+  "forward_checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "forward_training_step": 94000,
+  "forward_runtime_signature": "daac185b26ba7837f8568a683412dbaf42b8456010c24ea89e1db8fdc81f7ea5",
+  "inverse_runtime_signature": "20f378da00a39d2c80d59711e01a4f63c64ebdafccac741af0f138ce8af312f0",
+  "frozen_forward_weights": true,
+  "forward_network_retrained": false,
+  "global_inverse_flow_accuracy_validated": false,
+  "tests_passed": 68,
+  "generic_CLI_with_real_checkpoint": "passed",
+  "saved_result_reloads": "all four match to <5e-16",
+  "python": "3.12.14",
+  "packages": {
+    "jax": "0.11.1",
+    "jaxlib": "0.11.1",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "pytest": "9.2.0"
+  }
+}

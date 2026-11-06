@@ -1,0 +1,58 @@
+[
+  {
+    "folder": "development/trajectory_only_initial",
+    "label": "پرتاب مایل، تطبیق مسیر",
+    "trajectory_rmse_max": 0.0005125582691273613,
+    "velocity_error_pct": 21.514126449592002,
+    "pressure_error_pct": 34.540501321525916,
+    "inlet_error_pct": 41.38134299890919,
+    "momentum_rms": 16.68645308691819,
+    "selected_mean_speed": 1.0009725703873207,
+    "rank": 24,
+    "parameters": 63,
+    "seconds": 60.3740548400001,
+    "all_optimizer_starts_converged": false
+  },
+  {
+    "folder": "fem_beta",
+    "label": "پرتاب مایل، فیزیک و همواری",
+    "trajectory_rmse_max": 0.0018984431148281816,
+    "velocity_error_pct": 21.217203049344473,
+    "pressure_error_pct": 42.80359275023466,
+    "inlet_error_pct": 40.212721776232364,
+    "momentum_rms": 4.660908469700835,
+    "selected_mean_speed": 1.0104699710436496,
+    "rank": 24,
+    "parameters": 63,
+    "seconds": 205.38413415900004,
+    "all_optimizer_starts_converged": false
+  },
+  {
+    "folder": "corner_launch",
+    "label": "پرتاب گوشه‌ای، بدون پیش‌شرط‌سازی",
+    "trajectory_rmse_max": 0.0022008008533227407,
+    "velocity_error_pct": 24.006706341687277,
+    "pressure_error_pct": 49.87103740579074,
+    "inlet_error_pct": 40.169729587828904,
+    "momentum_rms": 5.541440086443802,
+    "selected_mean_speed": 1.004051727987197,
+    "rank": 26,
+    "parameters": 63,
+    "seconds": 390.2310309919999,
+    "all_optimizer_starts_converged": false
+  },
+  {
+    "folder": "corner_launch_preconditioned",
+    "label": "پرتاب گوشه‌ای، پیش‌شرط‌سازی با تمام گره‌ها",
+    "trajectory_rmse_max": 0.0006675707469400767,
+    "velocity_error_pct": 26.912705833085344,
+    "pressure_error_pct": 32.999212729402636,
+    "inlet_error_pct": 43.15330204960299,
+    "momentum_rms": 0.5311882438483307,
+    "selected_mean_speed": 1.0023600780844009,
+    "rank": 11,
+    "parameters": 63,
+    "seconds": 412.5569861609997,
+    "all_optimizer_starts_converged": false
+  }
+]

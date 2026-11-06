@@ -1,0 +1,34 @@
+{
+  "trajectory_result": [
+    {
+      "name": "upper_left",
+      "completed": true,
+      "boundary_exit_time": null,
+      "observed_points": 81,
+      "simulated_points": 81,
+      "position_rmse": 0.0018984431148281816,
+      "max_position_error": 0.004545199545078586
+    },
+    {
+      "name": "lower_right",
+      "completed": true,
+      "boundary_exit_time": null,
+      "observed_points": 81,
+      "simulated_points": 81,
+      "position_rmse": 0.0010000904095163212,
+      "max_position_error": 0.0030540915409306407
+    }
+  ],
+  "independent_truth": {
+    "velocity_relative_l2": 0.21217203049344474,
+    "pressure_relative_l2": 0.4280359275023466,
+    "v_relative_l2": 1.533637312537361,
+    "mean_speed_absolute_error": 0.01046997104364955,
+    "comparison_role": "synthetic independent FEM truth, fields not supplied to inversion",
+    "reference_grid_points": 7081,
+    "unique_recovery_claim": false,
+    "inlet_relative_l2": 0.40212721776232363
+  },
+  "local_data_rank": 24,
+  "parameters": 63
+}

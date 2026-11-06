@@ -1,0 +1,11 @@
+{
+  "source": "independent Taylor-Hood FEM validation reference beta.npz",
+  "velocity_between_reference_points": "linear RegularGridInterpolator",
+  "particle_solver": "adaptive solve_ivp RK45",
+  "trajectory_noise_std": 0.0002,
+  "noise_seed": 71104,
+  "forward_operator_used_to_generate_truth": false,
+  "reference_fields_used_in_inverse_objective": false,
+  "truth_mean_speed": 1.0,
+  "truth_reynolds": 30.0
+}

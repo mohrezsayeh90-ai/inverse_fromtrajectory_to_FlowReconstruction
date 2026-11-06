@@ -34,3 +34,19 @@ Outputs to retain after the run:
 - `acceptance_status.json`, `validation_checkpoint/`, `validation_best_checkpoint/`, and `heldout_test/` if actually evaluated.
 
 No outcome is asserted in advance. The inference API rejects a checkpoint without a passing report that matches its weight hash and implementation signature, unless provisional use is explicitly requested.
+
+## Saved-run reproduction without relying on Kaggle storage
+
+The completed last, best, and selected weights, including Adam and RNG states, are all in `reports/experiments/pressure_long/output/`. The 5,000-step parent is also retained at `models/candidates/pressure/checkpoint.npz`. Sources and seeds are retained in the run snapshot. To reproduce the continuation on a suitable two-GPU machine from repository files:
+
+```bash
+python -m flow_operator.train --output runs/reproduced_pressure \
+  --resume models/candidates/pressure/checkpoint.npz --steps 100000 \
+  --pool-count 10000 --pool-seed 9703107 --batch 64 --points 48 \
+  --width 128 --latent 64 --depth 4 --encoder-kind sensor --lift oseen \
+  --physics-normalization input_curvature_sqrt --separate-pressure-trunk \
+  --devices 2 --monitor-points 1024 \
+  --reference-monitor validation/references --reference-every 1000
+```
+
+Input functions are regenerated from the saved seed; resume checks their hash before updating weights. A changed software environment that changes that hash is rejected. The pinned tested CPU package versions are in `requirements-cpu-tested.txt`; keep an appropriate CUDA JAX installation for GPU training. Bitwise identical retraining across hardware, Python, and library versions is not promised. Frozen-weight evaluation is independently replayed in the saved reports. `python -m scripts.verify_reproducibility` checks the actual repository artifacts rather than assuming their presence.

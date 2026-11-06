@@ -1,0 +1,61 @@
+{
+  "all_checks_passed": true,
+  "source_commit": "89d190bcd4c8f5cf3e7cc7cfaa1f36aeb8a4defc",
+  "audit_scope": "Working tree and Git index at audit time; source_commit is HEAD before saving this report.",
+  "required_file_sha256": {
+    "flow_operator/model.py": "b55643c4cd10a7f7db8084ab5dc99f19d310d5967dcae2fad29440363143fcac",
+    "flow_operator/train.py": "d1d805537f28312be1aa56f9a23e6dc0779fb3ae8dbff4d56cde99a7a412f21a",
+    "flow_operator/predict.py": "6e1974a5c8d0eb13248ba9d16388fedf06ac4b1e545a8e483ae239b2d542fd16",
+    "flow_operator/profiles.py": "0e24f0a5ae3a46fea040c2a7c4e4b630710d2e89078709ba92d1c01bced9fa9d",
+    "flow_operator/checkpoint.py": "df417b485ac57a0a022851f75a89aa96b0aa3536fd70b1eff835256df7cfc265",
+    "scripts/make_kaggle.py": "55de9989e657e464fd6d5850cc4d0b4533dd4b4a11a3cd508fb8a402baf5d06f",
+    "scripts/finalize_run.py": "93469652ed6dbba900de9cf5143f0b30230b04e85ad809a900e68a066a9f25f9",
+    "requirements.txt": "c48a8402856397b1329ffd08bef5ac70b4b0809e7f120505befe77c328db7591",
+    "docs/TRAINING_REPRODUCIBILITY.md": "cfe92d65ed6f9ac817abdf9c4014f605c19827db0b30454139b2834f42c7702f",
+    "notebooks/training/pressure_long/operator.ipynb": "e0ca10c46e839244c943748dac8b9cb1a46c3a334b0c57e44abd3d2dc1a8c888",
+    "models/candidates/pressure_long/checkpoint.npz": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+    "flow_reconstruction/inverse.py": "386a324fb3b0ac23b3f9937fd86aaf23cc19e58ccb20dc631bc738beaaabc132",
+    "flow_reconstruction/particles.py": "9f0fdf44aa9fe2cc8cb859457534808ab1d447ca6ffbc1a2813500bc2aad541e",
+    "flow_reconstruction/profile.py": "627558b744e6346aff4c5ee72980cba36c224fb01dc07c36c2efee15ce8ca660",
+    "flow_reconstruction/io.py": "18a21d9955779db1fe39511431ed4ae8998b68eaec616239833788b705cbd847",
+    "flow_reconstruction/reconstruct.py": "767f8b4532fd7678344bc86d086730bcd50332d62abd4df0f5ff8fd1694399c1",
+    "flow_reconstruction/demo.py": "20e7e5da16569740859f67fa401db8fdb33d8920c05e9de85ca296894b2b7bc7",
+    "flow_reconstruction/ARTIFACT_MANIFEST.json": "1af03bfd0d0dccbb3aa1c0ab90332a82263012e8cc015bd3d456011512c6a70d",
+    "requirements-cpu-tested.txt": "4911f441bfa7a84cbd88761a0d8723d6a3d178d1f8060fe46f52bcbd62da1736"
+  },
+  "original_output_files": 30,
+  "full_saved_artifacts": 51,
+  "embedded_training_source_files": 17,
+  "original_archived_files_verified": 192,
+  "references_verified": 6,
+  "model_states": {
+    "checkpoint": {
+      "step": 100000,
+      "sha256": "e404067b9369e2bdd49868bc9dcba3d6efccd0bd527e41cc0ef4139b1553cea3",
+      "optimizer_and_rng_present": true
+    },
+    "best_checkpoint": {
+      "step": 94000,
+      "sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "optimizer_and_rng_present": true
+    },
+    "selected_checkpoint": {
+      "step": 94000,
+      "sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "optimizer_and_rng_present": true
+    }
+  },
+  "source_code_execution_notebook_weights_Adam_RNG_inputs_references_predictions_logs_present": true,
+  "environment": {
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "jax": "0.11.1",
+      "jaxlib": "0.11.1",
+      "matplotlib": "3.10.8",
+      "pytest": "9.2.0"
+    }
+  },
+  "note": "Method and frozen-weight inference are reproducible; bitwise retraining across different GPU, Python, and library versions is not guaranteed. Training snapshot can be extracted from the saved notebook."
+}

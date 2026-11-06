@@ -1,0 +1,96 @@
+{
+  "status": "experimental_regularized_inverse_fit",
+  "forward_checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "forward_training_step": 94000,
+  "forward_operator_benchmark_accepted": false,
+  "forward_weights_unchanged": true,
+  "config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 9,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 16,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 1,
+    "max_iterations": 2,
+    "quadrature_order": 3,
+    "seed": 71103
+  },
+  "selected_start": 0,
+  "candidates": [
+    {
+      "start": 0,
+      "objective": 27.81331336912493,
+      "iterations": 2,
+      "optimizer_success": false,
+      "optimizer_message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "mean_speed": 1.002504107629974,
+      "reynolds": 30.075123228899223,
+      "spline_minimum": 0.0,
+      "valid_inlet": true
+    }
+  ],
+  "mean_speed": 1.002504107629974,
+  "reynolds": 30.075123228899223,
+  "trajectories": [
+    {
+      "name": "upper_left",
+      "completed": true,
+      "boundary_exit_time": null,
+      "observed_points": 101,
+      "simulated_points": 101,
+      "position_rmse": 0.0035857657562776675,
+      "max_position_error": 0.007786553539492332
+    },
+    {
+      "name": "lower_right",
+      "completed": true,
+      "boundary_exit_time": null,
+      "observed_points": 101,
+      "simulated_points": 101,
+      "position_rmse": 0.003162227324314422,
+      "max_position_error": 0.00945235032379501
+    }
+  ],
+  "trajectory_consistency_passed": true,
+  "inlet": {
+    "input_samples": 9,
+    "encoder_points": 257,
+    "normalization_mean": 0.9860959960634897,
+    "normalized_flux": 1.0,
+    "normalized_min": 0.0,
+    "normalized_max": 1.8678290586733495,
+    "local_reverse_flow": false,
+    "sample_preservation_max_error": 0.0,
+    "representation": "C2 interpolating cubic spline through every supplied sample; no mode projection",
+    "resolution_notice": "Samples alone cannot prove that an unknown underlying function is resolved."
+  },
+  "physical_momentum_rms": 0.21775410084431795,
+  "divergence_rms": 1.4163722645411875e-16,
+  "data_jacobian_singular_values": [
+    579.1487040117573,
+    53.954044622688585,
+    7.749842643205444,
+    1.198075794900551,
+    0.9029912210896693,
+    0.5346380155015781,
+    0.17344031368872032
+  ],
+  "data_jacobian_effective_rank": 7,
+  "free_parameters": 7,
+  "rank_threshold_relative": 1e-05,
+  "unique_flow_guaranteed": false,
+  "uncertainty_notice": "Candidate spread is empirical optimizer sensitivity, not a calibrated confidence interval. Local rank is parameterization- and threshold-dependent.",
+  "pressure_notice": "Pressure is supplied conditionally by the forward operator; Stokes trajectories do not observe it directly.",
+  "seconds_including_compilation": 25.867139815999508
+}

@@ -1,0 +1,10 @@
+{
+  "velocity_relative_l2": 0.26912705833085343,
+  "pressure_relative_l2": 0.3299921272940264,
+  "v_relative_l2": 1.335349270204766,
+  "mean_speed_absolute_error": 0.002360078084400863,
+  "comparison_role": "synthetic independent FEM truth, fields not supplied to inversion",
+  "reference_grid_points": 7081,
+  "unique_recovery_claim": false,
+  "inlet_relative_l2": 0.43153302049602993
+}

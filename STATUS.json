@@ -25,5 +25,13 @@
   "continuation_optimizer_update_verified": true,
   "selected_checkpoint_step": 94000,
   "selected_checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
-  "training_in_progress": false
+  "training_in_progress": false,
+  "flow_reconstruction": {
+    "implemented": true,
+    "forward_weights_frozen": true,
+    "independent_FEM_example_tested": true,
+    "global_flow_accuracy_validated": false,
+    "unique_reconstruction_guaranteed": false,
+    "report": "flow_reconstruction/RESULTS.md"
+  }
 }
