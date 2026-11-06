@@ -1,0 +1,58 @@
+{
+  "artifacts": {
+    "flow_reconstruction/trajectory_comparisons/FLOW_AND_PARTICLES.md": {
+      "sha256": "31d2885d3679a5ee6efd42a4bf826a712924c2ae5deecdae45598115e6298957",
+      "bytes": 2503
+    },
+    "flow_reconstruction/trajectory_comparisons/case_1/flow_and_particles.json": {
+      "sha256": "201e3ba6de48ada4e0c2b6685d96b09557540a271b1f66665b1450188ef2c7f2",
+      "bytes": 915
+    },
+    "flow_reconstruction/trajectory_comparisons/case_1/flow_and_particles.pdf": {
+      "sha256": "9fc13109fd8d27dd687ab98e662c7990efeafe96d2a2271bc685917342130bbe",
+      "bytes": 134608
+    },
+    "flow_reconstruction/trajectory_comparisons/case_1/flow_and_particles.png": {
+      "sha256": "9ab7b5b8bd5456b0bdcaedda23e63da2f7328f4ae4e1ec5cadd43b12662c6115",
+      "bytes": 445812
+    },
+    "flow_reconstruction/trajectory_comparisons/case_2/flow_and_particles.json": {
+      "sha256": "c41046dca9d4c721f916d38adeede7c8d441891ea3cb34a4dcd8e593f82e3de2",
+      "bytes": 888
+    },
+    "flow_reconstruction/trajectory_comparisons/case_2/flow_and_particles.pdf": {
+      "sha256": "a38da3c99ec580d963a0cf0b3aa1deee41555b059181f020556c656c75ea2a61",
+      "bytes": 134728
+    },
+    "flow_reconstruction/trajectory_comparisons/case_2/flow_and_particles.png": {
+      "sha256": "82363a7be5971dbe02ff16d91c8c20717a0258a77b94cecaa0e7fc079f912a64",
+      "bytes": 403669
+    },
+    "flow_reconstruction/trajectory_comparisons/case_3/flow_and_particles.json": {
+      "sha256": "361e453e90840e8a41f67bb7f62e6c09fa9d8faec1db0a0abb813f51a2a6a307",
+      "bytes": 893
+    },
+    "flow_reconstruction/trajectory_comparisons/case_3/flow_and_particles.pdf": {
+      "sha256": "ad5f90c36861a780da89ece41286c4f44f26c0b2867d2e9fbbbeff67b3cb32ac",
+      "bytes": 135732
+    },
+    "flow_reconstruction/trajectory_comparisons/case_3/flow_and_particles.png": {
+      "sha256": "c94e5d938051bf908680d8d13052959ad03bd3c1f6a7c5336cee7330bc4ae29b",
+      "bytes": 440324
+    },
+    "flow_reconstruction/trajectory_comparisons/case_4/flow_and_particles.json": {
+      "sha256": "3bc3f5d2ce50cde0e941f42579525528538f3030207aef301f80d05a3d75c6ec",
+      "bytes": 908
+    },
+    "flow_reconstruction/trajectory_comparisons/case_4/flow_and_particles.pdf": {
+      "sha256": "85bbd85c3efb7fc5b706472e84214cafafae07e2df965e0bffd95323edbb373d",
+      "bytes": 138790
+    },
+    "flow_reconstruction/trajectory_comparisons/case_4/flow_and_particles.png": {
+      "sha256": "418509e55507b57643394e26e8ccefa78aca6f6473aa3cdb4e50329d4a2d1652",
+      "bytes": 483329
+    }
+  },
+  "protected_existing_files": 566,
+  "all_previous_files_unchanged": true
+}

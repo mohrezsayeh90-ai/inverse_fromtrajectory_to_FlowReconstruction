@@ -1,0 +1,15 @@
+{
+  "saved_result": "flow_reconstruction/examples/corner_launch_preconditioned/result",
+  "source_sha256": {
+    "flow_grid": "b1d668598e302a523678875b6926dda9eebe3daf20f712813ccff543b8169f48",
+    "fitted_model": "c5923c6464cd50fe26fe47a6fdbbc1c3bc98910ac0737aa2fcd2a47182a64ca6",
+    "particle_1_input": "d7908a1ab41709b71d8add5877f6d988547ed511b0cb80d523035a9ea7aa8739",
+    "particle_1_ODE": "6777dc87f6b4c9dd10857220469a568fca35a314b02eeaf8686f7b7e7000a9fd",
+    "particle_2_input": "fd04ccf3f2a5f8bf02ddd32a6ef1407874dc3dec7c93d0e525af379749aca63e",
+    "particle_2_ODE": "aa15fad1400d48569cfc01401fe45a89a72fd99f3d31baa0d66b62e8f37c8bc0"
+  },
+  "model_refitted": false,
+  "new_flow_prediction": false,
+  "new_particle_simulation": false,
+  "description": "Direct visualization of the previously saved inferred fluid grid and its own saved forward-ODE particle paths; no reference field comparison."
+}

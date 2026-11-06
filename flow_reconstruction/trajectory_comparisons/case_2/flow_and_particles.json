@@ -1,0 +1,15 @@
+{
+  "saved_result": "flow_reconstruction/examples/fem_beta/result",
+  "source_sha256": {
+    "flow_grid": "e905b2a1d7a7f2d6c605361dd21c2cca94ea83eb839a028116548e0e6bf8d6eb",
+    "fitted_model": "a624be5cb1018f68f241f542230317c2073a10a5e353ed8df6ca013f02ab92de",
+    "particle_1_input": "7d2d8d5ec2a0b2b7482b33de404894a3b3ea01ecb7b1b29325073a09d161bd24",
+    "particle_1_ODE": "ecf3eadf6587a7c895ecba8241c87601d0cd689ad741113bea9a4845678d2c0b",
+    "particle_2_input": "d01d074b420e8a68f92b5279ebfe3dbf620aafd374f189b79ca012a48aa0927b",
+    "particle_2_ODE": "c9dc5309634b7a77cb05ff7b8a3a1f92824508ea5ead778eaf0a89dbc92ba701"
+  },
+  "model_refitted": false,
+  "new_flow_prediction": false,
+  "new_particle_simulation": false,
+  "description": "Direct visualization of the previously saved inferred fluid grid and its own saved forward-ODE particle paths; no reference field comparison."
+}
