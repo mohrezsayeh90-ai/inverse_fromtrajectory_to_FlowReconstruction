@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
-LABELS={'gaussian':'Gaussian / pooled','oseen':'Oseen / pooled','moments':'Oseen / moments','sensor':'Direct sensor branch','pressure':'Separate pressure/stream operators'}
-COLORS={'gaussian':'#9b778c','oseen':'#527ca8','moments':'#e39432','sensor':'#008b8b','pressure':'#542b9e'}
+LABELS={'gaussian':'Gaussian / pooled','oseen':'Oseen / pooled','moments':'Oseen / moments','sensor':'Direct sensor branch','pressure':'Separate pressure/stream: pilot','pressure_long':'Separate pressure/stream: 100k run'}
+COLORS={'gaussian':'#9b778c','oseen':'#527ca8','moments':'#e39432','sensor':'#008b8b','pressure':'#542b9e','pressure_long':'#cf324d'}
 
 
 def main():
@@ -68,7 +68,7 @@ def main():
         for name,cases in case_metrics.items():
             for case in cases:writer.writerow(dict(experiment=name,case=case['name'],**{k:case[k] for k in columns[2:]}))
     text=['# نتایج واقعی آزمایش‌های اپراتور جدید','','تمام اعداد این صفحه از checkpoint واقعی و مرجع مستقل آمده‌اند. این‌ها validation تکرارشونده‌اند؛ آزمون کور نهایی نیستند. پاسخ CFD وارد objective آموزش نشده است.','',
-          '| آزمایش | گام | بیشینهٔ خطای سرعت ٪ | بیشینهٔ خطای فشار ٪ | بیشینهٔ RMS مومنتوم | تمام معیارها پاس؟ |','|---|---:|---:|---:|---:|---|']
+          '| آزمایش | گام وزن ارزیابی‌شده | بیشینهٔ خطای سرعت ٪ | بیشینهٔ خطای فشار ٪ | بیشینهٔ RMS مومنتوم | تمام معیارها پاس؟ |','|---|---:|---:|---:|---:|---|']
     for s in summaries:text.append(f"| [{LABELS[s['name']]}]({s['name']}/metrics.json) | {s['step']} | {s['max_velocity_pct']:.3f} | {s['max_pressure_pct']:.3f} | {s['max_momentum_rms']:.4f} | {s['accepted']} |")
     text+=['','![خطای مرجع در آموزش](reference_learning_curves.png)','','![باقی‌ماندهٔ معادلات](momentum_learning_curves.png)','',
            'آزمایش‌ها فقط در یک عامل تغییر نکرده‌اند؛ از این جدول نمی‌توان سهم مستقل هر تغییر معماری، batch یا مقیاس‌بندی را استنتاج کرد. قیود ورودی و جرم در همهٔ نسخه‌های جدید برقرارند، اما این به‌تنهایی دقت میدان را تضمین نمی‌کند.',

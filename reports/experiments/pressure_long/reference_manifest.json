@@ -1,0 +1,26 @@
+{
+  "validation/heldout_references/skew_flat_513.npz": {
+    "sha256": "3ae11fd3edc090b8e1d09b20bd268404331caa6d6c466770deb1c61ffb717c62",
+    "origin": "embedded"
+  },
+  "validation/heldout_references/mixed_scales_513.npz": {
+    "sha256": "d65e5697b7d3bfb47e1c5a0612032af6e4dfe2198c596f209afc27d3a0e89e35",
+    "origin": "embedded"
+  },
+  "validation/references/asymmetric.npz": {
+    "sha256": "0db341d75992967e50ddac34e9bb31f3820d8c94fdf9e61ca10f8bf76c20bdd3",
+    "origin": "mohrezsayeh/channel-general-physics-v3-pressure"
+  },
+  "validation/references/flat.npz": {
+    "sha256": "f9e6dd71b99231164d2f6dae128e967045e9878f41661098e43ab603ee716f6e",
+    "origin": "mohrezsayeh/channel-general-physics-v3-pressure"
+  },
+  "validation/references/nine.npz": {
+    "sha256": "6726f082c625b37ba5fcbe77079c914ed062e8083b3b9be3fcf6dbd389add2bd",
+    "origin": "mohrezsayeh/channel-general-physics-v3-pressure"
+  },
+  "validation/references/beta.npz": {
+    "sha256": "34fb61c2b7b232a6c5928709b5768edc749cfc4c71d736614d51e47d3b5f9ba1",
+    "origin": "mohrezsayeh/channel-general-physics-v3-pressure"
+  }
+}

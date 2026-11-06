@@ -1,0 +1,22 @@
+{
+  "seed": 9703107,
+  "count": 10000,
+  "input_points": 257,
+  "encoder_points": 257,
+  "families": {
+    "grf": 1807,
+    "oscillatory": 3076,
+    "beta": 1524,
+    "flat": 1501,
+    "jets": 915,
+    "random_spline": 711,
+    "parabolic": 466
+  },
+  "response_labels_present": false,
+  "reserved_profiles": [
+    "exact Beta(5,5); other diagnostic profiles are checked against the assembled pool"
+  ],
+  "training_speed_cap": 3.0,
+  "profile_source": "seven input-only families; no CFD",
+  "note": "Training coverage is finite; the inference interface does not restrict profiles to these generators."
+}

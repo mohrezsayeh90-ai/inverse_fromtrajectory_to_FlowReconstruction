@@ -44,13 +44,17 @@
       "id": "mohrezsayeh/channel-general-physics-v3-pressure-long",
       "target_steps": 100000,
       "resume_step": 5000,
-      "status": "RUNNING",
+      "status": "COMPLETE",
       "devices": 2,
-      "accepted": null,
+      "accepted": false,
       "physics_monitor_points": 1024,
       "reserved_test": "only_if_repeated_validation_passes",
       "reference_reuse": "four byte-verified parent references; two embedded reserved references",
-      "submission_size_bytes": 545570
+      "submission_size_bytes": 545570,
+      "steps": 100000,
+      "selected_checkpoint_step": 94000,
+      "selected_checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "final_heldout_test_evaluated": false
     }
   ]
 }

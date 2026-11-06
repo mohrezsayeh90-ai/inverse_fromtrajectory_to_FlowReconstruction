@@ -1,0 +1,7 @@
+{
+  "independent_CPU_evaluation": "completed",
+  "max_absolute_difference_in_acceptance_metrics": 1.199040866595169e-14,
+  "same_failed_gates": true,
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "runtime_signature": "daac185b26ba7837f8568a683412dbaf42b8456010c24ea89e1db8fdc81f7ea5"
+}
