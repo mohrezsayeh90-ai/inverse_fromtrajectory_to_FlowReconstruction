@@ -1,0 +1,149 @@
+{
+  "script_sha256": "5d68ba4eefc969e876ce5371f0bb03a3742ceb3ceb6c8da256f0030a87da8169",
+  "files": {
+    "summary.json": {
+      "sha256": "d62cf2ab5bd84212b18402c8984fafcb5a1eca23fd898f62d8d5c6b8e14a32ba",
+      "bytes": 4945
+    },
+    "README.md": {
+      "sha256": "451829ca31c89aa6f5f648b48f9cbdcffbc5291a95af2a47177ed551778c9534",
+      "bytes": 5635
+    },
+    "summary.csv": {
+      "sha256": "2294109096d5b0186cc75e12d1a384f89826f6c41e1e26387ace0d7b9b0e95da",
+      "bytes": 1517
+    },
+    "preservation_check.json": {
+      "sha256": "7f5546df908e9822d1488d60319171d935efe55074cc2aece91cc437d9cb59ad",
+      "bytes": 178
+    },
+    "case_1/inlet_used.csv": {
+      "sha256": "3ab3f7ed10a4ec6ae0e0e4e2c7cf91470562fef85d091327d152361213d7f9bf",
+      "bytes": 25664
+    },
+    "case_1/overlay_and_error.pdf": {
+      "sha256": "05cf47d086701057fc9c6360a75d457246830a1d8b17bc33c2183be94abe5628",
+      "bytes": 31097
+    },
+    "case_1/particle_2.csv": {
+      "sha256": "c25b9d3ec4307aae3990ca2ec21329ea1311aae62bde2a013e9b81c574d5aef3",
+      "bytes": 20424
+    },
+    "case_1/particle_1.csv": {
+      "sha256": "a9be7f4b313e22091f0d96bd9c380b19d10879673eef2d5b111434181738f042",
+      "bytes": 20439
+    },
+    "case_1/overlay_and_error.png": {
+      "sha256": "6c9799956358c2227ffdd5f8478ab4b3d1e268238d4ca0537f65a7c640ce28af",
+      "bytes": 376886
+    },
+    "case_1/metrics.json": {
+      "sha256": "4df7d28adba3a047646fa06fde61df360b88d9323645ef34c8b4821949e72aa1",
+      "bytes": 1672
+    },
+    "case_1/position_time_series.png": {
+      "sha256": "87e95966d087b5036169c42167f4ff6b5e086d2e8e8455aa42f8844a3178d354",
+      "bytes": 165426
+    },
+    "case_1/inlet_used.png": {
+      "sha256": "cdfcd8eceaacfbd04607a5d86b6d7f344a5d81c4fbb0aa8cae127b6baabd36c4",
+      "bytes": 62853
+    },
+    "case_4/inlet_used.csv": {
+      "sha256": "ed72aaa011aef840b3c915e8bade33fda4746c973ae9a22c8dead8200afc2997",
+      "bytes": 25664
+    },
+    "case_4/overlay_and_error.pdf": {
+      "sha256": "a987008cf5f48db60f227981c0b2c41fa016df5a1a369016d5ef704f30f048e6",
+      "bytes": 32721
+    },
+    "case_4/particle_2.csv": {
+      "sha256": "b5057587a61b34dc98c9a7d21895856bfdaafc00f2dcae4c0681881d66c9f008",
+      "bytes": 25491
+    },
+    "case_4/particle_1.csv": {
+      "sha256": "938888e1621f1b1ffc04c4776824cf7b3c4e837e22161759d68d5f16af8ee56e",
+      "bytes": 25495
+    },
+    "case_4/overlay_and_error.png": {
+      "sha256": "f2c0f35a01627aaf7c4cbf483a94f4c31ba66063e259b15b88e459d75c424640",
+      "bytes": 373868
+    },
+    "case_4/metrics.json": {
+      "sha256": "3a77b6ed2adc1efdb7a2248ff6fe0cddc52fdf01abe7b656c39da3515612adfc",
+      "bytes": 1670
+    },
+    "case_4/position_time_series.png": {
+      "sha256": "0f44c895b66bab695b692c6f94425da37418f308776261bb2f09e43a9dfe5473",
+      "bytes": 175596
+    },
+    "case_4/inlet_used.png": {
+      "sha256": "4deb2270fee64ac0d593d406804ee37d8a689e7d054b606222188462155ba85b",
+      "bytes": 57492
+    },
+    "case_3/inlet_used.csv": {
+      "sha256": "b89b224de036f4875d95915cdf91fc0d1f1539243ae5fdeeebfeb4937fe09ec2",
+      "bytes": 25664
+    },
+    "case_3/overlay_and_error.pdf": {
+      "sha256": "908547751217621e6a7467a6923bf9a3d4980399f32e6ce7b894c9b25c2adcf2",
+      "bytes": 32357
+    },
+    "case_3/particle_2.csv": {
+      "sha256": "6326c172bf68e8c6ca7980003567baacf0dbd21e8f71066179d7d9c136908abd",
+      "bytes": 25458
+    },
+    "case_3/particle_1.csv": {
+      "sha256": "f5756f169c2c780dcd6a22ac957a1e5ac4bf8c1e132b069d8215499ab1415a4f",
+      "bytes": 25493
+    },
+    "case_3/overlay_and_error.png": {
+      "sha256": "f734078ea5213f3f0bbff5162b66bfc2eb8882900d43b04385faea915628f743",
+      "bytes": 355466
+    },
+    "case_3/metrics.json": {
+      "sha256": "661dfb7030345406c79292c5a2ab7ac6b4bd67fa519b0da6d821a6bbb8ad2e48",
+      "bytes": 1650
+    },
+    "case_3/position_time_series.png": {
+      "sha256": "5e7361873548ab9fe7a6dd8a146b4f400eaeb28297ef2bafef2efe86256073bc",
+      "bytes": 177043
+    },
+    "case_3/inlet_used.png": {
+      "sha256": "ed4ff8e03059a5a674b2f76066542263eda2fa3587e33176cc22abad3b9aea44",
+      "bytes": 68846
+    },
+    "case_2/inlet_used.csv": {
+      "sha256": "9a319f4e059b3f6e8a9c4a5a05b07279b07e0ef6330dffcb65d8f83bcc21d7eb",
+      "bytes": 25664
+    },
+    "case_2/overlay_and_error.pdf": {
+      "sha256": "8d64b6481702c4de23c0c29c37936b1f1574bc29b5091adc754288ce532380cb",
+      "bytes": 31541
+    },
+    "case_2/particle_2.csv": {
+      "sha256": "1ba4d088313b8c38662f6b3b7c8c542eb8fc360da8d807880addcd8cec88deba",
+      "bytes": 20464
+    },
+    "case_2/particle_1.csv": {
+      "sha256": "5945b4e1debedc6e503ee8c7a58a4c1d6acaf8e4c6ea0acdfa3748cf0957d3c0",
+      "bytes": 20464
+    },
+    "case_2/overlay_and_error.png": {
+      "sha256": "2c0711dc03dabc381c26b6cc37d88cf6218cf756e944dc4b6366b6b1aefa9b20",
+      "bytes": 317701
+    },
+    "case_2/metrics.json": {
+      "sha256": "5875898d102b89e010774bfc0c1622b6ae030dba25b9b97fd00188e2083d855b",
+      "bytes": 1642
+    },
+    "case_2/position_time_series.png": {
+      "sha256": "e63d5cb8ad53d9b1caf50e9ac86c02537def92f048ad67b7b3e7f797add1163b",
+      "bytes": 167683
+    },
+    "case_2/inlet_used.png": {
+      "sha256": "ba2c0ddc08b9e5fa92211ef2611725e70b6bc0097f74353bf54d8532bc59aefe",
+      "bytes": 61567
+    }
+  }
+}

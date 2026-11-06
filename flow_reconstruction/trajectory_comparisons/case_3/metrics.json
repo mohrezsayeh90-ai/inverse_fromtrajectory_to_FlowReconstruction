@@ -1,0 +1,41 @@
+{
+  "source_fit": "flow_reconstruction/examples/corner_launch/result/fitted_model.json",
+  "saved_fit_sha256": "b700909ee5127626f6c8f839fcd98914590e14989153a6448a019bbb83177485",
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "normalized_inlet_sha256": "976a3fb0ce7ac307867af7aba34a593ed62a5d70afd68dcf8bbc96051ab4f2d2",
+  "mean_speed": 1.004051727987197,
+  "reynolds": 30.12155183961591,
+  "refitting": false,
+  "forward_weights_modified": false,
+  "comparison": "Only observed/input positions versus independently integrated positions in the saved inferred flow",
+  "particles": [
+    {
+      "case": "case_3",
+      "particle": "upper_left",
+      "observed_samples": 101,
+      "predicted_samples": 101,
+      "complete_time_coverage": true,
+      "coordinate_rmse_H": 0.0022008008533227407,
+      "position_2d_rmse_H": 0.003112402414851301,
+      "position_2d_rmse_percent_H": 0.31124024148513013,
+      "mean_distance_H": 0.0027653369253586115,
+      "max_distance_H": 0.005270934007378782,
+      "final_distance_H": 0.0030457114621912683,
+      "replay_max_difference_H": 0.0
+    },
+    {
+      "case": "case_3",
+      "particle": "lower_right",
+      "observed_samples": 101,
+      "predicted_samples": 101,
+      "complete_time_coverage": true,
+      "coordinate_rmse_H": 0.0006176732663836772,
+      "position_2d_rmse_H": 0.0008735219104350858,
+      "position_2d_rmse_percent_H": 0.08735219104350858,
+      "mean_distance_H": 0.0007371375615553185,
+      "max_distance_H": 0.002006151475149357,
+      "final_distance_H": 0.0018645547458482079,
+      "replay_max_difference_H": 0.0
+    }
+  ]
+}
