@@ -1,0 +1,32 @@
+{
+  "inputs_sha256": {
+    "experiments/corners_beta4/result/inlet_reference_units.csv": "f823d44f0f2bcc7ceea81cd50a3542c286a6759fb612476394cd99a82bf5a65d",
+    "experiments/corners_beta4/result/reconstructed_flow.npz": "bb99c858aab2dcb4683aafbe9cca84bcc839fb7c5b8b6c859aab954856a73c39",
+    "experiments/corners_beta4/input/curve_1.csv": "fab26787cbb8ee465c9abb565fda0cbabbde8776a675668609da9b58d776fcda",
+    "comparisons/corners_beta4/timed_track_1_dense.csv": "63a8152f388a3c9b7ff74e124c6b3122956bb125fb26eb1cceab45f8b93faabf",
+    "experiments/corners_beta4/result/track_1_forward.csv": "c032e2d9ce57ff09c4467f26bd5a408a93f949972793fea8a4f3b7800207a3dd",
+    "experiments/corners_beta4/input/curve_2.csv": "8175a6ce2004532ad0c81ea5f9f77e2bde3df9fb4b194742d01d17a01074ba2f",
+    "comparisons/corners_beta4/timed_track_2_dense.csv": "a1f56a34cad6afc15c97330627c6dbb375e27d59a385de5ac9dff7419c671c21",
+    "experiments/corners_beta4/result/track_2_forward.csv": "be2115a67d1bc0a740bd7d3f759367299cbb53379463bcfec3d638b626088081",
+    "experiments/corners_beta5/result/inlet_reference_units.csv": "fac384c6a5198824c3eec693cd46fe97ad74ba3710966e7b5b4476d8344e42d5",
+    "experiments/corners_beta5/result/reconstructed_flow.npz": "b2311c65906ab87a36b86b27be4a2712d9ae9bfbd320fd12992d57a4ef4e3814",
+    "experiments/corners_beta5/input/curve_1.csv": "ead73257ad84f0af56e6d768fd257218bc194dcbd88b4a380224081a93eba4a7",
+    "comparisons/corners_beta5/timed_track_1_dense.csv": "ac4d5e6bc5bbf000b410bc150e606b78b56e44a2be4e29b7f7aaabb37c6b404c",
+    "experiments/corners_beta5/result/track_1_forward.csv": "ccc8f8cc708224b0112ea3e8fdedd2c4407ffc415fb2447005cd4764b8c2a9e8",
+    "experiments/corners_beta5/input/curve_2.csv": "e084382b94138831e2a9b900c292c4e1163d570db02f923aaebd5c6ec1d019ab",
+    "comparisons/corners_beta5/timed_track_2_dense.csv": "63473085da23ba597a38202e5140665f1d97591b6407fed62ab2bfe18651cc1c",
+    "experiments/corners_beta5/result/track_2_forward.csv": "2acc56e042a445e53b7e5b8ac724486268668694df6f04172407e33b4756f644",
+    "experiments/oblique_beta5/result/inlet_reference_units.csv": "c03b14970fb9125cf727bd17ff7487e468094d0915f669ef1de4463c22dc06eb",
+    "experiments/oblique_beta5/result/reconstructed_flow.npz": "25db823ff5d0cb779be43f4777dab3651071b2780c41a2f670b029f28bdc5a0b",
+    "experiments/oblique_beta5/input/curve_1.csv": "c2db5091454b48c5727a2dded846416f4c92adc34d695aa9ff8ab33a99186b9e",
+    "comparisons/oblique_beta5/timed_track_1_dense.csv": "502c98bc9742e5e6bccf01801d708b844abbd38b8dc4832a168e9ee9923556ae",
+    "experiments/oblique_beta5/result/track_1_forward.csv": "4ef610b7e76407fe0abb68d89dc6283719bcd067be7dc0409e151f17d47697bc",
+    "experiments/oblique_beta5/input/curve_2.csv": "fa0897ad14d97e610c66abcb216a5b4d9c7d7a3842b754c94f3185bb6715ba11",
+    "comparisons/oblique_beta5/timed_track_2_dense.csv": "80df763efa1e85dea2d839bdc0456e096270b7bf7f1e32d600a876cf9f7640d9",
+    "experiments/oblique_beta5/result/track_2_forward.csv": "8edb71f0a647ca92bd2760ec146f7b8ad5a90fb75e927fe6b04044c479aa0aac"
+  },
+  "refitting": false,
+  "previous_results_modified": false,
+  "panel_2": "No-time inferred inlet only",
+  "panel_6": "Independent ODE x(t), y(t), both methods and particles, without time-axis rescaling"
+}
