@@ -1,0 +1,83 @@
+{
+  "time_unit": "H/U_ref",
+  "durations": [
+    {
+      "case": "corners_beta4",
+      "particle": 1,
+      "timed_duration": 1.2,
+      "no_time_inferred_duration": 1.1868318139541447,
+      "signed_difference": -0.013168186045855235,
+      "absolute_difference": 0.013168186045855235,
+      "relative_difference_percent": -1.097348837154603,
+      "no_time_endpoint_mismatch_H": 8.179204717376028e-05
+    },
+    {
+      "case": "corners_beta4",
+      "particle": 2,
+      "timed_duration": 1.2,
+      "no_time_inferred_duration": 1.191365025286149,
+      "signed_difference": -0.008634974713850996,
+      "absolute_difference": 0.008634974713850996,
+      "relative_difference_percent": -0.7195812261542497,
+      "no_time_endpoint_mismatch_H": 0.000648403199916172
+    },
+    {
+      "case": "corners_beta5",
+      "particle": 1,
+      "timed_duration": 1.2,
+      "no_time_inferred_duration": 1.1870196855589978,
+      "signed_difference": -0.012980314441002117,
+      "absolute_difference": 0.012980314441002117,
+      "relative_difference_percent": -1.0816928700835098,
+      "no_time_endpoint_mismatch_H": 0.0004612186631438374
+    },
+    {
+      "case": "corners_beta5",
+      "particle": 2,
+      "timed_duration": 1.2,
+      "no_time_inferred_duration": 1.1902644455643248,
+      "signed_difference": -0.009735554435675198,
+      "absolute_difference": 0.009735554435675198,
+      "relative_difference_percent": -0.8112962029729331,
+      "no_time_endpoint_mismatch_H": 0.0006329834144979973
+    },
+    {
+      "case": "oblique_beta5",
+      "particle": 1,
+      "timed_duration": 0.55,
+      "no_time_inferred_duration": 0.5741596539870283,
+      "signed_difference": 0.02415965398702824,
+      "absolute_difference": 0.02415965398702824,
+      "relative_difference_percent": 4.392664361277862,
+      "no_time_endpoint_mismatch_H": 0.0021971302578404493
+    },
+    {
+      "case": "oblique_beta5",
+      "particle": 2,
+      "timed_duration": 0.55,
+      "no_time_inferred_duration": 0.5465841924820749,
+      "signed_difference": -0.00341580751792514,
+      "absolute_difference": 0.00341580751792514,
+      "relative_difference_percent": -0.6210559123500254,
+      "no_time_endpoint_mismatch_H": 0.0007378363393277879
+    }
+  ],
+  "interparticle_gaps": [
+    {
+      "case": "corners_beta4",
+      "timed_particle2_minus_particle1": 0.0,
+      "no_time_particle2_minus_particle1": 0.004533211332004239
+    },
+    {
+      "case": "corners_beta5",
+      "timed_particle2_minus_particle1": 0.0,
+      "no_time_particle2_minus_particle1": 0.0032447600053269188
+    },
+    {
+      "case": "oblique_beta5",
+      "timed_particle2_minus_particle1": 0.0,
+      "no_time_particle2_minus_particle1": -0.02757546150495338
+    }
+  ],
+  "meaning": "Elapsed duration of fitted observed curve; not an exact endpoint first-passage event. Timed duration is supplied, not independently inferred."
+}
