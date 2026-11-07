@@ -1,0 +1,40 @@
+{
+  "name": "twin_b3_r30",
+  "label": "Twin-peaked inlet",
+  "group": "twin",
+  "reynolds": 30.0,
+  "power": 2,
+  "modulation": "1+0.55*cos(2*pi*y)",
+  "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "step": 94000,
+  "velocity_relative_l2": 0.008380506639384118,
+  "pressure_relative_l2": 0.04481440415559641,
+  "coarse_errors": {
+    "velocity_relative_l2": 0.00838076977081163,
+    "pressure_relative_l2": 0.04481421447198522
+  },
+  "mesh_change": {
+    "velocity_relative_l2": 2.9081242862636592e-05,
+    "pressure_relative_l2": 0.00019827079117217734
+  },
+  "meshes": [
+    {
+      "nx": 48,
+      "ny": 40,
+      "iterations": 13,
+      "nonlinear_residual": 1.704470383113827e-08
+    },
+    {
+      "nx": 72,
+      "ny": 64,
+      "iterations": 13,
+      "nonlinear_residual": 1.104338390980236e-08
+    }
+  ],
+  "mesh_verified": true,
+  "selected": true,
+  "prominent_peaks": 2,
+  "profile_max": 1.4726900924349486,
+  "profile_min": 0.0
+}

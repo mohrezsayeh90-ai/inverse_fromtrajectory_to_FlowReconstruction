@@ -1,0 +1,584 @@
+{
+  "cases": [
+    {
+      "name": "skew_b3",
+      "label": "Asymmetric inlet",
+      "group": "skew",
+      "reynolds": 30.0,
+      "power": 2,
+      "modulation": "1+0.6*cos(pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.016026090345352205,
+      "pressure_relative_l2": 0.02374453901074557,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.01602591970133062,
+        "pressure_relative_l2": 0.023742844049565018
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 1.3692596614309968e-05,
+        "pressure_relative_l2": 0.00014317920624155338
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 40,
+          "iterations": 17,
+          "nonlinear_residual": 1.6164530174954406e-08
+        },
+        {
+          "nx": 72,
+          "ny": 64,
+          "iterations": 17,
+          "nonlinear_residual": 1.046201209735287e-08
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 1,
+      "profile_max": 2.0495092002727726,
+      "profile_min": 0.0
+    },
+    {
+      "name": "skew_b4",
+      "label": "Asymmetric inlet",
+      "group": "skew",
+      "reynolds": 30.0,
+      "power": 3,
+      "modulation": "1+0.45*cos(pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.017741941539875763,
+      "pressure_relative_l2": 0.02443758072657087,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.017742329644610744,
+        "pressure_relative_l2": 0.024435366687715367
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 1.6109503484590995e-05,
+        "pressure_relative_l2": 0.00018917269403637154
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 40,
+          "iterations": 18,
+          "nonlinear_residual": 1.1521360843046498e-08
+        },
+        {
+          "nx": 72,
+          "ny": 64,
+          "iterations": 18,
+          "nonlinear_residual": 7.454666216292658e-09
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 1,
+      "profile_max": 2.272302738044733,
+      "profile_min": -3.484827097657787e-08
+    },
+    {
+      "name": "twin_b3_r20",
+      "label": "Twin-peaked inlet",
+      "group": "twin",
+      "reynolds": 20.0,
+      "power": 2,
+      "modulation": "1+0.55*cos(2*pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.009456950195721094,
+      "pressure_relative_l2": 0.018326284345310515,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.009457076533537312,
+        "pressure_relative_l2": 0.01832672191374356
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 2.9896949234274123e-05,
+        "pressure_relative_l2": 0.00020563052826564837
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 40,
+          "iterations": 13,
+          "nonlinear_residual": 9.221804194895072e-09
+        },
+        {
+          "nx": 72,
+          "ny": 64,
+          "iterations": 13,
+          "nonlinear_residual": 5.97619832806301e-09
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 2,
+      "profile_max": 1.4726900924349486,
+      "profile_min": 0.0
+    },
+    {
+      "name": "twin_b3_r30",
+      "label": "Twin-peaked inlet",
+      "group": "twin",
+      "reynolds": 30.0,
+      "power": 2,
+      "modulation": "1+0.55*cos(2*pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.008380506639384118,
+      "pressure_relative_l2": 0.04481440415559641,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.00838076977081163,
+        "pressure_relative_l2": 0.04481421447198522
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 2.9081242862636592e-05,
+        "pressure_relative_l2": 0.00019827079117217734
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 40,
+          "iterations": 13,
+          "nonlinear_residual": 1.704470383113827e-08
+        },
+        {
+          "nx": 72,
+          "ny": 64,
+          "iterations": 13,
+          "nonlinear_residual": 1.104338390980236e-08
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 2,
+      "profile_max": 1.4726900924349486,
+      "profile_min": 0.0
+    },
+    {
+      "name": "twin_b4",
+      "label": "Twin-peaked inlet",
+      "group": "twin",
+      "reynolds": 30.0,
+      "power": 3,
+      "modulation": "1+0.65*cos(2*pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.012115331197658211,
+      "pressure_relative_l2": 0.0462157969631433,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.012114502982747294,
+        "pressure_relative_l2": 0.04621646516165049
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 3.686536041456169e-05,
+        "pressure_relative_l2": 0.00027724081391750793
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 40,
+          "iterations": 13,
+          "nonlinear_residual": 2.1556649755185823e-08
+        },
+        {
+          "nx": 72,
+          "ny": 64,
+          "iterations": 13,
+          "nonlinear_residual": 1.397442669728731e-08
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 2,
+      "profile_max": 1.6412525832689562,
+      "profile_min": -6.646800452667451e-08
+    },
+    {
+      "name": "lobes4_r20",
+      "label": "Three-lobed inlet",
+      "group": "lobes",
+      "reynolds": 20.0,
+      "power": 2,
+      "modulation": "1+0.28*cos(8*pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.029284512119717918,
+      "pressure_relative_l2": 0.022061852328534384,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.0292842914142773,
+        "pressure_relative_l2": 0.022047014593754098
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 4.0315183607539996e-05,
+        "pressure_relative_l2": 0.000546802435472407
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 64,
+          "iterations": 14,
+          "nonlinear_residual": 7.043540134214094e-09
+        },
+        {
+          "nx": 72,
+          "ny": 96,
+          "iterations": 14,
+          "nonlinear_residual": 4.710940370172726e-09
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 3,
+      "profile_max": 2.401213286813269,
+      "profile_min": 0.0
+    },
+    {
+      "name": "lobes4_r30",
+      "label": "Three-lobed inlet",
+      "group": "lobes",
+      "reynolds": 30.0,
+      "power": 2,
+      "modulation": "1+0.28*cos(8*pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.03197950937438985,
+      "pressure_relative_l2": 0.025989953374444884,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.031979340443704485,
+        "pressure_relative_l2": 0.02598115383724726
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 3.84285177698069e-05,
+        "pressure_relative_l2": 0.0005334613165521929
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 64,
+          "iterations": 14,
+          "nonlinear_residual": 1.1508929282016762e-08
+        },
+        {
+          "nx": 72,
+          "ny": 96,
+          "iterations": 14,
+          "nonlinear_residual": 7.69366950329253e-09
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 3,
+      "profile_max": 2.401213286813269,
+      "profile_min": 0.0
+    },
+    {
+      "name": "waves3_r20",
+      "label": "Wavy inlet",
+      "group": "waves",
+      "reynolds": 20.0,
+      "power": 2,
+      "modulation": "1+0.25*cos(6*pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.018012693599490953,
+      "pressure_relative_l2": 0.050433631774199066,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.01801210581773705,
+        "pressure_relative_l2": 0.050431530504905495
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 2.2194412031788725e-05,
+        "pressure_relative_l2": 0.0002751611494327703
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 64,
+          "iterations": 13,
+          "nonlinear_residual": 1.5062478475672626e-08
+        },
+        {
+          "nx": 72,
+          "ny": 96,
+          "iterations": 13,
+          "nonlinear_residual": 1.007197171148906e-08
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 2,
+      "profile_max": 1.9478014175498568,
+      "profile_min": 0.0
+    },
+    {
+      "name": "waves3_r30",
+      "label": "Wavy inlet",
+      "group": "waves",
+      "reynolds": 30.0,
+      "power": 2,
+      "modulation": "1+0.25*cos(6*pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.014340474273372249,
+      "pressure_relative_l2": 0.05468263606783928,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.014339985548987164,
+        "pressure_relative_l2": 0.05468127092784246
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 2.0254801972434265e-05,
+        "pressure_relative_l2": 0.0002656008850769836
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 64,
+          "iterations": 14,
+          "nonlinear_residual": 1.314639273877027e-08
+        },
+        {
+          "nx": 72,
+          "ny": 96,
+          "iterations": 14,
+          "nonlinear_residual": 8.789900772484738e-09
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 2,
+      "profile_max": 1.9478014175498568,
+      "profile_min": 0.0
+    },
+    {
+      "name": "mixed",
+      "label": "Asymmetric multi-scale inlet",
+      "group": "mixed",
+      "reynolds": 30.0,
+      "power": 2,
+      "modulation": "1+0.18*sin(4*pi*y)+0.10*cos(6*pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.02328008464747943,
+      "pressure_relative_l2": 0.051595827107060094,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.023279980773172216,
+        "pressure_relative_l2": 0.05159354436499177
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 1.1539748072978318e-05,
+        "pressure_relative_l2": 0.0001620304617839637
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 64,
+          "iterations": 17,
+          "nonlinear_residual": 8.3388018903263e-09
+        },
+        {
+          "nx": 72,
+          "ny": 96,
+          "iterations": 17,
+          "nonlinear_residual": 5.571133627629854e-09
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 1,
+      "profile_max": 2.0815152462741278,
+      "profile_min": 0.0
+    },
+    {
+      "name": "nine",
+      "label": "Nine-cycle modulation",
+      "group": "nine",
+      "reynolds": 55.0,
+      "power": 2,
+      "modulation": "1+0.18*cos(18*pi*y)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.027529171329491023,
+      "pressure_relative_l2": 0.0683939225570666,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.027533642148626185,
+        "pressure_relative_l2": 0.06802048432204351
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 0.00013073433446436644,
+        "pressure_relative_l2": 0.0025439882752021025
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 64,
+          "iterations": 15,
+          "nonlinear_residual": 8.547718310680694e-09
+        },
+        {
+          "nx": 72,
+          "ny": 96,
+          "iterations": 15,
+          "nonlinear_residual": 5.710136384849328e-09
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 6,
+      "profile_max": 2.1599663352918888,
+      "profile_min": 0.0
+    },
+    {
+      "name": "shoulder",
+      "label": "Off-centre shoulder",
+      "group": "shoulder",
+      "reynolds": 30.0,
+      "power": 2,
+      "modulation": "1+0.65*exp(-((y-0.27)/0.09)**2)",
+      "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.022374265932263843,
+      "pressure_relative_l2": 0.05658492839459937,
+      "coarse_errors": {
+        "velocity_relative_l2": 0.022374620618084675,
+        "pressure_relative_l2": 0.05658526871974638
+      },
+      "mesh_change": {
+        "velocity_relative_l2": 4.307239635462475e-05,
+        "pressure_relative_l2": 0.0003398639173573688
+      },
+      "meshes": [
+        {
+          "nx": 48,
+          "ny": 40,
+          "iterations": 16,
+          "nonlinear_residual": 1.6396610857404488e-08
+        },
+        {
+          "nx": 72,
+          "ny": 64,
+          "iterations": 16,
+          "nonlinear_residual": 1.0610691032934276e-08
+        }
+      ],
+      "mesh_verified": true,
+      "selected": true,
+      "prominent_peaks": 1,
+      "profile_max": 1.8816781637959072,
+      "profile_min": 0.0
+    }
+  ],
+  "declared_candidates": [
+    [
+      "skew_b3",
+      "Asymmetric inlet",
+      "skew",
+      2,
+      30.0,
+      "1+0.6*cos(pi*y)"
+    ],
+    [
+      "skew_b4",
+      "Asymmetric inlet",
+      "skew",
+      3,
+      30.0,
+      "1+0.45*cos(pi*y)"
+    ],
+    [
+      "twin_b3_r20",
+      "Twin-peaked inlet",
+      "twin",
+      2,
+      20.0,
+      "1+0.55*cos(2*pi*y)"
+    ],
+    [
+      "twin_b3_r30",
+      "Twin-peaked inlet",
+      "twin",
+      2,
+      30.0,
+      "1+0.55*cos(2*pi*y)"
+    ],
+    [
+      "twin_b4",
+      "Twin-peaked inlet",
+      "twin",
+      3,
+      30.0,
+      "1+0.65*cos(2*pi*y)"
+    ],
+    [
+      "lobes4_r20",
+      "Three-lobed inlet",
+      "lobes",
+      2,
+      20.0,
+      "1+0.28*cos(8*pi*y)"
+    ],
+    [
+      "lobes4_r30",
+      "Three-lobed inlet",
+      "lobes",
+      2,
+      30.0,
+      "1+0.28*cos(8*pi*y)"
+    ],
+    [
+      "waves3_r20",
+      "Wavy inlet",
+      "waves",
+      2,
+      20.0,
+      "1+0.25*cos(6*pi*y)"
+    ],
+    [
+      "waves3_r30",
+      "Wavy inlet",
+      "waves",
+      2,
+      30.0,
+      "1+0.25*cos(6*pi*y)"
+    ],
+    [
+      "mixed",
+      "Asymmetric multi-scale inlet",
+      "mixed",
+      2,
+      30.0,
+      "1+0.18*sin(4*pi*y)+0.10*cos(6*pi*y)"
+    ],
+    [
+      "nine",
+      "Nine-cycle modulation",
+      "nine",
+      2,
+      55.0,
+      "1+0.18*cos(18*pi*y)"
+    ],
+    [
+      "shoulder",
+      "Off-centre shoulder",
+      "shoulder",
+      2,
+      30.0,
+      "1+0.65*exp(-((y-0.27)/0.09)**2)"
+    ]
+  ],
+  "selection_rule": "Mesh-verified velocity vector L2<5%, pressure L2<10%; all attempts retained",
+  "training_performed": false
+}

@@ -1,0 +1,40 @@
+{
+  "name": "mixed",
+  "label": "Asymmetric multi-scale inlet",
+  "group": "mixed",
+  "reynolds": 30.0,
+  "power": 2,
+  "modulation": "1+0.18*sin(4*pi*y)+0.10*cos(6*pi*y)",
+  "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "step": 94000,
+  "velocity_relative_l2": 0.02328008464747943,
+  "pressure_relative_l2": 0.051595827107060094,
+  "coarse_errors": {
+    "velocity_relative_l2": 0.023279980773172216,
+    "pressure_relative_l2": 0.05159354436499177
+  },
+  "mesh_change": {
+    "velocity_relative_l2": 1.1539748072978318e-05,
+    "pressure_relative_l2": 0.0001620304617839637
+  },
+  "meshes": [
+    {
+      "nx": 48,
+      "ny": 64,
+      "iterations": 17,
+      "nonlinear_residual": 8.3388018903263e-09
+    },
+    {
+      "nx": 72,
+      "ny": 96,
+      "iterations": 17,
+      "nonlinear_residual": 5.571133627629854e-09
+    }
+  ],
+  "mesh_verified": true,
+  "selected": true,
+  "prominent_peaks": 1,
+  "profile_max": 2.0815152462741278,
+  "profile_min": 0.0
+}

@@ -1,0 +1,40 @@
+{
+  "name": "nine",
+  "label": "Nine-cycle modulation",
+  "group": "nine",
+  "reynolds": 55.0,
+  "power": 2,
+  "modulation": "1+0.18*cos(18*pi*y)",
+  "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "step": 94000,
+  "velocity_relative_l2": 0.027529171329491023,
+  "pressure_relative_l2": 0.0683939225570666,
+  "coarse_errors": {
+    "velocity_relative_l2": 0.027533642148626185,
+    "pressure_relative_l2": 0.06802048432204351
+  },
+  "mesh_change": {
+    "velocity_relative_l2": 0.00013073433446436644,
+    "pressure_relative_l2": 0.0025439882752021025
+  },
+  "meshes": [
+    {
+      "nx": 48,
+      "ny": 64,
+      "iterations": 15,
+      "nonlinear_residual": 8.547718310680694e-09
+    },
+    {
+      "nx": 72,
+      "ny": 96,
+      "iterations": 15,
+      "nonlinear_residual": 5.710136384849328e-09
+    }
+  ],
+  "mesh_verified": true,
+  "selected": true,
+  "prominent_peaks": 6,
+  "profile_max": 2.1599663352918888,
+  "profile_min": 0.0
+}

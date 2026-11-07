@@ -1,0 +1,122 @@
+{
+  "selected_count": 7,
+  "all_attempts": 12,
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "figures": [
+    {
+      "path": "forward/lobes4_r20.png",
+      "dimensions": [
+        8640,
+        1696
+      ],
+      "sha256": "efeca88230de1d99eed76cd9811f3cefee57bae1c64fdd0f83c518fd0260720f"
+    },
+    {
+      "path": "forward/mixed.png",
+      "dimensions": [
+        8640,
+        1696
+      ],
+      "sha256": "e72dd366aaf88d0bfc8b34568ec30ab4b45a2bcc3a4c155104ac603ad7f8fe1a"
+    },
+    {
+      "path": "forward/nine.png",
+      "dimensions": [
+        8640,
+        1696
+      ],
+      "sha256": "8986d398191bf61a9abd378307b559a9d1b8780b52466a7fb4341e0c16f1146b"
+    },
+    {
+      "path": "forward/shoulder.png",
+      "dimensions": [
+        8640,
+        1696
+      ],
+      "sha256": "1dbac08da504a63ef0c1fb911a389773e07d5546e2c82524b9b868dd9a512547"
+    },
+    {
+      "path": "forward/skew_b3.png",
+      "dimensions": [
+        8640,
+        1696
+      ],
+      "sha256": "14e2af3058106e1de54b07045ead6770f5ac33b960f9f651a69bc01dd07dd454"
+    },
+    {
+      "path": "forward/twin_b3_r20.png",
+      "dimensions": [
+        8640,
+        1696
+      ],
+      "sha256": "5fd3cebe728e505900970589c51b0cc60ebc026e6339b303c752762e7b8253c6"
+    },
+    {
+      "path": "forward/waves3_r20.png",
+      "dimensions": [
+        8640,
+        1696
+      ],
+      "sha256": "300cbcbc1fa4eaa20dd36cdaff676818f6031ecc532a9481c55a40a377bc50f7"
+    },
+    {
+      "path": "inverse/corners_beta4.png",
+      "dimensions": [
+        10368,
+        1696
+      ],
+      "sha256": "e04a5d5d129fcdfe918087baf797b34506005a157476272b26965a080666f070"
+    },
+    {
+      "path": "inverse/corners_beta4_inlet.png",
+      "dimensions": [
+        2240,
+        1760
+      ],
+      "sha256": "06a91bcaaa787e5a49380c95bf00ba212f6cf6f3f88d4327b793035b9ef2b1ce"
+    },
+    {
+      "path": "inverse/corners_beta5.png",
+      "dimensions": [
+        10368,
+        1696
+      ],
+      "sha256": "6e88a623cd622d0b580626eaf094202169a1f7a591a29486f3a9dd53c0a95a00"
+    },
+    {
+      "path": "inverse/corners_beta5_inlet.png",
+      "dimensions": [
+        2240,
+        1760
+      ],
+      "sha256": "39340653b6aa528106c57664affbc14d9728c812ffb47e77065db42d04b4e14a"
+    },
+    {
+      "path": "inverse/oblique_beta5.png",
+      "dimensions": [
+        10368,
+        1696
+      ],
+      "sha256": "cc740df8691cef77d6bd7c5cba820e1048d0f2c1faf85aae6054d4644843217e"
+    },
+    {
+      "path": "inverse/oblique_beta5_inlet.png",
+      "dimensions": [
+        2240,
+        1760
+      ],
+      "sha256": "11ab75d847625f361881ef35b3d08a9eca18ae76ed76f5dc89f25f92127a9b5b"
+    },
+    {
+      "path": "profile_gallery.png",
+      "dimensions": [
+        4800,
+        4128
+      ],
+      "sha256": "9a906852f162118253094210c242352fef33b0d8688bf86bc116c696ea55c403"
+    }
+  ],
+  "pdf_pages": 14,
+  "selected_velocity_max_percent": 2.928451211971792,
+  "selected_pressure_max_percent": 6.8393922557066595
+}

@@ -1,0 +1,40 @@
+{
+  "name": "lobes4_r30",
+  "label": "Three-lobed inlet",
+  "group": "lobes",
+  "reynolds": 30.0,
+  "power": 2,
+  "modulation": "1+0.28*cos(8*pi*y)",
+  "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "step": 94000,
+  "velocity_relative_l2": 0.03197950937438985,
+  "pressure_relative_l2": 0.025989953374444884,
+  "coarse_errors": {
+    "velocity_relative_l2": 0.031979340443704485,
+    "pressure_relative_l2": 0.02598115383724726
+  },
+  "mesh_change": {
+    "velocity_relative_l2": 3.84285177698069e-05,
+    "pressure_relative_l2": 0.0005334613165521929
+  },
+  "meshes": [
+    {
+      "nx": 48,
+      "ny": 64,
+      "iterations": 14,
+      "nonlinear_residual": 1.1508929282016762e-08
+    },
+    {
+      "nx": 72,
+      "ny": 96,
+      "iterations": 14,
+      "nonlinear_residual": 7.69366950329253e-09
+    }
+  ],
+  "mesh_verified": true,
+  "selected": true,
+  "prominent_peaks": 3,
+  "profile_max": 2.401213286813269,
+  "profile_min": 0.0
+}

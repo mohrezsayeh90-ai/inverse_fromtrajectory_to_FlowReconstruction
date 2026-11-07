@@ -1,0 +1,40 @@
+{
+  "name": "skew_b4",
+  "label": "Asymmetric inlet",
+  "group": "skew",
+  "reynolds": 30.0,
+  "power": 3,
+  "modulation": "1+0.45*cos(pi*y)",
+  "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "step": 94000,
+  "velocity_relative_l2": 0.017741941539875763,
+  "pressure_relative_l2": 0.02443758072657087,
+  "coarse_errors": {
+    "velocity_relative_l2": 0.017742329644610744,
+    "pressure_relative_l2": 0.024435366687715367
+  },
+  "mesh_change": {
+    "velocity_relative_l2": 1.6109503484590995e-05,
+    "pressure_relative_l2": 0.00018917269403637154
+  },
+  "meshes": [
+    {
+      "nx": 48,
+      "ny": 40,
+      "iterations": 18,
+      "nonlinear_residual": 1.1521360843046498e-08
+    },
+    {
+      "nx": 72,
+      "ny": 64,
+      "iterations": 18,
+      "nonlinear_residual": 7.454666216292658e-09
+    }
+  ],
+  "mesh_verified": true,
+  "selected": true,
+  "prominent_peaks": 1,
+  "profile_max": 2.272302738044733,
+  "profile_min": -3.484827097657787e-08
+}

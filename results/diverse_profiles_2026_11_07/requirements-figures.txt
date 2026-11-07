@@ -1,0 +1,8 @@
+# Tested with Python 3.12.14; only for rebuilding figures from saved arrays.
+numpy==2.3.5
+scipy==1.17.0
+matplotlib==3.10.8
+Pillow==13.0.0
+PyMuPDF==1.26.6
+# For recomputing the FEM/operator sweep, also use the repository's
+# requirements-cpu-tested.txt and scikit-fem==12.0.2 in a CPU environment.
