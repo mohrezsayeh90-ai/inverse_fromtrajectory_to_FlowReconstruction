@@ -1,0 +1,249 @@
+{
+  "model_display_name": "PI-CFO",
+  "model_full_name": "Physics-Informed Channel Flow Operator",
+  "model_lineage": "Project-specific modified physics-informed DeepONet, not a claim of inventing the original DeepONet architecture",
+  "attempted_forward_cases": [
+    {
+      "name": "beta5_re20",
+      "power": 4,
+      "reynolds": 20.0,
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.009844985480770549,
+      "pressure_relative_l2": 0.06533534428974469,
+      "u_relative_l2": 0.009551613061914505,
+      "v_relative_l2": 0.04910875342704857,
+      "v_rmse": 0.002852133436667923,
+      "mesh_change": {
+        "velocity_relative_l2": 3.256320973758533e-05,
+        "pressure_relative_l2": 0.00033499600976167
+      },
+      "momentum_rms": 0.34931934723356445
+    },
+    {
+      "name": "beta5_re30",
+      "power": 4,
+      "reynolds": 30.0,
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.009060065852523566,
+      "pressure_relative_l2": 0.030823421501453258,
+      "u_relative_l2": 0.00835316063163917,
+      "v_relative_l2": 0.09261043323870846,
+      "v_rmse": 0.0041589897432342425,
+      "mesh_change": {
+        "velocity_relative_l2": 3.1572251183129914e-05,
+        "pressure_relative_l2": 0.0003620140274082291
+      },
+      "momentum_rms": 0.27596842703310287
+    },
+    {
+      "name": "beta5_re40",
+      "power": 4,
+      "reynolds": 40.0,
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.00924555950626614,
+      "pressure_relative_l2": 0.11761022121239609,
+      "u_relative_l2": 0.008368140633800623,
+      "v_relative_l2": 0.1274691393445206,
+      "v_rmse": 0.004677230370754557,
+      "mesh_change": {
+        "velocity_relative_l2": 3.131747779623366e-05,
+        "pressure_relative_l2": 0.0004090940364155101
+      },
+      "momentum_rms": 0.24799494561285818
+    },
+    {
+      "name": "beta4_re30",
+      "power": 3,
+      "reynolds": 30.0,
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.00757654715052744,
+      "pressure_relative_l2": 0.027823765435358288,
+      "u_relative_l2": 0.007305493737039788,
+      "v_relative_l2": 0.06057017491451557,
+      "v_rmse": 0.0023339475531381168,
+      "mesh_change": {
+        "velocity_relative_l2": 2.3307658156697093e-05,
+        "pressure_relative_l2": 0.00024181314774905709
+      },
+      "momentum_rms": 0.24290625312327732
+    },
+    {
+      "name": "beta3_re30",
+      "power": 2,
+      "reynolds": 30.0,
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.006480883235106657,
+      "pressure_relative_l2": 0.032225982745087804,
+      "u_relative_l2": 0.0058355085552424,
+      "v_relative_l2": 0.11984402829493769,
+      "v_rmse": 0.00317258118210855,
+      "mesh_change": {
+        "velocity_relative_l2": 1.8252972955472348e-05,
+        "pressure_relative_l2": 0.00014485172273834016
+      },
+      "momentum_rms": 0.20615273959780067
+    }
+  ],
+  "selected_forward_cases": [
+    "beta5_re20",
+    "beta5_re30",
+    "beta4_re30",
+    "beta3_re30"
+  ],
+  "selection_rule": "velocity-vector L2<5% and pressure L2<10%; software, models and old predictions unchanged",
+  "forward_rows": [
+    {
+      "figure": "beta5_re20_speed",
+      "profile": "Beta(5,5)",
+      "reynolds": 20.0,
+      "quantity": "velocity-vector",
+      "relative_l2": 0.009844985480770549,
+      "source_sha256": "a2a708dc45962d6a81433950c529ed8347f849cbbd97c1e0a609b7cb66e9dae0"
+    },
+    {
+      "figure": "beta5_re30_speed",
+      "profile": "Beta(5,5)",
+      "reynolds": 30.0,
+      "quantity": "velocity-vector",
+      "relative_l2": 0.009060065852523566,
+      "source_sha256": "1d0e7ea0423a2aadcadb91b4df3a9169dea992321559383c77475de7f26eb07a"
+    },
+    {
+      "figure": "beta4_re30_speed",
+      "profile": "Beta(4,4)",
+      "reynolds": 30.0,
+      "quantity": "velocity-vector",
+      "relative_l2": 0.00757654715052744,
+      "source_sha256": "17cc3a32cdb10bdc6a17ff9dfa52cd974e93fc077870326611879eba543b26e6"
+    },
+    {
+      "figure": "beta3_re30_speed",
+      "profile": "Beta(3,3)",
+      "reynolds": 30.0,
+      "quantity": "velocity-vector",
+      "relative_l2": 0.006480883235106657,
+      "source_sha256": "4039fdbeda1d7862564bce56006c6e0472df2e700b161f1c066e827b735ab128"
+    },
+    {
+      "figure": "beta4_re30_u",
+      "profile": "Beta(4,4)",
+      "reynolds": 30.0,
+      "quantity": "axial velocity",
+      "relative_l2": 0.007305493737039788,
+      "source_sha256": "17cc3a32cdb10bdc6a17ff9dfa52cd974e93fc077870326611879eba543b26e6"
+    },
+    {
+      "figure": "beta4_re30_v",
+      "profile": "Beta(4,4)",
+      "reynolds": 30.0,
+      "quantity": "transverse velocity",
+      "relative_l2": 0.06057017491451557,
+      "source_sha256": "17cc3a32cdb10bdc6a17ff9dfa52cd974e93fc077870326611879eba543b26e6"
+    },
+    {
+      "figure": "beta4_re30_p",
+      "profile": "Beta(4,4)",
+      "reynolds": 30.0,
+      "quantity": "pressure",
+      "relative_l2": 0.027823765435358288,
+      "source_sha256": "17cc3a32cdb10bdc6a17ff9dfa52cd974e93fc077870326611879eba543b26e6"
+    }
+  ],
+  "inverse_rows": [
+    {
+      "figure": "oblique_beta5",
+      "label": "Oblique launches / Beta(5,5) experiment",
+      "source": "flow_reconstruction/examples/fem_beta/result",
+      "source_sha256": {
+        "fitted_model": "a624be5cb1018f68f241f542230317c2073a10a5e353ed8df6ca013f02ab92de",
+        "flow": "e905b2a1d7a7f2d6c605361dd21c2cca94ea83eb839a028116548e0e6bf8d6eb",
+        "input_1": "7d2d8d5ec2a0b2b7482b33de404894a3b3ea01ecb7b1b29325073a09d161bd24",
+        "ODE_1": "ecf3eadf6587a7c895ecba8241c87601d0cd689ad741113bea9a4845678d2c0b",
+        "input_2": "d01d074b420e8a68f92b5279ebfe3dbf620aafd374f189b79ca012a48aa0927b",
+        "ODE_2": "c9dc5309634b7a77cb05ff7b8a3a1f92824508ea5ead778eaf0a89dbc92ba701"
+      },
+      "particles": [
+        {
+          "particle": 1,
+          "position_2d_rmse_H": 0.0026848040003838373,
+          "position_2d_rmse_percent_H": 0.26848040003838375,
+          "max_error_H": 0.004545199545078586,
+          "samples": 81
+        },
+        {
+          "particle": 2,
+          "position_2d_rmse_H": 0.0014143414207372443,
+          "position_2d_rmse_percent_H": 0.14143414207372443,
+          "max_error_H": 0.0030540915409306407,
+          "samples": 81
+        }
+      ],
+      "comparison_scope": "Consistency of fitted paths, not a blind trajectory test or proof of whole-field accuracy"
+    },
+    {
+      "figure": "corners_beta5",
+      "label": "Corner launches / Beta(5,5) experiment",
+      "source": "flow_reconstruction/examples/corner_launch_preconditioned/result",
+      "source_sha256": {
+        "fitted_model": "c5923c6464cd50fe26fe47a6fdbbc1c3bc98910ac0737aa2fcd2a47182a64ca6",
+        "flow": "b1d668598e302a523678875b6926dda9eebe3daf20f712813ccff543b8169f48",
+        "input_1": "d7908a1ab41709b71d8add5877f6d988547ed511b0cb80d523035a9ea7aa8739",
+        "ODE_1": "6777dc87f6b4c9dd10857220469a568fca35a314b02eeaf8686f7b7e7000a9fd",
+        "input_2": "fd04ccf3f2a5f8bf02ddd32a6ef1407874dc3dec7c93d0e525af379749aca63e",
+        "ODE_2": "aa15fad1400d48569cfc01401fe45a89a72fd99f3d31baa0d66b62e8f37c8bc0"
+      },
+      "particles": [
+        {
+          "particle": 1,
+          "position_2d_rmse_H": 0.0009440876041661938,
+          "position_2d_rmse_percent_H": 0.09440876041661937,
+          "max_error_H": 0.0018263106639781878,
+          "samples": 101
+        },
+        {
+          "particle": 2,
+          "position_2d_rmse_H": 0.0006817511514336996,
+          "position_2d_rmse_percent_H": 0.06817511514336996,
+          "max_error_H": 0.0014998431941516375,
+          "samples": 101
+        }
+      ],
+      "comparison_scope": "Consistency of fitted paths, not a blind trajectory test or proof of whole-field accuracy"
+    },
+    {
+      "figure": "corners_beta4",
+      "label": "Corner launches / Beta(4,4) experiment",
+      "source": "presentations/defense_2026_11_07/data/inverse_beta4/result",
+      "source_sha256": {
+        "fitted_model": "a0dd13f305f44e1f4d0dc5eb15f65331a47e405b3903691c3063be30f021d023",
+        "flow": "ee72db04222b769d18a455cd135ad78669ad4167f98cb28eedf1a68f3fb0beda",
+        "input_1": "0dcf7c6cd3255d0ab7730be0b95f5a5a3def942d4000862f3766ef818703d048",
+        "ODE_1": "388f1956b5ac5efae2ca9e6a9124b0d20cbdcce8e77feabca7b97ae108d4e75b",
+        "input_2": "7fcb40857f4e1d282babffe3c3b18c7bd973f02e037556bc92614baffb1fbf65",
+        "ODE_2": "5885892e1c3fd4096afc6fc3cc1c21bc6e17cdc4447dc278bcb6b4f1c1507cdc"
+      },
+      "particles": [
+        {
+          "particle": 1,
+          "position_2d_rmse_H": 0.0006283811667487946,
+          "position_2d_rmse_percent_H": 0.06283811667487946,
+          "max_error_H": 0.0013152449567916719,
+          "samples": 101
+        },
+        {
+          "particle": 2,
+          "position_2d_rmse_H": 0.000532900810991701,
+          "position_2d_rmse_percent_H": 0.0532900810991701,
+          "max_error_H": 0.0012930789493887094,
+          "samples": 101
+        }
+      ],
+      "comparison_scope": "Consistency of fitted paths, not a blind trajectory test or proof of whole-field accuracy"
+    }
+  ]
+}

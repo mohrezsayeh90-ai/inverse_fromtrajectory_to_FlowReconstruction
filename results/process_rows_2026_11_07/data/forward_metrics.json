@@ -1,0 +1,27 @@
+{
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "step": 94000,
+  "all_predeclared_cases": [
+    {
+      "name": "beta3_re30",
+      "power": 2,
+      "reynolds": 30.0,
+      "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+      "step": 94000,
+      "velocity_relative_l2": 0.006480883235106657,
+      "pressure_relative_l2": 0.032225982745087804,
+      "u_relative_l2": 0.0058355085552424,
+      "v_relative_l2": 0.11984402829493769,
+      "v_rmse": 0.00317258118210855,
+      "mesh_change": {
+        "velocity_relative_l2": 1.8252972955472348e-05,
+        "pressure_relative_l2": 0.00014485172273834016
+      },
+      "momentum_rms": 0.20615273959780067
+    }
+  ],
+  "selection_rule": "Field illustrations: velocity L2 <5% AND pressure L2 <10%; report all attempted cases; no universal acceptance claim.",
+  "training_performed": false,
+  "repeated_or_exploratory_validation": true,
+  "pressure_alignment": false
+}

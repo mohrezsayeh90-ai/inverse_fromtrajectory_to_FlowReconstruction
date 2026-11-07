@@ -1,0 +1,14 @@
+{
+  "rows": 10,
+  "panels_per_row": 5,
+  "png_size": [
+    8640,
+    1696
+  ],
+  "pdf_pages": 10,
+  "vector_speed_errors_selected_below_one_percent": true,
+  "inverse_cases": 3,
+  "comparison_scope": "Only fitted-path consistency for inverse rows",
+  "previous_tracked_files_unchanged": true,
+  "model_training_performed": false
+}
