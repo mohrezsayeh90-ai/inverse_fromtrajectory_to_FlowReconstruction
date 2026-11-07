@@ -1,0 +1,94 @@
+{
+  "case": "corners_beta5",
+  "label": "Corner launches / experiment A",
+  "paths": [
+    {
+      "particle": 1,
+      "timed": {
+        "symmetric_distance_rmse_H": 0.00033884682672697005,
+        "symmetric_hausdorff_H": 0.0014791024078324477,
+        "ordered_arclength_rmse_H": 0.0007772986384273274,
+        "endpoint_error_H": 0.0014791024078324477,
+        "observed_length_H": 3.295100685959015,
+        "predicted_length_H": 3.2962378049948446
+      },
+      "without_time": {
+        "symmetric_distance_rmse_H": 0.0003149388821295879,
+        "symmetric_hausdorff_H": 0.000851881944854859,
+        "ordered_arclength_rmse_H": 0.0003151983882069972,
+        "endpoint_error_H": 0.0004612186631438374,
+        "observed_length_H": 3.295100685959015,
+        "predicted_length_H": 3.2950122370446864
+      },
+      "timed_completed": true,
+      "without_time_completed": true,
+      "true_duration_for_posthoc_comparison_only": 1.2,
+      "inferred_duration": 1.1870196855589978,
+      "uniform_export_vs_original": {
+        "symmetric_distance_rmse_H": 1.6955307315915418e-05,
+        "symmetric_hausdorff_H": 0.00015641315023160425,
+        "ordered_arclength_rmse_H": 2.208593385502433e-05,
+        "endpoint_error_H": 0.0,
+        "observed_length_H": 3.295100685959015,
+        "predicted_length_H": 3.2950554370743816
+      },
+      "fit_resampling_vs_original": {
+        "symmetric_distance_rmse_H": 4.4250718785994603e-05,
+        "symmetric_hausdorff_H": 0.00028608452501294954,
+        "ordered_arclength_rmse_H": 4.989503585932598e-05,
+        "endpoint_error_H": 0.0,
+        "observed_length_H": 3.295100685959015,
+        "predicted_length_H": 3.2950204090896937
+      }
+    },
+    {
+      "particle": 2,
+      "timed": {
+        "symmetric_distance_rmse_H": 0.00022185405284548795,
+        "symmetric_hausdorff_H": 0.0011357773528327482,
+        "ordered_arclength_rmse_H": 0.001084964321853313,
+        "endpoint_error_H": 0.0011357773528327482,
+        "observed_length_H": 2.055898238892339,
+        "predicted_length_H": 2.058072746202678
+      },
+      "without_time": {
+        "symmetric_distance_rmse_H": 0.0004238080044458511,
+        "symmetric_hausdorff_H": 0.0026159448604134864,
+        "ordered_arclength_rmse_H": 0.00214781684435219,
+        "endpoint_error_H": 0.0006329834144979973,
+        "observed_length_H": 2.055898238892339,
+        "predicted_length_H": 2.0513103906847627
+      },
+      "timed_completed": true,
+      "without_time_completed": true,
+      "true_duration_for_posthoc_comparison_only": 1.2,
+      "inferred_duration": 1.1902644455643248,
+      "uniform_export_vs_original": {
+        "symmetric_distance_rmse_H": 4.4876776696562225e-05,
+        "symmetric_hausdorff_H": 0.00046603372363925564,
+        "ordered_arclength_rmse_H": 0.00021819259804434785,
+        "endpoint_error_H": 0.0,
+        "observed_length_H": 2.055898238892339,
+        "predicted_length_H": 2.055425210501563
+      },
+      "fit_resampling_vs_original": {
+        "symmetric_distance_rmse_H": 0.00018439050860077154,
+        "symmetric_hausdorff_H": 0.002549676866396875,
+        "ordered_arclength_rmse_H": 0.0008123659667850445,
+        "endpoint_error_H": 0.0,
+        "observed_length_H": 2.055898238892339,
+        "predicted_length_H": 2.0541639272406025
+      }
+    }
+  ],
+  "profile_relative_l2_difference": 0.1398826920461658,
+  "normalized_profile_relative_l2_difference": 0.13804793449938157,
+  "timed_mean_speed": 1.0023600780844009,
+  "without_time_mean_speed": 1.016554385960468,
+  "timed_reynolds": 30.070802342532026,
+  "without_time_reynolds": 30.49663157881404,
+  "source": "flow_reconstruction/examples/corner_launch_preconditioned/result",
+  "fit_report_sha256": "cfb20edf73ad3ec84a19f2667cbe17476c4b82b0b4c5b2ad1f94884f6af6a236",
+  "timed_fit_sha256": "c5923c6464cd50fe26fe47a6fdbbc1c3bc98910ac0737aa2fcd2a47182a64ca6",
+  "comparison_scope": "Same observed curves; geometry-only scores for both methods; profile difference is not error against truth"
+}

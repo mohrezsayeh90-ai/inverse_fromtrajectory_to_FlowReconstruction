@@ -1,0 +1,112 @@
+{
+  "status": "experimental_geometry_only_inverse",
+  "measured_timestamps_used": false,
+  "timed_fit_initialization_used": false,
+  "config": {
+    "points": 129,
+    "clock_knots": 33,
+    "clock_smoothness": 0.001,
+    "clock_log_bound": 5.0,
+    "starts": 2,
+    "max_iterations": 700,
+    "seed": 81206
+  },
+  "flow_config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 3,
+    "max_iterations": 400,
+    "quadrature_order": 3,
+    "seed": 71103
+  },
+  "selected_start": 0,
+  "candidates": [
+    {
+      "start": 0,
+      "objective": 0.4375116053011688,
+      "iterations": 700,
+      "success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "spline_minimum": 0.0,
+      "valid": true,
+      "mean_speed": 1.0145290665471058,
+      "reynolds": 30.435871996413177,
+      "components": [
+        0.39809025956347877,
+        0.004579267029124454,
+        0.034765850488774966,
+        7.622821980724481e-05,
+        0.0
+      ]
+    },
+    {
+      "start": 1,
+      "objective": 0.4438910254793643,
+      "iterations": 700,
+      "success": false,
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "spline_minimum": 0.0,
+      "valid": true,
+      "mean_speed": 1.0145908779795152,
+      "reynolds": 30.437726339385456,
+      "components": [
+        0.39843152271884225,
+        0.004295721944419743,
+        0.041087932960858095,
+        7.584785525574293e-05,
+        0.0
+      ]
+    }
+  ],
+  "mean_speed": 1.0145290665471058,
+  "reynolds": 30.435871996413177,
+  "paths": [
+    {
+      "completed": true,
+      "symmetric_distance_rmse_H": 0.00021120240190976785,
+      "symmetric_hausdorff_H": 0.0005970582923100343,
+      "ordered_arclength_rmse_H": 0.00021163871286924326,
+      "endpoint_error_H": 8.179204717376028e-05,
+      "observed_length_H": 3.307593031804321,
+      "predicted_length_H": 3.3075635694682317
+    },
+    {
+      "completed": true,
+      "symmetric_distance_rmse_H": 0.00036979958770148706,
+      "symmetric_hausdorff_H": 0.001965089952085743,
+      "ordered_arclength_rmse_H": 0.0016828633798658006,
+      "endpoint_error_H": 0.000648403199916172,
+      "observed_length_H": 2.0548950689580416,
+      "predicted_length_H": 2.051326491801211
+    }
+  ],
+  "inferred_durations": [
+    1.1868318139541447,
+    1.191365025286149
+  ],
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "forward_weights_unchanged": true,
+  "component_order": [
+    "integral_path",
+    "inlet_prior",
+    "momentum_residual",
+    "clock_smoothness",
+    "negative_inlet"
+  ],
+  "elapsed_seconds": 322.90215982599875,
+  "unique_flow_guaranteed": false
+}

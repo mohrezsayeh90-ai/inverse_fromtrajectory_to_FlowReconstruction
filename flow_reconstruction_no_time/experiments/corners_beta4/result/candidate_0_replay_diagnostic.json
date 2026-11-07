@@ -1,0 +1,20 @@
+[
+  {
+    "completed": true,
+    "symmetric_distance_rmse_H": 0.00021120240190976785,
+    "symmetric_hausdorff_H": 0.0005970582923100343,
+    "ordered_arclength_rmse_H": 0.00021163871286924326,
+    "endpoint_error_H": 8.179204717376028e-05,
+    "observed_length_H": 3.307593031804321,
+    "predicted_length_H": 3.3075635694682317
+  },
+  {
+    "completed": true,
+    "symmetric_distance_rmse_H": 0.00036979958770148706,
+    "symmetric_hausdorff_H": 0.001965089952085743,
+    "ordered_arclength_rmse_H": 0.0016828633798658006,
+    "endpoint_error_H": 0.000648403199916172,
+    "observed_length_H": 2.0548950689580416,
+    "predicted_length_H": 2.051326491801211
+  }
+]

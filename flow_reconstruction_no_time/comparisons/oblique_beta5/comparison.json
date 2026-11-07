@@ -1,0 +1,94 @@
+{
+  "case": "oblique_beta5",
+  "label": "Oblique launches",
+  "paths": [
+    {
+      "particle": 1,
+      "timed": {
+        "symmetric_distance_rmse_H": 0.0013066545256569797,
+        "symmetric_hausdorff_H": 0.003239158479913696,
+        "ordered_arclength_rmse_H": 0.001424152322821393,
+        "endpoint_error_H": 0.003239158479913696,
+        "observed_length_H": 1.4201991392832907,
+        "predicted_length_H": 1.4215667560900593
+      },
+      "without_time": {
+        "symmetric_distance_rmse_H": 0.0009523079331446689,
+        "symmetric_hausdorff_H": 0.0021971302578404493,
+        "ordered_arclength_rmse_H": 0.0010932009191228526,
+        "endpoint_error_H": 0.0021971302578404493,
+        "observed_length_H": 1.4201991392832907,
+        "predicted_length_H": 1.4190070527880156
+      },
+      "timed_completed": true,
+      "without_time_completed": true,
+      "true_duration_for_posthoc_comparison_only": 0.55,
+      "inferred_duration": 0.5741596539870283,
+      "uniform_export_vs_original": {
+        "symmetric_distance_rmse_H": 1.1965989403048197e-05,
+        "symmetric_hausdorff_H": 0.00013791091016505103,
+        "ordered_arclength_rmse_H": 1.5937926069934577e-05,
+        "endpoint_error_H": 0.0,
+        "observed_length_H": 1.4201991392832907,
+        "predicted_length_H": 1.4201508409616797
+      },
+      "fit_resampling_vs_original": {
+        "symmetric_distance_rmse_H": 3.385493300756225e-05,
+        "symmetric_hausdorff_H": 0.0002452339528600952,
+        "ordered_arclength_rmse_H": 3.998686439400635e-05,
+        "endpoint_error_H": 0.0,
+        "observed_length_H": 1.4201991392832907,
+        "predicted_length_H": 1.4201007270268677
+      }
+    },
+    {
+      "particle": 2,
+      "timed": {
+        "symmetric_distance_rmse_H": 0.000879498622187891,
+        "symmetric_hausdorff_H": 0.0028741473685464196,
+        "ordered_arclength_rmse_H": 0.0015991817143272565,
+        "endpoint_error_H": 0.002874147368546419,
+        "observed_length_H": 1.0006255043002137,
+        "predicted_length_H": 1.003982026840176
+      },
+      "without_time": {
+        "symmetric_distance_rmse_H": 0.00022641843647594267,
+        "symmetric_hausdorff_H": 0.0007959563660228866,
+        "ordered_arclength_rmse_H": 0.0004228147572363065,
+        "endpoint_error_H": 0.0007378363393277879,
+        "observed_length_H": 1.0006255043002137,
+        "predicted_length_H": 0.9999002930282361
+      },
+      "timed_completed": true,
+      "without_time_completed": true,
+      "true_duration_for_posthoc_comparison_only": 0.55,
+      "inferred_duration": 0.5465841924820749,
+      "uniform_export_vs_original": {
+        "symmetric_distance_rmse_H": 1.620562587711765e-05,
+        "symmetric_hausdorff_H": 0.00013666672026984948,
+        "ordered_arclength_rmse_H": 4.074902325687783e-05,
+        "endpoint_error_H": 0.0,
+        "observed_length_H": 1.0006255043002137,
+        "predicted_length_H": 1.0004855315647763
+      },
+      "fit_resampling_vs_original": {
+        "symmetric_distance_rmse_H": 5.27531970928088e-05,
+        "symmetric_hausdorff_H": 0.00048426291655590117,
+        "ordered_arclength_rmse_H": 0.00010191150936273265,
+        "endpoint_error_H": 0.0,
+        "observed_length_H": 1.0006255043002137,
+        "predicted_length_H": 1.0003019668857567
+      }
+    }
+  ],
+  "profile_relative_l2_difference": 0.25265193210308673,
+  "normalized_profile_relative_l2_difference": 0.2525806807594551,
+  "timed_mean_speed": 1.0104699710436496,
+  "without_time_mean_speed": 1.0110379153172888,
+  "timed_reynolds": 30.314099131309487,
+  "without_time_reynolds": 30.331137459518665,
+  "source": "flow_reconstruction/examples/fem_beta/result",
+  "fit_report_sha256": "5c2885abe607bf596931ce74aecf080a007afc297f4114b6d5cc23770af0f785",
+  "timed_fit_sha256": "a624be5cb1018f68f241f542230317c2073a10a5e353ed8df6ca013f02ab92de",
+  "comparison_scope": "Same observed curves; geometry-only scores for both methods; profile difference is not error against truth"
+}

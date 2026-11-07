@@ -1,0 +1,4 @@
+# Install in a separate CPU environment; do not replace working CUDA JAX.
+-r ../requirements-cpu-tested.txt
+Pillow==13.0.0
+PyMuPDF==1.26.6

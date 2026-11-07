@@ -1,0 +1,33 @@
+{
+  "format": "ordered_xy_geometry_v1",
+  "units": "nondimensional",
+  "reference_reynolds": 30.0,
+  "curves": [
+    {
+      "name": "upper_left",
+      "csv": "curve_1.csv",
+      "initial_position": [
+        0.03,
+        0.97
+      ],
+      "initial_velocity": [
+        6.0,
+        -4.0
+      ],
+      "stokes_time": 0.12
+    },
+    {
+      "name": "lower_right",
+      "csv": "curve_2.csv",
+      "initial_position": [
+        4.97,
+        0.03
+      ],
+      "initial_velocity": [
+        -6.0,
+        4.0
+      ],
+      "stokes_time": 0.12
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "start": 1,
+  "objective": 0.5184245077134336,
+  "iterations": 700,
+  "success": false,
+  "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+  "spline_minimum": 0.0,
+  "valid": true,
+  "mean_speed": 1.016554385960468,
+  "reynolds": 30.49663157881404,
+  "components": [
+    0.42509401958439264,
+    0.012504072773910666,
+    0.0807554823964233,
+    7.09329587037312e-05,
+    0.0
+  ]
+}

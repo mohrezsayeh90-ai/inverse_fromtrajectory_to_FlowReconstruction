@@ -1,0 +1,286 @@
+{
+  "cases": [
+    {
+      "case": "corners_beta4",
+      "label": "Corner launches / experiment B",
+      "paths": [
+        {
+          "particle": 1,
+          "timed": {
+            "symmetric_distance_rmse_H": 0.00027125718697327894,
+            "symmetric_hausdorff_H": 0.0012802033536706441,
+            "ordered_arclength_rmse_H": 0.000646715248179831,
+            "endpoint_error_H": 0.0012802033536706441,
+            "observed_length_H": 3.3076144808950456,
+            "predicted_length_H": 3.3085786492120928
+          },
+          "without_time": {
+            "symmetric_distance_rmse_H": 0.00021301204265674708,
+            "symmetric_hausdorff_H": 0.0006744840965512677,
+            "ordered_arclength_rmse_H": 0.00021337526119088567,
+            "endpoint_error_H": 8.179204717376028e-05,
+            "observed_length_H": 3.3076144808950456,
+            "predicted_length_H": 3.3075635694682317
+          },
+          "timed_completed": true,
+          "without_time_completed": true,
+          "true_duration_for_posthoc_comparison_only": 1.2,
+          "inferred_duration": 1.1868318139541447,
+          "uniform_export_vs_original": {
+            "symmetric_distance_rmse_H": 1.1804524515736384e-05,
+            "symmetric_hausdorff_H": 0.00010218549861306021,
+            "ordered_arclength_rmse_H": 1.3128669748920022e-05,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 3.3076144808950456,
+            "predicted_length_H": 3.307593031804321
+          },
+          "fit_resampling_vs_original": {
+            "symmetric_distance_rmse_H": 3.438047084272767e-05,
+            "symmetric_hausdorff_H": 0.00023916667173789233,
+            "ordered_arclength_rmse_H": 3.673008390100504e-05,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 3.3076144808950456,
+            "predicted_length_H": 3.307570218447264
+          }
+        },
+        {
+          "particle": 2,
+          "timed": {
+            "symmetric_distance_rmse_H": 0.00020586072839498513,
+            "symmetric_hausdorff_H": 0.0009604728204285908,
+            "ordered_arclength_rmse_H": 0.0008431561627950839,
+            "endpoint_error_H": 0.0009604728204285908,
+            "observed_length_H": 2.0555505513522605,
+            "predicted_length_H": 2.0571847402215186
+          },
+          "without_time": {
+            "symmetric_distance_rmse_H": 0.0004029780209641727,
+            "symmetric_hausdorff_H": 0.002402362456989435,
+            "ordered_arclength_rmse_H": 0.001977865934868169,
+            "endpoint_error_H": 0.000648403199916172,
+            "observed_length_H": 2.0555505513522605,
+            "predicted_length_H": 2.051326491801211
+          },
+          "timed_completed": true,
+          "without_time_completed": true,
+          "true_duration_for_posthoc_comparison_only": 1.2,
+          "inferred_duration": 1.191365025286149,
+          "uniform_export_vs_original": {
+            "symmetric_distance_rmse_H": 5.729524206911405e-05,
+            "symmetric_hausdorff_H": 0.0007653188184375194,
+            "ordered_arclength_rmse_H": 0.0003042642256807741,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 2.0555505513522605,
+            "predicted_length_H": 2.0548950689580416
+          },
+          "fit_resampling_vs_original": {
+            "symmetric_distance_rmse_H": 0.00018111525628154864,
+            "symmetric_hausdorff_H": 0.0022657929304249133,
+            "ordered_arclength_rmse_H": 0.0007713642347298187,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 2.0555505513522605,
+            "predicted_length_H": 2.05390541828108
+          }
+        }
+      ],
+      "profile_relative_l2_difference": 0.0966117502837918,
+      "normalized_profile_relative_l2_difference": 0.09534421290294635,
+      "timed_mean_speed": 1.0019354465967374,
+      "without_time_mean_speed": 1.0145290665471058,
+      "timed_reynolds": 30.05806339790212,
+      "without_time_reynolds": 30.435871996413177,
+      "source": "presentations/defense_2026_11_07/data/inverse_beta4/result",
+      "fit_report_sha256": "bfa2cd0c2e07d5b6d161588acb664c068972bdca32d75fc06d36640cb36fbd11",
+      "timed_fit_sha256": "a0dd13f305f44e1f4d0dc5eb15f65331a47e405b3903691c3063be30f021d023",
+      "comparison_scope": "Same observed curves; geometry-only scores for both methods; profile difference is not error against truth"
+    },
+    {
+      "case": "corners_beta5",
+      "label": "Corner launches / experiment A",
+      "paths": [
+        {
+          "particle": 1,
+          "timed": {
+            "symmetric_distance_rmse_H": 0.00033884682672697005,
+            "symmetric_hausdorff_H": 0.0014791024078324477,
+            "ordered_arclength_rmse_H": 0.0007772986384273274,
+            "endpoint_error_H": 0.0014791024078324477,
+            "observed_length_H": 3.295100685959015,
+            "predicted_length_H": 3.2962378049948446
+          },
+          "without_time": {
+            "symmetric_distance_rmse_H": 0.0003149388821295879,
+            "symmetric_hausdorff_H": 0.000851881944854859,
+            "ordered_arclength_rmse_H": 0.0003151983882069972,
+            "endpoint_error_H": 0.0004612186631438374,
+            "observed_length_H": 3.295100685959015,
+            "predicted_length_H": 3.2950122370446864
+          },
+          "timed_completed": true,
+          "without_time_completed": true,
+          "true_duration_for_posthoc_comparison_only": 1.2,
+          "inferred_duration": 1.1870196855589978,
+          "uniform_export_vs_original": {
+            "symmetric_distance_rmse_H": 1.6955307315915418e-05,
+            "symmetric_hausdorff_H": 0.00015641315023160425,
+            "ordered_arclength_rmse_H": 2.208593385502433e-05,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 3.295100685959015,
+            "predicted_length_H": 3.2950554370743816
+          },
+          "fit_resampling_vs_original": {
+            "symmetric_distance_rmse_H": 4.4250718785994603e-05,
+            "symmetric_hausdorff_H": 0.00028608452501294954,
+            "ordered_arclength_rmse_H": 4.989503585932598e-05,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 3.295100685959015,
+            "predicted_length_H": 3.2950204090896937
+          }
+        },
+        {
+          "particle": 2,
+          "timed": {
+            "symmetric_distance_rmse_H": 0.00022185405284548795,
+            "symmetric_hausdorff_H": 0.0011357773528327482,
+            "ordered_arclength_rmse_H": 0.001084964321853313,
+            "endpoint_error_H": 0.0011357773528327482,
+            "observed_length_H": 2.055898238892339,
+            "predicted_length_H": 2.058072746202678
+          },
+          "without_time": {
+            "symmetric_distance_rmse_H": 0.0004238080044458511,
+            "symmetric_hausdorff_H": 0.0026159448604134864,
+            "ordered_arclength_rmse_H": 0.00214781684435219,
+            "endpoint_error_H": 0.0006329834144979973,
+            "observed_length_H": 2.055898238892339,
+            "predicted_length_H": 2.0513103906847627
+          },
+          "timed_completed": true,
+          "without_time_completed": true,
+          "true_duration_for_posthoc_comparison_only": 1.2,
+          "inferred_duration": 1.1902644455643248,
+          "uniform_export_vs_original": {
+            "symmetric_distance_rmse_H": 4.4876776696562225e-05,
+            "symmetric_hausdorff_H": 0.00046603372363925564,
+            "ordered_arclength_rmse_H": 0.00021819259804434785,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 2.055898238892339,
+            "predicted_length_H": 2.055425210501563
+          },
+          "fit_resampling_vs_original": {
+            "symmetric_distance_rmse_H": 0.00018439050860077154,
+            "symmetric_hausdorff_H": 0.002549676866396875,
+            "ordered_arclength_rmse_H": 0.0008123659667850445,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 2.055898238892339,
+            "predicted_length_H": 2.0541639272406025
+          }
+        }
+      ],
+      "profile_relative_l2_difference": 0.1398826920461658,
+      "normalized_profile_relative_l2_difference": 0.13804793449938157,
+      "timed_mean_speed": 1.0023600780844009,
+      "without_time_mean_speed": 1.016554385960468,
+      "timed_reynolds": 30.070802342532026,
+      "without_time_reynolds": 30.49663157881404,
+      "source": "flow_reconstruction/examples/corner_launch_preconditioned/result",
+      "fit_report_sha256": "cfb20edf73ad3ec84a19f2667cbe17476c4b82b0b4c5b2ad1f94884f6af6a236",
+      "timed_fit_sha256": "c5923c6464cd50fe26fe47a6fdbbc1c3bc98910ac0737aa2fcd2a47182a64ca6",
+      "comparison_scope": "Same observed curves; geometry-only scores for both methods; profile difference is not error against truth"
+    },
+    {
+      "case": "oblique_beta5",
+      "label": "Oblique launches",
+      "paths": [
+        {
+          "particle": 1,
+          "timed": {
+            "symmetric_distance_rmse_H": 0.0013066545256569797,
+            "symmetric_hausdorff_H": 0.003239158479913696,
+            "ordered_arclength_rmse_H": 0.001424152322821393,
+            "endpoint_error_H": 0.003239158479913696,
+            "observed_length_H": 1.4201991392832907,
+            "predicted_length_H": 1.4215667560900593
+          },
+          "without_time": {
+            "symmetric_distance_rmse_H": 0.0009523079331446689,
+            "symmetric_hausdorff_H": 0.0021971302578404493,
+            "ordered_arclength_rmse_H": 0.0010932009191228526,
+            "endpoint_error_H": 0.0021971302578404493,
+            "observed_length_H": 1.4201991392832907,
+            "predicted_length_H": 1.4190070527880156
+          },
+          "timed_completed": true,
+          "without_time_completed": true,
+          "true_duration_for_posthoc_comparison_only": 0.55,
+          "inferred_duration": 0.5741596539870283,
+          "uniform_export_vs_original": {
+            "symmetric_distance_rmse_H": 1.1965989403048197e-05,
+            "symmetric_hausdorff_H": 0.00013791091016505103,
+            "ordered_arclength_rmse_H": 1.5937926069934577e-05,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 1.4201991392832907,
+            "predicted_length_H": 1.4201508409616797
+          },
+          "fit_resampling_vs_original": {
+            "symmetric_distance_rmse_H": 3.385493300756225e-05,
+            "symmetric_hausdorff_H": 0.0002452339528600952,
+            "ordered_arclength_rmse_H": 3.998686439400635e-05,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 1.4201991392832907,
+            "predicted_length_H": 1.4201007270268677
+          }
+        },
+        {
+          "particle": 2,
+          "timed": {
+            "symmetric_distance_rmse_H": 0.000879498622187891,
+            "symmetric_hausdorff_H": 0.0028741473685464196,
+            "ordered_arclength_rmse_H": 0.0015991817143272565,
+            "endpoint_error_H": 0.002874147368546419,
+            "observed_length_H": 1.0006255043002137,
+            "predicted_length_H": 1.003982026840176
+          },
+          "without_time": {
+            "symmetric_distance_rmse_H": 0.00022641843647594267,
+            "symmetric_hausdorff_H": 0.0007959563660228866,
+            "ordered_arclength_rmse_H": 0.0004228147572363065,
+            "endpoint_error_H": 0.0007378363393277879,
+            "observed_length_H": 1.0006255043002137,
+            "predicted_length_H": 0.9999002930282361
+          },
+          "timed_completed": true,
+          "without_time_completed": true,
+          "true_duration_for_posthoc_comparison_only": 0.55,
+          "inferred_duration": 0.5465841924820749,
+          "uniform_export_vs_original": {
+            "symmetric_distance_rmse_H": 1.620562587711765e-05,
+            "symmetric_hausdorff_H": 0.00013666672026984948,
+            "ordered_arclength_rmse_H": 4.074902325687783e-05,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 1.0006255043002137,
+            "predicted_length_H": 1.0004855315647763
+          },
+          "fit_resampling_vs_original": {
+            "symmetric_distance_rmse_H": 5.27531970928088e-05,
+            "symmetric_hausdorff_H": 0.00048426291655590117,
+            "ordered_arclength_rmse_H": 0.00010191150936273265,
+            "endpoint_error_H": 0.0,
+            "observed_length_H": 1.0006255043002137,
+            "predicted_length_H": 1.0003019668857567
+          }
+        }
+      ],
+      "profile_relative_l2_difference": 0.25265193210308673,
+      "normalized_profile_relative_l2_difference": 0.2525806807594551,
+      "timed_mean_speed": 1.0104699710436496,
+      "without_time_mean_speed": 1.0110379153172888,
+      "timed_reynolds": 30.314099131309487,
+      "without_time_reynolds": 30.331137459518665,
+      "source": "flow_reconstruction/examples/fem_beta/result",
+      "fit_report_sha256": "5c2885abe607bf596931ce74aecf080a007afc297f4114b6d5cc23770af0f785",
+      "timed_fit_sha256": "a624be5cb1018f68f241f542230317c2073a10a5e353ed8df6ca013f02ab92de",
+      "comparison_scope": "Same observed curves; geometry-only scores for both methods; profile difference is not error against truth"
+    }
+  ]
+}

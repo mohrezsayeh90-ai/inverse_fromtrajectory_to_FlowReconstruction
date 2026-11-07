@@ -1,0 +1,5 @@
+{
+  "corners_beta4": "presentations/defense_2026_11_07/data/inverse_beta4/result",
+  "corners_beta5": "flow_reconstruction/examples/corner_launch_preconditioned/result",
+  "oblique_beta5": "flow_reconstruction/examples/fem_beta/result"
+}

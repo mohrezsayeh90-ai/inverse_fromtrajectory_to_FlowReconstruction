@@ -1,0 +1,18 @@
+{
+  "existing_files_verified": 805,
+  "existing_files_changed": [],
+  "all_three_time_free_inputs_have_xy_only": true,
+  "full_loss_directional_gradient_checks": [
+    {
+      "automatic": -13.670524281326038,
+      "finite_difference": -13.670524289399742,
+      "relative_error": 5.905920879572228e-10
+    },
+    {
+      "automatic": 7.052693860252091,
+      "finite_difference": 7.05269386477858,
+      "relative_error": 6.418098678503318e-10
+    }
+  ],
+  "all_replays_completed": true
+}
