@@ -1,0 +1,9 @@
+{
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "forward_case_metrics": "data/forward_metrics.json",
+  "first_inverse_source": "flow_reconstruction/examples/corner_launch_preconditioned/result",
+  "second_inverse_source": "data/inverse_beta4/result",
+  "all_figures_from_saved_or_new_numeric_results": true,
+  "trained_model_ready": false,
+  "reserved_513_knot_tests_used": false
+}

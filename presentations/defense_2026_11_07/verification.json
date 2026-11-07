@@ -1,0 +1,60 @@
+{
+  "pages": 22,
+  "main_slides": 19,
+  "backup_slides": 3,
+  "pptx_native_text_editable": true,
+  "pdf_page_count_verified": true,
+  "all_slide_text_present_in_pptx": true,
+  "no_off_slide_objects": true,
+  "html_text_overflows": 0,
+  "all_figures_from_numeric_sources": true,
+  "all_four_attempted_forward_cases_preserved": [
+    {
+      "case": "beta5_re20",
+      "velocity_error_pct": 0.984498548077055,
+      "pressure_error_pct": 6.533534428974469
+    },
+    {
+      "case": "beta5_re30",
+      "velocity_error_pct": 0.9060065852523567,
+      "pressure_error_pct": 3.0823421501453256
+    },
+    {
+      "case": "beta5_re40",
+      "velocity_error_pct": 0.9245559506266141,
+      "pressure_error_pct": 11.761022121239609
+    },
+    {
+      "case": "beta4_re30",
+      "velocity_error_pct": 0.757654715052744,
+      "pressure_error_pct": 2.782376543535829
+    }
+  ],
+  "same_checkpoint_for_all_results": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "low_field_error_cases": 3,
+  "inverse_metrics_verified": [
+    {
+      "source": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/flow_reconstruction/examples/corner_launch_preconditioned/result",
+      "particle": "upper_left",
+      "position_2d_rmse_percent_H": 0.09440876041661937
+    },
+    {
+      "source": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/flow_reconstruction/examples/corner_launch_preconditioned/result",
+      "particle": "lower_right",
+      "position_2d_rmse_percent_H": 0.06817511514336998
+    },
+    {
+      "source": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/data/inverse_beta4/result",
+      "particle": "upper_left",
+      "position_2d_rmse_percent_H": 0.06283811667487946
+    },
+    {
+      "source": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/data/inverse_beta4/result",
+      "particle": "lower_right",
+      "position_2d_rmse_percent_H": 0.0532900810991701
+    }
+  ],
+  "selected_examples_do_not_establish_global_acceptance": true,
+  "inverse_trajectory_consistency_is_not_full_field_accuracy": true,
+  "renderer_note": "PDF and PNG previews rendered with Chromium. Native PowerPoint object and text structure checked; no Microsoft PowerPoint renderer is available here."
+}

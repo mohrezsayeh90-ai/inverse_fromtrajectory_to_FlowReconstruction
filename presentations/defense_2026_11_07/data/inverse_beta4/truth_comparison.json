@@ -1,0 +1,9 @@
+{
+  "generator": "independent FEM, Beta(4,4), Re=30",
+  "noise_std": 0.0002,
+  "noise_seed": 72109,
+  "reference_fields_used_in_inverse_loss": false,
+  "velocity_relative_l2": 0.19505029177662866,
+  "inlet_relative_l2": 0.32423059029184137,
+  "pressure_relative_l2": 0.2079541835661194
+}

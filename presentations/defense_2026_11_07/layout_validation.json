@@ -1,0 +1,161 @@
+{
+  "slides": 22,
+  "text_overflows": [],
+  "automatic_font_adjustments": [
+    {
+      "slide": 0,
+      "block": 5,
+      "size": 50.5
+    },
+    {
+      "slide": 1,
+      "block": 6,
+      "size": 35
+    },
+    {
+      "slide": 1,
+      "block": 9,
+      "size": 35
+    },
+    {
+      "slide": 1,
+      "block": 12,
+      "size": 29.5
+    },
+    {
+      "slide": 2,
+      "block": 8,
+      "size": 37
+    },
+    {
+      "slide": 2,
+      "block": 12,
+      "size": 37
+    },
+    {
+      "slide": 2,
+      "block": 16,
+      "size": 37
+    },
+    {
+      "slide": 5,
+      "block": 10,
+      "size": 29.5
+    },
+    {
+      "slide": 5,
+      "block": 11,
+      "size": 25.5
+    },
+    {
+      "slide": 6,
+      "block": 7,
+      "size": 37
+    },
+    {
+      "slide": 6,
+      "block": 11,
+      "size": 37
+    },
+    {
+      "slide": 6,
+      "block": 15,
+      "size": 37
+    },
+    {
+      "slide": 7,
+      "block": 8,
+      "size": 37
+    },
+    {
+      "slide": 9,
+      "block": 7,
+      "size": 37
+    },
+    {
+      "slide": 9,
+      "block": 10,
+      "size": 37
+    },
+    {
+      "slide": 9,
+      "block": 13,
+      "size": 37
+    },
+    {
+      "slide": 11,
+      "block": 17,
+      "size": 29.5
+    },
+    {
+      "slide": 11,
+      "block": 18,
+      "size": 31.5
+    },
+    {
+      "slide": 12,
+      "block": 8,
+      "size": 37
+    },
+    {
+      "slide": 12,
+      "block": 12,
+      "size": 37
+    },
+    {
+      "slide": 12,
+      "block": 16,
+      "size": 37
+    },
+    {
+      "slide": 15,
+      "block": 8,
+      "size": 37
+    },
+    {
+      "slide": 15,
+      "block": 12,
+      "size": 37
+    },
+    {
+      "slide": 15,
+      "block": 16,
+      "size": 37
+    },
+    {
+      "slide": 16,
+      "block": 8,
+      "size": 37
+    },
+    {
+      "slide": 16,
+      "block": 12,
+      "size": 37
+    },
+    {
+      "slide": 16,
+      "block": 16,
+      "size": 37
+    },
+    {
+      "slide": 18,
+      "block": 6,
+      "size": 29.5
+    },
+    {
+      "slide": 18,
+      "block": 9,
+      "size": 29.5
+    },
+    {
+      "slide": 18,
+      "block": 12,
+      "size": 29.5
+    },
+    {
+      "slide": 19,
+      "block": 7,
+      "size": 26.5
+    }
+  ]
+}

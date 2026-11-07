@@ -1,0 +1,3300 @@
+[
+  {
+    "title": "از پروفایل ورودی تا بازسازی جریان از مسیر ذرات",
+    "section": "RESEARCH PRESENTATION · 07 NOV 2026",
+    "notes": "هدف، ساخت دو نگاشت مرتبط است: حل مستقیم برای تابع ورودی و سپس استفاده از همان اپراتور در یک استنتاج معکوس. این نسخه گزارش چارچوب و شواهد توسعه‌ای است. مدل مبنا هنوز مجوز ادعای دقت برای تمام پروفایل‌ها را ندارد. زمان پیشنهادی: ۳۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "RESEARCH PRESENTATION · 07 NOV 2026",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "از پروفایل ورودی تا بازسازی جریان از مسیر ذرات",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "گزارش پژوهشی قابل بازتولید | نسخهٔ مدل ثابت: گام ۹۴هزار | ارائهٔ چارچوب و شواهد عددی",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "01",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 110,
+        "y": 205,
+        "w": 1390,
+        "h": 160,
+        "text": "DeepONet–PINN برای کانال دوبعدی\nو استنتاج معکوس با درگ استوکس",
+        "size": 50.5,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 405,
+        "w": 1420,
+        "h": 320,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/inverse_beta5.png"
+      },
+      {
+        "kind": "text",
+        "x": 110,
+        "y": 738,
+        "w": 1370,
+        "h": 60,
+        "text": "پروفایل → میدان  |  مسیر ذرات → یک جریان سازگار",
+        "size": 32,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "دو نگاشت، یک مدل جریانِ مشترک",
+    "section": "01 · RESEARCH QUESTION",
+    "notes": "در مستقیم، شکل تابع ورودی و Re داده می‌شوند. در معکوس، تنها دو مسیر زمان‌دار و اطلاعات ذرات داده می‌شود. شبکهٔ جریان در معکوس منجمد است؛ این روش با بازآموزی PINN برای هر مسئله یا یک inverse network تک‌مرحله‌ای متفاوت است. زمان پیشنهادی: ۴۵ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "01 · RESEARCH QUESTION",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "دو نگاشت، یک مدل جریانِ مشترک",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "02",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 205,
+        "w": 680,
+        "h": 270,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 115,
+        "y": 225,
+        "w": 630,
+        "h": 60,
+        "text": "مسئلهٔ مستقیم",
+        "size": 35,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 115,
+        "y": 305,
+        "w": 630,
+        "h": 140,
+        "text": "تابع ورودی f(y) و عدد Re معلوم‌اند؛ میدان u,v,p خواسته می‌شود.",
+        "size": 32,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 830,
+        "y": 205,
+        "w": 680,
+        "h": 270,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 855,
+        "y": 225,
+        "w": 630,
+        "h": 60,
+        "text": "مسئلهٔ معکوس",
+        "size": 35,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 855,
+        "y": 305,
+        "w": 630,
+        "h": 140,
+        "text": "دو مسیر زمان‌دار معلوم‌اند؛ f(y)، سرعت میانگین و میدان تخمین زده می‌شوند.",
+        "size": 32,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 530,
+        "w": 1420,
+        "h": 220,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 550,
+        "w": 1350,
+        "h": 50,
+        "text": "ایدهٔ اتصال",
+        "size": 29.5,
+        "color": "#ffc35a",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 612,
+        "w": 1350,
+        "h": 115,
+        "text": "اپراتور جریانِ آموزش‌دیده، یک مدل جانشین منجمد در حلقهٔ استنتاج است. معیار نهاییِ سازگاری مسیر، حل مستقل معادلهٔ ذره در جریان تخمینی است.",
+        "size": 32,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "محیط فیزیکی و شرایط مرزی",
+    "section": "02 · FORWARD / GEOMETRY",
+    "notes": "طول کانال پنج برابر ارتفاع است. ورودی فقط مؤلفهٔ محوری دارد و v ورودی صفر است؛ v در میدان داخلی می‌تواند غیرصفر باشد. فشار نقطه‌ای کل خروجی صفر نشده است؛ خروجی از نوع traction با فشار خارجی صفر است. FEM نیز همین مسئلهٔ مرزی را حل می‌کند. زمان: ۴۵ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "02 · FORWARD / GEOMETRY",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "محیط فیزیکی و شرایط مرزی",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "کانال بی‌بعد ۵×۱؛ ورودی محوری است و v ورودی صفر است.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "03",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 85,
+        "y": 195,
+        "w": 1430,
+        "h": 365,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/geometry.png"
+      },
+      {
+        "kind": "rect",
+        "x": 85,
+        "y": 585,
+        "w": 440,
+        "h": 195,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 103,
+        "y": 597,
+        "w": 404,
+        "h": 45,
+        "text": "دامنهٔ آموزش",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 103,
+        "y": 638,
+        "w": 404,
+        "h": 63,
+        "text": "10 ≤ Re ≤ 100",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 103,
+        "y": 703,
+        "w": 404,
+        "h": 69,
+        "text": "بر پایهٔ سرعت میانگین ورودی",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 565,
+        "y": 585,
+        "w": 440,
+        "h": 195,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 583,
+        "y": 597,
+        "w": 404,
+        "h": 45,
+        "text": "ورودی تابعی",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 583,
+        "y": 638,
+        "w": 404,
+        "h": 63,
+        "text": "u(0,y)=f(y)",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 583,
+        "y": 703,
+        "w": 404,
+        "h": 69,
+        "text": "پروفایل صاف و غیرمنفی؛ دیواره‌ها صفر",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1045,
+        "y": 585,
+        "w": 470,
+        "h": 195,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 1063,
+        "y": 597,
+        "w": 434,
+        "h": 45,
+        "text": "خروجی میدان",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 1063,
+        "y": 638,
+        "w": 434,
+        "h": 63,
+        "text": "u(x,y), v(x,y), p",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 1063,
+        "y": 703,
+        "w": 434,
+        "h": 69,
+        "text": "فشار خارجی صفر؛ شرط خروجی از نوع traction",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "معادلات بی‌بعد و قیدهای ساختاری",
+    "section": "03 · FORWARD / PHYSICS",
+    "notes": "مقیاس سرعت در اپراتور مستقیم، سرعت میانگین ورودی است. از تابع جریان برای اعمال پیوستگی استفاده شده است. کل spline ورودی در lift مرزی وارد می‌شود؛ پاس‌شدن جرم و مرز ساختاری به‌تنهایی دقت میدان داخلی را ثابت نمی‌کند. زمان: ۴۵ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "03 · FORWARD / PHYSICS",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "معادلات بی‌بعد و قیدهای ساختاری",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "فشارِ تمام نقاط خروجی جداگانه صفر نشده؛ همان شرط traction در FEM و مدل استفاده می‌شود.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "04",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 205,
+        "w": 800,
+        "h": 465,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/ns_equations.png"
+      },
+      {
+        "kind": "text",
+        "x": 930,
+        "y": 210,
+        "w": 560,
+        "h": 162,
+        "text": "• پیوستگی و ناویر–استوکس پایا برای سیال تراکم‌ناپذیر.",
+        "size": 30,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 930,
+        "y": 380,
+        "w": 560,
+        "h": 162,
+        "text": "• تابع جریان: u=ψ_y و v=−ψ_x؛ پیوستگی در ساختار اعمال می‌شود.",
+        "size": 30,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 930,
+        "y": 550,
+        "w": 560,
+        "h": 162,
+        "text": "• قید سخت، کل spline ورودی را نگه می‌دارد؛ دیواره و دبی نیز ساختاری‌اند.",
+        "size": 30,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "معماری اپراتور فیزیک‌آگاه",
+    "section": "04 · FORWARD / ARCHITECTURE",
+    "notes": "دو شبکهٔ scalar مستقل برای تصحیح تابع جریان و فشار وجود دارد. هرکدام branch و trunk خود را دارند. branch از ۲۵۷ حسگر داخلی و Re و ویژگی مشتق‌شده از خود ورودی استفاده می‌کند. تمام نقاط CSV در قید مرزی حفظ می‌شوند. این نمایش یک تفکیک عددی محدود دارد، نه تضمین تمام توابع ممکن. زمان: ۶۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "04 · FORWARD / ARCHITECTURE",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "معماری اپراتور فیزیک‌آگاه",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "دو DeepONet اسکالر مستقل برای تصحیح ψ و p؛ width=128، latent=64، depth=4.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "05",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 210,
+        "w": 290,
+        "h": 135,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 102,
+        "y": 222,
+        "w": 266,
+        "h": 111,
+        "text": "f(y), Re",
+        "size": 30,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 445,
+        "w": 290,
+        "h": 135,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 102,
+        "y": 457,
+        "w": 266,
+        "h": 111,
+        "text": "(x,y)",
+        "size": 30,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 470,
+        "y": 210,
+        "w": 360,
+        "h": 135,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 482,
+        "y": 222,
+        "w": 336,
+        "h": 111,
+        "text": "Branch ψ\nBranch p",
+        "size": 30,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 470,
+        "y": 445,
+        "w": 360,
+        "h": 135,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 482,
+        "y": 457,
+        "w": 336,
+        "h": 111,
+        "text": "Trunk ψ\nTrunk p",
+        "size": 30,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 930,
+        "y": 320,
+        "w": 150,
+        "h": 145,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 942,
+        "y": 332,
+        "w": 126,
+        "h": 121,
+        "text": "⊙ , Σ",
+        "size": 30,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 1180,
+        "y": 270,
+        "w": 330,
+        "h": 245,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 1192,
+        "y": 282,
+        "w": 306,
+        "h": 221,
+        "text": "qψ , qp\nLift + correction\nψ , p → u , v , p",
+        "size": 30,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "arrow",
+        "x": 395,
+        "y": 265,
+        "w": 60,
+        "h": 30,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "arrow",
+        "x": 395,
+        "y": 500,
+        "w": 60,
+        "h": 30,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "arrow",
+        "x": 850,
+        "y": 330,
+        "w": 60,
+        "h": 30,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "arrow",
+        "x": 1097,
+        "y": 370,
+        "w": 60,
+        "h": 30,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 650,
+        "w": 1400,
+        "h": 70,
+        "text": "مسیر مستقلِ شرط مرزی: انتگرالِ تمام تابع ورودی → lift تابع جریان",
+        "size": 32,
+        "color": "#ffc35a",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 735,
+        "w": 1400,
+        "h": 55,
+        "text": "هیچ پروژکشن چهارمودی یا انتخاب از بانکِ پاسخ انجام نمی‌شود.",
+        "size": 29,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "آموزش از فیزیک؛ مرجع برای پایش و انتخاب وزن",
+    "section": "05 · FORWARD / TRAINING",
+    "notes": "بانک شامل فقط تابع‌های ورودی است، نه جواب‌های CFD. Loss مستقیم از باقیماندهٔ مومنتوم و traction ساخته می‌شود؛ s از انحنای ورودی و Re محاسبه شده است. مرجع FEM در گرادیان استفاده نشده، اما برای پایش تکرارشونده و انتخاب checkpoint استفاده شده است؛ بنابراین آن مراجع را آزمون کور ننامید. زمان: ۶۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "05 · FORWARD / TRAINING",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "آموزش از فیزیک؛ مرجع برای پایش و انتخاب وزن",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "۱۰هزار تابع ورودی از هفت مولد؛ بازنمونه‌گیری Re در batch؛ صفر برچسب میدان در objective.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "06",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 220,
+        "w": 850,
+        "h": 290,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/loss.png"
+      },
+      {
+        "kind": "text",
+        "x": 980,
+        "y": 200,
+        "w": 520,
+        "h": 162,
+        "text": "• مولدهای GRF، نوسانی، Beta، تخت، جت، spline و سهموی.",
+        "size": 27,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 980,
+        "y": 370,
+        "w": 520,
+        "h": 162,
+        "text": "• Loss از مومنتوم و traction خروجی ساخته می‌شود؛ مقیاس s فقط تابع ورودی و Re است.",
+        "size": 27,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 980,
+        "y": 540,
+        "w": 520,
+        "h": 162,
+        "text": "• FEM بیرون از گرادیان است؛ اما در پایش تکرارشونده و انتخاب checkpoint استفاده شده است.",
+        "size": 27,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 580,
+        "w": 850,
+        "h": 175,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 597,
+        "w": 790,
+        "h": 50,
+        "text": "تفکیک ضروری",
+        "size": 29.5,
+        "color": "#ffc35a",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 655,
+        "w": 790,
+        "h": 75,
+        "text": "Validation مورد استفاده برای انتخاب مدل، آزمون کور نهایی محسوب نمی‌شود.",
+        "size": 25.5,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 105,
+        "y": 765,
+        "w": 835,
+        "h": 55,
+        "text": "Adam · batch=64 · 48 PDE points/input · 100k steps",
+        "size": 24,
+        "color": "#40d9c4",
+        "bold": false,
+        "rtl": false
+      }
+    ]
+  },
+  {
+    "title": "پروتکل مقایسهٔ مستقیم: وزن ثابت و شبکهٔ مشترک",
+    "section": "06 · FORWARD / VALIDATION",
+    "notes": "همهٔ نتیجه‌های مستقیم این ارائه از checkpoint گام ۹۴۰۰۰ گرفته شده‌اند. چهار حالت بررسی از پیش در prepare_results مشخص‌اند؛ سه مورد معیار میدانِ سرعت کمتر از ۵٪ و فشار کمتر از ۱۰٪ را دارند. این شرط جای تمام gateهای فیزیک را نمی‌گیرد. خطا روی ۷۰۸۱ نقطهٔ مشترک، با تراکم بیشتر نزدیک ورودی، محاسبه می‌شود. زمان: ۴۵ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "06 · FORWARD / VALIDATION",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "پروتکل مقایسهٔ مستقیم: وزن ثابت و شبکهٔ مشترک",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "هر چهار حالتِ از پیش مشخص‌شده و تمام خروجی‌ها ذخیره‌اند؛ هیچ تنظیم مجدد وزن انجام نشده است.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "07",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 210,
+        "w": 440,
+        "h": 200,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 222,
+        "w": 404,
+        "h": 45,
+        "text": "وزن استفاده‌شده",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 263,
+        "w": 404,
+        "h": 63,
+        "text": "94,000",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 328,
+        "w": 404,
+        "h": 74,
+        "text": "SHA256: ccf6fa2b…",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 565,
+        "y": 210,
+        "w": 440,
+        "h": 200,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 583,
+        "y": 222,
+        "w": 404,
+        "h": 45,
+        "text": "نمونه‌برداری مقایسه",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 583,
+        "y": 263,
+        "w": 404,
+        "h": 63,
+        "text": "7,081",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 583,
+        "y": 328,
+        "w": 404,
+        "h": 74,
+        "text": "نقاط مشترک با تراکم بیشتر نزدیک ورودی",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1040,
+        "y": 210,
+        "w": 470,
+        "h": 200,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 1058,
+        "y": 222,
+        "w": 434,
+        "h": 45,
+        "text": "مرجع مستقل",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 1058,
+        "y": 263,
+        "w": 434,
+        "h": 63,
+        "text": "P2 / P1",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 1058,
+        "y": 328,
+        "w": 434,
+        "h": 74,
+        "text": "FEM تیلور–هود؛ کنترل ریزسازی دو شبکه",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 460,
+        "w": 1400,
+        "h": 65,
+        "text": "تعریف خطا:  ‖پیش‌بینی − مرجع‖₂ / ‖مرجع‖₂",
+        "size": 35,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 550,
+        "w": 1400,
+        "h": 75,
+        "text": "سرعت به‌صورت بردار (u,v) سنجیده می‌شود. فشار بدون جابه‌جایی پسینی مقایسه می‌شود.",
+        "size": 31,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 670,
+        "w": 1400,
+        "h": 105,
+        "text": "نمونهٔ «کم‌خطا در میدان»: خطای سرعت <۵٪ و فشار <۱۰٪؛ این شرط به معنی پاس‌شدن تمام معیارهای فیزیک نیست.",
+        "size": 31,
+        "color": "#ffc35a",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "نمونهٔ اول: ورودی Beta(5,5)، رینولدز ۳۰",
+    "section": "07 · FORWARD / LOW-ERROR FIELD CASE",
+    "notes": "ورودی Beta(5,5) با میانگین یک است. خطوط ممتد برش‌ها FEM و خطوط خط‌چین شبکه‌اند. خطای بردار سرعت حدود ۰٫۹۱٪ است؛ نقشهٔ اختلاف با مقیاس متفاوت از دو نقشهٔ میدان نمایش داده می‌شود تا ساختار خطا دیده شود. این یک مثال عملکرد مناسب است، نه نتیجهٔ کل دامنه. زمان: ۶۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "07 · FORWARD / LOW-ERROR FIELD CASE",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "نمونهٔ اول: ورودی Beta(5,5)، رینولدز ۳۰",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "f(y)=630 y⁴(1−y)⁴؛ میانگین ورودی یک؛ همان وزن گام ۹۴هزار.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "08",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 190,
+        "w": 920,
+        "h": 300,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/beta5_re30_profiles.png"
+      },
+      {
+        "kind": "rect",
+        "x": 1045,
+        "y": 195,
+        "w": 465,
+        "h": 180,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 1063,
+        "y": 207,
+        "w": 429,
+        "h": 45,
+        "text": "خطای بردار سرعت",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 1063,
+        "y": 248,
+        "w": 429,
+        "h": 63,
+        "text": "0.91%",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 1063,
+        "y": 313,
+        "w": 429,
+        "h": 54,
+        "text": "در برابر FEM",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 1045,
+        "y": 395,
+        "w": 465,
+        "h": 95,
+        "text": "پروفایل ورودی و برش‌های مقطعی، در کنار نقشهٔ u",
+        "size": 29,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 515,
+        "w": 1420,
+        "h": 275,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/beta5_re30_u.png"
+      }
+    ]
+  },
+  {
+    "title": "همان ورودی: مقایسهٔ فشار و سرعت عرضی",
+    "section": "08 · FORWARD / PRESSURE AND TRANSVERSE VELOCITY",
+    "notes": "فشار حدود ۳٫۰۸٪ خطا دارد. مؤلفهٔ عرضی از نظر اندازه کوچک‌تر است: خطای نسبی آن حدود ۹٫۲۶٪ و RMSE آن ۰٫۰۰۴۱۶ برابر سرعت میانگین است. کوچک‌بودن خطای سرعت برداری نباید به همان درصد برای تک‌تک مؤلفه‌ها تعبیر شود. فشار بدون alignment پسینی مقایسه شده است. زمان: ۵۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "08 · FORWARD / PRESSURE AND TRANSVERSE VELOCITY",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "همان ورودی: مقایسهٔ فشار و سرعت عرضی",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "مقیاس رنگ در دو نقشهٔ مرجع و شبکه یکسان است؛ ستون سوم اختلاف مستقیم است.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "09",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 190,
+        "w": 1420,
+        "h": 265,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/beta5_re30_p.png"
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 480,
+        "w": 1420,
+        "h": 265,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/beta5_re30_v.png"
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 770,
+        "w": 1400,
+        "h": 50,
+        "text": "فشار: 3.08%  |  خطای نسبی v: 9.26%  |  RMSE(v): 0.00416 Umean",
+        "size": 27,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "نمونهٔ دوم: شکل ورودی متفاوت، Beta(4,4)",
+    "section": "09 · FORWARD / SECOND INLET SHAPE",
+    "notes": "اینجا شکل تابع نیز تغییر کرده و Beta(4,4) است. سرعت حدود ۰٫۷۶٪ و فشار حدود ۲٫۷۸٪ اختلاف دارند. تغییر فشار بین دو شبکهٔ FEM حدود ۰٫۰۲۴٪ است و بسیار کوچک‌تر از اختلاف مدل و مرجع است. وزن شبکه همان وزن مثال قبل است. این نمونه درون خانوادهٔ توابع مطالعه‌شده است و ادعای خارج‌توزیع نیست. زمان: ۵۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "09 · FORWARD / SECOND INLET SHAPE",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "نمونهٔ دوم: شکل ورودی متفاوت، Beta(4,4)",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "f(y)=140 y³(1−y)³؛ Re=30؛ همان checkpoint و بدون آموزش مجدد.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "10",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 190,
+        "w": 440,
+        "h": 155,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 202,
+        "w": 404,
+        "h": 45,
+        "text": "خطای سرعت",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 243,
+        "w": 404,
+        "h": 63,
+        "text": "0.76%",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 570,
+        "y": 190,
+        "w": 440,
+        "h": 155,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 202,
+        "w": 404,
+        "h": 45,
+        "text": "خطای فشار",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 243,
+        "w": 404,
+        "h": 63,
+        "text": "2.78%",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 1050,
+        "y": 190,
+        "w": 460,
+        "h": 155,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 202,
+        "w": 424,
+        "h": 45,
+        "text": "خطای ریزسازی فشار",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 243,
+        "w": 424,
+        "h": 63,
+        "text": "0.02%",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 370,
+        "w": 1420,
+        "h": 205,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/beta4_re30_u.png"
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 595,
+        "w": 1420,
+        "h": 205,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/beta4_re30_p.png"
+      }
+    ]
+  },
+  {
+    "title": "تغییر رینولدز، با حفظ پروفایل Beta(5,5)",
+    "section": "10 · FORWARD / PARAMETRIC CHECK",
+    "notes": "حالت‌های Re=20،30،40 از یک پروفایل مشترک و یک checkpoint هستند. در Re=20 سرعت حدود ۰٫۹۸٪ و فشار حدود ۶٫۵۳٪ خطا دارند. در Re=40، سرعت همچنان حدود ۰٫۹۲٪ است ولی فشار حدود ۱۱٫۷۶٪ می‌شود. نشان‌دادن همین مورد مانع برداشت نادرستِ دقت یکنواخت در کل بازه است. زمان: ۵۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "10 · FORWARD / PARAMETRIC CHECK",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "تغییر رینولدز، با حفظ پروفایل Beta(5,5)",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "این نقاط بررسی توسعه‌ای‌اند؛ نمودار، تعمیم آماری یا تضمین کل بازه را اثبات نمی‌کند.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "11",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 190,
+        "w": 1420,
+        "h": 445,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/reynolds_scan.png"
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 660,
+        "w": 1400,
+        "h": 60,
+        "text": "Re=20: سرعت ۰٫۹۸٪، فشار ۶٫۵۳٪  |  Re=30: سرعت ۰٫۹۱٪، فشار ۳٫۰۸٪",
+        "size": 30,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 730,
+        "w": 1400,
+        "h": 75,
+        "text": "در Re=40، سرعت همچنان کم‌خطاست؛ فشار به ۱۱٫۷۶٪ می‌رسد و از آستانهٔ میدان عبور می‌کند.",
+        "size": 29,
+        "color": "#ffc35a",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "از مشاهدهٔ ذرات به یک جریان سازگار",
+    "section": "11 · INVERSE / FRAMEWORK",
+    "notes": "مسیرها، نقطه و سرعت اولیه و زمان پاسخ ذره را می‌گیریم. پارامترهای شکل ورودی و سرعت میانگین بهینه می‌شوند و اپراتور منجمد هر بار میدان را می‌دهد. پس از استنتاج، حرکت ذرات مستقل و با میدان در موقعیت پیش‌بینی‌شدهٔ خود ذره حل می‌شود. زمان: ۵۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "11 · INVERSE / FRAMEWORK",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "از مشاهدهٔ ذرات به یک جریان سازگار",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "مدل جانشین منجمد است؛ برای هر جفت مسیر جدید، تنها پارامترهای ورودی و سرعت میانگین بهینه می‌شوند.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "12",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 230,
+        "w": 310,
+        "h": 170,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 105,
+        "y": 255,
+        "w": 280,
+        "h": 125,
+        "text": "دو مسیر زمان‌دار\n+ شرایط پرتاب",
+        "size": 30,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "arrow",
+        "x": 410,
+        "y": 300,
+        "w": 40,
+        "h": 24,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "rect",
+        "x": 460,
+        "y": 230,
+        "w": 310,
+        "h": 170,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 475,
+        "y": 255,
+        "w": 280,
+        "h": 125,
+        "text": "f(y), A\nپارامترهای مجهول",
+        "size": 30,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "arrow",
+        "x": 780,
+        "y": 300,
+        "w": 40,
+        "h": 24,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "rect",
+        "x": 830,
+        "y": 230,
+        "w": 310,
+        "h": 170,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 845,
+        "y": 255,
+        "w": 280,
+        "h": 125,
+        "text": "اپراتور منجمد\nu,v,p",
+        "size": 30,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "arrow",
+        "x": 1150,
+        "y": 300,
+        "w": 40,
+        "h": 24,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "rect",
+        "x": 1200,
+        "y": 230,
+        "w": 310,
+        "h": 170,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 1215,
+        "y": 255,
+        "w": 280,
+        "h": 125,
+        "text": "معادلهٔ ذره\nحل مستقل ODE",
+        "size": 30,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 470,
+        "w": 1420,
+        "h": 230,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 490,
+        "w": 1360,
+        "h": 50,
+        "text": "حلقهٔ استنتاج",
+        "size": 29.5,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 560,
+        "w": 1360,
+        "h": 100,
+        "text": "خطای مسیر + همواری پروفایل + فیزیک جریان → تنظیم f و A → تکرار؛ سپس بررسی حرکت ذرات در همان جریان.",
+        "size": 31.5,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 100,
+        "y": 745,
+        "w": 1400,
+        "h": 65,
+        "text": "روش عمومیِ حل معکوس است؛ یک شبکهٔ معکوسِ آموزش‌دیده با یک forward-pass آنی نیست.",
+        "size": 27,
+        "color": "#ffc35a",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "سناریوی مشاهده: دو پرتاب از گوشه‌های مخالف",
+    "section": "12 · INVERSE / GIVEN DATA",
+    "notes": "مکان‌های شروع گوشه‌های مخالف‌اند و جهت پرتاب اولیه به سمت مرکز هندسی است. سرعت‌های اولیه ۶ و منفی ۶ در راستای x هستند؛ مؤلفه‌های y برابر منفی ۱٫۲ و مثبت ۱٫۲ است. St=0.42 معلوم فرض شده است. دو مسیر هرکدام ۱۰۱ نمونه با نویز مصنوعی ۰٫۰۰۰۲H دارند. این آزمایش عددی مصنوعی است، نه آزمایش واقعی ذرات. زمان: ۵۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "12 · INVERSE / GIVEN DATA",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "سناریوی مشاهده: دو پرتاب از گوشه‌های مخالف",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "ورودی حل معکوس: زمان و مکان ذرات، سرعت اولیه، St و ویسکوزیتهٔ معلوم. میدان حقیقی وارد loss نمی‌شود.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "13",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 190,
+        "w": 1420,
+        "h": 325,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/observed_tracks.png"
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 545,
+        "w": 440,
+        "h": 215,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 557,
+        "w": 404,
+        "h": 45,
+        "text": "شرایط پرتاب",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 598,
+        "w": 404,
+        "h": 63,
+        "text": "(6, −1.2) / (−6, 1.2)",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 663,
+        "w": 404,
+        "h": 89,
+        "text": "از (۰،۱) و (۵،۰)؛ رو به مرکز هندسی",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 570,
+        "y": 545,
+        "w": 440,
+        "h": 215,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 557,
+        "w": 404,
+        "h": 45,
+        "text": "مشاهده",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 598,
+        "w": 404,
+        "h": 63,
+        "text": "101 × 2",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 663,
+        "w": 404,
+        "h": 89,
+        "text": "t تا ۱٫۲؛ نویز موقعیت ۰٫۰۰۰۲H",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1050,
+        "y": 545,
+        "w": 460,
+        "h": 215,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 557,
+        "w": 424,
+        "h": 45,
+        "text": "ذرات نقطه‌ای",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 598,
+        "w": 424,
+        "h": 63,
+        "text": "St = 0.42",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 663,
+        "w": 424,
+        "h": 89,
+        "text": "درگ استوکس؛ اثر یک‌طرفهٔ سیال بر ذره",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "مدل ذره و فرم انتگرالیِ مقاوم‌تر به نویز",
+    "section": "13 · INVERSE / PARTICLE PHYSICS",
+    "notes": "نیرو فقط درگ استوکس و اثر سیال بر ذره یک‌طرفه است. زمان‌بندی برای استنتاج لازم است؛ صرف منحنی هندسی کافی نیست. فرم انتگرالی دقیق، نیاز به مشتق دوم دادهٔ پرنویز را حذف می‌کند. quadrature روی مسیر مشاهده‌شده برای استنتاج استفاده می‌شود؛ سپس حل ODE مستقل از مسیر مشاهده‌شده کنترل نهایی است. زمان: ۶۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "13 · INVERSE / PARTICLE PHYSICS",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "مدل ذره و فرم انتگرالیِ مقاوم‌تر به نویز",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "نمونهٔ ایده‌آل استوکس؛ برای ذرهٔ واقعی باید Re ذره کوچک باشد. زمان‌بندی مسیرها ضروری است.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "14",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 190,
+        "w": 1420,
+        "h": 190,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/particle_equations.png"
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 410,
+        "w": 1420,
+        "h": 235,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/weak_equation.png"
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 690,
+        "w": 1400,
+        "h": 110,
+        "text": "فرم انتگرالی نیاز به مشتق‌گیری مرتبهٔ دوم از مسیر پرنویز را حذف می‌کند. حل ODE نهایی روی مسیرِ پیش‌بینی‌شدهٔ خود ذره انجام می‌شود.",
+        "size": 30,
+        "color": "#40d9c4",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "مجهول‌ها و قیدهای حل معکوس",
+    "section": "14 · INVERSE / REGULARIZATION",
+    "notes": "شکل ورودی گره‌ای است؛ هیچ چهار مود ثابتی تحمیل نشده است. میانگین شکل نرمال می‌شود و A جداگانه برآورد می‌شود. با ویسکوزیتهٔ معلوم، Re=A Re_ref است. priorهای انحنا و فیزیک از اطلاعات معلوم استفاده می‌کنند و target میدان ندارند. شروع‌ها به سقف iteration رسیده‌اند؛ جواب، بهترین تخمین موجود است و مینیمم سراسری اثبات نشده است. زمان: ۶۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "14 · INVERSE / REGULARIZATION",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "مجهول‌ها و قیدهای حل معکوس",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "تعداد گره‌ها و وزن priorها قابل تنظیم‌اند؛ این انتخاب‌ها جای اطلاعات مشاهده را نمی‌گیرند.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "15",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 220,
+        "w": 800,
+        "h": 270,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/inverse_loss.png"
+      },
+      {
+        "kind": "text",
+        "x": 940,
+        "y": 200,
+        "w": 560,
+        "h": 132,
+        "text": "• ۶۵ گرهٔ spline؛ ۶۳ پارامتر آزاد شامل سرعت میانگین A.",
+        "size": 29,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 940,
+        "y": 340,
+        "w": 560,
+        "h": 132,
+        "text": "• پروفایل غیرمنفی با میانگین نرمال‌شده؛ Re=A Re_ref.",
+        "size": 29,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 940,
+        "y": 480,
+        "w": 560,
+        "h": 132,
+        "text": "• پیش‌شرط‌سازی وارون‌پذیر روی تمام گره‌ها؛ بدون حذف مود.",
+        "size": 29,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 940,
+        "y": 620,
+        "w": 560,
+        "h": 132,
+        "text": "• چند شروع و گزارش همگرایی؛ جواب نهایی الزاماً مینیمم سراسری نیست.",
+        "size": 29,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 550,
+        "w": 800,
+        "h": 190,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 585,
+        "w": 740,
+        "h": 100,
+        "text": "وزن‌های شبکه در تمام این مراحل ثابت می‌مانند.",
+        "size": 34,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 115,
+        "y": 700,
+        "w": 775,
+        "h": 50,
+        "text": "L-BFGS-B · 2–3 starts · 400–500 iterations",
+        "size": 23,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": false
+      }
+    ]
+  },
+  {
+    "title": "بازسازی سازگار با مسیر: آزمایش Beta(5,5)",
+    "section": "15 · INVERSE / FLUID + PARTICLE RESULT",
+    "notes": "این همان جریان بازسازی‌شده است، نه میدان حقیقی که به‌عنوان پاسخ در پس‌زمینه گذاشته شده باشد. رنگ‌ها سرعت سیال، خطوط سفید جهت سیال و رنگ‌های نارنجی و صورتی حرکت ذرات اینرسی‌دار هستند. RMSE دوبعدی مسیرها ۰٫۰۹۴۴ و ۰٫۰۶۸۲ درصد H است. A حدود ۱٫۰۰۲۴ در برابر مقدار مولد یک است. زمان: ۶۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "15 · INVERSE / FLUID + PARTICLE RESULT",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "بازسازی سازگار با مسیر: آزمایش Beta(5,5)",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "پس‌زمینه و خطوط سفید: سیال تخمینی؛ مسیر رنگی: ذرات در همان سیال؛ دایرهٔ توخالی: مشاهده.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "16",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 190,
+        "w": 1420,
+        "h": 410,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/inverse_beta5.png"
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 625,
+        "w": 440,
+        "h": 165,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 637,
+        "w": 404,
+        "h": 45,
+        "text": "ذرهٔ بالا–چپ",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 678,
+        "w": 404,
+        "h": 63,
+        "text": "0.0944% H",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 743,
+        "w": 404,
+        "h": 39,
+        "text": "RMSE دوبعدی موقعیت",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 570,
+        "y": 625,
+        "w": 440,
+        "h": 165,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 637,
+        "w": 404,
+        "h": 45,
+        "text": "ذرهٔ پایین–راست",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 678,
+        "w": 404,
+        "h": 63,
+        "text": "0.0682% H",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 743,
+        "w": 404,
+        "h": 39,
+        "text": "RMSE دوبعدی موقعیت",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1050,
+        "y": 625,
+        "w": 460,
+        "h": 165,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 637,
+        "w": 424,
+        "h": 45,
+        "text": "سرعت میانگین تخمینی",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 678,
+        "w": 424,
+        "h": 63,
+        "text": "1.0024",
+        "size": 37,
+        "color": "#ffc35a",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 743,
+        "w": 424,
+        "h": 39,
+        "text": "مقدار مولد: ۱ Uref",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "تکرار چارچوب برای ورودی Beta(4,4)",
+    "section": "16 · INVERSE / SECOND FLOW EXPERIMENT",
+    "notes": "برای شکل Beta(4,4) یک مجموعه مسیر مستقل از FEM همین شکل ساخته شد. حل معکوس به میدان یا تابع ورودی مولد دسترسی نداشت. RMSE دوبعدی مسیرها حدود ۰٫۰۶۲۸ و ۰٫۰۵۳۳ درصد H است. مسیر نزدیک، شاهد سازگاری شرطی است؛ خطای کل میدان در پشتیبان گزارش شده است. زمان: ۵۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "16 · INVERSE / SECOND FLOW EXPERIMENT",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "تکرار چارچوب برای ورودی Beta(4,4)",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "دادهٔ مصنوعی از FEM مستقل تولید شد؛ تنها مسیرها و اطلاعات پرتاب به استنتاج داده شدند.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "17",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 190,
+        "w": 1420,
+        "h": 410,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/inverse_beta4.png"
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 625,
+        "w": 440,
+        "h": 165,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 637,
+        "w": 404,
+        "h": 45,
+        "text": "ذرهٔ بالا–چپ",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 678,
+        "w": 404,
+        "h": 63,
+        "text": "0.0628% H",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 108,
+        "y": 743,
+        "w": 404,
+        "h": 39,
+        "text": "RMSE دوبعدی موقعیت",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 570,
+        "y": 625,
+        "w": 440,
+        "h": 165,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 637,
+        "w": 404,
+        "h": 45,
+        "text": "ذرهٔ پایین–راست",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 678,
+        "w": 404,
+        "h": 63,
+        "text": "0.0533% H",
+        "size": 37,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 588,
+        "y": 743,
+        "w": 404,
+        "h": 39,
+        "text": "RMSE دوبعدی موقعیت",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1050,
+        "y": 625,
+        "w": 460,
+        "h": 165,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 637,
+        "w": 424,
+        "h": 45,
+        "text": "سرعت میانگین تخمینی",
+        "size": 24,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 678,
+        "w": 424,
+        "h": 63,
+        "text": "1.0019",
+        "size": 37,
+        "color": "#ffc35a",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 1068,
+        "y": 743,
+        "w": 424,
+        "h": 39,
+        "text": "مقدار مولد: ۱ Uref",
+        "size": 22,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "آیا جریان تخمینی، همان مسیر را بازتولید می‌کند؟",
+    "section": "17 · INVERSE / TRAJECTORY CONSISTENCY",
+    "notes": "نمودار، فاصلهٔ اقلیدسی موقعیت خروجی و ورودی در زمان یکسان را نشان می‌دهد. RMSE دوبعدی ریشهٔ میانگین dx²+dy² است و با RMSE مختصاتیِ گزارش‌های قبلی ضریب رادیکال دو تفاوت دارد. درصد H، درصد خطای موقعیت نسبت به ارتفاع کانال است؛ آن را درصد دقت شبکه ننامید. این مسیرها برای استنتاج استفاده شده‌اند و آزمون دیده‌نشده نیستند. زمان: ۵۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "17 · INVERSE / TRAJECTORY CONSISTENCY",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "آیا جریان تخمینی، همان مسیر را بازتولید می‌کند؟",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "خطا در زمان‌های یکسان؛ درصدها نسبت به H هستند، نه درصد مسیر پیموده‌شده یا «درصد دقت مدل».",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "18",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 190,
+        "w": 1420,
+        "h": 430,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/inverse_errors.png"
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 655,
+        "w": 1400,
+        "h": 65,
+        "text": "دو شکل ورودی و دو جفت مسیر بررسی شدند؛ این‌ها نمونه‌های توسعه‌ای‌اند، نه آزمون کور تعمیم.",
+        "size": 31,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 735,
+        "w": 1400,
+        "h": 75,
+        "text": "نتیجهٔ قابل ادعا: مدل، جریان‌هایی تخمین زده که حرکتِ ذرات در آن‌ها به مسیرهای داده‌شده نزدیک است.",
+        "size": 31,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "جمع‌بندی: دستاورد مشخص و محدودهٔ ادعا",
+    "section": "18 · CONCLUSIONS",
+    "notes": "دستاورد اول، اپراتور با نمونه‌های مشخصِ توافق خوب با FEM است. دستاورد دوم، اتصال عملی آن به استنتاج از ذرات و بازتولید مسیرهاست. مرز ادعا این است که دقت عمومی و یکتایی کل جریان هنوز ثابت نشده است. گام بعدی: بهبود دقت فیزیکی اپراتور و طراحی مشاهده‌های حساس‌تر یا دادهٔ بیشتر برای رفع نامعینی. زمان: ۶۰ ثانیه.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "18 · CONCLUSIONS",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "جمع‌بندی: دستاورد مشخص و محدودهٔ ادعا",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "کد، وزن، ورودی‌ها، مراجع، شکل‌ها و فایل‌های ارائه در مخزن همراه نسخه و هش ذخیره می‌شوند.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "19",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 200,
+        "w": 1420,
+        "h": 165,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 212,
+        "w": 1340,
+        "h": 50,
+        "text": "مدل مستقیم",
+        "size": 29.5,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 270,
+        "w": 1340,
+        "h": 80,
+        "text": "برای سه نمونهٔ مشخص، سرعت برداری زیر ۱٪ و فشار زیر ۷٪ اختلاف با FEM دارد.",
+        "size": 31,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 390,
+        "w": 1420,
+        "h": 165,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 402,
+        "w": 1340,
+        "h": 50,
+        "text": "مسئلهٔ معکوس",
+        "size": 29.5,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 460,
+        "w": 1340,
+        "h": 80,
+        "text": "دو مسیر ذره به یک ورودی و میدان سازگار نسبت داده می‌شوند؛ بازشبیه‌سازی مستقل مسیر انجام شده است.",
+        "size": 31,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 90,
+        "y": 580,
+        "w": 1420,
+        "h": 165,
+        "color": "#15263b"
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 592,
+        "w": 1340,
+        "h": 50,
+        "text": "حد اعتبار",
+        "size": 29.5,
+        "color": "#ffc35a",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 120,
+        "y": 650,
+        "w": 1340,
+        "h": 80,
+        "text": "دقت عمومی و یکتایی بازسازی هنوز تأیید نشده‌اند؛ تطبیق مسیر با بازیابی دقیق کل میدان یکسان نیست.",
+        "size": 31,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "پشتیبان: همهٔ حالت‌های اصلیِ وزن منتخب",
+    "section": "A1 · FULL ORIGINAL VALIDATION",
+    "notes": "این اسلاید برای سؤال دربارهٔ نتیجهٔ تمام benchmarkهاست. موارد ناموفق حذف نشده‌اند. در وزن منتخب، حالت ۹نوسانی خطای سرعت بزرگ‌تر از ۵٪ دارد و بعضی فشارها از ۱۰٪ عبور می‌کنند. تمام مومنتوم‌ها نیز زیر آستانهٔ اصلی ۰٫۰۵ نیستند. دو تابع رزروشدهٔ ۵۱۳گرهی در این کار مصرف نشده‌اند.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "A1 · FULL ORIGINAL VALIDATION",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "پشتیبان: همهٔ حالت‌های اصلیِ وزن منتخب",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "این جدولِ زمینه، از معرفی نمونه‌های منتخب به‌عنوان دقت تضمین‌شدهٔ اپراتور جلوگیری می‌کند.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "20",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 190,
+        "w": 1420,
+        "h": 410,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/all_original_cases.png"
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 645,
+        "w": 1400,
+        "h": 95,
+        "text": "در مجموعهٔ اصلی، سرعت، فشار و مومنتوم در همهٔ حالت‌ها هم‌زمان پذیرفته نشدند؛ حالت ۹نوسانی همچنان دشوار است.",
+        "size": 30,
+        "color": "#ffc35a",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 755,
+        "w": 1400,
+        "h": 45,
+        "text": "دو ورودی ۵۱۳گرهیِ رزروشده در این ارائه استفاده نشده‌اند.",
+        "size": 26.5,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "پشتیبان: مسیر خوب، لزوماً ورودی یکتا نمی‌دهد",
+    "section": "A2 · IDENTIFIABILITY",
+    "notes": "برای سؤال دربارهٔ بازیابی ورودی: دو مسیر محدود، به‌ویژه در حضور خطای مدل و نویز، کل تابع را به‌طور مطمئن تعیین نمی‌کنند. در مثال اول خطای ورودی حدود ۴۳٪ و خطای کل سرعت حدود ۲۷٪ است. در مثال دوم نیز این خطاها صفر نیستند. رتبهٔ عددی Jacobian به پارامترگذاری وابسته است؛ این نتیجه تنها به محدودیت اطلاعات اشاره می‌کند.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "A2 · IDENTIFIABILITY",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "پشتیبان: مسیر خوب، لزوماً ورودی یکتا نمی‌دهد",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "رتبهٔ محلی، به مختصات پارامترها و آستانه وابسته است؛ پراکندگی شروع‌ها confidence interval نیست.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "21",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "image",
+        "x": 90,
+        "y": 190,
+        "w": 1420,
+        "h": 390,
+        "path": "/workspace/inverse_fromtrajectory_to_FlowReconstruction/presentations/defense_2026_11_07/assets/identifiability.png"
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 625,
+        "w": 1400,
+        "h": 90,
+        "text": "آزمایش اول: خطای ورودی ۴۳٫۱۵٪ و خطای کل سرعت ۲۶٫۹۱٪، با وجود خطای مسیر نزدیک ۰٫۱ درصد ارتفاع کانال.",
+        "size": 31,
+        "color": "#ffc35a",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 95,
+        "y": 735,
+        "w": 1400,
+        "h": 75,
+        "text": "آزمایش دوم: خطای ورودی ۳۲٫۴۲٪ و خطای کل سرعت ۱۹٫۵۱٪. این اختلاف‌ها در داده‌های ارائه محفوظ‌اند.",
+        "size": 29,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  },
+  {
+    "title": "پشتیبان: بازتولید، نسخه‌ها و آزمون نرم‌افزار",
+    "section": "A3 · REPRODUCIBILITY",
+    "notes": "۶۸ تست، آزمون صحت پیاده‌سازی است؛ نه ۶۸ نتیجهٔ موفقِ دقت میدان. آزمون‌ها مشتق AD، حرکت تحلیلی ذره، مرز، checkpoint و گرادیان معکوس را بررسی می‌کنند. نسخهٔ ثابت وزن، داده‌ها، نمودارها و کد تولید ارائه در مخزن محفوظ‌اند. ارجاع: Wang, Wang & Perdikaris, Physics-informed DeepONets؛ کد رسمی PredictiveIntelligenceLab/Physics-informed-DeepONets.",
+    "blocks": [
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 35,
+        "w": 1420,
+        "h": 35,
+        "text": "A3 · REPRODUCIBILITY",
+        "size": 18,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 88,
+        "w": 1430,
+        "h": 88,
+        "text": "پشتیبان: بازتولید، نسخه‌ها و آزمون نرم‌افزار",
+        "size": 43,
+        "color": "#f0f5fb",
+        "bold": true,
+        "rtl": true
+      },
+      {
+        "kind": "rect",
+        "x": 1480,
+        "y": 49,
+        "w": 30,
+        "h": 5,
+        "color": "#40d9c4"
+      },
+      {
+        "kind": "text",
+        "x": 220,
+        "y": 847,
+        "w": 1290,
+        "h": 35,
+        "text": "چارچوب الهام‌گرفته از Wang, Wang & Perdikaris / Physics-informed DeepONets؛ benchmark کانال، پیاده‌سازی مستقل است.",
+        "size": 17,
+        "color": "#9fb3c8",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 85,
+        "y": 845,
+        "w": 100,
+        "h": 35,
+        "text": "22",
+        "size": 20,
+        "color": "#40d9c4",
+        "bold": true,
+        "rtl": false
+      },
+      {
+        "kind": "text",
+        "x": 100,
+        "y": 210,
+        "w": 1400,
+        "h": 137,
+        "text": "• وزن مشترک همهٔ نمونه‌های این ارائه: گام ۹۴هزار؛ SHA256 با ccf6fa2b آغاز می‌شود.",
+        "size": 31,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 100,
+        "y": 355,
+        "w": 1400,
+        "h": 137,
+        "text": "• FEM و کنترل ریزسازی مستقل؛ خطاهای میدان و تمام حالت‌های بررسی‌شده در JSON/NPZ محفوظ‌اند.",
+        "size": 31,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 100,
+        "y": 500,
+        "w": 1400,
+        "h": 137,
+        "text": "• ۶۸ تست نرم‌افزار: مشتق‌ها، قید مرزی، حرکت ذره، گرادیان معکوس و بارگذاری جواب؛ این عدد، تعداد آزمون موفق دقت میدان نیست.",
+        "size": 31,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      },
+      {
+        "kind": "text",
+        "x": 100,
+        "y": 645,
+        "w": 1400,
+        "h": 137,
+        "text": "• کد تولید ارائه، PPTX قابل ویرایش، PDF، نسخهٔ HTML، یادداشت گوینده و دادهٔ شکل‌ها همراه ارائه‌اند.",
+        "size": 31,
+        "color": "#f0f5fb",
+        "bold": false,
+        "rtl": true
+      }
+    ]
+  }
+]
