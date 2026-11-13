@@ -1,0 +1,43 @@
+{
+  "name": "mixed",
+  "label": "\u0686\u0646\u062f\u0645\u0642\u06cc\u0627\u0633\u06cc",
+  "group": "mixed",
+  "reynolds": 30,
+  "power": 2,
+  "modulation": "1+0.18*sin(4*pi*y)+0.10*cos(6*pi*y)",
+  "profile_formula": "normalize(y^power*(1-y)^power*modulation)",
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "step": 94000,
+  "velocity_relative_l2": 0.02328008464747943,
+  "pressure_relative_l2": 0.051595827107060094,
+  "coarse_errors": {
+    "velocity_relative_l2": 0.023279980773172216,
+    "pressure_relative_l2": 0.05159354436499177
+  },
+  "mesh_change": {
+    "velocity_relative_l2": 1.1539748072978318e-05,
+    "pressure_relative_l2": 0.0001620304617839637
+  },
+  "meshes": [
+    {
+      "nx": 48,
+      "ny": 64,
+      "iterations": 17,
+      "nonlinear_residual": 8.3388018903263e-09
+    },
+    {
+      "nx": 72,
+      "ny": 96,
+      "iterations": 17,
+      "nonlinear_residual": 5.571133627629854e-09
+    }
+  ],
+  "mesh_verified": true,
+  "selected": true,
+  "prominent_peaks": 1,
+  "profile_max": 2.0815152462741278,
+  "profile_min": 0.0,
+  "source": "results/diverse_profiles_2026_11_07/data/mixed.npz",
+  "source_sha256": "ad6c45a3dc79b614f48f021400f21352da49e271431d4e6547d2b22e4e8741a7",
+  "roughness": 51.59439529141834
+}

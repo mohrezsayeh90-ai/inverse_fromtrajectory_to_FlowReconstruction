@@ -1,0 +1,92 @@
+{
+  "generator": "Independent analytical/FEM flow; no learned field used; interior linear interpolation of archived FEM samples",
+  "noise_std": 0.0002,
+  "noise_seed": 76113,
+  "initial_exact": true,
+  "tracks": [
+    {
+      "particle": 1,
+      "initial_position": [
+        0.03,
+        0.97
+      ],
+      "initial_velocity": [
+        6.0,
+        -1.2
+      ],
+      "St": 0.42,
+      "completed": true,
+      "solver_tolerance_maximum_difference": 5.49158083451573e-07
+    },
+    {
+      "particle": 2,
+      "initial_position": [
+        4.9,
+        0.03
+      ],
+      "initial_velocity": [
+        -6.0,
+        1.2
+      ],
+      "St": 0.42,
+      "completed": true,
+      "solver_tolerance_maximum_difference": 9.186556355622599e-07
+    },
+    {
+      "particle": 3,
+      "initial_position": [
+        0.03,
+        0.15
+      ],
+      "initial_velocity": [
+        1.5,
+        0.0
+      ],
+      "St": 0.42,
+      "completed": true,
+      "solver_tolerance_maximum_difference": 5.5123082320918115e-08
+    },
+    {
+      "particle": 4,
+      "initial_position": [
+        0.03,
+        0.85
+      ],
+      "initial_velocity": [
+        1.5,
+        0.0
+      ],
+      "St": 0.42,
+      "completed": true,
+      "solver_tolerance_maximum_difference": 5.194811159014989e-08
+    },
+    {
+      "particle": 5,
+      "initial_position": [
+        0.03,
+        0.35
+      ],
+      "initial_velocity": [
+        1.5,
+        0.0
+      ],
+      "St": 0.42,
+      "completed": true,
+      "solver_tolerance_maximum_difference": 7.576357097249797e-09
+    },
+    {
+      "particle": 6,
+      "initial_position": [
+        0.03,
+        0.65
+      ],
+      "initial_velocity": [
+        1.5,
+        0.0
+      ],
+      "St": 0.42,
+      "completed": true,
+      "solver_tolerance_maximum_difference": 1.227823887006707e-08
+    }
+  ]
+}

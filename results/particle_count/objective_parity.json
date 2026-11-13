@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "particle_count": 2,
+  "zero_cost": 0.4621044215727246,
+  "nonzero_cost": 139.65131309978273,
+  "maximum_gradient_difference": 3.637978807091713e-12,
+  "checks": "Full original objective and gradient at zero and nonzero coefficients; priors and physical penalty included"
+}

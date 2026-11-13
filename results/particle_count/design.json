@@ -1,0 +1,102 @@
+{
+  "profiles": [
+    "parabolic",
+    "beta5",
+    "skew_b3",
+    "flat30",
+    "twin_b3_r30",
+    "shoulder",
+    "mixed",
+    "waves3_r30",
+    "lobes4_r30",
+    "nine30"
+  ],
+  "particle_counts": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "launches": [
+    [
+      [
+        0.03,
+        0.97
+      ],
+      [
+        6.0,
+        -1.2
+      ]
+    ],
+    [
+      [
+        4.9,
+        0.03
+      ],
+      [
+        -6.0,
+        1.2
+      ]
+    ],
+    [
+      [
+        0.03,
+        0.15
+      ],
+      [
+        1.5,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.03,
+        0.85
+      ],
+      [
+        1.5,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.03,
+        0.35
+      ],
+      [
+        1.5,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.03,
+        0.65
+      ],
+      [
+        1.5,
+        0.0
+      ]
+    ]
+  ],
+  "reference_reynolds": 30,
+  "reference_mean_speed": 1.0,
+  "horizon": 1.2,
+  "observations_per_particle": 81,
+  "noise_std": 0.0002,
+  "noise_seed": 76113,
+  "initial_positions_exact": true,
+  "known_stokes_time": 0.42,
+  "inlet_nodes": 65,
+  "optimizer_starts": 2,
+  "optimizer_seed": 71103,
+  "max_iterations": 200,
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "selection": "Minimum declared objective among valid nonnegative splines; no truth-based selection or warm starts between particle counts",
+  "ordering": "Ascending RMS inlet curvature sqrt(integral(f_second_derivative^2 dy)); operational roughness proxy, not universal complexity",
+  "normalization": "Data term averaged over particles, so regularization strength relative to per-particle data remains fixed",
+  "scope": "50 matched synthetic FEM/analytical-reference fits; one shared noise realization and two optimizer starts per fit; not a confidence-interval or population study",
+  "reference_policy": "Cached independently mesh-checked FEM at Re30 reused for seven profiles; two new two-mesh FEM references; exact Poiseuille for parabolic. No learned field in observation generation.",
+  "heldout_policy": "Only first N trajectories enter a fit; inlet truth and reference field excluded; raw files include all six for nested comparisons."
+}

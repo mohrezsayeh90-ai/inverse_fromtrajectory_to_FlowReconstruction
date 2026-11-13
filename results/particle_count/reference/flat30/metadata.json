@@ -1,0 +1,25 @@
+{
+  "name": "flat30",
+  "label": "\u062a\u0642\u0631\u06cc\u0628\u0627\u064b \u062a\u062e\u062a",
+  "roughness": 190.5055625818937,
+  "reynolds": 30,
+  "kind": "independent Taylor-Hood FEM",
+  "meshes": [
+    {
+      "nx": 64,
+      "ny": 64,
+      "iterations": 13,
+      "nonlinear_residual": 9.543938257806674e-09
+    },
+    {
+      "nx": 80,
+      "ny": 96,
+      "iterations": 13,
+      "nonlinear_residual": 6.978813365206129e-09
+    }
+  ],
+  "mesh_change": {
+    "velocity_relative_l2": 5.3410500270890745e-05,
+    "pressure_relative_l2": 0.0004622191053560995
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "beta5",
+  "label": "\u0628\u062a\u0627\u06cc \u0628\u0627\u0631\u06cc\u06a9",
+  "roughness": 43.62589212616415,
+  "reynolds": 30,
+  "meshes": [
+    {
+      "nx": 48,
+      "ny": 32,
+      "iterations": 16,
+      "nonlinear_residual": 1.8135724187733563e-08
+    },
+    {
+      "nx": 64,
+      "ny": 48,
+      "iterations": 16,
+      "nonlinear_residual": 1.2870025951588358e-08
+    }
+  ],
+  "mesh_change": {
+    "velocity_relative_l2": 3.1572251183129914e-05,
+    "pressure_relative_l2": 0.0003620140274082291
+  },
+  "role": "repeated_validation_only_not_a_blind_test",
+  "input_representation": "same normalized complete spline as neural operator",
+  "pressure_alignment": false,
+  "source": "validation/references/beta.npz",
+  "source_sha256": "34fb61c2b7b232a6c5928709b5768edc749cfc4c71d736614d51e47d3b5f9ba1"
+}

@@ -1,0 +1,7 @@
+{
+  "fits": 50,
+  "inlet_metrics_recomputed": 50,
+  "replays_recomputed": 200,
+  "checkpoint_unchanged": true,
+  "all_count_conditions_present": true
+}
