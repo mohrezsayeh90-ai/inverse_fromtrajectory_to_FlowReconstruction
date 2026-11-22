@@ -21,6 +21,7 @@ The final checkpoint failed these acceptance thresholds. `pressure_relative_l2`,
 - [Final portable archive](checkpoints/resume_200000.zip) with the parent checkpoint, source, configuration and restart instructions
 - [Portable archives at every milestone](checkpoints)
 - [Training log](training.jsonl), [validation history](validation_history.csv) and [final metrics](final_metrics.json)
+- [Results for 14 smooth inlet cases](smooth_inlets/README.md), with inlet profiles, FEM references and error metrics
 - [Run configuration](config.json), [completion status](status.json), [timings](summary.json) and [SHA-256 checksums](SHA256SUMS)
 
 To resume from a milestone, extract its archive in a fresh run directory and follow [RESUME.txt](RESUME.txt). Each archive contains its update index, model parameters, SOAP moments and bases, and NumPy RNG state. The final archive represents an already completed schedule.
