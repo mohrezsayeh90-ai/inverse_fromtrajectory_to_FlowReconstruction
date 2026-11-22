@@ -1,0 +1,568 @@
+{
+  "cases": [
+    {
+      "name": "01_wall_soft_quartic",
+      "reynolds": 12.0,
+      "velocity_relative_l2": 0.0034758518635489345,
+      "u_relative_l2": 0.00267182527388379,
+      "v_relative_l2": 0.06439497338127259,
+      "v_rmse": 0.002490152450776792,
+      "pressure_relative_l2": 0.0018089925143094307,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.15230940328928616,
+      "divergence_rms": 2.7741469602769826e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 7.76322148367091e-05,
+      "flux_max_error": 3.856425938586483e-06,
+      "field_point_count": 7081,
+      "component_rmse": {
+        "u": 0.0029882000683440265,
+        "v": 0.0024901524507767955,
+        "p": 0.006198555244881886
+      },
+      "inlet_formula": "[4*y*(1-y)]^2",
+      "reference_definition": {
+        "role": "smooth_inlet_diagnostic",
+        "unnormalized_profile": "[4*y*(1-y)]^2",
+        "meshes": [
+          {
+            "nx": 32,
+            "ny": 24,
+            "iterations": 12,
+            "nonlinear_residual": 3.9637232066049995e-08
+          },
+          {
+            "nx": 48,
+            "ny": 36,
+            "iterations": 12,
+            "nonlinear_residual": 2.6598475060660205e-08
+          }
+        ],
+        "mesh_change": {
+          "velocity_relative_l2": 5.7499171392517643e-05,
+          "pressure_relative_l2": 0.0002630774595156196
+        },
+        "pressure_alignment": false
+      },
+      "gates": {
+        "velocity_relative_l2": true,
+        "pressure_relative_l2": true,
+        "momentum_rms": false,
+        "divergence_rms": true,
+        "outlet_traction_rms": true,
+        "flux_max_error": true,
+        "boundary_max_error": true
+      }
+    },
+    {
+      "name": "02_left_skewed_quadratic",
+      "reynolds": 24.0,
+      "velocity_relative_l2": 0.011205910574664366,
+      "u_relative_l2": 0.010594705665755825,
+      "v_relative_l2": 0.35855338007034365,
+      "v_rmse": 0.003991869890361439,
+      "pressure_relative_l2": 0.0032354812416339846,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.11927757084801498,
+      "divergence_rms": 1.3589781421495084e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 2.340462511021312e-05,
+      "flux_max_error": 3.8385159842890815e-06,
+      "field_point_count": 7081,
+      "component_rmse": {
+        "u": 0.01158044552410763,
+        "v": 0.003991869890361444,
+        "p": 0.005764954765409092
+      },
+      "inlet_formula": "6*y*(1-y)*(1-0.20*(2*y-1))",
+      "reference_definition": {
+        "role": "smooth_inlet_diagnostic",
+        "unnormalized_profile": "6*y*(1-y)*(1-0.20*(2*y-1))",
+        "meshes": [
+          {
+            "nx": 32,
+            "ny": 24,
+            "iterations": 15,
+            "nonlinear_residual": 1.1694812304679494e-08
+          },
+          {
+            "nx": 48,
+            "ny": 36,
+            "iterations": 15,
+            "nonlinear_residual": 7.841905920770138e-09
+          }
+        ],
+        "mesh_change": {
+          "velocity_relative_l2": 5.572551950302944e-06,
+          "pressure_relative_l2": 3.5646500484978836e-05
+        },
+        "pressure_alignment": false
+      },
+      "gates": {
+        "velocity_relative_l2": true,
+        "pressure_relative_l2": true,
+        "momentum_rms": false,
+        "divergence_rms": true,
+        "outlet_traction_rms": true,
+        "flux_max_error": true,
+        "boundary_max_error": true
+      }
+    },
+    {
+      "name": "03_flat_core_octic",
+      "reynolds": 32.0,
+      "velocity_relative_l2": 0.0051999497098499615,
+      "u_relative_l2": 0.004704794805063142,
+      "v_relative_l2": 0.06560463448399295,
+      "v_rmse": 0.0023796650674565672,
+      "pressure_relative_l2": 0.021619212996863615,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.09043285189900045,
+      "divergence_rms": 2.6917458194679675e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 7.729984597919801e-05,
+      "flux_max_error": 1.1443892173002013e-05,
+      "field_point_count": 7081,
+      "component_rmse": {
+        "u": 0.005039597130976329,
+        "v": 0.0023796650674565655,
+        "p": 0.03151868662911792
+      },
+      "inlet_formula": "1-(2*y-1)^8",
+      "reference_definition": {
+        "role": "smooth_inlet_diagnostic",
+        "unnormalized_profile": "1-(2*y-1)^8",
+        "meshes": [
+          {
+            "nx": 32,
+            "ny": 24,
+            "iterations": 13,
+            "nonlinear_residual": 2.018308511132267e-08
+          },
+          {
+            "nx": 48,
+            "ny": 36,
+            "iterations": 13,
+            "nonlinear_residual": 1.3553718751564112e-08
+          }
+        ],
+        "mesh_change": {
+          "velocity_relative_l2": 0.00014545932811122815,
+          "pressure_relative_l2": 0.0005120107380920356
+        },
+        "pressure_alignment": false
+      },
+      "gates": {
+        "velocity_relative_l2": true,
+        "pressure_relative_l2": true,
+        "momentum_rms": false,
+        "divergence_rms": true,
+        "outlet_traction_rms": true,
+        "flux_max_error": true,
+        "boundary_max_error": true
+      }
+    },
+    {
+      "name": "04_sine_blend",
+      "reynolds": 39.0,
+      "velocity_relative_l2": 0.0091425496508862,
+      "u_relative_l2": 0.008721306533352456,
+      "v_relative_l2": 0.24806136881509103,
+      "v_rmse": 0.003043737093891217,
+      "pressure_relative_l2": 0.023464473591430956,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.07479352498874056,
+      "divergence_rms": 1.626328394447723e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 2.7351903597374157e-05,
+      "flux_max_error": 3.808217095779831e-06,
+      "field_point_count": 7081,
+      "component_rmse": {
+        "u": 0.00967029018648855,
+        "v": 0.00304373709389121,
+        "p": 0.023961796605247054
+      },
+      "inlet_formula": "0.6*sin(pi*y)+0.4*sin(pi*y)^2",
+      "reference_definition": {
+        "role": "smooth_inlet_diagnostic",
+        "unnormalized_profile": "0.6*sin(pi*y)+0.4*sin(pi*y)^2",
+        "meshes": [
+          {
+            "nx": 32,
+            "ny": 24,
+            "iterations": 13,
+            "nonlinear_residual": 2.6290446543609952e-08
+          },
+          {
+            "nx": 48,
+            "ny": 36,
+            "iterations": 13,
+            "nonlinear_residual": 1.7629567460323636e-08
+          }
+        ],
+        "mesh_change": {
+          "velocity_relative_l2": 2.2579179025556646e-05,
+          "pressure_relative_l2": 0.00012480141743116408
+        },
+        "pressure_alignment": false
+      },
+      "gates": {
+        "velocity_relative_l2": true,
+        "pressure_relative_l2": true,
+        "momentum_rms": false,
+        "divergence_rms": true,
+        "outlet_traction_rms": true,
+        "flux_max_error": true,
+        "boundary_max_error": true
+      }
+    },
+    {
+      "name": "05_right_broad_bump",
+      "reynolds": 47.0,
+      "velocity_relative_l2": 0.01110275514035928,
+      "u_relative_l2": 0.00989131319546484,
+      "v_relative_l2": 0.783889046347612,
+      "v_rmse": 0.005532409514069428,
+      "pressure_relative_l2": 0.005412891996321162,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.08096195804016444,
+      "divergence_rms": 1.1669033560866194e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 2.0232327473270792e-05,
+      "flux_max_error": 3.805898057485102e-06,
+      "field_point_count": 7081,
+      "component_rmse": {
+        "u": 0.010849884128671312,
+        "v": 0.005532409514069437,
+        "p": 0.004820214661181338
+      },
+      "inlet_formula": "6*y*(1-y)*(1+0.3*exp(-((y-0.68)/0.22)^2))",
+      "reference_definition": {
+        "role": "smooth_inlet_diagnostic",
+        "unnormalized_profile": "6*y*(1-y)*(1+0.3*exp(-((y-0.68)/0.22)^2))",
+        "meshes": [
+          {
+            "nx": 32,
+            "ny": 24,
+            "iterations": 17,
+            "nonlinear_residual": 1.4765445624772514e-08
+          },
+          {
+            "nx": 48,
+            "ny": 36,
+            "iterations": 17,
+            "nonlinear_residual": 9.904989208372012e-09
+          }
+        ],
+        "mesh_change": {
+          "velocity_relative_l2": 2.0299681352411703e-05,
+          "pressure_relative_l2": 7.961260105822726e-05
+        },
+        "pressure_alignment": false
+      },
+      "gates": {
+        "velocity_relative_l2": true,
+        "pressure_relative_l2": true,
+        "momentum_rms": false,
+        "divergence_rms": true,
+        "outlet_traction_rms": true,
+        "flux_max_error": true,
+        "boundary_max_error": true
+      }
+    },
+    {
+      "name": "06_shallow_twin_shoulders",
+      "reynolds": 53.0,
+      "velocity_relative_l2": 0.003574701118789082,
+      "u_relative_l2": 0.003345652601230576,
+      "v_relative_l2": 0.17929938001930348,
+      "v_rmse": 0.0013626359629980906,
+      "pressure_relative_l2": 0.007426197331476827,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.05916913687882642,
+      "divergence_rms": 1.4394672850423352e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 1.8675240835058557e-05,
+      "flux_max_error": 4.561323267315842e-06,
+      "field_point_count": 7081,
+      "component_rmse": {
+        "u": 0.0036203159278242066,
+        "v": 0.001362635962998091,
+        "p": 0.006370058494122211
+      },
+      "inlet_formula": "6*y*(1-y)*(1-0.28*exp(-((y-0.5)/0.20)^2))",
+      "reference_definition": {
+        "role": "smooth_inlet_diagnostic",
+        "unnormalized_profile": "6*y*(1-y)*(1-0.28*exp(-((y-0.5)/0.20)^2))",
+        "meshes": [
+          {
+            "nx": 32,
+            "ny": 24,
+            "iterations": 13,
+            "nonlinear_residual": 2.2453699275986042e-08
+          },
+          {
+            "nx": 48,
+            "ny": 36,
+            "iterations": 13,
+            "nonlinear_residual": 1.50699915010645e-08
+          }
+        ],
+        "mesh_change": {
+          "velocity_relative_l2": 3.061145262914094e-05,
+          "pressure_relative_l2": 0.00010506957927115271
+        },
+        "pressure_alignment": false
+      },
+      "gates": {
+        "velocity_relative_l2": true,
+        "pressure_relative_l2": true,
+        "momentum_rms": false,
+        "divergence_rms": true,
+        "outlet_traction_rms": true,
+        "flux_max_error": true,
+        "boundary_max_error": true
+      }
+    },
+    {
+      "name": "07_smooth_left_bias",
+      "reynolds": 61.0,
+      "velocity_relative_l2": 0.009846215321633382,
+      "u_relative_l2": 0.009227283481915996,
+      "v_relative_l2": 0.2357866567746014,
+      "v_rmse": 0.003708958916950537,
+      "pressure_relative_l2": 0.020124049265838023,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.08566209824586003,
+      "divergence_rms": 1.279546370523217e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 2.432489596364376e-05,
+      "flux_max_error": 6.357825509395454e-06,
+      "field_point_count": 7081,
+      "component_rmse": {
+        "u": 0.009951998354215246,
+        "v": 0.003708958916950544,
+        "p": 0.015514181041807774
+      },
+      "inlet_formula": "(1-(2*y-1)^4)*(1-0.18*sin(pi*(y-0.5)))",
+      "reference_definition": {
+        "role": "smooth_inlet_diagnostic",
+        "unnormalized_profile": "(1-(2*y-1)^4)*(1-0.18*sin(pi*(y-0.5)))",
+        "meshes": [
+          {
+            "nx": 32,
+            "ny": 24,
+            "iterations": 17,
+            "nonlinear_residual": 1.5467403603481502e-08
+          },
+          {
+            "nx": 48,
+            "ny": 36,
+            "iterations": 17,
+            "nonlinear_residual": 1.0373998799106712e-08
+          }
+        ],
+        "mesh_change": {
+          "velocity_relative_l2": 3.3268617198831276e-05,
+          "pressure_relative_l2": 0.00015437088439187378
+        },
+        "pressure_alignment": false
+      },
+      "gates": {
+        "velocity_relative_l2": true,
+        "pressure_relative_l2": true,
+        "momentum_rms": false,
+        "divergence_rms": true,
+        "outlet_traction_rms": true,
+        "flux_max_error": true,
+        "boundary_max_error": true
+      }
+    },
+    {
+      "name": "08_broad_gaussian_core",
+      "reynolds": 72.0,
+      "velocity_relative_l2": 0.01468083423164915,
+      "u_relative_l2": 0.013914352265359163,
+      "v_relative_l2": 0.4246773573755552,
+      "v_rmse": 0.005277047298390958,
+      "pressure_relative_l2": 0.020808642365992547,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.07103859012180606,
+      "divergence_rms": 1.2389124984662503e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 3.610845827016455e-05,
+      "flux_max_error": 3.793561960563352e-06,
+      "field_point_count": 7081,
+      "component_rmse": {
+        "u": 0.015674615207404596,
+        "v": 0.005277047298390964,
+        "p": 0.009378363911716163
+      },
+      "inlet_formula": "6*y*(1-y)*exp(-((y-0.5)/0.45)^2)",
+      "reference_definition": {
+        "role": "smooth_inlet_diagnostic",
+        "unnormalized_profile": "6*y*(1-y)*exp(-((y-0.5)/0.45)^2)",
+        "meshes": [
+          {
+            "nx": 32,
+            "ny": 24,
+            "iterations": 15,
+            "nonlinear_residual": 1.8139081295610585e-08
+          },
+          {
+            "nx": 48,
+            "ny": 36,
+            "iterations": 15,
+            "nonlinear_residual": 1.2164987568895813e-08
+          }
+        ],
+        "mesh_change": {
+          "velocity_relative_l2": 3.265778341000072e-05,
+          "pressure_relative_l2": 0.00023437831121353507
+        },
+        "pressure_alignment": false
+      },
+      "gates": {
+        "velocity_relative_l2": true,
+        "pressure_relative_l2": true,
+        "momentum_rms": false,
+        "divergence_rms": true,
+        "outlet_traction_rms": true,
+        "flux_max_error": true,
+        "boundary_max_error": true
+      }
+    },
+    {
+      "name": "09_gently_wavy",
+      "reynolds": 83.0,
+      "velocity_relative_l2": 0.013789340591826562,
+      "u_relative_l2": 0.01300506679566834,
+      "v_relative_l2": 1.485160601285608,
+      "v_rmse": 0.005024602154964481,
+      "pressure_relative_l2": 0.016353323195654638,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.06968307545170967,
+      "divergence_rms": 1.6603585065546385e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 9.693718481836944e-06,
+      "flux_max_error": 4.12431255403245e-06,
+      "field_point_count": 7081,
+      "component_rmse": {
+        "u": 0.014254093938807406,
+        "v": 0.005024602154964482,
+        "p": 0.008148307797070086
+      },
+      "inlet_formula": "6*y*(1-y)*(1+0.075*cos(4*pi*y))",
+      "reference_definition": {
+        "role": "smooth_inlet_diagnostic",
+        "unnormalized_profile": "6*y*(1-y)*(1+0.075*cos(4*pi*y))",
+        "meshes": [
+          {
+            "nx": 32,
+            "ny": 24,
+            "iterations": 13,
+            "nonlinear_residual": 1.8008448187507537e-08
+          },
+          {
+            "nx": 48,
+            "ny": 36,
+            "iterations": 13,
+            "nonlinear_residual": 1.2068661047235236e-08
+          }
+        ],
+        "mesh_change": {
+          "velocity_relative_l2": 3.2764290575004976e-05,
+          "pressure_relative_l2": 0.00011054855481303196
+        },
+        "pressure_alignment": false
+      },
+      "gates": {
+        "velocity_relative_l2": true,
+        "pressure_relative_l2": true,
+        "momentum_rms": false,
+        "divergence_rms": true,
+        "outlet_traction_rms": true,
+        "flux_max_error": true,
+        "boundary_max_error": true
+      }
+    },
+    {
+      "name": "10_tilted_flat_core",
+      "reynolds": 95.0,
+      "velocity_relative_l2": 0.01660545320184725,
+      "u_relative_l2": 0.015928124829601514,
+      "v_relative_l2": 0.28822065805467,
+      "v_rmse": 0.0050241869182415565,
+      "pressure_relative_l2": 0.020559503813794306,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.15155867749783683,
+      "divergence_rms": 1.2561404907879148e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 3.216335361189726e-05,
+      "flux_max_error": 8.900915244969276e-06,
+      "field_point_count": 7081,
+      "component_rmse": {
+        "u": 0.017019347535513766,
+        "v": 0.00502418691824156,
+        "p": 0.011502768761634082
+      },
+      "inlet_formula": "(1-(2*y-1)^6)*(1+0.16*(2*y-1))",
+      "reference_definition": {
+        "role": "smooth_inlet_diagnostic",
+        "unnormalized_profile": "(1-(2*y-1)^6)*(1+0.16*(2*y-1))",
+        "meshes": [
+          {
+            "nx": 32,
+            "ny": 24,
+            "iterations": 18,
+            "nonlinear_residual": 5.9788914313641166e-09
+          },
+          {
+            "nx": 48,
+            "ny": 36,
+            "iterations": 18,
+            "nonlinear_residual": 3.9982099266531634e-09
+          }
+        ],
+        "mesh_change": {
+          "velocity_relative_l2": 8.787487354428426e-05,
+          "pressure_relative_l2": 0.0002940433241993491
+        },
+        "pressure_alignment": false
+      },
+      "gates": {
+        "velocity_relative_l2": true,
+        "pressure_relative_l2": true,
+        "momentum_rms": false,
+        "divergence_rms": true,
+        "outlet_traction_rms": true,
+        "flux_max_error": true,
+        "boundary_max_error": true
+      }
+    }
+  ],
+  "thresholds": {
+    "velocity_relative_l2": 0.05,
+    "pressure_relative_l2": 0.1,
+    "momentum_rms": 0.05,
+    "divergence_rms": 0.0001,
+    "outlet_traction_rms": 0.01,
+    "flux_max_error": 0.002,
+    "boundary_max_error": 0.0001
+  },
+  "gates": {
+    "velocity_relative_l2": true,
+    "pressure_relative_l2": true,
+    "momentum_rms": false,
+    "divergence_rms": true,
+    "outlet_traction_rms": true,
+    "flux_max_error": true,
+    "boundary_max_error": true
+  },
+  "all_gates_passed": false,
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "nominal_step": 314000,
+  "cfd_training_labels": 0,
+  "pressure_convention": "Same outlet convention as FEM. No fitted gauge shift.",
+  "units": "x/H, y/H, u/U_mean, v/U_mean, p/(rho*U_mean^2)"
+}
