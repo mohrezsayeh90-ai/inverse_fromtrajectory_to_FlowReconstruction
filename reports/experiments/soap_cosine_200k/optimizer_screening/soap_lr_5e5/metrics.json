@@ -1,0 +1,131 @@
+{
+  "cases": [
+    {
+      "name": "asymmetric",
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.04161108482336451,
+      "u_relative_l2": 0.040851575295325966,
+      "v_relative_l2": 0.4058108577049889,
+      "v_rmse": 0.008895070136676834,
+      "pressure_relative_l2": 0.17546534435912126,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.12247331476471227,
+      "divergence_rms": 6.585837254608769e-17,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 0.0002853004386465158,
+      "flux_max_error": 4.067881827940489e-06
+    },
+    {
+      "name": "beta",
+      "reynolds": 30.0,
+      "velocity_relative_l2": 0.008595980229310086,
+      "u_relative_l2": 0.008069593678124687,
+      "v_relative_l2": 0.07827955723713008,
+      "v_rmse": 0.0035154125109746887,
+      "pressure_relative_l2": 0.041593422715158576,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.13570952926504679,
+      "divergence_rms": 2.230099580683075e-16,
+      "boundary_max_error": 8.881784197001252e-16,
+      "outlet_traction_rms": 0.0005511554838818573,
+      "flux_max_error": 3.7887074672005028e-06
+    },
+    {
+      "name": "flat",
+      "reynolds": 70.0,
+      "velocity_relative_l2": 0.025089695747556574,
+      "u_relative_l2": 0.024075578991429276,
+      "v_relative_l2": 0.2778732753501536,
+      "v_rmse": 0.007552396617399916,
+      "pressure_relative_l2": 0.09902211746325947,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.49390692880360915,
+      "divergence_rms": 4.781352609643143e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 0.0006753452509996449,
+      "flux_max_error": 6.334758228643267e-06
+    },
+    {
+      "name": "nine",
+      "reynolds": 55.0,
+      "velocity_relative_l2": 0.07764949633677541,
+      "u_relative_l2": 0.07395140364492767,
+      "v_relative_l2": 0.9493711751130368,
+      "v_rmse": 0.026040119935524134,
+      "pressure_relative_l2": 0.06430464062685508,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 2.1584651301887887,
+      "divergence_rms": 1.5191466240398021e-15,
+      "boundary_max_error": 8.881784197001252e-16,
+      "outlet_traction_rms": 0.0012793578595339053,
+      "flux_max_error": 5.349774576002275e-06
+    }
+  ],
+  "thresholds": {
+    "velocity_relative_l2": 0.05,
+    "pressure_relative_l2": 0.1,
+    "momentum_rms": 0.05,
+    "divergence_rms": 0.0001,
+    "outlet_traction_rms": 0.01,
+    "flux_max_error": 0.002,
+    "boundary_max_error": 0.0001
+  },
+  "gates": {
+    "velocity_relative_l2": false,
+    "pressure_relative_l2": false,
+    "momentum_rms": false,
+    "divergence_rms": true,
+    "outlet_traction_rms": true,
+    "flux_max_error": true,
+    "boundary_max_error": true
+  },
+  "all_gates_passed": false,
+  "score": 43.16930260377577,
+  "field_tiebreak": 1.7546534435912124,
+  "fixed_physics": [
+    {
+      "name": "poiseuille",
+      "reynolds": 40.0,
+      "momentum_rms": 0.0438508540391922,
+      "divergence_rms": 4.177967639407143e-06,
+      "outlet_traction_rms": 8.540992712369189e-05
+    },
+    {
+      "name": "nine_oscillations",
+      "reynolds": 55.0,
+      "momentum_rms": 2.0582263469696045,
+      "divergence_rms": 0.00010898215987253934,
+      "outlet_traction_rms": 0.001275107148103416
+    },
+    {
+      "name": "beta_5_5",
+      "reynolds": 30.0,
+      "momentum_rms": 0.13317576050758362,
+      "divergence_rms": 2.7486337785376236e-05,
+      "outlet_traction_rms": 0.0005604050238616765
+    },
+    {
+      "name": "flat",
+      "reynolds": 70.0,
+      "momentum_rms": 0.5016255974769592,
+      "divergence_rms": 0.00024557134020142257,
+      "outlet_traction_rms": 0.0006819087429903448
+    }
+  ],
+  "updates": 5000,
+  "training_seconds": 141.19926963601438,
+  "checkpoint_seconds": 2.6299942470000133,
+  "evaluation_seconds": 0.2829317420000734,
+  "clip_fraction": 0.0,
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 243776106426137678416972130241066423051,
+      "inc": 323137697342622850680800125814393917125
+    },
+    "has_uint32": 0,
+    "uinteger": 1970452273
+  },
+  "checkpoint": "soap_lr_5e5/update_05000.npz",
+  "checkpoint_sha256": "daebea58ae92a9858988daa529ca570083044815cecec4e875e6f8b72e38bbd6"
+}

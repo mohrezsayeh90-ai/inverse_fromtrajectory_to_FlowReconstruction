@@ -1,0 +1,90 @@
+{
+  "parent_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "base_adam_count": 94000,
+  "dtype": "float32",
+  "pool_sha256": "0894ca0065947a7de6979c13ae3c1d543aa81d19118f0f8c15cdc8bcf56c4103",
+  "pool_seed": 9703107,
+  "pool_count": 10000,
+  "encoder_points": 257,
+  "physics_normalization": "input_curvature_sqrt",
+  "global_batch": 64,
+  "interior_points": 48,
+  "outlet_points": 48,
+  "gradient_clip": 100.0,
+  "optimizer_vendor": {
+    "repository": "https://github.com/haydn-jones/SOAP_JAX",
+    "commit": "a7c92f174c49b13136294a94ae0d46266b4f671f",
+    "version": "0.2.2",
+    "unmodified_files": {
+      "LICENSE": "8da7301612cac455c61665c1344b016c57fa0067f8a42607d537d7a2a4db1f5e",
+      "soap_jax/soap.py": "2c6825a2378a28ee940767b984ab5cbf7115ab38894b95cdf9e7d7e1e520ba95"
+    }
+  },
+  "reference_sha256": {
+    "asymmetric.npz": "0db341d75992967e50ddac34e9bb31f3820d8c94fdf9e61ca10f8bf76c20bdd3",
+    "beta.npz": "34fb61c2b7b232a6c5928709b5768edc749cfc4c71d736614d51e47d3b5f9ba1",
+    "flat.npz": "f9e6dd71b99231164d2f6dae128e967045e9878f41661098e43ab603ee716f6e",
+    "nine.npz": "6726f082c625b37ba5fcbe77079c914ed062e8083b3b9be3fcf6dbd389add2bd"
+  },
+  "source_sha256": {
+    "__init__.py": "948b04abf5bc637cf30ed17c473f3b70c09ae25ff1bc39f432019bf65870ed69",
+    "api.py": "37119d3e4ab6b1c1c824027d1e120a8d4c275894d9daaba4fcf8d401802c05eb",
+    "checkpoint.py": "df417b485ac57a0a022851f75a89aa96b0aa3536fd70b1eff835256df7cfc265",
+    "evaluate.py": "05281f73b9eeeb164c0fec8769d48c95992d56ff8ab9cf7be1681c3fd0f28f37",
+    "model.py": "b55643c4cd10a7f7db8084ab5dc99f19d310d5967dcae2fad29440363143fcac",
+    "predict.py": "6e1974a5c8d0eb13248ba9d16388fedf06ac4b1e545a8e483ae239b2d542fd16",
+    "profiles.py": "0e24f0a5ae3a46fea040c2a7c4e4b630710d2e89078709ba92d1c01bced9fa9d",
+    "provenance.py": "dd491429b8cfc23ea02859861e128da8786d5bcdca5dc5f09f7254c396f26cbb",
+    "sampling.py": "fd9fcd296f3a7359915c973debee72335486e06a9e991583e8cd6582a37e6d4b",
+    "soap_checkpoint.py": "8fdd15279796eaff1690479cd55f716e294d7a4bb69ccac3aa430c745a0673b2",
+    "train.py": "467e0c71534984d37ee0ca4cd54e941497457f8bf3fc86752b0b8895f57cbca7",
+    "train_soap.py": "861372b5b870432524e71d209ba98faab1808267c5073741216ecb0ccba9e242",
+    "validation.py": "2061225b31b86980bbf1f315b108e5de0a9b578b78cdbd84c1b43feb32664461"
+  },
+  "geometry": {
+    "width": 128,
+    "latent": 64,
+    "depth": 4,
+    "encoder_width": 48,
+    "length": 5.0,
+    "seed": 91837,
+    "lift": "oseen",
+    "functional_moments": false,
+    "encoder_kind": "sensor",
+    "sensor_count": 257,
+    "separate_pressure_trunk": true
+  },
+  "updates_budget": 50000,
+  "wall_seconds": 28800,
+  "reserve_seconds": 1800,
+  "devices": [
+    "cuda:0"
+  ],
+  "microbatches": 4,
+  "screen": 5000,
+  "final": 20000,
+  "arms": {
+    "adam_control": null,
+    "soap_lr_2e5": 2e-05,
+    "soap_lr_5e5": 5e-05,
+    "soap_lr_1e4": 0.0001
+  },
+  "soap_settings": {
+    "b1": 0.95,
+    "b2": 0.95,
+    "shampoo_beta": -1,
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "precondition_frequency": 10,
+    "max_precond_dim": 1024,
+    "precondition_1d": false
+  },
+  "jax": "0.11.2",
+  "numpy": "2.3.5",
+  "optax": "0.2.8",
+  "guard_absolute_tolerance": {
+    "velocity_relative_l2": 1e-10,
+    "pressure_relative_l2": 1e-10,
+    "v_rmse": 1e-10
+  }
+}

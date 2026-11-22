@@ -1,0 +1,11 @@
+{
+  "flow_operator/train.py": "467e0c71534984d37ee0ca4cd54e941497457f8bf3fc86752b0b8895f57cbca7",
+  "flow_operator/evaluate.py": "05281f73b9eeeb164c0fec8769d48c95992d56ff8ab9cf7be1681c3fd0f28f37",
+  "flow_operator/train_soap.py": "861372b5b870432524e71d209ba98faab1808267c5073741216ecb0ccba9e242",
+  "flow_operator/soap_checkpoint.py": "8fdd15279796eaff1690479cd55f716e294d7a4bb69ccac3aa430c745a0673b2",
+  "flow_operator/_vendor/upstream.json": "342fb7d8f3a900078fdeac44270ec680878c04f8a2a1fecaf68ad5b23bed48ac",
+  "flow_operator/_vendor/LICENSE": "8da7301612cac455c61665c1344b016c57fa0067f8a42607d537d7a2a4db1f5e",
+  "flow_operator/_vendor/soap_jax/soap.py": "2c6825a2378a28ee940767b984ab5cbf7115ab38894b95cdf9e7d7e1e520ba95",
+  "tests/test_soap_checkpoint.py": "bb9188406bbc0061fa5b483f6ca1d487811eb3eafd27316c155efd154940ac7e",
+  "tests/test_soap_objective.py": "14676c5016a572a69693881c9e3ae2cc0ea8977494a2083a0b6e42e534dc25f9"
+}

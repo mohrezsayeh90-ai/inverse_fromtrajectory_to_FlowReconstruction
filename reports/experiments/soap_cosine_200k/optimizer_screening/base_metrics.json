@@ -1,0 +1,131 @@
+{
+  "cases": [
+    {
+      "name": "asymmetric",
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.04649095790441279,
+      "u_relative_l2": 0.04592566580043465,
+      "v_relative_l2": 0.37159561052478224,
+      "v_rmse": 0.0081450975382775,
+      "pressure_relative_l2": 0.17844667487757426,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.15086371880233024,
+      "divergence_rms": 6.597897376718774e-17,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 0.00036211344776713994,
+      "flux_max_error": 3.967289209594327e-06
+    },
+    {
+      "name": "beta",
+      "reynolds": 30.0,
+      "velocity_relative_l2": 0.00906006585252357,
+      "u_relative_l2": 0.008353160631639166,
+      "v_relative_l2": 0.09261043323870871,
+      "v_rmse": 0.004158989743234255,
+      "pressure_relative_l2": 0.030823421501453285,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.27585695849035546,
+      "divergence_rms": 2.2077614501997254e-16,
+      "boundary_max_error": 8.881784197001252e-16,
+      "outlet_traction_rms": 0.0008011365310012305,
+      "flux_max_error": 3.7765510423337645e-06
+    },
+    {
+      "name": "flat",
+      "reynolds": 70.0,
+      "velocity_relative_l2": 0.030019309455908486,
+      "u_relative_l2": 0.02826161412513754,
+      "v_relative_l2": 0.3978057832829172,
+      "v_rmse": 0.010812076290035952,
+      "pressure_relative_l2": 0.109742541531293,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.5170347123447507,
+      "divergence_rms": 4.2458023479584373e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 0.000900442681540467,
+      "flux_max_error": 6.393865575438085e-06
+    },
+    {
+      "name": "nine",
+      "reynolds": 55.0,
+      "velocity_relative_l2": 0.06603996222734278,
+      "u_relative_l2": 0.06217529497552998,
+      "v_relative_l2": 0.8919863288084652,
+      "v_rmse": 0.024466121988857233,
+      "pressure_relative_l2": 0.08209510240381991,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 2.092895785044811,
+      "divergence_rms": 1.3828929613101425e-15,
+      "boundary_max_error": 8.881784197001252e-16,
+      "outlet_traction_rms": 0.0013389280281094831,
+      "flux_max_error": 5.20674152493239e-06
+    }
+  ],
+  "thresholds": {
+    "velocity_relative_l2": 0.05,
+    "pressure_relative_l2": 0.1,
+    "momentum_rms": 0.05,
+    "divergence_rms": 0.0001,
+    "outlet_traction_rms": 0.01,
+    "flux_max_error": 0.002,
+    "boundary_max_error": 0.0001
+  },
+  "gates": {
+    "velocity_relative_l2": false,
+    "pressure_relative_l2": false,
+    "momentum_rms": false,
+    "divergence_rms": true,
+    "outlet_traction_rms": true,
+    "flux_max_error": true,
+    "boundary_max_error": true
+  },
+  "all_gates_passed": false,
+  "score": 41.857915700896214,
+  "field_tiebreak": 1.7844667487757426,
+  "fixed_physics": [
+    {
+      "name": "poiseuille",
+      "reynolds": 40.0,
+      "momentum_rms": 0.056736063212156296,
+      "divergence_rms": 3.9613701119378675e-06,
+      "outlet_traction_rms": 0.00014381695655174553
+    },
+    {
+      "name": "nine_oscillations",
+      "reynolds": 55.0,
+      "momentum_rms": 1.9430162906646729,
+      "divergence_rms": 9.734282502904534e-05,
+      "outlet_traction_rms": 0.0013318703277036548
+    },
+    {
+      "name": "beta_5_5",
+      "reynolds": 30.0,
+      "momentum_rms": 0.2954413890838623,
+      "divergence_rms": 2.8166392439743504e-05,
+      "outlet_traction_rms": 0.0008288257522508502
+    },
+    {
+      "name": "flat",
+      "reynolds": 70.0,
+      "momentum_rms": 0.5452002882957458,
+      "divergence_rms": 0.0002235933643532917,
+      "outlet_traction_rms": 0.0009028802742250264
+    }
+  ],
+  "updates": 0,
+  "training_seconds": 0.0,
+  "checkpoint_seconds": 0.0,
+  "evaluation_seconds": 107.09072990900017,
+  "clip_fraction": 0.0,
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 143994615326907756444138141064496061628,
+      "inc": 323137697342622850680800125814393917125
+    },
+    "has_uint32": 1,
+    "uinteger": 4059007715
+  },
+  "checkpoint": "base_checkpoint.npz",
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8"
+}

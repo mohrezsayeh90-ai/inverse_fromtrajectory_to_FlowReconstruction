@@ -1,0 +1,24 @@
+{
+  "winner": "soap_lr_2e5",
+  "screen_guard_failures": {
+    "soap_lr_2e5": [],
+    "soap_lr_5e5": [
+      {
+        "case": "beta",
+        "metric": "pressure_relative_l2",
+        "value": 0.041593422715158576,
+        "ceiling": 0.03698810580174394
+      }
+    ],
+    "soap_lr_1e4": [
+      {
+        "case": "beta",
+        "metric": "pressure_relative_l2",
+        "value": 0.04277427040986467,
+        "ceiling": 0.03698810580174394
+      }
+    ]
+  },
+  "all_screens_decided": true,
+  "screen_rng_equal": true
+}
