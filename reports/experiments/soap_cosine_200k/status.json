@@ -1,0 +1,8 @@
+{
+  "state": "complete",
+  "cosine_updates": 200000,
+  "target": 200000,
+  "nominal_step": 314000,
+  "optimizer_count": 220001,
+  "train_seconds": 5914.870687272254
+}

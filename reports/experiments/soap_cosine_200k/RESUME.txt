@@ -1,0 +1,7 @@
+Unzip source_bundle.zip into a project directory. Retain GPU-enabled JAX.
+Use NumPy 2.3.5, SciPy 1.17.0 and the pinned SOAP dependencies in config.json.
+Extract checkpoint.npz from the latest resume archive into the run directory.
+The complete parent checkpoint is included as parent.npz in source_bundle.zip.
+Run from the project root with the same numeric environment and source.
+python -m flow_operator.train_soap_cosine --parent /path/to/parent.npz --output /path/to/run --resume /path/to/checkpoint.npz
+The cosine index, optimizer moments/bases and production RNG are restored.

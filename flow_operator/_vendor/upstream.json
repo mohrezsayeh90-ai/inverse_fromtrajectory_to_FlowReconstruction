@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/haydn-jones/SOAP_JAX",
+  "commit": "a7c92f174c49b13136294a94ae0d46266b4f671f",
+  "version": "0.2.2",
+  "unmodified_files": {
+    "LICENSE": "8da7301612cac455c61665c1344b016c57fa0067f8a42607d537d7a2a4db1f5e",
+    "soap_jax/soap.py": "2c6825a2378a28ee940767b984ab5cbf7115ab38894b95cdf9e7d7e1e520ba95"
+  }
+}

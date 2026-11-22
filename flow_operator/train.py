@@ -19,7 +19,7 @@ from .sampling import make_pool,diagnostic_profiles
 from .checkpoint import save,load
 
 
-def make_step(functions,normalization='none',axis_name=None):
+def make_loss(functions,normalization='none'):
     def loss(params,batch):
         if normalization in ['input_curvature','input_curvature_sqrt']:
             # Exact integral of (f'')^2 for each supplied cubic. This uses ONLY
@@ -36,6 +36,19 @@ def make_step(functions,normalization='none',axis_name=None):
         else:
             terms=functions['raw_terms'](params,batch)
         return terms[0]+10*terms[1],terms
+    return loss
+
+
+def adam_update(params,m,v,count,grad):
+    m=jax.tree_util.tree_map(lambda a,g:.9*a+.1*g,m,grad)
+    v=jax.tree_util.tree_map(lambda a,g:.999*a+.001*g*g,v,grad)
+    lr=jnp.maximum(2e-5,1e-3*.95**(count/2000))
+    params=jax.tree_util.tree_map(lambda p,a,b:p-lr*(a/(1-.9**count))/(jnp.sqrt(b/(1-.999**count))+1e-8),params,m,v)
+    return params,m,v,lr
+
+
+def make_step(functions,normalization='none',axis_name=None):
+    loss=make_loss(functions,normalization)
     def step(params,m,v,count,batch):
         (loss_value,terms),grad=jax.value_and_grad(loss,has_aux=True)(params,batch)
         if axis_name is not None:
@@ -44,10 +57,7 @@ def make_step(functions,normalization='none',axis_name=None):
             terms=jax.lax.pmean(terms,axis_name)
         norm=jnp.sqrt(sum(jnp.sum(g*g) for g in jax.tree_util.tree_leaves(grad)))
         grad=jax.tree_util.tree_map(lambda g:g*jnp.minimum(1.,100/(norm+1e-12)),grad)
-        m=jax.tree_util.tree_map(lambda a,g:.9*a+.1*g,m,grad)
-        v=jax.tree_util.tree_map(lambda a,g:.999*a+.001*g*g,v,grad)
-        lr=jnp.maximum(2e-5,1e-3*.95**(count/2000))
-        params=jax.tree_util.tree_map(lambda p,a,b:p-lr*(a/(1-.9**count))/(jnp.sqrt(b/(1-.999**count))+1e-8),params,m,v)
+        params,m,v,_=adam_update(params,m,v,count,grad)
         return params,m,v,loss_value,terms,norm
     return jax.jit(step) if axis_name is None else jax.pmap(step,axis_name=axis_name)
 

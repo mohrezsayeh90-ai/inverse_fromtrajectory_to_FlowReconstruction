@@ -1,0 +1,6 @@
+{
+  "updates": 200000,
+  "train_seconds": 5914.870687272254,
+  "invocation_wall_seconds": 6304.0306550410005,
+  "optimizer_count": 220001
+}

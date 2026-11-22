@@ -16,21 +16,10 @@ from .validation import read_cases,compare
 from .provenance import runtime_signature
 
 
-def main():
-    p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--checkpoint',required=True);p.add_argument('--references',required=True)
-    p.add_argument('--output',required=True);p.add_argument('--acceptance',default='configs/acceptance.json')
-    p.add_argument('--role',choices=['repeated_validation','final_heldout_test'],default='repeated_validation')
-    a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
-    checkpoint=Path(a.checkpoint);sha=hashlib.sha256(checkpoint.read_bytes()).hexdigest()
-    signature=runtime_signature()
-    params,cfg,metadata,_=load(checkpoint)
-    # Diagnostics in double precision from the actual trained float32 parameters.
-    jax.config.update('jax_enable_x64',True)
-    params=jax.tree_util.tree_map(lambda x:x.astype(np.float64),params)
-    functions=make_functions(cfg);cases=read_cases(a.references)
+def evaluate_fields(params,cfg,cases,thresholds,out=None,functions=None):
+    """Original acceptance metrics. When requested, also write arrays and plots."""
+    functions=make_functions(cfg) if functions is None else functions
     field_report=compare(params,functions,cases);rng=np.random.default_rng(918397)
-    limits=json.loads(Path(a.acceptance).read_text())
     for case,record in zip(cases,field_report['cases']):
         data=stack([case['profile']],np.float64);re=np.array([case['re']])
         xy=rng.uniform([.001,.001],[cfg.length-.001,.999],size=(1,1024,2));xy[...,:1]=cfg.length*(xy[...,:1]/cfg.length)**2
@@ -49,6 +38,7 @@ def main():
                for z in np.array_split(grid_xy,int(np.ceil(len(grid_xy)/1024)))]
         grid=np.concatenate(parts).reshape(31,513,3)
         record['flux_max_error']=float(np.max(abs(np.trapezoid(grid[...,0],yy,axis=1)-1)))
+        if out is None:continue
         # Save reference + actual model outputs, without gauge fitting.
         pred=np.concatenate([np.asarray(functions['fields'](params,data,re,z[None]))[0]
              for z in np.array_split(case['xy'],int(np.ceil(len(case['xy'])/1024)))])
@@ -67,10 +57,27 @@ def main():
                 fig.colorbar(im,ax=axes[row,col],format='%.3g')
         fig.suptitle(f"{case['name']} | Re={case['re']:g} | velocity error {100*record['velocity_relative_l2']:.2f}% | pressure error {100*record['pressure_relative_l2']:.2f}%")
         fig.savefig(out/(case['name']+'.png'),dpi=140);plt.close(fig)
-    thresholds={k:v for k,v in limits.items() if isinstance(v,(int,float))}
     gates={k:all(r[k]<v for r in field_report['cases']) for k,v in thresholds.items()}
-    report=dict(checkpoint_sha256=sha,runtime_signature=signature,step=metadata['step'],role=a.role,cases=field_report['cases'],
-        thresholds=thresholds,gates=gates,all_gates_passed=all(gates.values()),
+    return dict(cases=field_report['cases'],thresholds=thresholds,gates=gates,
+                all_gates_passed=all(gates.values()))
+
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--checkpoint',required=True);p.add_argument('--references',required=True)
+    p.add_argument('--output',required=True);p.add_argument('--acceptance',default='configs/acceptance.json')
+    p.add_argument('--role',choices=['repeated_validation','final_heldout_test'],default='repeated_validation')
+    a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
+    checkpoint=Path(a.checkpoint);sha=hashlib.sha256(checkpoint.read_bytes()).hexdigest()
+    signature=runtime_signature()
+    params,cfg,metadata,_=load(checkpoint)
+    # Diagnostics in double precision from the actual trained float32 parameters.
+    jax.config.update('jax_enable_x64',True)
+    params=jax.tree_util.tree_map(lambda x:x.astype(np.float64),params)
+    limits=json.loads(Path(a.acceptance).read_text())
+    thresholds={k:v for k,v in limits.items() if isinstance(v,(int,float))}
+    metrics=evaluate_fields(params,cfg,read_cases(a.references),thresholds,out)
+    report=dict(checkpoint_sha256=sha,runtime_signature=signature,step=metadata['step'],role=a.role,**metrics,
         universal_accuracy_guaranteed=False,training_labels_used=metadata['CFD_response_labels_used'],
         note='Accuracy measured on the listed benchmark only; no pressure alignment or per-input training.')
     if runtime_signature()!=signature:raise RuntimeError('Model implementation changed during evaluation; acceptance was not saved')

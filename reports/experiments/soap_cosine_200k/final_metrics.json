@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "name": "asymmetric",
+      "reynolds": 100.0,
+      "velocity_relative_l2": 0.049580303415957,
+      "u_relative_l2": 0.04861304298069324,
+      "v_relative_l2": 0.4995689007620991,
+      "v_rmse": 0.010950176236072627,
+      "pressure_relative_l2": 0.09112698469210348,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.08591344688795718,
+      "divergence_rms": 9.50827716036293e-17,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 0.00019082921786571196,
+      "flux_max_error": 3.82131661369467e-06
+    },
+    {
+      "name": "beta",
+      "reynolds": 30.0,
+      "velocity_relative_l2": 0.007904886161950363,
+      "u_relative_l2": 0.006853902714517822,
+      "v_relative_l2": 0.10376208589398332,
+      "v_rmse": 0.004659793026314164,
+      "pressure_relative_l2": 0.05984840207184584,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.1073991148714291,
+      "divergence_rms": 2.43972886740279e-16,
+      "boundary_max_error": 8.881784197001252e-16,
+      "outlet_traction_rms": 0.00011505934405557713,
+      "flux_max_error": 3.8098838133215907e-06
+    },
+    {
+      "name": "flat",
+      "reynolds": 70.0,
+      "velocity_relative_l2": 0.01955818135067921,
+      "u_relative_l2": 0.01866633218696837,
+      "v_relative_l2": 0.22966415366874318,
+      "v_rmse": 0.006242107216392558,
+      "pressure_relative_l2": 0.04512173684281058,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 0.44848074163910107,
+      "divergence_rms": 8.229838348897204e-16,
+      "boundary_max_error": 4.440892098500626e-16,
+      "outlet_traction_rms": 0.00011858762595091383,
+      "flux_max_error": 7.099472317584343e-06
+    },
+    {
+      "name": "nine",
+      "reynolds": 55.0,
+      "velocity_relative_l2": 0.042105284740665994,
+      "u_relative_l2": 0.038905044929682664,
+      "v_relative_l2": 0.6448045398363046,
+      "v_rmse": 0.017686220092271738,
+      "pressure_relative_l2": 0.29411388841316116,
+      "role": "repeated_reference_validation_excluded_from_objective",
+      "momentum_rms": 1.8763518000243302,
+      "divergence_rms": 1.4260591026484683e-15,
+      "boundary_max_error": 8.881784197001252e-16,
+      "outlet_traction_rms": 0.0001486319521518368,
+      "flux_max_error": 4.6217574714013665e-06
+    }
+  ],
+  "thresholds": {
+    "velocity_relative_l2": 0.05,
+    "pressure_relative_l2": 0.1,
+    "momentum_rms": 0.05,
+    "divergence_rms": 0.0001,
+    "outlet_traction_rms": 0.01,
+    "flux_max_error": 0.002,
+    "boundary_max_error": 0.0001
+  },
+  "gates": {
+    "velocity_relative_l2": true,
+    "pressure_relative_l2": false,
+    "momentum_rms": false,
+    "divergence_rms": true,
+    "outlet_traction_rms": true,
+    "flux_max_error": true,
+    "boundary_max_error": true
+  },
+  "all_gates_passed": false,
+  "score": 37.5270360004866,
+  "field_tiebreak": 2.9411388841316115
+}
