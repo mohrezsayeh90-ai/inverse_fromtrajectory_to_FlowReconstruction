@@ -1,0 +1,719 @@
+{
+  "seed": 284913,
+  "noise_std": 0.0002,
+  "horizon": 1.2,
+  "St": 0.42,
+  "launches": [
+    {
+      "particle": 1,
+      "position": [
+        0.03,
+        0.97
+      ],
+      "velocity": [
+        6.0,
+        -1.2
+      ],
+      "kind": "archived-base",
+      "reference_refinement_max": 5.113606489359768e-07
+    },
+    {
+      "particle": 2,
+      "position": [
+        4.9,
+        0.03
+      ],
+      "velocity": [
+        -6.0,
+        1.2
+      ],
+      "kind": "archived-base",
+      "reference_refinement_max": 2.081776937501445e-07
+    },
+    {
+      "particle": 3,
+      "position": [
+        0.25864871720471855,
+        0.27829710110000005
+      ],
+      "velocity": [
+        1.032894764955934,
+        -0.15550519325713946
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 1.2623505130093804e-08
+    },
+    {
+      "particle": 4,
+      "position": [
+        0.21389669506194603,
+        0.7974456516499999
+      ],
+      "velocity": [
+        1.1074567464053602,
+        0.19673035347525886
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 1.509776814678787e-07
+    },
+    {
+      "particle": 5,
+      "position": [
+        3.0201025964889316,
+        0.6249675139426195
+      ],
+      "velocity": [
+        -0.8896363140986384,
+        -1.0734645588461016
+      ],
+      "kind": "random-direction",
+      "reference_refinement_max": 2.516303299060496e-08
+    },
+    {
+      "particle": 6,
+      "position": [
+        0.1739172051026756,
+        0.15574275275000027
+      ],
+      "velocity": [
+        2.1694780214552805,
+        -0.15575383589770292
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 6.746560909931532e-08
+    },
+    {
+      "particle": 7,
+      "position": [
+        2.291455580029771,
+        0.8096337237879331
+      ],
+      "velocity": [
+        2.6838760394387364,
+        -0.3354798954476367
+      ],
+      "kind": "random-direction",
+      "reference_refinement_max": 5.896904387014956e-08
+    },
+    {
+      "particle": 8,
+      "position": [
+        0.09438622763266441,
+        0.35403985385000053
+      ],
+      "velocity": [
+        1.1990486432296492,
+        -0.1446285248138478
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 9.389442334750697e-08
+    },
+    {
+      "particle": 9,
+      "position": [
+        0.2904705441301202,
+        0.8731884044000002
+      ],
+      "velocity": [
+        0.7037108351047406,
+        -0.3057202694550236
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 1.7341142521942743e-07
+    },
+    {
+      "particle": 10,
+      "position": [
+        0.7558858675201082,
+        0.7471749493399783
+      ],
+      "velocity": [
+        1.5433947395869327,
+        -0.19429981112516478
+      ],
+      "kind": "random-direction",
+      "reference_refinement_max": 1.0560844732054875e-07
+    },
+    {
+      "particle": 11,
+      "position": [
+        0.28019265966648754,
+        0.23148550550000052
+      ],
+      "velocity": [
+        0.9335872706512621,
+        0.10236246687219247
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 2.7671503532999964e-08
+    },
+    {
+      "particle": 12,
+      "position": [
+        2.2174019908775615,
+        0.6219119160826125
+      ],
+      "velocity": [
+        1.683689365818618,
+        0.7357027627291973
+      ],
+      "kind": "random-direction",
+      "reference_refinement_max": 8.310610954964659e-08
+    },
+    {
+      "particle": 13,
+      "position": [
+        0.2223645366753776,
+        0.42978260660000006
+      ],
+      "velocity": [
+        1.5889170483880446,
+        -0.029029300331736507
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 4.4997964021575854e-08
+    },
+    {
+      "particle": 14,
+      "position": [
+        0.2537755140467953,
+        0.10893115714999979
+      ],
+      "velocity": [
+        0.918516976805794,
+        0.27975324124379625
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 6.736835045373368e-08
+    },
+    {
+      "particle": 15,
+      "position": [
+        0.19186110458746047,
+        0.628079707700001
+      ],
+      "velocity": [
+        1.871551909713225,
+        0.1967023773043705
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 3.6117748791753e-08
+    },
+    {
+      "particle": 16,
+      "position": [
+        0.34379981456232295,
+        0.3072282582500008
+      ],
+      "velocity": [
+        1.149683843521788,
+        0.2733387255442075
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 8.197936041121068e-08
+    },
+    {
+      "particle": 17,
+      "position": [
+        0.18074799028167965,
+        0.8263768088000005
+      ],
+      "velocity": [
+        2.1113576470107724,
+        0.16005315049054109
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 1.2088660317211009e-07
+    },
+    {
+      "particle": 18,
+      "position": [
+        0.33544702363006385,
+        0.5055253593500003
+      ],
+      "velocity": [
+        2.6163521980021476,
+        -0.43021446562797905
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 1.9507555037989732e-07
+    },
+    {
+      "particle": 19,
+      "position": [
+        3.6734716646636123,
+        0.2801513912920473
+      ],
+      "velocity": [
+        -1.0148678636697857,
+        0.17711143277003755
+      ],
+      "kind": "random-direction",
+      "reference_refinement_max": 6.096174853809089e-08
+    },
+    {
+      "particle": 20,
+      "position": [
+        0.13641277968996673,
+        0.7038224604500012
+      ],
+      "velocity": [
+        1.596909715919022,
+        0.3568810830164954
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 4.101298145542387e-08
+    },
+    {
+      "particle": 21,
+      "position": [
+        0.24070201736499408,
+        0.3829710110000011
+      ],
+      "velocity": [
+        0.8246165909298808,
+        -0.3185155579494262
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 1.9170134313295506e-08
+    },
+    {
+      "particle": 22,
+      "position": [
+        2.820113831438159,
+        0.76783308984578
+      ],
+      "velocity": [
+        -2.192474546570946,
+        -1.6522704226383782
+      ],
+      "kind": "random-direction",
+      "reference_refinement_max": 3.7080186388038783e-07
+    },
+    {
+      "particle": 23,
+      "position": [
+        0.2972493415347922,
+        0.5812681121000005
+      ],
+      "velocity": [
+        2.1904870168406942,
+        -0.0922500093266545
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 1.3273867160989994e-07
+    },
+    {
+      "particle": 24,
+      "position": [
+        0.1971129717753572,
+        0.2604166626500003
+      ],
+      "velocity": [
+        3.287824324710222,
+        -0.0035118951989850378
+      ],
+      "kind": "stratified-random",
+      "reference_refinement_max": 1.1055834192585934e-08
+    }
+  ],
+  "attempts": [
+    {
+      "position": [
+        0.03,
+        0.97
+      ],
+      "velocity": [
+        6.0,
+        -1.2
+      ],
+      "kind": "archived-base",
+      "accepted": true
+    },
+    {
+      "position": [
+        4.9,
+        0.03
+      ],
+      "velocity": [
+        -6.0,
+        1.2
+      ],
+      "kind": "archived-base",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.25864871720471855,
+        0.27829710110000005
+      ],
+      "velocity": [
+        1.032894764955934,
+        -0.15550519325713946
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        1.768876283880116,
+        0.5186669662055875
+      ],
+      "velocity": [
+        0.4055311766075828,
+        -1.4510119899514484
+      ],
+      "kind": "random-direction",
+      "accepted": false
+    },
+    {
+      "position": [
+        0.21389669506194603,
+        0.7974456516499999
+      ],
+      "velocity": [
+        1.1074567464053602,
+        0.19673035347525886
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        3.0201025964889316,
+        0.6249675139426195
+      ],
+      "velocity": [
+        -0.8896363140986384,
+        -1.0734645588461016
+      ],
+      "kind": "random-direction",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.1739172051026756,
+        0.15574275275000027
+      ],
+      "velocity": [
+        2.1694780214552805,
+        -0.15575383589770292
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        2.291455580029771,
+        0.8096337237879331
+      ],
+      "velocity": [
+        2.6838760394387364,
+        -0.3354798954476367
+      ],
+      "kind": "random-direction",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.09438622763266441,
+        0.35403985385000053
+      ],
+      "velocity": [
+        1.1990486432296492,
+        -0.1446285248138478
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.8275173908221893,
+        0.6675891852198681
+      ],
+      "velocity": [
+        -0.9520147739043575,
+        0.8755112334536975
+      ],
+      "kind": "random-direction",
+      "accepted": false
+    },
+    {
+      "position": [
+        0.2904705441301202,
+        0.8731884044000002
+      ],
+      "velocity": [
+        0.7037108351047406,
+        -0.3057202694550236
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.7558858675201082,
+        0.7471749493399783
+      ],
+      "velocity": [
+        1.5433947395869327,
+        -0.19429981112516478
+      ],
+      "kind": "random-direction",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.28019265966648754,
+        0.23148550550000052
+      ],
+      "velocity": [
+        0.9335872706512621,
+        0.10236246687219247
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        2.2174019908775615,
+        0.6219119160826125
+      ],
+      "velocity": [
+        1.683689365818618,
+        0.7357027627291973
+      ],
+      "kind": "random-direction",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.2223645366753776,
+        0.42978260660000006
+      ],
+      "velocity": [
+        1.5889170483880446,
+        -0.029029300331736507
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        1.7841855557729758,
+        0.45157377280930705
+      ],
+      "velocity": [
+        -1.2322137347562339,
+        2.116073692727779
+      ],
+      "kind": "random-direction",
+      "accepted": false
+    },
+    {
+      "position": [
+        0.2537755140467953,
+        0.10893115714999979
+      ],
+      "velocity": [
+        0.918516976805794,
+        0.27975324124379625
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        1.433179793893881,
+        0.23477564513948768
+      ],
+      "velocity": [
+        1.0747949406559274,
+        3.3691920753863327
+      ],
+      "kind": "random-direction",
+      "accepted": false
+    },
+    {
+      "position": [
+        0.19186110458746047,
+        0.628079707700001
+      ],
+      "velocity": [
+        1.871551909713225,
+        0.1967023773043705
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        1.1537088116482674,
+        0.39779996808990753
+      ],
+      "velocity": [
+        1.2576839432183982,
+        -1.0597630410532222
+      ],
+      "kind": "random-direction",
+      "accepted": false
+    },
+    {
+      "position": [
+        0.34379981456232295,
+        0.3072282582500008
+      ],
+      "velocity": [
+        1.149683843521788,
+        0.2733387255442075
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.683996844748471,
+        0.2039123640745099
+      ],
+      "velocity": [
+        1.0522642863864853,
+        -0.6901887200293416
+      ],
+      "kind": "random-direction",
+      "accepted": false
+    },
+    {
+      "position": [
+        0.18074799028167965,
+        0.8263768088000005
+      ],
+      "velocity": [
+        2.1113576470107724,
+        0.16005315049054109
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.6673062180707191,
+        0.19070723116990748
+      ],
+      "velocity": [
+        -0.210595810293623,
+        -3.0937693521410963
+      ],
+      "kind": "random-direction",
+      "accepted": false
+    },
+    {
+      "position": [
+        0.33544702363006385,
+        0.5055253593500003
+      ],
+      "velocity": [
+        2.6163521980021476,
+        -0.43021446562797905
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        3.6734716646636123,
+        0.2801513912920473
+      ],
+      "velocity": [
+        -1.0148678636697857,
+        0.17711143277003755
+      ],
+      "kind": "random-direction",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.13641277968996673,
+        0.7038224604500012
+      ],
+      "velocity": [
+        1.596909715919022,
+        0.3568810830164954
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        1.3543568212557648,
+        0.12930009389509622
+      ],
+      "velocity": [
+        1.0780719404201897,
+        -2.905594469496092
+      ],
+      "kind": "random-direction",
+      "accepted": false
+    },
+    {
+      "position": [
+        0.24070201736499408,
+        0.3829710110000011
+      ],
+      "velocity": [
+        0.8246165909298808,
+        -0.3185155579494262
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        2.820113831438159,
+        0.76783308984578
+      ],
+      "velocity": [
+        -2.192474546570946,
+        -1.6522704226383782
+      ],
+      "kind": "random-direction",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.2972493415347922,
+        0.5812681121000005
+      ],
+      "velocity": [
+        2.1904870168406942,
+        -0.0922500093266545
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        2.1381401237604396,
+        0.16296782796564846
+      ],
+      "velocity": [
+        -0.6723014992105896,
+        2.1554416083374264
+      ],
+      "kind": "random-direction",
+      "accepted": false
+    },
+    {
+      "position": [
+        0.1971129717753572,
+        0.2604166626500003
+      ],
+      "velocity": [
+        3.287824324710222,
+        -0.0035118951989850378
+      ],
+      "kind": "stratified-random",
+      "accepted": true
+    }
+  ],
+  "reference_sha256": "9193295b64c870e4824792c8d37c7db00f58b73ae974e5b4cc514a07acad33e2"
+}

@@ -1,0 +1,2 @@
+profile,display_N,search_stop_N,final_N,final_error_percent,first_tested_below_5_N,final_replay_complete,reason
+nine30,"2,6,11,15,20,24",24,24,8.112795349934332,,True,maximum count reached

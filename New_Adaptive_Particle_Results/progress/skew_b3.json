@@ -1,0 +1,24 @@
+{
+  "profile": "skew_b3",
+  "phase": "adaptive",
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.20543342646935295,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.06523349501694738,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 6,
+      "error": 0.07486593424827344,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ]
+}

@@ -92,3 +92,7 @@ python -m flow_operator.predict --checkpoint models/checkpoint.npz \
 ## منبع
 
 Wang, Wang & Perdikaris، [Physics-informed DeepONets](https://github.com/PredictiveIntelligenceLab/Physics-informed-DeepONets)، کامیت بررسی‌شده `77e7c747d653b34e79e43df7d88bad87de5c27d8`. مولد GRF و ایدهٔ branch/trunk و modified MLP از آن الهام گرفته‌اند. نمایش کامل spline، encoder با quadrature متغیر و lift مرزی، سازگارکردن مستقل برای کانال NS هستند؛ این پروژه بازتولید عین benchmarkهای مقاله نیست.
+
+## Particle-count inverse reconstruction
+
+The preserved inverse experiments, nine profile comparisons, randomized and near-inlet release studies, and reproduction notes are documented in [the inverse results publication](docs/INVERSE_RESULTS_PUBLICATION.md).

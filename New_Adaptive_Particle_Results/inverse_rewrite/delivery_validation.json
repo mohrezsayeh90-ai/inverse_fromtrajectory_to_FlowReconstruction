@@ -1,0 +1,19 @@
+{
+  "pages": 133,
+  "figures": {
+    "fig:inverse-rewrite-beta5": "4-40",
+    "fig:inverse-rewrite-skew_b3": "4-41",
+    "fig:inverse-rewrite-flat30": "4-42",
+    "fig:inverse-rewrite-twin_b3_r30": "4-43",
+    "fig:inverse-rewrite-shoulder": "4-44",
+    "fig:inverse-rewrite-mixed": "4-45",
+    "fig:inverse-rewrite-waves3_r30": "4-46",
+    "fig:inverse-rewrite-lobes4_r30": "4-47",
+    "fig:inverse-rewrite-nine30": "4-48",
+    "fig:inverse-rewrite-local": "4-49"
+  },
+  "full_domain_replays": 2304,
+  "held_out_final_trajectory_replays": 360,
+  "previous_chapter_preserved": true,
+  "thesis_sha256": "624152bdb02ce5a0cb6b94b58e492d5393ab038199ffd218c8ffcd898f80c6b7"
+}

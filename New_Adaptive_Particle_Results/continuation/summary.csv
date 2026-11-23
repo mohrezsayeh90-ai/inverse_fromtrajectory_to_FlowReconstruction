@@ -1,0 +1,10 @@
+profile,final_N,final_error_percent,stopping_reason,smallest_evaluated_target_N
+beta5,6,3.0915776089144376,evaluation target reached,3
+skew_b3,24,4.765249333023,evaluation target reached,24
+flat30,24,6.161128107685388,maximum count reached,
+twin_b3_r30,6,4.029765443857791,evaluation target reached,5
+shoulder,24,7.877197683728097,maximum count reached,
+mixed,24,7.537183398496394,maximum count reached,
+waves3_r30,24,6.866530545291215,maximum count reached,
+lobes4_r30,24,18.292360531532424,maximum count reached,
+nine30,15,38.81495098542267,error plateau under fixed fitting budget,

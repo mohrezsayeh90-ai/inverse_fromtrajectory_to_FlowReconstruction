@@ -1,0 +1,24 @@
+{
+  "profile": "flat30",
+  "phase": "adaptive",
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.25297236574249016,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.09558219260707841,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 6,
+      "error": 0.06718844672267202,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ]
+}

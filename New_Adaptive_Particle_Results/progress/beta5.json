@@ -1,0 +1,24 @@
+{
+  "profile": "beta5",
+  "phase": "adaptive",
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.2684369122555714,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.06088049184465088,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 6,
+      "error": 0.22643244584319455,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ]
+}

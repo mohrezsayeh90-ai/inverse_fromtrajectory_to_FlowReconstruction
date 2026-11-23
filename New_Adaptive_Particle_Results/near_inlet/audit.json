@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "counts": {
+    "profiles": 1,
+    "fits": 6,
+    "replays": 76
+  },
+  "scope": "Saved-fit/replay consistency; no uniqueness or global-optimum claim"
+}

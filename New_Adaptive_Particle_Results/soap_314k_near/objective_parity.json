@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "profile": "nine30",
+  "checkpoint": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "jax": "0.12.0.1",
+  "checks": [
+    {
+      "absolute_loss_difference": 4.773959005888173e-14,
+      "max_gradient_difference": 1.0913936421275139e-11
+    },
+    {
+      "absolute_loss_difference": 1.9895196601282805e-13,
+      "max_gradient_difference": 7.275957614183426e-12
+    }
+  ]
+}

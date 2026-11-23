@@ -1,0 +1,138 @@
+{
+  "profile": "mixed",
+  "phase": "completed",
+  "adaptive_counts": [
+    2,
+    4,
+    6,
+    9,
+    14,
+    21,
+    24
+  ],
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.2603965702355913,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.09989037952469965,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 6,
+      "error": 0.10468010286865773,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 9,
+      "error": 0.07741973740903245,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 11,
+      "error": 0.07444470811729438,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 14,
+      "error": 0.07985262872305285,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 15,
+      "error": 0.07725355087917987,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 20,
+      "error": 0.0729584544433179,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 21,
+      "error": 0.07607575874409561,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 24,
+      "error": 0.07030802100780767,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ],
+  "display_counts": [
+    2,
+    6,
+    11,
+    15,
+    20,
+    24
+  ],
+  "final_count": 24,
+  "search_stop_N": 24,
+  "stopping_reason": "maximum count reached",
+  "target_relative_l2": 0.05,
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "source_revision": "f6b8690059716e809c2dac27c8715e65fcb1d267",
+  "config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 2,
+    "max_iterations": 200,
+    "quadrature_order": 3,
+    "seed": 71103
+  },
+  "reference_sha256": "671c613b1c00036c6b49a96cabaeb6a00e78d9938109d862ba7373b03738e4d6",
+  "observation_sha256": {
+    "track_1.csv": "41d8b0dda2bdfee8e00887e917f23f98d7431a6cc99195b555da4c68dd56c0ac",
+    "track_2.csv": "62f1631dbd98e4f4bbd7c5997f1d4105d2e88e597f737567d422bb8ea8716eba",
+    "track_3.csv": "bb69cafe782ad4b06e485e1ddf730f7737e0fcd88296744a0573953366e92e27",
+    "track_4.csv": "59b241343f74c066b49418518d359bae613ef20f33ea0d7e2577d3d22c235b87",
+    "track_5.csv": "e27a622d47cccf571874dd8b9b81eacc603f617a99bf3fa0e9ba646fef9c4775",
+    "track_6.csv": "7207e207b56af60d22d4c474b7a5fbf132151dfcaa658238e85dce8be2d15e50",
+    "track_7.csv": "f33ddd454c02f3acbbcdbd7cd7bbd7577a8228b3f29b6a8de1c76bf37bb8f9d4",
+    "track_8.csv": "d33ae5103d9a3b8fa1c42e6cd2e69bb2aa2d9510662c5630e2c0501f345b0dc4",
+    "track_9.csv": "da9166aab853393c1087c513ceacbe329ac280ce1bd5576a3a0194995c367e36",
+    "track_10.csv": "68bcec469fb0ca58ef1b2cb44431a0f5007c0928447c149c91588bfb281ae419",
+    "track_11.csv": "74b0ccf62c790e10d7c87c7f88586a71db1448083a344e6b5a8a98ae2832822d",
+    "track_12.csv": "051e1c7c10791ee803791ff9b2124f86a93030e067639486f71fd43dddb605e2",
+    "track_13.csv": "c4561784067261e7426de039cf0062daeed9ef35366b8046f9d7e787042adcab",
+    "track_14.csv": "27d1f26a758c54cc49ad19c81107feacea36f4b74db3eb7e911867cf7f4f39b0",
+    "track_15.csv": "72f25ea5e0b5918fd7ef9a76fcb9324eda93b18ebaa7ba561febc02ebe8cb97a",
+    "track_16.csv": "ea0db6068c74d9066931e03890b1ef6d69de4a3e3d1eaf0004a3585c2ceb1a12",
+    "track_17.csv": "cfd1ed78718e55a77da7ab7ec1b7236ff9a3188fe32a02de7b5de7ba9b5a02b0",
+    "track_18.csv": "4a6476e207bca1a4ba47267d8f22044c8eb39bf09f80c96c9fc993c035377f42",
+    "track_19.csv": "30f2b4b1f074960046e120f11bd837441750cc075c0af937d77e573a50f8aa52",
+    "track_20.csv": "2f17cbba0c9ee51048254e7c4573bdf4e5362f74af59863d36e95e8ee891f2f1",
+    "track_21.csv": "5fd4b2395a8133ce03a25357aa467c1c456ef74176ad687ceaa5cf1367ebf1b6",
+    "track_22.csv": "b047f3185d6935bcb0c2f8e47b626ee2da4ab3e50b7162c6554c6fa8ba3661c8",
+    "track_23.csv": "396653809f44416417adc68e5a0fa762e49459b2229c35607c9a03bdd3f557af",
+    "track_24.csv": "a2d37dc3a58ed9995df9079a48a0cf681909396548dcc6b0195420285bb215e1"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "profile": "twin_b3_r30",
+  "phase": "completed",
+  "adaptive_counts": [
+    2,
+    4,
+    6
+  ],
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.18458242342814374,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 3,
+      "error": 0.12675098784018954,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.05248641770245164,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 5,
+      "error": 0.05207595688604756,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 6,
+      "error": 0.04513102828912578,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ],
+  "display_counts": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "final_count": 6,
+  "search_stop_N": 6,
+  "stopping_reason": "evaluation target reached",
+  "target_relative_l2": 0.05,
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "source_revision": "f6b8690059716e809c2dac27c8715e65fcb1d267",
+  "config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 2,
+    "max_iterations": 200,
+    "quadrature_order": 3,
+    "seed": 71103
+  },
+  "reference_sha256": "393d27cf7912fff4be0591086313aa5aee31c4caa25707626f708fab6838e6c4",
+  "observation_sha256": {
+    "track_1.csv": "19b3b32a34e02e2fb65e7642879c889dfb665719e73e75ce121f474b7fb546ba",
+    "track_2.csv": "443510153580f0ed448c05ef4ae9a0be508f410405f69c25680635fbd3f7625d",
+    "track_3.csv": "29c98335b96a9dd92d4bc6b7688937d1f234eab678e48094f8ca2681eff71fc9",
+    "track_4.csv": "bc433246a1e8477b6658f009ac0edba7a89617fd0df57114fecf34a379749b0d",
+    "track_5.csv": "6d9503c871847d2bd4a60e18facb05b24f15963d5b6358c0981f15487fdfb08b",
+    "track_6.csv": "1e0b93912c51d2d477ba6528d74f6c7519c699512972e3b2fdeee675457da3a9",
+    "track_7.csv": "cd21ab4bdecefa93fa118dac83c798bd62c7923dd91abcecdcc8e92fcee915aa",
+    "track_8.csv": "a79e2f92ff9f511e5331309ff1fb2cf2f2030616956fa74f793caa8f684a39c1",
+    "track_9.csv": "bdfedb1cb2bc1880198b789dcd1457b08d51d3c2ff3a587d73e7068161389e86",
+    "track_10.csv": "1ce0734a583defdbf9f12c33d241c7407d8af07ae24561a4c57478b8382938f9",
+    "track_11.csv": "e6a767b5ca8ac9103bbf996948855532810580287b4bc5b8a3fae2e1b6c2150f",
+    "track_12.csv": "402d598b5890bdd6e2a057a20a99170772fd6294f99d4c7dc2693dae829cb39b",
+    "track_13.csv": "5597c81e3cd91201266b0e1ae705dee74a78c4ad145da2fd3e63603d606e69cf",
+    "track_14.csv": "75b41af7bb47b6c3fae70075154b8ec81fcbed7bfc34a33a0094b6dec22be665",
+    "track_15.csv": "b0dc0544d41f53140cca7056efefd9f222797e1c8f7774513541e04ec777cc39",
+    "track_16.csv": "4cfb5cf23f19b1bab00749fff4973860ce1a917bbda523cc8a871bb15d8483eb",
+    "track_17.csv": "e9b96481155a7bc60140ef3b2a495e4ea21ba99adabf32164dac16e857875a56",
+    "track_18.csv": "a51432aa902fecfd35b96884e1404bfc933598dd170b3cc53499fb4f3c20c6d7",
+    "track_19.csv": "0eb849d9bbc38dbbcb09a02873f92f6b49e9f369c9de870d9e01a1a28ba7c517",
+    "track_20.csv": "6d125047c11a06fe3849a12fb3c76e5366384a8b39448d09bec79c766fb6c8ba",
+    "track_21.csv": "666a2a27a9c3bbc9adcebd7794d1ae4fdde7875590c3407dd096676ae2fb108e",
+    "track_22.csv": "085af34690ea161394d0782a27a2900c6bdfc133821ccb7d2a240daaffad85f4",
+    "track_23.csv": "70300da410c5afd800a416fd92569d91f0d9d36a3ad64c5d076acf651189b7d8",
+    "track_24.csv": "99826de796a7ed07131618f9c029ca8a695dd1108ca5c8bf04df3b707fcda5aa"
+  }
+}

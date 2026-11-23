@@ -1,0 +1,10 @@
+profile,display_N,search_stop_N,final_N,final_error_percent,first_tested_below_5_N,final_replay_complete,reason
+beta5,"2,6,10,13,17,21",21,21,2.761388152607108,17,True,evaluation target reached
+skew_b3,"2,6,10,13,17,21",21,21,3.811617164768724,21,True,evaluation target reached
+flat30,"2,6,11,15,20,24",24,24,5.164915909672964,,True,maximum count reached
+twin_b3_r30,"2,3,4,5,6",6,6,4.5131028289125785,6,True,evaluation target reached
+shoulder,"2,6,11,15,20,24",24,24,5.373294734952791,,True,maximum count reached
+mixed,"2,6,11,15,20,24",24,24,7.030802100780767,,True,maximum count reached
+waves3_r30,"2,3,4,5,6",4,6,5.77163683839852,4,True,evaluation target reached
+lobes4_r30,"2,6,11,15,20,24",24,24,18.167509807870726,,True,maximum count reached
+nine30,"2,5,7,10,12,15",15,15,38.90354610174258,,True,error plateau under fixed fitting budget

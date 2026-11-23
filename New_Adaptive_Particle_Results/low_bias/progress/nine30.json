@@ -1,0 +1,12 @@
+{
+  "profile": "nine30",
+  "phase": "adaptive",
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.39162566384767517,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ]
+}

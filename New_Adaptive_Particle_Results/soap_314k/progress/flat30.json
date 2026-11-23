@@ -1,0 +1,138 @@
+{
+  "profile": "flat30",
+  "phase": "completed",
+  "adaptive_counts": [
+    2,
+    4,
+    6,
+    9,
+    14,
+    21,
+    24
+  ],
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.2082591645222321,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.10249887661557984,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 6,
+      "error": 0.07299294681508328,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 9,
+      "error": 0.06169148304583534,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 11,
+      "error": 0.06578211696926206,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 14,
+      "error": 0.06335941949511421,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 15,
+      "error": 0.051195624162461005,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 20,
+      "error": 0.050344269598265906,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 21,
+      "error": 0.05023262744497028,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 24,
+      "error": 0.05164915909672964,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ],
+  "display_counts": [
+    2,
+    6,
+    11,
+    15,
+    20,
+    24
+  ],
+  "final_count": 24,
+  "search_stop_N": 24,
+  "stopping_reason": "maximum count reached",
+  "target_relative_l2": 0.05,
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "source_revision": "f6b8690059716e809c2dac27c8715e65fcb1d267",
+  "config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 2,
+    "max_iterations": 200,
+    "quadrature_order": 3,
+    "seed": 71103
+  },
+  "reference_sha256": "9193295b64c870e4824792c8d37c7db00f58b73ae974e5b4cc514a07acad33e2",
+  "observation_sha256": {
+    "track_1.csv": "d1bbc1beb1d4ba95816110c36f38ad727b465771370fddab93422e0bade95d72",
+    "track_2.csv": "73d70c702602d2419d4f74aeaa13acdb448a24cc070850fe6f500c217b9bc195",
+    "track_3.csv": "c724523da2a120e114fe975d353d2bde1f9a763aa6c9abd7d1c427a987555b20",
+    "track_4.csv": "21119420428091c46e6fefa5c896239f3c015412ef30d423313b32df3f7e0be5",
+    "track_5.csv": "ea29860211ffd9942aa9d405ae4f052abdb48cc7aa578bb4b76ac99c23a49c8d",
+    "track_6.csv": "1fdfaf149b2f8ce048652985a2070500bd1a4de4d08b53e2f3841c417aa235aa",
+    "track_7.csv": "bbd952b051421719911526134ac414c895841851e192b618a6cdfa72e452e9a4",
+    "track_8.csv": "4f1e5535f80578300cd4e0c859a2352ffdc01a4bbc520b460e07abc3644f6989",
+    "track_9.csv": "c9727523717c81797a9682b24dc5d458ef4514f556d002931b2350c6c8f8d0f1",
+    "track_10.csv": "5ee3e36979237ac94839651fa737cdb8e8cdc6d4edcb5e3ce9a5364851210b0b",
+    "track_11.csv": "4c92672d52edd19b636394223d1099c0fcf9b8d13cdaa4ee315c3401a3733c61",
+    "track_12.csv": "3422457899931501b17e7899f4cb4a6ddde325266af701f00ebd9b48b69523dd",
+    "track_13.csv": "9d2b10a58df5265e3ef586e0f8001db9bf57bf6620617110a1ae483acead042b",
+    "track_14.csv": "25d7444f8d5e3c1426699eb99ee72b433a7224fa3aecbec4e8c4d6996d27e579",
+    "track_15.csv": "8469114c3ee8c24d9aa1de546cfa1021f603c4748b408904d345741c43d6e6ee",
+    "track_16.csv": "fe1d83b698a831967ccad130ecd4e288f77dd1e2ee77ac3d959006a791f4786b",
+    "track_17.csv": "3ed040b85a796f47bc43dc43f98bd7989a8e2e329dda06c505cf3f0912c67a17",
+    "track_18.csv": "6bec01a39bc080897531c789b862defdd4bfa9963ebaa892913c21be5800731e",
+    "track_19.csv": "5cf1f832062d26be5fa9ef23c03cf2b1375d39d30c4123687e14744061cb2ef2",
+    "track_20.csv": "27ddcdda859bf817d8989cba269d2586a9950685dc8101ab79a4dfb14a3b28d9",
+    "track_21.csv": "d624a578019f9773750b16884f19541b885557878585a3d55027a1071ecb5484",
+    "track_22.csv": "0eda942337d99ab8d9a7497c79691737fbe0dae4af88f2da2b9735f4dfb7d41b",
+    "track_23.csv": "0e8736d6a05fab15d4fb89cdf0818aebe5167222fdee94d6e69354ef5de6b81c",
+    "track_24.csv": "674a58acf167cee9fd1a4c4e7677ff3c07a4a9027d9c247feeaa2390ad18e57d"
+  }
+}

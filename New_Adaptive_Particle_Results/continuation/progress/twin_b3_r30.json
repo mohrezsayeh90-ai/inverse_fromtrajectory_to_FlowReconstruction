@@ -1,0 +1,71 @@
+{
+  "profile": "twin_b3_r30",
+  "phase": "completed",
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.1501202013699321,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 3,
+      "error": 0.12374905091002224,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.05277509472121509,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 5,
+      "error": 0.047587498789873325,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 6,
+      "error": 0.040297654438577905,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ],
+  "display_counts": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "adaptive_counts": [],
+  "final_count": 6,
+  "stopping_reason": "evaluation target reached",
+  "target_relative_l2": 0.05,
+  "oracle_selection": true,
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 2,
+    "max_iterations": 200,
+    "quadrature_order": 3,
+    "seed": 71103
+  }
+}

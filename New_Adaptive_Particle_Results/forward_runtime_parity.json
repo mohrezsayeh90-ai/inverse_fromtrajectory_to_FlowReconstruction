@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "case": "skew_b3",
+  "relative_l2": 8.763591902364846e-08,
+  "maximum_absolute": 7.337340528490444e-07,
+  "points": 7081,
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "scope": "Actual frozen-network prediction versus archived field array; does not certify physical benchmark gates"
+}

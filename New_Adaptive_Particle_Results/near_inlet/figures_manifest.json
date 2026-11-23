@@ -1,0 +1,39 @@
+[
+  {
+    "profile": "nine30",
+    "display_counts": [
+      2,
+      4,
+      8,
+      15,
+      23,
+      24
+    ],
+    "errors_percent": [
+      39.14574232581394,
+      39.689779791816804,
+      37.73003761427783,
+      19.190990362025254,
+      11.32673208493739,
+      10.593562083326068
+    ],
+    "inputs_sha256": {
+      "New_Adaptive_Particle_Results/continuation/fits/nine30/N2/inlet.csv": "0131382089eededb3e3eaa6cdf458a0c9c56fc60fc21fa4b7424f5178bb82e54",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N2/inlet.csv": "62e7dee33a760f797dbef245f0ab962df38ea5f97c5f798aa043a1af91b59679",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N2/report.json": "1c170fdb2b2ea6b684d0498c156bd9c69724b37bb7e9241a9d17a66aa007d320",
+      "New_Adaptive_Particle_Results/continuation/fits/nine30/N4/inlet.csv": "2f5ca546d828b978314ddb287357af518fe7a3d73043ac4f21fde6fd849489cf",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N4/inlet.csv": "54f8fdf861935478e101882f4b6110e1d23b0a7e6f32fa1e691fb82210f9066f",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N4/report.json": "7d15c31d528e9fbf1f6650c6d141c189fbd546ff83b0406819bad54fe78ac2be",
+      "New_Adaptive_Particle_Results/continuation/fits/nine30/N8/inlet.csv": "4bf7b6e5be1871efebf544c804682986fa6655e7cd0bd9299b917a4e1f88cc3a",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N8/inlet.csv": "3b8c8116c2af6551c91f9345c78f007ee45c8fe50c6cbeebaf1673afd6b9aec1",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N8/report.json": "45ee10114172bb5a551849acc0b0bf15b293c61050420d623699601d5e510cac",
+      "New_Adaptive_Particle_Results/continuation/fits/nine30/N15/inlet.csv": "c223346477437e60db6c4489c01519281cbf9b37bc5c6ff77b2eaba8f03afc1d",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N15/inlet.csv": "c472dbc441790f171fb687a79995766d7e5fee0310db424eaf11dc3f65e0589d",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N15/report.json": "c2e4c21d085a291fbb4279e29fe2d4bb0e7fae9f84a1bd9457aae72671843327",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N23/inlet.csv": "cd1aed3c14103387a21c54b8d34835257be681b97cc9f3b8f298a27bc433914d",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N23/report.json": "29ebbc1243eb7d4ad984279078af8aec5ad77b2d44c1d67a9f20feee55963e93",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N24/inlet.csv": "2a1086056cca2ac0c9e62784c432504e0665a04261a59e734f241d4bc4384967",
+      "New_Adaptive_Particle_Results/near_inlet/fits/nine30/N24/report.json": "e7aa7115d0ba97465106048ade6a4e69419e5848102e56b8ea810c546e9fb269"
+    }
+  }
+]

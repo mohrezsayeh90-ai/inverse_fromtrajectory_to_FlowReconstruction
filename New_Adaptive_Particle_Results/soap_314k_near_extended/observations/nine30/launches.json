@@ -1,0 +1,1212 @@
+{
+  "seed": 284913,
+  "noise_std": 0.0002,
+  "horizon": 1.2,
+  "St": 0.42,
+  "launches": [
+    {
+      "particle": 1,
+      "position": [
+        0.03,
+        0.97
+      ],
+      "velocity": [
+        6.0,
+        -1.2
+      ],
+      "kind": "archived-base",
+      "reference_refinement_max": 2.8440000221507944e-07
+    },
+    {
+      "particle": 2,
+      "position": [
+        4.9,
+        0.03
+      ],
+      "velocity": [
+        -6.0,
+        1.2
+      ],
+      "kind": "archived-base",
+      "reference_refinement_max": 4.1431211972309256e-07
+    },
+    {
+      "particle": 3,
+      "position": [
+        0.007384556768053925,
+        0.5
+      ],
+      "velocity": [
+        0.11217105591152565,
+        -0.03455670961269766
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 1.6565929628065135e-08
+    },
+    {
+      "particle": 4,
+      "position": [
+        0.006815996004172167,
+        0.14477160953750015
+      ],
+      "velocity": [
+        0.2327779025856615,
+        -0.03477752142945352
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 1.9320947952650158e-08
+    },
+    {
+      "particle": 5,
+      "position": [
+        0.0061734966761519666,
+        0.7195432190750002
+      ],
+      "velocity": [
+        0.21389669506194603,
+        -0.059502883572976
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 1.0201090505645993e-07
+    },
+    {
+      "particle": 6,
+      "position": [
+        0.007874357126556705,
+        0.3643148286125001
+      ],
+      "velocity": [
+        0.3266225561212705,
+        0.02975416998633798
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 1.501068885856327e-08
+    },
+    {
+      "particle": 7,
+      "position": [
+        0.006182913215923047,
+        0.9390864381500003
+      ],
+      "velocity": [
+        0.09895107584394942,
+        -0.029190168512756798
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 1.079034878115337e-08
+    },
+    {
+      "particle": 8,
+      "position": [
+        0.007225970695273707,
+        0.5838580476875004
+      ],
+      "velocity": [
+        0.16442906381755998,
+        0.01889546129192317
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 1.142386940600204e-08
+    },
+    {
+      "particle": 9,
+      "position": [
+        0.008474446303752062,
+        0.22862965722500003
+      ],
+      "velocity": [
+        0.27747748436498393,
+        -0.003958288588269451
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 8.10385114569101e-09
+    },
+    {
+      "particle": 10,
+      "position": [
+        0.005507271172944736,
+        0.8034012667625007
+      ],
+      "velocity": [
+        0.13155567504345908,
+        -0.032139672180855075
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 5.690085269627332e-08
+    },
+    {
+      "particle": 11,
+      "position": [
+        0.005803782140669021,
+        0.44817287630000036
+      ],
+      "velocity": [
+        0.2948288271749451,
+        -0.0463033611498001
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 1.8286942071732426e-07
+    },
+    {
+      "particle": 12,
+      "position": [
+        0.008526634502915702,
+        0.09294448583750003
+      ],
+      "velocity": [
+        0.2904705441301202,
+        -0.08641927765968396
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 4.080882409773778e-09
+    },
+    {
+      "particle": 13,
+      "position": [
+        0.005641243246866562,
+        0.6677160953750007
+      ],
+      "velocity": [
+        0.11359141226667686,
+        0.05885117841428053
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 2.340858107352517e-08
+    },
+    {
+      "particle": 14,
+      "position": [
+        0.006357380518252432,
+        0.31248770491250033
+      ],
+      "velocity": [
+        0.21802402645081642,
+        0.0315386626665643
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 7.531197709909065e-08
+    },
+    {
+      "particle": 15,
+      "position": [
+        0.005578116360868349,
+        0.8872593144500002
+      ],
+      "velocity": [
+        0.2648076260058526,
+        0.014914085531051696
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 2.9232398390810488e-08
+    },
+    {
+      "particle": 16,
+      "position": [
+        0.007580532933726726,
+        0.5320309239874998
+      ],
+      "velocity": [
+        0.19543049362182618,
+        0.013112967934918035
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 5.4085186551589004e-08
+    },
+    {
+      "particle": 17,
+      "position": [
+        0.006969880419147172,
+        0.17680253352500117
+      ],
+      "velocity": [
+        0.17704032231193856,
+        -0.006450955629274779
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 5.569964189877652e-08
+    },
+    {
+      "particle": 18,
+      "position": [
+        0.006832457586852662,
+        0.7515741430625009
+      ],
+      "velocity": [
+        0.20482240533721124,
+        0.01614580103915368
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 5.125637558833773e-08
+    },
+    {
+      "particle": 19,
+      "position": [
+        0.008335696987783494,
+        0.3963457526000006
+      ],
+      "velocity": [
+        0.2537755140467953,
+        -0.07209886821294707
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 8.827129138744283e-08
+    },
+    {
+      "particle": 20,
+      "position": [
+        0.008243347738861316,
+        0.041117362137500335
+      ],
+      "velocity": [
+        0.17731530318894045,
+        -0.0631486559191696
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 2.604549506624032e-09
+    },
+    {
+      "particle": 21,
+      "position": [
+        0.008498889443229067,
+        0.6158889716750001
+      ],
+      "velocity": [
+        0.2952984403677195,
+        -0.01893651166430832
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 7.568664739387998e-08
+    },
+    {
+      "particle": 22,
+      "position": [
+        0.006828735879617633,
+        0.26066058121250146
+      ],
+      "velocity": [
+        0.30149536895169965,
+        -0.042273719803856594
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 1.1654359588497698e-08
+    },
+    {
+      "particle": 23,
+      "position": [
+        0.006513333181380512,
+        0.8354321907500012
+      ],
+      "velocity": [
+        0.1771964197876259,
+        -0.022288064260905308
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 4.852243451480831e-08
+    },
+    {
+      "particle": 24,
+      "position": [
+        0.008357712166426548,
+        0.48020380028750087
+      ],
+      "velocity": [
+        0.12579644841087528,
+        0.060741939009823914
+      ],
+      "kind": "near-inlet-stratified-random",
+      "reference_refinement_max": 1.8440894367088845e-08
+    },
+    {
+      "particle": 25,
+      "position": [
+        0.005754196703239201,
+        0.12497540982500063
+      ],
+      "velocity": [
+        0.23841980619417225,
+        0.09311498013207087
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 2.42596187582933e-08
+    },
+    {
+      "particle": 26,
+      "position": [
+        0.007952415621038305,
+        0.6997470193625004
+      ],
+      "velocity": [
+        0.17005287154855958,
+        0.08612263953045105
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.618793121771489e-08
+    },
+    {
+      "particle": 27,
+      "position": [
+        0.008554437242113352,
+        0.34451862890000007
+      ],
+      "velocity": [
+        0.34066773460029187,
+        -0.034685467231791875
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.8376144966802954e-08
+    },
+    {
+      "particle": 28,
+      "position": [
+        0.005479985695834996,
+        0.9192902384375016
+      ],
+      "velocity": [
+        0.12379003975126439,
+        0.021640489350843353
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.1815128708736466e-08
+    },
+    {
+      "particle": 29,
+      "position": [
+        0.006104136459115888,
+        0.5640618479749996
+      ],
+      "velocity": [
+        0.2886480114193487,
+        -0.01592735516140309
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.1633177754433177e-07
+    },
+    {
+      "particle": 30,
+      "position": [
+        0.006493571173135156,
+        0.20883345751250257
+      ],
+      "velocity": [
+        0.32164608426434343,
+        0.010458292514522682
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.9555405073035104e-08
+    },
+    {
+      "particle": 31,
+      "position": [
+        0.007735073683467887,
+        0.7836050670500023
+      ],
+      "velocity": [
+        0.24820623626310706,
+        -0.05441448159796236
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 3.53596324442762e-08
+    },
+    {
+      "particle": 32,
+      "position": [
+        0.008533569580600526,
+        0.428376676587502
+      ],
+      "velocity": [
+        0.3349909701550042,
+        -0.00962815491963434
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 5.350076826005079e-09
+    },
+    {
+      "particle": 33,
+      "position": [
+        0.0072695765530987975,
+        0.07314828612500177
+      ],
+      "velocity": [
+        0.15927655647716144,
+        -0.022417340756477083
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 7.886254274613869e-09
+    },
+    {
+      "particle": 34,
+      "position": [
+        0.007226379895124777,
+        0.6479198956625015
+      ],
+      "velocity": [
+        0.17026532477084788,
+        -0.08951741395348363
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 5.784808188025181e-09
+    },
+    {
+      "particle": 35,
+      "position": [
+        0.00842638653111209,
+        0.2926915052000012
+      ],
+      "velocity": [
+        0.07197633287489319,
+        -0.016046842264680825
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.5992758894967096e-08
+    },
+    {
+      "particle": 36,
+      "position": [
+        0.006071292947692004,
+        0.867463114737501
+      ],
+      "velocity": [
+        0.2031387011035734,
+        -0.050691575040019046
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 4.125335406612862e-09
+    },
+    {
+      "particle": 37,
+      "position": [
+        0.00826800676681811,
+        0.5122347242750007
+      ],
+      "velocity": [
+        0.14463218158153912,
+        -0.030215712323841556
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 2.3406283355953406e-08
+    },
+    {
+      "particle": 38,
+      "position": [
+        0.005927123046473561,
+        0.1570063338125004
+      ],
+      "velocity": [
+        0.2903419924276054,
+        0.07021072602019551
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 5.9546755748485225e-08
+    },
+    {
+      "particle": 39,
+      "position": [
+        0.00847096887696931,
+        0.7317779433500002
+      ],
+      "velocity": [
+        0.23172709483435383,
+        0.06475118738659444
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 2.23066576321429e-08
+    },
+    {
+      "particle": 40,
+      "position": [
+        0.008023683516411063,
+        0.3765495528874999
+      ],
+      "velocity": [
+        0.28161612271246234,
+        -0.07619857673716401
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.1008938449741379e-07
+    },
+    {
+      "particle": 41,
+      "position": [
+        0.006902210654963004,
+        0.951321162425003
+      ],
+      "velocity": [
+        0.09548382097511277,
+        -0.0721185411839252
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 5.9823529741098724e-09
+    },
+    {
+      "particle": 42,
+      "position": [
+        0.006206653755662146,
+        0.5960927719625027
+      ],
+      "velocity": [
+        0.06458589255175108,
+        -0.001475893250277388
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.6226384014217388e-08
+    },
+    {
+      "particle": 43,
+      "position": [
+        0.005202539892641085,
+        0.24086438150000236
+      ],
+      "velocity": [
+        0.18359862947793404,
+        -0.03192591822941762
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 7.008709124178836e-08
+    },
+    {
+      "particle": 44,
+      "position": [
+        0.005149189815888317,
+        0.8156359910375022
+      ],
+      "velocity": [
+        0.29827108267550817,
+        -0.008070007932235071
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.8800368040139404e-08
+    },
+    {
+      "particle": 45,
+      "position": [
+        0.00559605542583281,
+        0.46040760057500185
+      ],
+      "velocity": [
+        0.24130046145412293,
+        0.09036448008093978
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 9.105791232144611e-09
+    },
+    {
+      "particle": 46,
+      "position": [
+        0.006473113550920675,
+        0.10517921011250153
+      ],
+      "velocity": [
+        0.08477305496097538,
+        0.01711996856489098
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 2.2909313973640266e-08
+    },
+    {
+      "particle": 47,
+      "position": [
+        0.008196984264600094,
+        0.6799508196500014
+      ],
+      "velocity": [
+        0.16687039402934484,
+        -0.0019369910129426876
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.7517617134643615e-08
+    },
+    {
+      "particle": 48,
+      "position": [
+        0.007302287833492446,
+        0.32472242918750105
+      ],
+      "velocity": [
+        0.3751480184556736,
+        0.04029270270943858
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "reference_refinement_max": 1.4895802746828224e-07
+    }
+  ],
+  "attempts": [
+    {
+      "position": [
+        0.03,
+        0.97
+      ],
+      "velocity": [
+        6.0,
+        -1.2
+      ],
+      "kind": "archived-base",
+      "accepted": true
+    },
+    {
+      "position": [
+        4.9,
+        0.03
+      ],
+      "velocity": [
+        -6.0,
+        1.2
+      ],
+      "kind": "archived-base",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.007384556768053925,
+        0.5
+      ],
+      "velocity": [
+        0.11217105591152565,
+        -0.03455670961269766
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006815996004172167,
+        0.14477160953750015
+      ],
+      "velocity": [
+        0.2327779025856615,
+        -0.03477752142945352
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.0061734966761519666,
+        0.7195432190750002
+      ],
+      "velocity": [
+        0.21389669506194603,
+        -0.059502883572976
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.007874357126556705,
+        0.3643148286125001
+      ],
+      "velocity": [
+        0.3266225561212705,
+        0.02975416998633798
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006182913215923047,
+        0.9390864381500003
+      ],
+      "velocity": [
+        0.09895107584394942,
+        -0.029190168512756798
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.007225970695273707,
+        0.5838580476875004
+      ],
+      "velocity": [
+        0.16442906381755998,
+        0.01889546129192317
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.008474446303752062,
+        0.22862965722500003
+      ],
+      "velocity": [
+        0.27747748436498393,
+        -0.003958288588269451
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.005507271172944736,
+        0.8034012667625007
+      ],
+      "velocity": [
+        0.13155567504345908,
+        -0.032139672180855075
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.005803782140669021,
+        0.44817287630000036
+      ],
+      "velocity": [
+        0.2948288271749451,
+        -0.0463033611498001
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.008526634502915702,
+        0.09294448583750003
+      ],
+      "velocity": [
+        0.2904705441301202,
+        -0.08641927765968396
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.005641243246866562,
+        0.6677160953750007
+      ],
+      "velocity": [
+        0.11359141226667686,
+        0.05885117841428053
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006357380518252432,
+        0.31248770491250033
+      ],
+      "velocity": [
+        0.21802402645081642,
+        0.0315386626665643
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.005578116360868349,
+        0.8872593144500002
+      ],
+      "velocity": [
+        0.2648076260058526,
+        0.014914085531051696
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.007580532933726726,
+        0.5320309239874998
+      ],
+      "velocity": [
+        0.19543049362182618,
+        0.013112967934918035
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006969880419147172,
+        0.17680253352500117
+      ],
+      "velocity": [
+        0.17704032231193856,
+        -0.006450955629274779
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006832457586852662,
+        0.7515741430625009
+      ],
+      "velocity": [
+        0.20482240533721124,
+        0.01614580103915368
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.008335696987783494,
+        0.3963457526000006
+      ],
+      "velocity": [
+        0.2537755140467953,
+        -0.07209886821294707
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.008243347738861316,
+        0.041117362137500335
+      ],
+      "velocity": [
+        0.17731530318894045,
+        -0.0631486559191696
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.008498889443229067,
+        0.6158889716750001
+      ],
+      "velocity": [
+        0.2952984403677195,
+        -0.01893651166430832
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006828735879617633,
+        0.26066058121250146
+      ],
+      "velocity": [
+        0.30149536895169965,
+        -0.042273719803856594
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006513333181380512,
+        0.8354321907500012
+      ],
+      "velocity": [
+        0.1771964197876259,
+        -0.022288064260905308
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.008357712166426548,
+        0.48020380028750087
+      ],
+      "velocity": [
+        0.12579644841087528,
+        0.060741939009823914
+      ],
+      "kind": "near-inlet-stratified-random",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.005754196703239201,
+        0.12497540982500063
+      ],
+      "velocity": [
+        0.23841980619417225,
+        0.09311498013207087
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.007952415621038305,
+        0.6997470193625004
+      ],
+      "velocity": [
+        0.17005287154855958,
+        0.08612263953045105
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.008554437242113352,
+        0.34451862890000007
+      ],
+      "velocity": [
+        0.34066773460029187,
+        -0.034685467231791875
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.005479985695834996,
+        0.9192902384375016
+      ],
+      "velocity": [
+        0.12379003975126439,
+        0.021640489350843353
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006104136459115888,
+        0.5640618479749996
+      ],
+      "velocity": [
+        0.2886480114193487,
+        -0.01592735516140309
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006493571173135156,
+        0.20883345751250257
+      ],
+      "velocity": [
+        0.32164608426434343,
+        0.010458292514522682
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.007735073683467887,
+        0.7836050670500023
+      ],
+      "velocity": [
+        0.24820623626310706,
+        -0.05441448159796236
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.008533569580600526,
+        0.428376676587502
+      ],
+      "velocity": [
+        0.3349909701550042,
+        -0.00962815491963434
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.0072695765530987975,
+        0.07314828612500177
+      ],
+      "velocity": [
+        0.15927655647716144,
+        -0.022417340756477083
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.007226379895124777,
+        0.6479198956625015
+      ],
+      "velocity": [
+        0.17026532477084788,
+        -0.08951741395348363
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.00842638653111209,
+        0.2926915052000012
+      ],
+      "velocity": [
+        0.07197633287489319,
+        -0.016046842264680825
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006071292947692004,
+        0.867463114737501
+      ],
+      "velocity": [
+        0.2031387011035734,
+        -0.050691575040019046
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.00826800676681811,
+        0.5122347242750007
+      ],
+      "velocity": [
+        0.14463218158153912,
+        -0.030215712323841556
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.005927123046473561,
+        0.1570063338125004
+      ],
+      "velocity": [
+        0.2903419924276054,
+        0.07021072602019551
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.00847096887696931,
+        0.7317779433500002
+      ],
+      "velocity": [
+        0.23172709483435383,
+        0.06475118738659444
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.008023683516411063,
+        0.3765495528874999
+      ],
+      "velocity": [
+        0.28161612271246234,
+        -0.07619857673716401
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006902210654963004,
+        0.951321162425003
+      ],
+      "velocity": [
+        0.09548382097511277,
+        -0.0721185411839252
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006206653755662146,
+        0.5960927719625027
+      ],
+      "velocity": [
+        0.06458589255175108,
+        -0.001475893250277388
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.005202539892641085,
+        0.24086438150000236
+      ],
+      "velocity": [
+        0.18359862947793404,
+        -0.03192591822941762
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.005149189815888317,
+        0.8156359910375022
+      ],
+      "velocity": [
+        0.29827108267550817,
+        -0.008070007932235071
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.00559605542583281,
+        0.46040760057500185
+      ],
+      "velocity": [
+        0.24130046145412293,
+        0.09036448008093978
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.006473113550920675,
+        0.10517921011250153
+      ],
+      "velocity": [
+        0.08477305496097538,
+        0.01711996856489098
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.008196984264600094,
+        0.6799508196500014
+      ],
+      "velocity": [
+        0.16687039402934484,
+        -0.0019369910129426876
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    },
+    {
+      "position": [
+        0.007302287833492446,
+        0.32472242918750105
+      ],
+      "velocity": [
+        0.3751480184556736,
+        0.04029270270943858
+      ],
+      "kind": "near-inlet-stratified-random-extension",
+      "accepted": true
+    }
+  ],
+  "reference_sha256": "2ae4fb805fdae687c459ed945ac6f6e0866ea8622c7f11c1bb0ac5645485b565",
+  "additional_launch_seed": 284914
+}

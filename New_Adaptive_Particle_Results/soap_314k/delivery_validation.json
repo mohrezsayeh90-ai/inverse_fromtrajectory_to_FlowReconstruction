@@ -1,0 +1,17 @@
+{
+  "final_pages": 123,
+  "primary_figures": 9,
+  "supplementary_figures": 1,
+  "thesis_sha256": "b42411f8333348519015dc776f734ae8ed005acffe2a0b22a79e0bec01b75bfa",
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "previous_thesis_sha256": "427c29afa56291833d1825ff0e7791baaa91cb0b05c63c688845a7c25dcb0e53",
+  "unresolved_references": false,
+  "missing_glyphs": false,
+  "overfull_signatures": [
+    "Overfull \\hbox (0.80212pt too wide)",
+    "Overfull \\hbox (1.80328pt too wide)",
+    "Overfull \\hbox (18.0pt too wide)",
+    "Overfull \\hbox (2.604pt too wide)",
+    "Overfull \\vbox (3.92294pt too high)"
+  ]
+}

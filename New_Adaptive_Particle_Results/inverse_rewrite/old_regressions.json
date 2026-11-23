@@ -1,0 +1,118 @@
+[
+  {
+    "profile": "waves3_r30",
+    "before": {
+      "fitted_N": 4,
+      "evaluated_N": 6,
+      "objective": 1.7057695514103357,
+      "coordinate_rmse": 0.0008725164162162458,
+      "data_cost": 1.5225697931336821,
+      "curvature_cost": 0.06938276007968586,
+      "other_penalties": 0.11381699819696772,
+      "inlet_l2_percent": 3.6414644748409053,
+      "converged": false,
+      "iterations": 200,
+      "stop_reason": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT"
+    },
+    "after": {
+      "fitted_N": 6,
+      "evaluated_N": 6,
+      "objective": 0.31233745358298415,
+      "coordinate_rmse": 0.0002750276884830026,
+      "data_cost": 0.15128045886460703,
+      "curvature_cost": 0.06993978241937863,
+      "other_penalties": 0.09111721229899848,
+      "inlet_l2_percent": 5.77163683839852,
+      "converged": false,
+      "iterations": 200,
+      "stop_reason": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT"
+    }
+  },
+  {
+    "profile": "skew_b3",
+    "before": {
+      "fitted_N": 13,
+      "evaluated_N": 17,
+      "objective": 9.300284694183812,
+      "coordinate_rmse": 0.0021096959113716977,
+      "data_cost": 8.901633676916918,
+      "curvature_cost": 0.05060154760417396,
+      "other_penalties": 0.3480494696627207,
+      "inlet_l2_percent": 5.822197342087162,
+      "converged": false,
+      "iterations": 200,
+      "stop_reason": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT"
+    },
+    "after": {
+      "fitted_N": 17,
+      "evaluated_N": 17,
+      "objective": 2.1475252152739674,
+      "coordinate_rmse": 0.0008787050775853277,
+      "data_cost": 1.5442452267484736,
+      "curvature_cost": 0.08665550451847781,
+      "other_penalties": 0.516624484007016,
+      "inlet_l2_percent": 6.444246367136295,
+      "converged": false,
+      "iterations": 200,
+      "stop_reason": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT"
+    }
+  },
+  {
+    "profile": "lobes4_r30",
+    "before": {
+      "fitted_N": 20,
+      "evaluated_N": 24,
+      "objective": 4.213375304982333,
+      "coordinate_rmse": 0.0013757137532495755,
+      "data_cost": 3.7851766617600684,
+      "curvature_cost": 0.09914189835135086,
+      "other_penalties": 0.3290567448709136,
+      "inlet_l2_percent": 16.482806943539778,
+      "converged": false,
+      "iterations": 200,
+      "stop_reason": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT"
+    },
+    "after": {
+      "fitted_N": 24,
+      "evaluated_N": 24,
+      "objective": 2.6281352413629206,
+      "coordinate_rmse": 0.0010825587338476183,
+      "data_cost": 2.343866824459517,
+      "curvature_cost": 0.030212018891985944,
+      "other_penalties": 0.2540563980114178,
+      "inlet_l2_percent": 18.167509807870726,
+      "converged": false,
+      "iterations": 200,
+      "stop_reason": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT"
+    }
+  },
+  {
+    "profile": "flat30",
+    "before": {
+      "fitted_N": 20,
+      "evaluated_N": 24,
+      "objective": 0.450900630721533,
+      "coordinate_rmse": 0.0003929906613817461,
+      "data_cost": 0.30888331986652445,
+      "curvature_cost": 0.05026972771411991,
+      "other_penalties": 0.09174758314088866,
+      "inlet_l2_percent": 5.0344269598265905,
+      "converged": false,
+      "iterations": 200,
+      "stop_reason": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT"
+    },
+    "after": {
+      "fitted_N": 24,
+      "evaluated_N": 24,
+      "objective": 0.37106745467978575,
+      "coordinate_rmse": 0.00034892690310378257,
+      "data_cost": 0.24349996741919291,
+      "curvature_cost": 0.04986808407822526,
+      "other_penalties": 0.07769940318236757,
+      "inlet_l2_percent": 5.164915909672964,
+      "converged": false,
+      "iterations": 200,
+      "stop_reason": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT"
+    }
+  }
+]

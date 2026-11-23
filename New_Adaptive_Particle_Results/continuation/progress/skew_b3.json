@@ -1,0 +1,86 @@
+{
+  "profile": "skew_b3",
+  "phase": "completed",
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.20543342646935295,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.06523349501694738,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 6,
+      "error": 0.07273022653033434,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 9,
+      "error": 0.06714110921421391,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 14,
+      "error": 0.06153890387864996,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 21,
+      "error": 0.05307547302595475,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 24,
+      "error": 0.04765249333023,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ],
+  "display_counts": [
+    2,
+    4,
+    6,
+    14,
+    21,
+    24
+  ],
+  "adaptive_counts": [
+    9
+  ],
+  "final_count": 24,
+  "stopping_reason": "evaluation target reached",
+  "target_relative_l2": 0.05,
+  "oracle_selection": true,
+  "checkpoint_sha256": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+  "config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 2,
+    "max_iterations": 200,
+    "quadrature_order": 3,
+    "seed": 71103
+  }
+}

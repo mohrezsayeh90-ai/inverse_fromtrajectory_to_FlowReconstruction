@@ -1,0 +1,102 @@
+{
+  "profile": "waves3_r30",
+  "phase": "completed",
+  "adaptive_counts": [
+    2,
+    4
+  ],
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.26254065188362447,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 3,
+      "error": 0.06019542567656641,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.03641464474840905,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 5,
+      "error": 0.048051007114480765,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 6,
+      "error": 0.0577163683839852,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ],
+  "display_counts": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "final_count": 6,
+  "search_stop_N": 4,
+  "stopping_reason": "evaluation target reached",
+  "target_relative_l2": 0.05,
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "source_revision": "f6b8690059716e809c2dac27c8715e65fcb1d267",
+  "config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 2,
+    "max_iterations": 200,
+    "quadrature_order": 3,
+    "seed": 71103
+  },
+  "reference_sha256": "ff38c415dc9d6ff58714f22a2bb29906f48a6e1d59ffd8feb411684df5c22a90",
+  "observation_sha256": {
+    "track_1.csv": "a49b3e59ee7223165c1a4263378fc8d42dbf2a01f339649041460faa121eadaf",
+    "track_2.csv": "1685f8ea54c116f5e95ab69e3780724e2631a15a16bce5333bd74280bc2240aa",
+    "track_3.csv": "b9662cefbd25ab16845df5b1d8e1f28f3250db00028ad52851b5df6dcb498295",
+    "track_4.csv": "f58647908d0f84cb297f445910ef313c6a5647a682aa6c94907a54f6a731d6f6",
+    "track_5.csv": "4f474fd1effa36da0bfa157eaabd8f828b7cb0f975873a8f05c7a4c6c45a6150",
+    "track_6.csv": "919996eb7322c86607e3b552cfb5058269717732da38b2de06c5716f3a7b28de",
+    "track_7.csv": "75908713157a9b061e3cbb18eb408404a909ac4f3852c95cdd7afe8d6c795fa0",
+    "track_8.csv": "3a687689f884f36fe94d2d9984165a5f0a36721bddc9e7f298c3367853cc3535",
+    "track_9.csv": "6da7ebeb341cb1af579729b5b4a8eb84643dbd58c36dd5a660713fa498cb8105",
+    "track_10.csv": "4fe2498ff7cfc03de6ff1b5680f8a4af5d97729c9ccafee9e58bee81ee41b95c",
+    "track_11.csv": "872b7e66a8011105d9ae7c14d75224b2e9ec55f5065c247c7c0dd75f7130337c",
+    "track_12.csv": "a22d9a02eb2144a9ef5851f09d2dc44852c4d9abd2b9c3f1bbc4f576fdaa61e9",
+    "track_13.csv": "ebcb44bc6468a9bccc07b1954b2aceee3fd93f1771778b43cb7451b10b43ab56",
+    "track_14.csv": "1a3734d781eb5d55c2c72bdbe9bfda807276f701811a14a9dc3cf633918132be",
+    "track_15.csv": "38933b8d597eb531589adc1d2064396107960a7599ddf8ba4788463f5362c995",
+    "track_16.csv": "e3b2e3c9c8df9ea06f39b3d8ae440a270a94459026247ca54accaa73415ea70a",
+    "track_17.csv": "e4868c05d15da30ae4134cb5592df496aae5e43cf497584537b645e99ff03219",
+    "track_18.csv": "a1725c591fa9068ae5f9f804c35f2c25b2a3d04d4196cdc872e27cdee0b53e5e",
+    "track_19.csv": "2eb736126ea6bc040ee1a249f266129c90ce317b3ebb29994e38bf2fb75e7d76",
+    "track_20.csv": "6780ae632f2bced45c39f768536f6bdf5db7eccb6ac74934c8ee8a76bbfc150f",
+    "track_21.csv": "9779ed38b2e4dc6c66b8978cb4e2d773619c0c2b35cf1aeb86aee9399a463fd7",
+    "track_22.csv": "ecd52c243276c8c40a3513b46b3f229cbe949ffe9da78ef726ab9a0a72b29b30",
+    "track_23.csv": "e53fa5c6ef0275e933bfdf435a65ebff26a98765b19bafaae7e7b52fe36da844",
+    "track_24.csv": "1424c291caa7d9cf73141556fd41c82411e4f8ad3ae53c27799dc449a8605709"
+  }
+}

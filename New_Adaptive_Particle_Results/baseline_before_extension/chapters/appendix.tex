@@ -1,0 +1,481 @@
+\فصل{مطالب تکمیلی}
+\label{chap:results-supplement}
+
+این پیوست، شواهد تکمیلی فصل~\ref{chap:results} را گردآوری می‌کند.
+همهٔ شکل‌ها از خروجی‌های ذخیره‌شده تهیه شدند.
+هیچ آموزش، برازش یا حل عددی تازه‌ای انجام نشد.
+
+\قسمت{اعتبارسنجی وزن منتخب جریان}
+\label{sec:appendix-checkpoint}
+
+این آزمون با مجموعهٔ هفت‌نمونه‌ای اکتشافی فصل نتایج متفاوت است.
+شناسهٔ نه‌نوسانی این بخش نیز به ورودی مستقل تعلق دارد.
+میدان جریان در کانال مستطیلی بی‌بعد با ابعاد $5\times1$ بررسی شد.
+مختصات، سرعت و فشار مطابق رابطهٔ~\eqref{eq:forward-flow-scales} بی‌بعد شدند.
+چهار ورودی در شکل~\ref{fig:results-forward-flow-inlets} نشان داده شده‌اند.
+این ورودی‌ها بتا، تخت، نامتقارن و دارای نه نوسان هستند.
+عدد رینولدز هر حالت در شکل و جدول آمده است.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figs/chapter4/forward-flow-inlets.pdf}
+\caption{پروفایل‌های بی‌بعد ورودی در ارزیابی تکرارشوندهٔ عملگر جریان.}
+\label{fig:results-forward-flow-inlets}
+\end{figure}
+
+مرجع با روش اجزای محدود و شرایط مرزی یکسان محاسبه شد.
+شبکه و مرجع در $7081$ نقطهٔ مشترک مقایسه شدند.
+تراکم نقاط نزدیک ورودی بیشتر بود.
+با ریزترشدن مش، تغییر نسبی سرعت کمتر از $0.010\%$ ماند.
+تغییر نسبی فشار در همان بررسی کمتر از $0.20\%$ بود.
+فشار با مرجع خروجی مشترک مقایسه شد.
+حل‌های مرجع در انتخاب وزن نقش داشتند.
+تابع هزینهٔ آموزش از پاسخ‌های اجزای محدود استفاده نکرد.
+دو ورودی رزروشده در این ارزیابی بررسی نشدند.
+
+شکل~\ref{fig:results-forward-flow-beta} میدان ورودی بتا را نشان می‌دهد.
+شکل~\ref{fig:results-forward-flow-nine} به ورودی دارای نه نوسان اختصاص دارد.
+هر ردیف یک کمیت بی‌بعد را در سه پنل نشان می‌دهد.
+پنل‌ها میدان مرجع، پیش‌بینی و اختلاف علامت‌دار را نمایش می‌دهند.
+اختلاف از کم‌کردن مرجع از پیش‌بینی به دست می‌آید.
+در حالت نوسانی، اختلاف مؤلفهٔ عرضی نزدیک ورودی متمرکزتر است.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.98\textwidth,height=0.72\textheight,keepaspectratio]{figs/chapter4/forward-flow-beta.pdf}
+\caption{مقایسهٔ میدان پیش‌بینی‌شده و مرجع برای ورودی بتا در $\mathrm{Re}=30$.}
+\label{fig:results-forward-flow-beta}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.98\textwidth,height=0.72\textheight,keepaspectratio]{figs/chapter4/forward-flow-nine.pdf}
+\caption{مقایسهٔ میدان پیش‌بینی‌شده و مرجع برای ورودی نوسانی در $\mathrm{Re}=55$.}
+\label{fig:results-forward-flow-nine}
+\end{figure}
+
+جدول~\ref{tab:results-forward-flow-errors} خطاهای وزن منتخب را نشان می‌دهد.
+این وزن در گام $94000$ ذخیره شد.
+خطاهای نسبی مطابق رابطهٔ~\eqref{eq:validation-relative-l2} و برحسب درصد گزارش شده‌اند.
+معیارهای ریشهٔ میانگین مربعات مطابق رابطهٔ~\eqref{eq:validation-forward-flow-rms} هستند.
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{خطاهای بی‌بعد میدان و باقیماندهٔ مومنتوم برای وزن منتخب.}
+\label{tab:results-forward-flow-errors}
+\begin{tabular}{@{}lcccccc@{}}
+\hline
+ورودی & $\mathrm{Re}$ & $E_2(\mathbf U^*)$ & $E_2(v^*)$ &
+$E_{v,\mathrm{rms}}^*$ & $E_2(p^*)$ & $E_{\mathrm{mom,rms}}^*$ \\
+\hline
+بتا & $30$ & $0.906\%$ & $9.261\%$ & $0.004159$ & $3.082\%$ & $0.2759$ \\
+تخت & $70$ & $3.002\%$ & $39.781\%$ & $0.010812$ & $10.974\%$ & $0.5170$ \\
+نامتقارن & $100$ & $4.649\%$ & $37.160\%$ & $0.008145$ & $17.845\%$ & $0.1509$ \\
+نه نوسان & $55$ & $6.604\%$ & $89.199\%$ & $0.024466$ & $8.210\%$ & $2.0929$ \\
+\hline
+\end{tabular}
+\end{table}
+
+ورودی بتا کمترین خطای بردار سرعت و فشار را داشت.
+در حالت نوسانی، خطای نسبی مؤلفهٔ عرضی به $89.199\%$ رسید.
+ریشهٔ میانگین مربعات همان مؤلفه برابر $0.024466$ بود.
+بنابراین دقت مؤلفهٔ عرضی باید جدا از خطای بردار سرعت سنجیده شود.
+بیشترین خطای نسبی فشار در حالت نامتقارن ثبت شد.
+در این مجموعه، شکل ورودی و عدد رینولدز هم‌زمان تغییر کردند.
+
+حد پذیرش خطای نسبی سرعت $5\%$ و فشار $10\%$ بود.
+خطای سرعت در حالت نوسانی از حد تعیین‌شده گذشت.
+خطای فشار در حالت‌های تخت و نامتقارن از حد گذشت.
+باقیماندهٔ مومنتوم در هر چهار حالت از آستانهٔ $0.05$ بیشتر بود.
+معیارهای پیوستگی، شرط خروجی، دبی و خطای ورودی پذیرفته شدند.
+در مجموع، وزن منتخب سه معیار از هفت معیار را برآورده نکرد.
+وزن گام $100000$ نیز همان سه معیار را برآورده نکرد.
+این ارزیابی، مبنای گزارش محدودیت میدان در بازسازی معکوس است.
+
+
+\FloatBarrier
+\قسمت{شکل‌های تکمیلی پیش‌بینی مستقیم}
+\label{sec:appendix-forward}
+
+\زیرقسمت{ورودی‌های اکتشافی جریان}
+چهار نمونهٔ باقی‌مانده در شکل‌های بعدی ارائه شده‌اند.
+تعریف نرم و وزن نقاط با جدول~\ref{tab:results-forward-flow-exploratory} یکسان است.
+نسخهٔ اصلی شکل‌های جریان نیز در مخزن پژوهشی در دسترس است.
+\begin{latin}
+\small
+\href{https://github.com/mohrezsayeh90-ai/inverse_fromtrajectory_to_FlowReconstruction/blob/92897a6962e537a4bea88042609be102095db037/results/diverse_profiles_2026_11_07/all_new_figures.pdf}{Original seven-case flow and timed inverse gallery}
+\end{latin}
+خطای نسبی مؤلفهٔ عرضی به کوچک‌بودن مرجع حساس است.
+ریشهٔ میانگین مربعات آن، معیار مکمل با مقیاس ثابت است.
+
+شکل~\ref{fig:appendix-flow-waves3_r20} نمونهٔ سه‌دوره‌ای را نشان می‌دهد.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/forward-flow-chain-waves3_r20.pdf}
+\caption{میدان، خطا و برش‌های سرعت برای ورودی سه‌دوره‌ای.}
+\label{fig:appendix-flow-waves3_r20}
+\end{figure}
+
+\FloatBarrier
+
+شکل~\ref{fig:appendix-flow-lobes4_r20} نمونهٔ چهاردوره‌ای را نشان می‌دهد.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/forward-flow-chain-lobes4_r20.pdf}
+\caption{میدان، خطا و برش‌های سرعت برای ورودی چهاردوره‌ای.}
+\label{fig:appendix-flow-lobes4_r20}
+\end{figure}
+
+\FloatBarrier
+
+شکل~\ref{fig:appendix-flow-mixed} نمونهٔ ترکیبی را نشان می‌دهد.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/forward-flow-chain-mixed.pdf}
+\caption{میدان، خطا و برش‌های سرعت برای ورودی ترکیبی.}
+\label{fig:appendix-flow-mixed}
+\end{figure}
+
+\FloatBarrier
+
+شکل~\ref{fig:appendix-flow-shoulder} نمونهٔ شانه‌دار را نشان می‌دهد.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/forward-flow-chain-shoulder.pdf}
+\caption{میدان، خطا و برش‌های سرعت برای ورودی شانه‌دار.}
+\label{fig:appendix-flow-shoulder}
+\end{figure}
+
+\FloatBarrier
+
+\زیرقسمت{فرکانس متغیر و رهاسازی پایین‌دست مغناطیسی}
+شکل~\ref{fig:appendix-magnetic-09} نمونهٔ فرکانس متغیر دو منبع را نشان می‌دهد.
+خطای همین نمونه در شکل~\ref{fig:results-forward-magnetic-errors} نیز آمده است.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/forward-magnetic-chain-09.pdf}
+\caption{تحریک دو منبع با فرکانس متغیر و پاسخ ذره.}
+\label{fig:appendix-magnetic-09}
+\end{figure}
+
+\FloatBarrier
+شکل~\ref{fig:appendix-magnetic-11} پاسخ رهاسازی پایین‌دست را نشان می‌دهد.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/forward-magnetic-chain-11.pdf}
+\caption{تغییر منبع و پاسخ ذره با رهاسازی پایین‌دست.}
+\label{fig:appendix-magnetic-11}
+\end{figure}
+
+نسخهٔ اصلی دوازده زنجیره در مخزن پژوهشی در دسترس است.
+\begin{latin}
+\small
+\href{https://github.com/mohrezsayeh90-ai/Master_Magnetic/blob/639906f53a11934b3058fbbdb246e34a1dd001fd/results/trained_presentation/trained_cases_panels_1_to_5.pdf}{Original 12-case magnetic gallery}
+\end{latin}
+
+\FloatBarrier
+\قسمت{مقایسه‌های تکمیلی بازسازی جریان}
+\label{sec:appendix-inverse}
+
+\زیرقسمت{بازپخش زمان‌دار و مقایسه با میدان مرجع}
+نمونهٔ گوشه‌ای الف با نمونهٔ ب در متن اصلی متفاوت است.
+شکل~\ref{fig:results-inverse-timed-replay} بازپخش نمونهٔ گوشه‌ای الف را نشان می‌دهد.
+در بازپخش، معادلهٔ حرکت از شرایط اولیه دوباره انتگرال‌گیری شد.
+سرعت سیال در مکان جاری ذره خوانده شد.
+خطای مکانی در زمان‌های مشاهده محاسبه شد.
+پروفایل ورودی تخمینی نیز با پروفایل مرجع مقایسه شده است.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.97\textwidth,height=0.68\textheight,keepaspectratio]{figs/chapter4/inverse-timed-replay.pdf}
+\caption{مقایسهٔ مسیرها و پروفایل ورودی در بازسازی زمان‌دار نمونهٔ گوشه‌ای الف.}
+\label{fig:results-inverse-timed-replay}
+\end{figure}
+
+شکل~\ref{fig:results-inverse-timed-fields} سه مؤلفهٔ میدان همان نمونه را نشان می‌دهد.
+هر ردیف شامل میدان مرجع، میدان تخمینی و اختلاف علامت‌دار است.
+اختلاف از کم‌کردن مرجع از تخمین به دست می‌آید.
+اختلاف در بخش‌هایی از کانال، دور از مسیرها نیز دیده می‌شود.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.98\textwidth,height=0.72\textheight,keepaspectratio]{figs/chapter4/inverse-timed-fields.pdf}
+\caption{مقایسهٔ میدان بازسازی‌شده و مرجع اجزای محدود در نمونهٔ گوشه‌ای الف.}
+\label{fig:results-inverse-timed-fields}
+\end{figure}
+
+جدول~\ref{tab:results-inverse-timed} خطاهای مسیر، پروفایل و میدان را گزارش می‌کند.
+معیار مسیر از رابطهٔ~\eqref{eq:validation-inverse-timed-path} به دست می‌آید.
+خطاهای نسبی میدان مطابق رابطهٔ~\eqref{eq:validation-relative-l2} محاسبه شدند.
+هر شش بازپخش به پایان بازهٔ مشاهده رسیدند.
+بهینه‌سازی در شروع‌های منتخب با رسیدن به سقف تکرار پایان یافت.
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{خطاهای بی‌بعد بازپخش و مقایسهٔ بازسازی زمان‌دار با مرجع.}
+\label{tab:results-inverse-timed}
+\begin{tabular}{@{}lcccccc@{}}
+\hline
+نمونه & $10^4 E_{1,\mathrm{rms}}^*$ & $10^4 E_{2,\mathrm{rms}}^*$ & $A$ &
+$E_2(f_{\mathrm{ref}}^*)$ & $E_2(\mathbf U_{\mathrm{ref}}^*)$ & $E_2(p_{\mathrm{ref}}^*)$ \\
+\hline
+گوشه‌ای ب & $4.443$ & $3.768$ & $1.00194$ & $32.423\%$ & $19.505\%$ & $20.795\%$ \\
+گوشه‌ای الف & $6.676$ & $4.821$ & $1.00236$ & $43.153\%$ & $26.913\%$ & $32.999\%$ \\
+مایل & $18.984$ & $10.001$ & $1.01047$ & $40.213\%$ & $21.217\%$ & $42.804\%$ \\
+\hline
+\end{tabular}
+\end{table}
+
+در جدول، $f_{\mathrm{ref}}^*$ پروفایل ورودی در مقیاس سرعت مرجع است.
+در نمونهٔ گوشه‌ای الف، خطای بازپخش هر دو ذره کمتر از $7\times10^{-4}$ بود.
+خطای نسبی پروفایل همان نمونه به $43.153\%$ رسید.
+خطای نسبی میدان سرعت نیز $26.913\%$ بود.
+فشار از پاسخ اپراتور جریان به دست آمد.
+این مقایسه نشان می‌دهد بازتولید دو مسیر برای تأیید کل میدان کافی نیست.
+تفسیر میدان به محدودیت‌های عملگر مستقیم در بخش~\ref{sec:results-forward-flow} وابسته است.
+
+
+شکل~\ref{fig:appendix-timed-a} زنجیرهٔ زمان‌دار نمونهٔ گوشه‌ای الف را نشان می‌دهد.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/inverse-timed-chain-a.pdf}
+\caption{مسیرها، میدان تخمینی و خطای بازپخش زمان‌دار نمونهٔ گوشه‌ای الف.}
+\label{fig:appendix-timed-a}
+\end{figure}
+
+\FloatBarrier
+
+شکل~\ref{fig:appendix-timed-oblique} زنجیرهٔ زمان‌دار نمونهٔ مایل را نشان می‌دهد.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/inverse-timed-chain-oblique.pdf}
+\caption{مسیرها، میدان تخمینی و خطای بازپخش زمان‌دار نمونهٔ مایل.}
+\label{fig:appendix-timed-oblique}
+\end{figure}
+
+\FloatBarrier
+
+\زیرقسمت{هندسه و ساعت تخمینی نمونه‌های گوشه‌ای}
+\begin{latin}
+\small
+\href{https://github.com/mohrezsayeh90-ai/inverse_fromtrajectory_to_FlowReconstruction/blob/92897a6962e537a4bea88042609be102095db037/flow_reconstruction_no_time/chain_revision_xt_yt/chains_only.pdf}{Original three-case geometry-only gallery}
+\end{latin}
+نمونهٔ ب، همان دادهٔ شکل~\ref{fig:results-inverse-timed-chain-b} را بدون زمان بررسی می‌کند.
+شکل~\ref{fig:appendix-geometry-b} این ارتباط را نشان می‌دهد.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/inverse-geometry-chain-b.pdf}
+\caption{بازسازی هندسی و ساعت تخمینی در نمونهٔ گوشه‌ای ب.}
+\label{fig:appendix-geometry-b}
+\end{figure}
+
+\FloatBarrier
+شکل~\ref{fig:appendix-geometry-a} به نمونهٔ گوشه‌ای الف تعلق دارد.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/inverse-geometry-chain-a.pdf}
+\caption{بازسازی هندسی و ساعت تخمینی در نمونهٔ گوشه‌ای الف.}
+\label{fig:appendix-geometry-a}
+\end{figure}
+
+\FloatBarrier
+جدول~\ref{tab:results-inverse-geometry} هر شش مسیر و دو معیار را مقایسه می‌کند.
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{خطاهای هندسی بی‌بعد دو بازپخش با مقیاس مشترک.}
+\label{tab:results-inverse-geometry}
+\begin{tabular}{@{}lccccc@{}}
+\hline
+ & & \multicolumn{2}{c}{$10^4 E_{\mathrm{sym}}^*$}
+     & \multicolumn{2}{c}{$10^4 E_{\mathrm{arc}}^*$} \\
+نمونه & ذره & زمان‌دار & بدون زمان & زمان‌دار & بدون زمان \\
+\hline
+گوشه‌ای ب & $1$ & $2.713$ & $2.130$ & $6.467$ & $2.134$ \\
+گوشه‌ای ب & $2$ & $2.059$ & $4.030$ & $8.432$ & $19.779$ \\
+گوشه‌ای الف & $1$ & $3.388$ & $3.149$ & $7.773$ & $3.152$ \\
+گوشه‌ای الف & $2$ & $2.219$ & $4.238$ & $10.850$ & $21.478$ \\
+مایل & $1$ & $13.067$ & $9.523$ & $14.242$ & $10.932$ \\
+مایل & $2$ & $8.795$ & $2.264$ & $15.992$ & $4.228$ \\
+\hline
+\end{tabular}
+\end{table}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.97\textwidth,height=0.75\textheight,keepaspectratio]{figs/chapter4/inverse-geometry-comparison.pdf}
+\caption{مقایسهٔ هندسهٔ بازپخش و پروفایل‌های تخمینی در دو روش.}
+\label{fig:results-inverse-geometry}
+\end{figure}
+\FloatBarrier
+\زیرقسمت{چیدمان مطالعهٔ تعداد مسیرها}
+شکل~\ref{fig:inverse-count-design} ترتیب مسیرهای افزوده‌شده را مشخص می‌کند.
+این مطالعه از آزمایش بازپخش نمونهٔ ب مستقل است.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{figs/chapter4/inverse-particle-count-design.pdf}
+\caption{ترتیب شش مسیر مرجع در کانال بی‌بعد برای ورودی نه‌نوسانی.}
+\label{fig:inverse-count-design}
+\end{figure}
+\FloatBarrier
+\قسمت{جزئیات بازیابی تحریک مغناطیسی}
+\label{sec:appendix-magnetic-inverse}
+
+جدول~\ref{tab:results-master10-inverse} آزمون‌های حساسیت و نویز را نیز شامل می‌شود.
+شکل‌های این بخش، تک‌منبعی و دومنبعی را جداگانه مقایسه می‌کنند.
+موقعیت‌های زمان‌دار مصنوعی برای بازیابی دو دامنهٔ منبع استفاده شدند.
+جریان حامل، هندسه و پارامترهای سیال معلوم و ثابت بودند.
+مدل بیش‌میرا به سرعت اولیهٔ مستقل نیاز ندارد.
+شرط اولیه از اولین موقعیت دقیق گرفته شد.
+وزن‌های آموزش‌دیدهٔ مدل دهم در تمام برازش‌ها ثابت ماندند.
+روش از هدف رابطهٔ~\eqref{eq:inverse-master10-proposed-objective} استفاده می‌کند.
+
+در آزمون پایه، هفت گره روی بازهٔ $[0,1.5]$ قرار داشتند.
+بین گره‌ها از درون‌یابی خطی استفاده شد.
+پنجرهٔ پایه برابر $0.0125$ و محاسبات از نوع \lr{float64} بود.
+معیار انتخاب شروع، مجموع هزینهٔ داده و جریمه‌های اعلام‌شده بود.
+شروع‌ها غیرصفر و مستقل از تحریک حقیقی انتخاب شدند.
+تحریک مرجع فقط در تولید مشاهده و ارزیابی استفاده شد.
+بازپخش مستقل، ضرایب خام تخمینی را دریافت کرد.
+
+در آزمون $A$، فقط منبع چپِ مثبت مجهول بود.
+در آزمون $B$، هر دو منبع بدون پیشین علامت تخمین زده شدند.
+هر دو آزمون از موقعیت اولیهٔ $(X_0,Z_0)=(0.12,-1)$ آغاز شدند.
+هر مسیر پایه $121$ مشاهده داشت.
+ارزیابی مستقل روی $601$ زمان مشترک انجام شد.
+آزمون $C$ از حل عددیِ تحریک نرم تغییر منبع استفاده کرد.
+افق زمانی این آزمون $2.25$ بود.
+
+شکل~\ref{fig:results-master10-controls} تحریک حقیقی و تخمینی دو آزمون را نشان می‌دهد.
+برای مقایسه، یک علامت مشترک برای هر دو منبع انتخاب شد.
+این علامت در همهٔ زمان‌ها ثابت ماند.
+معیار مقایسه مطابق رابطهٔ~\eqref{eq:validation-master10-proposed-recovery} است.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.98\textwidth]{figs/chapter4/inverse-master10-controls.pdf}
+\caption{تحریک مرجع و تخمین هم‌تراز در آزمون‌های تک‌منبعی و دومنبعی.}
+\label{fig:results-master10-controls}
+\end{figure}
+
+شکل~\ref{fig:results-master10-replay} پیش‌بینی شبکه و بازپخش مستقل را مقایسه می‌کند.
+بازپخش با حل‌گر \lr{DOP853} و معادلهٔ اصلی انجام شد.
+مقیاس‌های عرضی و محوری، طول‌های مرجع متفاوت دارند.
+قاب مسیر بزرگ‌نمایی شده و مرز آن دیوارهٔ لوله نیست.
+خطای هر مؤلفه جداگانه و با مقیاس ثابت گزارش می‌شود.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.98\textwidth]{figs/chapter4/inverse-master10-replay.pdf}
+\caption{مسیر تخمینی و بازپخش مستقل همراه خطاهای بی‌بعد دو مؤلفه.}
+\label{fig:results-master10-replay}
+\end{figure}
+
+جدول~\ref{tab:results-master10-inverse} بیشینهٔ خطاهای بازپخش نسبت به مرجع پاک را نشان می‌دهد.
+خطای تحریک، نرم نسبی مشترک دو منبع پس از هم‌ترازی است.
+وضعیت جدول فقط به توقف بهینه‌ساز منتخب اشاره دارد.
+تمام بازپخش‌های مستقلِ جدول کامل و داخل دامنه بودند.
+سقف هر شروع $90$ تکرار بود.
+در حالت پایه سه شروع و در مقایسه‌ها دو شروع اجرا شد.
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{خطای بازپخش، خطای تحریک و وضعیت بهینه‌ساز در آزمایش‌های معکوس.}
+\label{tab:results-master10-inverse}
+\begin{tabular}{@{}llcccc@{}}
+\hline
+آزمون & تنظیم & $10^5 E_{X,\infty}$ & $10^5 E_{Z,\infty}$ & $E_a(\%)$ & توقف\\
+\hline
+\lr{A} & منبع چپ مثبت & $6.315$ & $1.144$ & $0.37$ & توقف خطی \\
+\lr{B} & دو منبع؛ علامت نامعلوم & $46.592$ & $3.251$ & $104.65$ & سقف تکرار \\
+\lr{Bk} & سیزده گره & $76.918$ & $3.165$ & $118.75$ & سقف تکرار \\
+\lr{Bh} & پنجرهٔ نصف & $46.480$ & $3.006$ & $104.82$ & سقف تکرار \\
+\lr{Bw} & مقیاس محوری دوبرابر & $46.842$ & $2.922$ & $104.87$ & سقف تکرار \\
+\lr{Bl} & زبری ده‌برابر & $47.643$ & $3.261$ & $105.27$ & سقف تکرار \\
+\lr{C} & تحریک نرم بایگانی‌شده & $89.340$ & $8.349$ & $102.44$ & سقف تکرار \\
+\lr{Ds} & سی‌ویک مشاهده & $46.365$ & $2.760$ & $103.91$ & سقف تکرار \\
+\lr{D1} & نویز $0.05$؛ بذر $1103$ & $54.330$ & $1.863$ & $100.96$ & سقف تکرار \\
+\lr{D2} & نویز $0.05$؛ بذر $2907$ & $53.364$ & $1.667$ & $104.34$ & سقف تکرار \\
+\lr{D3} & نویز $0.2$؛ بذر $1103$ & $184.551$ & $2.863$ & $98.56$ & سقف تکرار \\
+\lr{D4} & نویز $0.2$؛ بذر $2907$ & $71.093$ & $1.193$ & $110.21$ & سقف تکرار \\
+\hline
+\end{tabular}
+\end{table}
+
+در دادهٔ کم‌نمونه، هر چهارمین مشاهده و دو انتها حفظ شدند.
+نویز جدول، انحراف معیار فیزیکی برحسب میکرومتر برای هر مؤلفه است.
+نویز هر مؤلفه با طول مرجع همان مؤلفه بی‌بعد شد.
+شرط اولیه در تمام آزمون‌های نویزی دقیق باقی ماند.
+مقیاس برازش، بیشینهٔ نویز معلوم و کف خطای عملگر بود.
+
+خطای تحریک تک‌منبعی حدود $0.374\%$ بود.
+در آزمون دومنبعی پایه، این خطا به $104.65\%$ رسید.
+برازش منتخب تک‌منبعی با توقف جست‌وجوی خطی پایان یافت.
+دو شروع دیگر تک‌منبعی همگرا شدند.
+این تفاوت، دقت مسیر را از دقت تحریک متمایز می‌کند.
+توقف در سقف تکرار، همگرایی یا کمینهٔ سراسری را تأیید نمی‌کند.
+نتایج ناموفقِ بازیابی نیز در جدول حفظ شده‌اند.
+این نتایج به بودجه، پیشین‌ها و نمایش خطی همین آزمایش محدودند.
+ارزیابی مستقیم قبلی با این برازش‌ها تغییر نمی‌کند.
+
+
+\FloatBarrier
+\قسمت{بازتاب برنامه و حساسیت رهاسازی}
+\label{sec:appendix-formation}
+
+\زیرقسمت{منابع پشتیبان هندسه و پوشش}
+چیدمان ایستگاه‌ها، پوشش هدف و برش‌های مرکز در منابع پشتیبان ثبت‌اند.
+پوشش هندسی با نرخ برخورد به هدف یکسان نیست.
+\begin{latin}
+\small
+\href{https://github.com/mohrezsayeh90-ai/Main_Proposal/tree/9690560dd817fc3bea96007fd4c200a1141db712/New_Main_Results/runs/formation_20261112_cpu/figures}{Formation support: F03\_ports, F05\_occupancy, F06\_slices}
+\end{latin}
+
+
+
+\زیرقسمت{بازتاب یک برنامهٔ صدذره‌ای ذخیره‌شده}
+شکل~\ref{fig:appendix-formation-reflection} پاسخ بازتابی را با تبدیل هندسی مقایسه می‌کند.
+بیشینهٔ باقیماندهٔ مرجع تحلیلی برابر $6.80436\times10^{-16}$ بود.
+برای میدان شبکهٔ ثابت، این مقدار $1.093\times10^{-4}$ بود.
+مقایسهٔ بهینه‌سازی دسترس‌پذیری دیواره‌ها همچنان انجام نشده است.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/formation-reflection.pdf}
+\caption{مقایسهٔ بازتاب هندسی و بازپخش مستقل یک برنامهٔ صدذره‌ای.}
+\label{fig:appendix-formation-reflection}
+\end{figure}
+
+\FloatBarrier
+\زیرقسمت{حساسیت عددی برنامه‌های منتخب}
+شکل~\ref{fig:appendix-formation-sensitivity} دو نمایندهٔ کم‌حاشیه و پُرحاشیه را مقایسه می‌کند.
+تعداد ذرات این نماینده‌ها حداکثر $24$ بود.
+برای هر وضعیت تکمیل‌شده، $64$ اغتشاش بررسی شد.
+آستانهٔ پذیرش خطای مرجع $0.004$ بود.
+زمان هدف اسمی در هر نماینده ثابت ماند.
+پذیرش نامشروط و مشروط به قیود، جداگانه نمایش داده شدند.
+با نبود نمونهٔ مجاز، کسر پذیرش مشروط تعریف نمی‌شود.
+این حساسیت عددی، معیار قابلیت‌اعتماد سخت‌افزار نیست.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figs/chapter4/formation-release-sensitivity.pdf}
+\caption{حساسیت عددی برنامه‌های منتخب به اغتشاش رهاسازی و زمان‌بندی.}
+\label{fig:appendix-formation-sensitivity}
+\end{figure}

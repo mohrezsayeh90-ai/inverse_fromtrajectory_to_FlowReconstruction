@@ -1,0 +1,28 @@
+{
+  "pdf_pages": 112,
+  "primary_figures": 9,
+  "supplementary_figures": 1,
+  "preserved_previous_content": true,
+  "references_resolved": true,
+  "embedded_fonts": true,
+  "text_bounds_checked": true,
+  "main_audit": {
+    "passed": true,
+    "counts": {
+      "profiles": 9,
+      "fits": 58,
+      "replays": 571
+    },
+    "scope": "Saved-fit/replay consistency; no uniqueness or global-optimum claim"
+  },
+  "focused_audit": {
+    "passed": true,
+    "counts": {
+      "profiles": 1,
+      "fits": 6,
+      "replays": 76
+    },
+    "scope": "Saved-fit/replay consistency; no uniqueness or global-optimum claim"
+  },
+  "thesis_sha256": "427c29afa56291833d1825ff0e7791baaa91cb0b05c63c688845a7c25dcb0e53"
+}

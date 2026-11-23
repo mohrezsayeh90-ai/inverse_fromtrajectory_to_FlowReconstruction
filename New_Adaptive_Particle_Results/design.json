@@ -1,0 +1,27 @@
+{
+  "source_revision": "92897a6962e537a4bea88042609be102095db037",
+  "source_files_sha256": {
+    "models/candidates/pressure_long/checkpoint.npz": "ccf6fa2b3e179a22c443384083e2dec338fc497f9562a567ed7e0955d3c67bf8",
+    "experiments/particle_count/fit_campaign.py": "0bad974b6a727f8b97d525f6e860bb4ee9e13e2fcc69a8027b9722edafca754b",
+    "flow_reconstruction/inverse.py": "386a324fb3b0ac23b3f9937fd86aaf23cc19e58ccb20dc631bc738beaaabc132",
+    "flow_reconstruction/particles.py": "9f0fdf44aa9fe2cc8cb859457534808ab1d447ca6ffbc1a2813500bc2aad541e"
+  },
+  "profiles": [
+    "beta5",
+    "skew_b3",
+    "flat30",
+    "twin_b3_r30",
+    "shoulder",
+    "mixed",
+    "waves3_r30",
+    "lobes4_r30",
+    "nine30"
+  ],
+  "max_particles": 24,
+  "threshold_relative_l2": 0.05,
+  "noise_std": 0.0002,
+  "seed": 284913,
+  "weights_frozen": true,
+  "truth_used_in_fit": false,
+  "truth_used_for_synthetic_count_selection": true
+}

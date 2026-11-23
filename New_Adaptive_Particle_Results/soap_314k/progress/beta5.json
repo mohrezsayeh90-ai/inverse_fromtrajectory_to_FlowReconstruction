@@ -1,0 +1,131 @@
+{
+  "profile": "beta5",
+  "phase": "completed",
+  "adaptive_counts": [
+    2,
+    4,
+    6,
+    9,
+    14,
+    21
+  ],
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.3890844561411206,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.13646258778223505,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 6,
+      "error": 0.10222209295124111,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 9,
+      "error": 0.07632823780125059,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 10,
+      "error": 0.05925712066407803,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 13,
+      "error": 0.05341959716623621,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 14,
+      "error": 0.06248129090283435,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 17,
+      "error": 0.03841551429028704,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 21,
+      "error": 0.02761388152607108,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ],
+  "display_counts": [
+    2,
+    6,
+    10,
+    13,
+    17,
+    21
+  ],
+  "final_count": 21,
+  "search_stop_N": 21,
+  "stopping_reason": "evaluation target reached",
+  "target_relative_l2": 0.05,
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "source_revision": "f6b8690059716e809c2dac27c8715e65fcb1d267",
+  "config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 2,
+    "max_iterations": 200,
+    "quadrature_order": 3,
+    "seed": 71103
+  },
+  "reference_sha256": "ae2a940139a87484a216d2060d8ef2e165876b8d9a0221319ac04992656d7261",
+  "observation_sha256": {
+    "track_1.csv": "cf458266eac7ecc8d37ff0e584c5991b25d056271cb7e1dd4f1e5a2c248b7e1a",
+    "track_2.csv": "1522090fec4d765d1d89c80dd5e765d3bb5976159005773f5d492b237d9cdb9e",
+    "track_3.csv": "429790c473dde45dcbe2320ee0295de86910abaac3d4269ed8ae4835d57e0931",
+    "track_4.csv": "7b50d35a324d50bb76d924a3aa7da164aec230d245dd8283fb2ef3746cec39da",
+    "track_5.csv": "c696e396587a6b5d0039226c6d0807d565fc29d4a13a03ba53b7091479021eb7",
+    "track_6.csv": "6a92e235babe54038ebf70cdf6a0e4aa86b5d972394961485a75d2acdde18bd6",
+    "track_7.csv": "7d5a110fa56d98ccad45e7553f32e63536cdd0b9a2d470cbafe7c484509fd8d3",
+    "track_8.csv": "aa7a3db544e329dd04aadd90cf03064831999cdd9804e2574943bc8d0ef2e17f",
+    "track_9.csv": "ae4cb89b5db5cba127bb8954dd481a3fc4a0d6f8bebf99af2e0e996cbb6ebfdc",
+    "track_10.csv": "0f26c39ac6a8cd65e604f4003213cd0d70632ed8802aae6d69f8774f0818fbcf",
+    "track_11.csv": "986a160ae9f91aba1035bc5a6c01f4be1e62147e12c3faa59e3122ae84052047",
+    "track_12.csv": "39be4994384d56a117840040935bb5605a549d78feeaa1749156aa86bc81fc72",
+    "track_13.csv": "0b22db6b8f2a9b3d08937491609b37f7c7582f381c6966f33b629d09a90d5abd",
+    "track_14.csv": "8511ae330c326c618bf8d0da95c2a6beed65201f0dbb2d483af55268c57cc0ce",
+    "track_15.csv": "a5355c3fa75ba3951d8014ceaa758552241f0c477064731cb5433fef5ed659b8",
+    "track_16.csv": "8f8d29c3dfa139f247a2e6f8d9343a05b83ef1a10d564d5a3ae17f8fa175faf5",
+    "track_17.csv": "48517e89ba0d3fd7c669c794e95afb64a1d6cefa7e5eb4b193a04f2f675025f5",
+    "track_18.csv": "691975368a78eebb25cee478f34d4c557b264d0035a3610267a7ea40fc3689ba",
+    "track_19.csv": "e072fbc4b051ac4c927c0f49818114d68cde8cbe81c2a1cf071ff5b73a6bf16a",
+    "track_20.csv": "04ac625cfe70391176251121b7c32d20645ea6d7597c0980b8a314e469938b92",
+    "track_21.csv": "52b601e75245124399999c90410eda8f94c599d3068a9019736e15069332f6c1",
+    "track_22.csv": "a1c1e1aefa593521b7fb6a979f3fe0ef68a5bd1ab62dda8cd740020c3a451c8b",
+    "track_23.csv": "2bf1ae6f61c14e89d6540c4001fc48280d5fb1a673137c4b31f0cf8d5b7e2703",
+    "track_24.csv": "24d52be840d85d65b778ae3b92cfcd5f7649881c113535bb2ec306e943c9c900"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "profile": "nine30",
+  "phase": "completed",
+  "adaptive_counts": [
+    2,
+    4,
+    8,
+    15
+  ],
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.3907115182693425,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.390843235861548,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 5,
+      "error": 0.39067866971911835,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 7,
+      "error": 0.3907135699774668,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 8,
+      "error": 0.38965218375858923,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 10,
+      "error": 0.38998345104823734,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 12,
+      "error": 0.39011401037825805,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 15,
+      "error": 0.3890354610174258,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ],
+  "display_counts": [
+    2,
+    5,
+    7,
+    10,
+    12,
+    15
+  ],
+  "final_count": 15,
+  "search_stop_N": 15,
+  "stopping_reason": "error plateau under fixed fitting budget",
+  "target_relative_l2": 0.05,
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "source_revision": "f6b8690059716e809c2dac27c8715e65fcb1d267",
+  "config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 2,
+    "max_iterations": 200,
+    "quadrature_order": 3,
+    "seed": 71103
+  },
+  "reference_sha256": "2ae4fb805fdae687c459ed945ac6f6e0866ea8622c7f11c1bb0ac5645485b565",
+  "observation_sha256": {
+    "track_1.csv": "7d0788b11d0ad564b2f7f86d335cce647889ab5ded08ff906f960a8b448fb8f9",
+    "track_2.csv": "c5055ad3ea89d7493e0ae3400da149935efb8ec11c5b741615cf05110d1560e9",
+    "track_3.csv": "99e1e9890346bc8bb914340641d41cdf70f31444d47bba8e408ca61e5e4e8afe",
+    "track_4.csv": "0d58659e4ac5bd151fe6e19dbee5d844703b5defc8f1f4a23dedfcc8f6fed438",
+    "track_5.csv": "e0a642834ca20bdff81bcea8583a521e386d9a0c6d0275bce916b9d99e96f231",
+    "track_6.csv": "eb43401564d4fff654e4bd1feadf8acbbe8025fd17d24cc6bd6077a067a31814",
+    "track_7.csv": "cc92584746a7d8b7185b20e6cebc687bf850ed55111073635175be95a0413962",
+    "track_8.csv": "777c1b51ddd89d2791fa52d21c7dfb8e20eae5700dafd35decd233888f1618bc",
+    "track_9.csv": "4b6552dcb12923f15cc63dfbd8be90f7a52abbfaf383268bdc91be3bfb0b4304",
+    "track_10.csv": "748e7862a0739b746750809a25a5bc2775d60741eb4de096dc0ac5af7b583565",
+    "track_11.csv": "098acec083238de994f86b2e8dbbfe0fd3efb51b121854002b04c6647c271ce9",
+    "track_12.csv": "d38d440ab42e60e8e2dbb52ae7b63d0a7b972d19643193382448bed87fdbc6d1",
+    "track_13.csv": "1613750c125fdf8dc8290ac22e4fa75a625e0903ad5ca2ec8eb9e5e28e957682",
+    "track_14.csv": "c15bc705d3c30852158f79370922fe008729ccb2b83433649ec703f38773d075",
+    "track_15.csv": "6fe214523b113bd445cc83cebb8df7fb000fae0a26c99daea118b438b2fe45f8",
+    "track_16.csv": "cec1977785f0cac1b0fd4d467b6c38940e4e3f7b9e2ec4e19c7e72bcfad39204",
+    "track_17.csv": "faed9154d34f2e1319d197e28893d3ac7b15ee3e7a68b2df747c86b6ec283325",
+    "track_18.csv": "013363cb56bfef83ab8ad3081f469157ae01989dc1db13d197884691d365ae97",
+    "track_19.csv": "1c64eeede4cd42b1c23092a9f8f848c80e80f6c4c9addfde09ee97a543099006",
+    "track_20.csv": "93058649c3519387423f632c74ac94e70dacaed75b0843ee4c58b67669fd0ec7",
+    "track_21.csv": "7e555524cb1250fe0afe42031d76082a9f6cbe79bec834aa8dca164aff91979d",
+    "track_22.csv": "913157ea9758e3955cef92930e4c22ba6a4dc7fdc2fb6b3bec52241e1dc95bd3",
+    "track_23.csv": "c9aca5b073d02a3c0a45babf6985ae6a3ebfc7247169245c87b60a2f92c8ffc4",
+    "track_24.csv": "5e8866b46ed4fa708d848c04a9582023bf9cec42ee9f1606f3abcf4056a588ba"
+  }
+}

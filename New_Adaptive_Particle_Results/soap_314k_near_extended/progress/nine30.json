@@ -1,0 +1,151 @@
+{
+  "profile": "nine30",
+  "phase": "completed",
+  "adaptive_counts": [
+    2,
+    4,
+    8,
+    15,
+    23,
+    24,
+    36,
+    48
+  ],
+  "evaluated": [
+    {
+      "N": 2,
+      "error": 0.39476192301186497,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 4,
+      "error": 0.42271974480748636,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 8,
+      "error": 0.35936507208369983,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 15,
+      "error": 0.1908461142790165,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 23,
+      "error": 0.08757538591317594,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 24,
+      "error": 0.08112795349934332,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 36,
+      "error": 0.0708092248945437,
+      "complete": true,
+      "optimizer_converged": false
+    },
+    {
+      "N": 48,
+      "error": 0.06202439568445268,
+      "complete": true,
+      "optimizer_converged": false
+    }
+  ],
+  "display_counts": [
+    2,
+    8,
+    15,
+    24,
+    36,
+    48
+  ],
+  "final_count": 48,
+  "search_stop_N": 48,
+  "stopping_reason": "maximum count reached",
+  "target_relative_l2": 0.05,
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "source_revision": "f6b8690059716e809c2dac27c8715e65fcb1d267",
+  "config": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-08,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.0,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 2,
+    "max_iterations": 400,
+    "quadrature_order": 3,
+    "seed": 71103
+  },
+  "reference_sha256": "2ae4fb805fdae687c459ed945ac6f6e0866ea8622c7f11c1bb0ac5645485b565",
+  "observation_sha256": {
+    "track_1.csv": "da120d978ba698a49170f934e0bcb4923360ab95aad7d6b8ad5dbd4bbda20893",
+    "track_2.csv": "b6f92fac6846998a851c3ccd2bd18109c60b9f088317fdf7dabff8cce7dc6d4a",
+    "track_3.csv": "7c533848e8abb33addebfc2dd8f1f680207444d899f5687dee83fb47a1a23801",
+    "track_4.csv": "9b5f2fe6c7b6fc8592b9da90552f8613be8dd66baf3440af19f1afb8d07b7c98",
+    "track_5.csv": "0b3c4c7a57c99c4ca2145e98a2b83b85d01e5db8008d6225579d8424bd36ea16",
+    "track_6.csv": "eac1b736d114e904a531443d2058aa640e7fee199d062a9167b247379b819c51",
+    "track_7.csv": "ecee670867fbeb9d930edd25080a2bcce0fa458cd041cc8c4c353f90c81d852a",
+    "track_8.csv": "b71150f81a1e6fe5bb98be12136476a370aa5805d28b7f7b36995f2c341664b1",
+    "track_9.csv": "12e018f1adb69450dba89a5f7afe0e9d8d9b6e41e5e8b4ecd2e7a193caaf4f77",
+    "track_10.csv": "c91ccd2ff60434ccfbc8504f798d2a055b0d6b839ee5282d7065dbd4fd631f7c",
+    "track_11.csv": "19c3b027ba32c55f921277c179a3662f519618b4001ee452a363b8bfb6745c47",
+    "track_12.csv": "eec526b76913409b7d11ed4d55c887e9b781ea1b21d4023c03f53cc1dddc8ade",
+    "track_13.csv": "99a9350037ec2b35cd54fb2fcb2d72896ca1b8cc0214eeac1eab317bfab69aed",
+    "track_14.csv": "8dabcf6ba071abf1de2e2397d3373821fd8f7add9c35951d76bd81cccaa12ae7",
+    "track_15.csv": "e063b2878a242a25d76f1a9f14d8f96e1f3652ec1de0ba54a798dbd13cbd3084",
+    "track_16.csv": "ad468148c186e6ac1c5b5003812624000c1f590d4eb56676987911d8d7c24748",
+    "track_17.csv": "6a8d52f66d6d911a93a67a4bf88422980d17dc8d211c03e247a8f32a794c4296",
+    "track_18.csv": "7fde0185a01123f5ef302ad41eb29993cf43642d1496c68e63e850434eb7c942",
+    "track_19.csv": "a985e8a22bb8db419b0c4b12d653cb6c4adaa8207dcb98090e824f67fc782600",
+    "track_20.csv": "39337c3a76928df368b2fb97162ddabd4a9fd86eb5ad79c8054836de4c9c2309",
+    "track_21.csv": "56d8a1de441ede2bcadbc5a3e2cb0d2175053e1477e5f7be588f732674ccce67",
+    "track_22.csv": "a10656c7db1f49965213bc40e6cb5b4fb4595b9615b7e8ea49dfd4ddfb7c1e6c",
+    "track_23.csv": "857929600e30cd3149c615f07417bcaea2d47656079a2fccbe7c15e5cc2cf9c1",
+    "track_24.csv": "1a2ad90d8a6122557fbbcec1561d3f567078e484648a894a2dac0660becbf06d",
+    "track_25.csv": "5dcb31f4bb5bafc520871471a1a2f473b63df45cea593a3d1ed82dbb241f332d",
+    "track_26.csv": "cfab188a4c76a749ffaf620954cfbaf93968f3bc92c29681ee580b649497a8de",
+    "track_27.csv": "1ea292149203c21f15b744f5ac993b6ec876105a9b01a4ecafa98fcb47cbc98d",
+    "track_28.csv": "02dbeacafd6cf9af67153822b15ea5b21e58e2c7d967e4dec98dd589514f39ee",
+    "track_29.csv": "01022a1202974a1bdab2443fbd2b3e012e39d4bc2057baab765121f5846529f2",
+    "track_30.csv": "8bc43e1e9f14647643cd27d3f2054f8be4adb27e36c1d8d1fed79dd5da180f7c",
+    "track_31.csv": "c2df3578ac60ee60e8b59cf1dccdeeea97888855be5403aca96045c9195b7ab0",
+    "track_32.csv": "965c27513f4fd6dc400e96500943b3add337b89b1665498fa88aab92113ad30e",
+    "track_33.csv": "cfb207a8e6e4e6cf1ec6c912313344c1c4adefcd1014ff30cd841c195e994209",
+    "track_34.csv": "00ac89049d76829d443e5a2bb2f9f4313e13b952df84d45d8776ba0c70c61aca",
+    "track_35.csv": "d229bc7a152975a7fb5461027054c27a1a53bf645c7df958db720ebd85169434",
+    "track_36.csv": "547452dce58ef6001b6b91cfd56882471ddcd9d994295f684fe9c86ab0619561",
+    "track_37.csv": "70c82f551fd62b4e0e522d7d7856084280c8e5e7419eb1cbff9413bbd4a14816",
+    "track_38.csv": "0d68abe3e9dbd79534b9dc25c18b1e3d23cdcb6c3eb88aed3be3cce718bc2289",
+    "track_39.csv": "df48daea35c30dda65629bd9c54381037740038c7681c831de211817cf11cf03",
+    "track_40.csv": "0dc51a3f6cebbf25faf5dcd2e85aa392b5f352ff7edab4b907067ba7d47c7abd",
+    "track_41.csv": "ca13f4a92768c6b6a206d98a1e374cfccbfd48ebe2d7a1f0bbc80accb80e8417",
+    "track_42.csv": "eb0edafe426e723d3173e0853438a512ddbb187f19cc3bb560774a04560e7750",
+    "track_43.csv": "030415ac992d39c7759753d35f0cc71ad85d32b02e6dd057dbf0f1826b5b758e",
+    "track_44.csv": "310dacc2db9496f8a45dea292ff2a4f69095ad859f41c5a52870c8da50b31d6f",
+    "track_45.csv": "692999ef2a8c8536f4bb11323378208a05de93521bb9090a0eb9d5ac225d39a6",
+    "track_46.csv": "580a6edeee1684c3f1e07f88ea96eaabec74f18020cfd9ec6c59e001508f814d",
+    "track_47.csv": "8ec6b40bdd6f2750a41473172e722338a1464e7dddbd626b4b84ec5d82803a8d",
+    "track_48.csv": "d6dd6f32a5863d50cea26e02e1969f615dc9cabd0658d7912d266d2d71e3a816"
+  }
+}
