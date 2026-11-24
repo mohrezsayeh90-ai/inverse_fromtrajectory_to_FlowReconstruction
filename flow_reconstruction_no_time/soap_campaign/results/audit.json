@@ -1,0 +1,68 @@
+{
+  "source_commit": "a9984f07e91680eb22e2a236e74116190d0cb210",
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "stages_per_arm": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    48
+  ],
+  "stage_records": 216,
+  "unique_fits": 198,
+  "converged_unique": 0,
+  "stops": {
+    "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT": 198
+  },
+  "flow_parameterization": {
+    "reference_reynolds": 30.0,
+    "mean_speed_bounds": [
+      0.5,
+      1.5
+    ],
+    "profile_points": 65,
+    "position_scale": 0.001,
+    "smoothness": 1e-05,
+    "regularization_kind": "inlet_curvature",
+    "physics_weight": 0.02,
+    "physics_scale": 0.1,
+    "physics_points": 192,
+    "shape_prior": 0.0001,
+    "mean_prior": 0.0001,
+    "log_shape_bound": 3.0,
+    "precondition_shape": true,
+    "starts": 3,
+    "max_iterations": 400,
+    "quadrature_order": 3,
+    "seed": 71103
+  },
+  "geometry_config": {
+    "points": 65,
+    "clock_knots": 17,
+    "starts": 2,
+    "max_iterations": 250
+  },
+  "geometry_less_than_timed": 3,
+  "hybrid_less_than_random": 5,
+  "below_five_percent": {
+    "random": 0,
+    "hybrid": 0
+  },
+  "median_N48": {
+    "random": 16.821608677721137,
+    "hybrid": 22.74104766461233
+  },
+  "fit_total": 1728,
+  "fit_complete": 1726,
+  "fit_median_symmetric_distance_H": 0.0024974439037937944,
+  "test_total": 288,
+  "test_complete": 288,
+  "test_median_symmetric_distance_H": 0.010666952313651858,
+  "clock_signed_percentiles_5_50_95": [
+    -17.822606928924447,
+    0.3511264446563911,
+    39.12425506395812
+  ],
+  "pdf_sha256": "6e5e533141229dfce5254208b0da2bd7187a3139ea6a9a377ff0a175e3c096cf"
+}

@@ -1,0 +1,93 @@
+{
+  "timing_used_only_after_fit": true,
+  "tracks": [
+    {
+      "completed": true,
+      "source": "New_Adaptive_Particle_Results/inverse_rewrite/seed_53129/nine30/observations/test_random/track_1.csv",
+      "horizon": 1.2,
+      "symmetric_distance_rmse_H": 0.008784683315957801,
+      "symmetric_hausdorff_H": 0.052243055042892825,
+      "ordered_arclength_rmse_H": 0.03214387235031109,
+      "endpoint_error_H": 0.052243055042892825,
+      "observed_length_H": 0.8819743152193024,
+      "predicted_length_H": 0.8396258060302105
+    },
+    {
+      "completed": true,
+      "source": "New_Adaptive_Particle_Results/inverse_rewrite/seed_53129/nine30/observations/test_random/track_2.csv",
+      "horizon": 1.2,
+      "symmetric_distance_rmse_H": 0.014774473736215411,
+      "symmetric_hausdorff_H": 0.05772237187933383,
+      "ordered_arclength_rmse_H": 0.029587408262464986,
+      "endpoint_error_H": 0.05772237187933383,
+      "observed_length_H": 0.6078120119979457,
+      "predicted_length_H": 0.592010448496536
+    },
+    {
+      "completed": true,
+      "source": "New_Adaptive_Particle_Results/inverse_rewrite/seed_53129/nine30/observations/test_random/track_3.csv",
+      "horizon": 1.2,
+      "symmetric_distance_rmse_H": 0.021816345427268995,
+      "symmetric_hausdorff_H": 0.13033068225815256,
+      "ordered_arclength_rmse_H": 0.08344892220978302,
+      "endpoint_error_H": 0.13033068225815256,
+      "observed_length_H": 0.9635565931747244,
+      "predicted_length_H": 0.8735567734936069
+    },
+    {
+      "completed": true,
+      "source": "New_Adaptive_Particle_Results/inverse_rewrite/seed_53129/nine30/observations/test_random/track_4.csv",
+      "horizon": 1.2,
+      "symmetric_distance_rmse_H": 0.01777706009008809,
+      "symmetric_hausdorff_H": 0.12116026909035105,
+      "ordered_arclength_rmse_H": 0.0726157671898915,
+      "endpoint_error_H": 0.12116026909035105,
+      "observed_length_H": 1.0266864339968855,
+      "predicted_length_H": 0.9140426425159404
+    },
+    {
+      "completed": true,
+      "source": "New_Adaptive_Particle_Results/inverse_rewrite/seed_53129/nine30/observations/test_near/track_1.csv",
+      "horizon": 1.2,
+      "symmetric_distance_rmse_H": 0.013936052400024988,
+      "symmetric_hausdorff_H": 0.07196692143753028,
+      "ordered_arclength_rmse_H": 0.04206746907228525,
+      "endpoint_error_H": 0.07196692143753028,
+      "observed_length_H": 0.4917102947256053,
+      "predicted_length_H": 0.5587688036316899
+    },
+    {
+      "completed": true,
+      "source": "New_Adaptive_Particle_Results/inverse_rewrite/seed_53129/nine30/observations/test_near/track_2.csv",
+      "horizon": 1.2,
+      "symmetric_distance_rmse_H": 0.02570255802629497,
+      "symmetric_hausdorff_H": 0.1405008069926807,
+      "ordered_arclength_rmse_H": 0.08210592508094557,
+      "endpoint_error_H": 0.1405008069926807,
+      "observed_length_H": 1.168704262683072,
+      "predicted_length_H": 1.0281074300422979
+    },
+    {
+      "completed": true,
+      "source": "New_Adaptive_Particle_Results/inverse_rewrite/seed_53129/nine30/observations/test_near/track_3.csv",
+      "horizon": 1.2,
+      "symmetric_distance_rmse_H": 0.01803091012983266,
+      "symmetric_hausdorff_H": 0.05467959524615031,
+      "ordered_arclength_rmse_H": 0.035272955299305124,
+      "endpoint_error_H": 0.05467959524615031,
+      "observed_length_H": 0.8872595831320214,
+      "predicted_length_H": 0.9376065787630301
+    },
+    {
+      "completed": true,
+      "source": "New_Adaptive_Particle_Results/inverse_rewrite/seed_53129/nine30/observations/test_near/track_4.csv",
+      "horizon": 1.2,
+      "symmetric_distance_rmse_H": 0.029884705920178223,
+      "symmetric_hausdorff_H": 0.10340562814758322,
+      "ordered_arclength_rmse_H": 0.06168796486418546,
+      "endpoint_error_H": 0.10340562814758322,
+      "observed_length_H": 0.8558490188182059,
+      "predicted_length_H": 0.7596686686971094
+    }
+  ]
+}

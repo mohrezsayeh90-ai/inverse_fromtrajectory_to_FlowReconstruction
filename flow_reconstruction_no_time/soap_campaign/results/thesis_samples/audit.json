@@ -1,0 +1,16 @@
+{
+  "studies": {
+    "adaptive": {
+      "stages": 52,
+      "profiles": 9
+    },
+    "near": {
+      "stages": 8,
+      "profiles": 1
+    }
+  },
+  "spatial_prefix_stages": 16,
+  "sensitivity_trials": 12,
+  "pdf_sha256": "9dce17b625261de95a6f1a94bbebc36cf3d352baf184b8b18579a5269f1ffb42",
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9"
+}

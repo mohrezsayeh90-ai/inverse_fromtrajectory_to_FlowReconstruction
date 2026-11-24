@@ -1,0 +1,15 @@
+{
+  "checkpoint_sha256": "e46687f8d50818329072eca1af7c70136fb9e3d314207f89e9427ccc140dfbf9",
+  "jax": "0.11.1",
+  "integrator_difference": 4.440892098500626e-16,
+  "checks": [
+    {
+      "max_velocity_difference": 6.661338147750939e-16,
+      "max_momentum_difference": 2.7408630920433552e-14
+    },
+    {
+      "max_velocity_difference": 5.551115123125783e-16,
+      "max_momentum_difference": 3.397282455352979e-14
+    }
+  ]
+}

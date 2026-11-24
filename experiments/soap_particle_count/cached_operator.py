@@ -77,6 +77,19 @@ class CachedObjective:
         probe_basis = jax.jit(jax.vmap(basis_terms))(probes) if config.physics_weight else None
         builder = model.builder
 
+        def velocity(profile, re, branch, xy, spatial_basis):
+            lift_data = jax.vmap(lift_velocity, in_axes=(None, None, 0))(profile, re, xy)
+            return lift_data + spatial_basis @ branch[0]
+
+        def momentum(profile, re, branch):
+            vel, grad, lap, pressure = jax.vmap(lift_terms, in_axes=(None, None, 0))(profile, re, probes)
+            bv, bg, bl, bp = probe_basis
+            vel += bv @ branch[0]
+            grad += jnp.einsum('ncld,l->ncd', bg, branch[0])
+            lap += bl @ branch[0]
+            pressure += bp @ branch[1]
+            return jnp.einsum('ncd,nd->nc', grad, vel) + pressure - lap/re
+
         def positions(profile, speed, re, data, branch):
             lift_data = jax.vmap(jax.vmap(lift_velocity, in_axes=(None,None,0)), in_axes=(None,None,0))(profile,re,data['xy'])
             correction = jnp.einsum('ntcl,l->ntc',data['integrated_basis'],branch[0])
@@ -92,17 +105,14 @@ class CachedObjective:
             curvature = jnp.sum((12*aa*aa+12*aa*bb+4*bb*bb)/builder.h**3)
             physical = 0.
             if probe_basis is not None:
-                vel,grad,lap,pressure = jax.vmap(lift_terms,in_axes=(None,None,0))(profile,re,probes)
-                bv,bg,bl,bp = probe_basis
-                vel += bv@branch[0]
-                grad += jnp.einsum('ncld,l->ncd',bg,branch[0])
-                lap += bl@branch[0]
-                pressure += bp@branch[1]
-                momentum = jnp.einsum('ncd,nd->nc',grad,vel)+pressure-lap/re
-                physical = config.physics_weight*jnp.mean(jnp.sum((speed**2*momentum/config.physics_scale)**2,axis=-1))
+                residual_momentum = momentum(profile, re, branch)
+                physical = config.physics_weight*jnp.mean(jnp.sum((speed**2*residual_momentum/config.physics_scale)**2,axis=-1))
             regularization = config.smoothness*curvature+config.shape_prior*jnp.mean(z*z)+config.mean_prior*theta[-1]**2+physical
             dense = builder.dense@(jnp.asarray(builder.base)*jnp.exp(jnp.pad(z,(1,1))))
             return jnp.sum(residual**2)/count+regularization+1e5*jnp.mean(jnp.minimum(dense,0)**2)
+
+        self.velocity = velocity
+        self.momentum = momentum
 
         self.loss = jax.jit(jax.value_and_grad(loss))
         self.positions = positions
